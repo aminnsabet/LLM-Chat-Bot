@@ -2,7 +2,7 @@
 admin_username: admin
 admin_password: admin
 #----------------------- Hugging Configuration
-Hugging_ACCESS_TOKEN : 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
+Hugging_ACCESS_TOKEN : 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
 #----------------------- Weight and Biases Key 
 WANDB_KEY : 251320f252f36c48298b9d80fc9fc0a06cedc9e1
 WANDB_ENABLE : True
@@ -60,7 +60,7 @@ LLMs:
     repetition_penalty: 1.1
     batch_size: 2
     route_prefix: Llama_13b
-    num_gpus: 0.55
+    num_gpus: 0
     min_replicas: 1
     initial_replicas: 1
     max_replicas: 2
