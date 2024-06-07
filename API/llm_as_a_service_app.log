@@ -1054,3 +1054,75 @@
 2024-06-07 11:25:27,167 - llm_as_a_service_logger - INFO - Wandb Logging Enabled
 2024-06-07 11:25:27,167 - llm_as_a_service_logger - INFO - Wandb Logging Enabled
 2024-06-07 11:25:27,167 - llm_as_a_service_logger - INFO - Wandb Logging Enabled
+2024-06-07 11:34:11,196 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-06-07 11:34:11,196 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-06-07 11:34:11,196 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-06-07 11:34:11,196 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-06-07 11:34:12,915 - llm_as_a_service_logger - INFO - Wandb Logging Enabled
+2024-06-07 11:34:12,915 - llm_as_a_service_logger - INFO - Wandb Logging Enabled
+2024-06-07 11:34:12,915 - llm_as_a_service_logger - INFO - Wandb Logging Enabled
+2024-06-07 11:34:12,915 - llm_as_a_service_logger - INFO - Wandb Logging Enabled
+2024-06-07 11:34:48,055 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-06-07 11:34:48,055 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-06-07 11:34:48,055 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-06-07 11:34:48,055 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-06-07 11:34:49,691 - llm_as_a_service_logger - INFO - Wandb Logging Enabled
+2024-06-07 11:34:49,691 - llm_as_a_service_logger - INFO - Wandb Logging Enabled
+2024-06-07 11:34:49,691 - llm_as_a_service_logger - INFO - Wandb Logging Enabled
+2024-06-07 11:34:49,691 - llm_as_a_service_logger - INFO - Wandb Logging Enabled
+2024-06-07 11:48:49,072 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-06-07 11:48:49,072 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-06-07 11:48:49,072 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-06-07 11:48:49,072 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-06-07 11:48:50,655 - llm_as_a_service_logger - INFO - Wandb Logging Enabled
+2024-06-07 11:48:50,655 - llm_as_a_service_logger - INFO - Wandb Logging Enabled
+2024-06-07 11:48:50,655 - llm_as_a_service_logger - INFO - Wandb Logging Enabled
+2024-06-07 11:48:50,655 - llm_as_a_service_logger - INFO - Wandb Logging Enabled
+2024-06-07 11:49:38,209 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-06-07 11:49:38,209 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-06-07 11:49:38,209 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-06-07 11:49:38,209 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-06-07 11:49:39,706 - llm_as_a_service_logger - INFO - Wandb Logging Enabled
+2024-06-07 11:49:39,706 - llm_as_a_service_logger - INFO - Wandb Logging Enabled
+2024-06-07 11:49:39,706 - llm_as_a_service_logger - INFO - Wandb Logging Enabled
+2024-06-07 11:49:39,706 - llm_as_a_service_logger - INFO - Wandb Logging Enabled
+2024-06-07 11:55:52,250 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-06-07 11:55:52,250 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-06-07 11:55:52,250 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-06-07 11:55:52,250 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-06-07 11:55:53,782 - llm_as_a_service_logger - INFO - Wandb Logging Enabled
+2024-06-07 11:55:53,782 - llm_as_a_service_logger - INFO - Wandb Logging Enabled
+2024-06-07 11:55:53,782 - llm_as_a_service_logger - INFO - Wandb Logging Enabled
+2024-06-07 11:55:53,782 - llm_as_a_service_logger - INFO - Wandb Logging Enabled
+2024-06-07 11:57:10,499 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-06-07 11:57:10,499 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-06-07 11:57:10,499 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-06-07 11:57:10,499 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-06-07 11:57:12,079 - llm_as_a_service_logger - INFO - Wandb Logging Enabled
+2024-06-07 11:57:12,079 - llm_as_a_service_logger - INFO - Wandb Logging Enabled
+2024-06-07 11:57:12,079 - llm_as_a_service_logger - INFO - Wandb Logging Enabled
+2024-06-07 11:57:12,079 - llm_as_a_service_logger - INFO - Wandb Logging Enabled
+2024-06-07 11:57:32,472 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-06-07 11:57:32,472 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-06-07 11:57:32,472 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-06-07 11:57:32,472 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-06-07 11:57:32,472 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-06-07 11:57:32,472 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-06-07 11:57:54,514 - llm_as_a_service_logger - INFO - Received request by router: {'username': 'string', 'prompt': 'hi', 'memory': False, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'Llama_70b'}
+2024-06-07 11:57:54,514 - llm_as_a_service_logger - INFO - Received request by router: {'username': 'string', 'prompt': 'hi', 'memory': False, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'Llama_70b'}
+2024-06-07 11:57:54,514 - llm_as_a_service_logger - INFO - Received request by router: {'username': 'string', 'prompt': 'hi', 'memory': False, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'Llama_70b'}
+2024-06-07 11:57:54,514 - llm_as_a_service_logger - INFO - Received request by router: {'username': 'string', 'prompt': 'hi', 'memory': False, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'Llama_70b'}
+2024-06-07 11:57:54,514 - llm_as_a_service_logger - INFO - Received request by router: {'username': 'string', 'prompt': 'hi', 'memory': False, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'Llama_70b'}
+2024-06-07 11:57:54,514 - llm_as_a_service_logger - INFO - Received request by router: {'username': 'string', 'prompt': 'hi', 'memory': False, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'Llama_70b'}
+2024-06-07 11:57:54,515 - llm_as_a_service_logger - INFO - Received request by backend: {'username': 'admin', 'prompt': 'hi', 'memory': False, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'Llama_70b'}
+2024-06-07 11:57:54,515 - llm_as_a_service_logger - INFO - Received request by backend: {'username': 'admin', 'prompt': 'hi', 'memory': False, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'Llama_70b'}
+2024-06-07 11:57:54,515 - llm_as_a_service_logger - INFO - Received request by backend: {'username': 'admin', 'prompt': 'hi', 'memory': False, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'Llama_70b'}
+2024-06-07 11:57:54,515 - llm_as_a_service_logger - INFO - Received request by backend: {'username': 'admin', 'prompt': 'hi', 'memory': False, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'Llama_70b'}
+2024-06-07 11:57:54,515 - llm_as_a_service_logger - INFO - Received request by backend: {'username': 'admin', 'prompt': 'hi', 'memory': False, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'Llama_70b'}
+2024-06-07 11:57:54,515 - llm_as_a_service_logger - INFO - Received request by backend: {'username': 'admin', 'prompt': 'hi', 'memory': False, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'Llama_70b'}
+2024-06-07 11:58:07,056 - llm_as_a_service_logger - INFO - Processed the request successfully
+2024-06-07 11:58:07,056 - llm_as_a_service_logger - INFO - Processed the request successfully
+2024-06-07 11:58:07,056 - llm_as_a_service_logger - INFO - Processed the request successfully
+2024-06-07 11:58:07,056 - llm_as_a_service_logger - INFO - Processed the request successfully
+2024-06-07 11:58:07,056 - llm_as_a_service_logger - INFO - Processed the request successfully
+2024-06-07 11:58:07,056 - llm_as_a_service_logger - INFO - Processed the request successfully

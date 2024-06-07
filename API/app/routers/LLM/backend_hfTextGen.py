@@ -64,7 +64,7 @@ class LLMDeployment:
 
         current_path = pathlib.Path(__file__).parent.parent.parent.parent
         config_path = current_path/ 'cluster_conf.yaml'
-
+        self.RAG_enabled = True
         # Environment variables setup
         with open(config_path, 'r') as self.file:
             self.config = yaml.safe_load(self.file)

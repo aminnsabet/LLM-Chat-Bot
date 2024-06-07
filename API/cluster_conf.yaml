@@ -16,7 +16,7 @@ Ray_service_URL : "http://localhost:8000"
 API_service_URL : "http://localhost:8081"
 DB_name: chat_bot_db
 #----------------------- API Port
-API_port: 8082
+API_port: 8086
 #----------------------- Vector Database Cluster Configuration
 VD_WeaviateEmbedder_num_gpus: 0.1
 VD_deployment_num_gpus: 0.1
