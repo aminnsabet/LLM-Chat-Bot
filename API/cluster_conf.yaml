@@ -2,7 +2,7 @@
 admin_username: admin
 admin_password: admin
 #----------------------- Hugging Configuration
-Hugging_ACCESS_TOKEN : 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
+Hugging_ACCESS_TOKEN : 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
 #----------------------- Weight and Biases Key 
 WANDB_KEY : 0e7a7b13e06cf5b342134be31eba89e3279dec96
 WANDB_ENABLE : True
@@ -16,7 +16,7 @@ Ray_service_URL : "http://localhost:8000"
 API_service_URL : "http://localhost:8081"
 DB_name: chat_bot_db
 #----------------------- API Port
-API_port: 8083
+API_port: 8082
 #----------------------- Vector Database Cluster Configuration
 VD_WeaviateEmbedder_num_gpus: 0.1
 VD_deployment_num_gpus: 0.1
@@ -43,7 +43,7 @@ Langchain_access_key: ls__c832be79a7804c9cb85244aff1782f6e
 LLMs: 
   - name: Llama_7b
     url: "http://localhost:8082/" 
-    model_id: "meta-llama/Llama-2-13b-chat-hf"
+    model_id: "meta-llama/Llama-2-7b-chat-hf"
     temperature: 0.01
     max_new_tokens: 512
     repetition_penalty: 1.1
