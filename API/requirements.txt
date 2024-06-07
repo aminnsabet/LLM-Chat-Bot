@@ -14,6 +14,7 @@ uvicorn
 python-dotenv
 python-jose
 python-multipart
+langchainhub
 torch --index-url https://download.pytorch.org/whl/rocm5.7
 torchvision --index-url https://download.pytorch.org/whl/rocm5.7
 torchaudio --index-url https://download.pytorch.org/whl/rocm5.7
