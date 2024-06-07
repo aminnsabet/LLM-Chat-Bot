@@ -24,7 +24,7 @@ def get_route_prefix_for_llm(llm_name):
     return None
 
 Ray_service_URL = config.get("Ray_service_URL")
-llm = LLMDeployment(model_tokenizer="meta-llama/Llama-2-13b-chat-hf")
+llm = LLMDeployment(model_tokenizer="meta-llama/Llama-2-7b-chat-hf")
 router = APIRouter()
 
 @router.post("/")

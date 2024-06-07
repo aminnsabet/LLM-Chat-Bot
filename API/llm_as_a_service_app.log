@@ -1022,3 +1022,35 @@
 2024-03-26 15:08:24,115 - llm_as_a_service_logger - INFO - Processed the request successfully
 2024-03-26 15:08:24,115 - llm_as_a_service_logger - INFO - Processed the request successfully
 2024-03-26 15:08:24,115 - llm_as_a_service_logger - INFO - Processed the request successfully
+2024-06-07 11:15:11,693 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-06-07 11:15:11,693 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-06-07 11:15:11,693 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-06-07 11:15:11,693 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-06-07 11:15:13,201 - llm_as_a_service_logger - INFO - Wandb Logging Enabled
+2024-06-07 11:15:13,201 - llm_as_a_service_logger - INFO - Wandb Logging Enabled
+2024-06-07 11:15:13,201 - llm_as_a_service_logger - INFO - Wandb Logging Enabled
+2024-06-07 11:15:13,201 - llm_as_a_service_logger - INFO - Wandb Logging Enabled
+2024-06-07 11:15:37,455 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-06-07 11:15:37,455 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-06-07 11:15:37,455 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-06-07 11:15:37,455 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-06-07 11:15:38,939 - llm_as_a_service_logger - INFO - Wandb Logging Enabled
+2024-06-07 11:15:38,939 - llm_as_a_service_logger - INFO - Wandb Logging Enabled
+2024-06-07 11:15:38,939 - llm_as_a_service_logger - INFO - Wandb Logging Enabled
+2024-06-07 11:15:38,939 - llm_as_a_service_logger - INFO - Wandb Logging Enabled
+2024-06-07 11:16:39,467 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-06-07 11:16:39,467 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-06-07 11:16:39,467 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-06-07 11:16:39,467 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-06-07 11:16:40,979 - llm_as_a_service_logger - INFO - Wandb Logging Enabled
+2024-06-07 11:16:40,979 - llm_as_a_service_logger - INFO - Wandb Logging Enabled
+2024-06-07 11:16:40,979 - llm_as_a_service_logger - INFO - Wandb Logging Enabled
+2024-06-07 11:16:40,979 - llm_as_a_service_logger - INFO - Wandb Logging Enabled
+2024-06-07 11:25:25,662 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-06-07 11:25:25,662 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-06-07 11:25:25,662 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-06-07 11:25:25,662 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-06-07 11:25:27,167 - llm_as_a_service_logger - INFO - Wandb Logging Enabled
+2024-06-07 11:25:27,167 - llm_as_a_service_logger - INFO - Wandb Logging Enabled
+2024-06-07 11:25:27,167 - llm_as_a_service_logger - INFO - Wandb Logging Enabled
+2024-06-07 11:25:27,167 - llm_as_a_service_logger - INFO - Wandb Logging Enabled
