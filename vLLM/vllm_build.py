@@ -1,24 +1,84 @@
 import os
 import threading
 import socket
+import logging
 from fastapi import FastAPI, HTTPException
-from pydantic import BaseModel
+from pydantic import BaseModel, field_validator
 import docker
 import uvicorn
 import traceback
 import requests
+from typing import Optional
 
 app = FastAPI()
 
 class EngineArgs(BaseModel):
     HUGGING_FACE_HUB_TOKEN: str
-    model: str
+    MODEL: str
+    TOKENIZER: Optional[str] = 'auto'
+    MAX_MODEL_LEN: Optional[int] = 512
+    TENSOR_PARALLEL_SIZE: Optional[int] = 1
+    SEED: Optional[int] = 42
+    QUANTIZATION: Optional[str] = None
+
+    @field_validator('HUGGING_FACE_HUB_TOKEN')
+    def validate_huggingface_token(cls, value):
+        headers = {"Authorization": f"Bearer {value}"}
+        response = requests.get("https://huggingface.co/api/whoami-v2", headers=headers)
+        if response.status_code != 200:
+            raise ValueError("Invalid Hugging Face token.")
+        return value
+
+    @field_validator('MODEL')
+    def validate_huggingface_model(cls, value):
+        response = requests.head(f"https://huggingface.co/{value}")
+        if response.status_code != 200:
+            raise ValueError("Invalid Hugging Face model.")
+        return value
+
+    @field_validator('TOKENIZER')
+    def validate_huggingface_tokenizer(cls, value):
+        if value != 'auto':
+            response = requests.head(f"https://huggingface.co/{value}")
+            if response.status_code != 200:
+                raise ValueError("Invalid Hugging Face tokenizer.")
+        return value
+
+    @field_validator('MAX_MODEL_LEN')
+    def validate_max_model_len(cls, value):
+        if value <= 0:
+            raise ValueError("MAX_MODEL_LEN must be a positive integer.")
+        return value
+
+    @field_validator('TENSOR_PARALLEL_SIZE')
+    def validate_tensor_parallel_size(cls, value):
+        if value <= 0:
+            raise ValueError("TENSOR_PARALLEL_SIZE must be a positive integer.")
+        return value
+
+    @field_validator('SEED')
+    def validate_seed(cls, value):
+        if value < 0:
+            raise ValueError("SEED must be a non-negative integer.")
+        return value
+
+    @field_validator('QUANTIZATION')
+    def validate_quantization(cls, value):
+        valid_options = [
+            "aqlm", "awq", "deepspeedfp", "fp8", "marlin",
+            "gptq_marlin_24", "gptq_marlin", "gptq", "squeezellm",
+            "compressed-tensors", "bitsandbytes"
+        ]
+        if value is not None and value not in valid_options:
+            raise ValueError(f"QUANTIZATION must be one of {valid_options}.")
+        return value
 
 def capture_logs(container, log_file_path):
-    with open(log_file_path, 'w') as log_file:
-        for line in container.logs(stream=True):
+    with open(log_file_path, 'a') as log_file:  # Open in append mode
+        for line in container.logs(stream=True, stdout=True, stderr=True):
             decoded_line = line.strip().decode('utf-8')
             log_file.write(decoded_line + '\n')
+            log_file.flush()  # Ensure each log line is written immediately
 
 def find_free_port(start=8500, end=8700):
     for port in range(start, end + 1):
@@ -44,7 +104,7 @@ def run_docker(engine_args: EngineArgs):
     if user_info is None:
         raise HTTPException(status_code=400, detail="Invalid Hugging Face token.")
     
-    if not validate_huggingface_model(engine_args.model):
+    if not validate_huggingface_model(engine_args.MODEL):
         raise HTTPException(status_code=400, detail="Invalid Hugging Face model.")
 
     client = docker.from_env()
@@ -63,11 +123,17 @@ def run_docker(engine_args: EngineArgs):
 
     try:
         free_port = find_free_port()
-        ports = {f'{free_port}/tcp': free_port}
+        ports = {8000:f'{free_port}/tcp'}  # Map the external port to the internal port 8000
+
+        command = f"--model {engine_args.MODEL} --max-model-len {engine_args.MAX_MODEL_LEN}"
+        if engine_args.QUANTIZATION:
+            command += f" --quantization {engine_args.QUANTIZATION}"
+        if engine_args.TOKENIZER and engine_args.TOKENIZER != 'auto':
+            command += f" --tokenizer {engine_args.TOKENIZER}"
 
         container = client.containers.run(
             'vllm/vllm-openai:latest',
-            command=f"--model {engine_args.model} --max-model-len 512",
+            command=command,
             runtime='nvidia',
             volumes=volumes,
             environment=env_vars,
@@ -87,18 +153,19 @@ def run_docker(engine_args: EngineArgs):
 
         logging.info(f"Container started successfully. Port: {free_port}")
         logging.info(f"User info: {user_info}")
-        logging.info(f"container ID: {container.id}")
+        logging.info(f"Container ID: {container.id}")
         
         return {
             "message": "Container started successfully",
-            "vLLM_endpoint": f"http://localhost:{free_port}/v1/",
+            "vLLM_endpoint": f"http://localhost:{free_port}/v1/completions",
             "user_info": user_info
         }
     except Exception as e:
         # Log error message to the log file
-        with open(log_file_path, 'a') as log_file:
+        with open(log_file_path, 'a') as log_file:  # Open in append mode
             log_file.write(f"Error: {str(e)}\n")
             log_file.write(traceback.format_exc())
+            log_file.flush()
 
         raise HTTPException(status_code=500, detail=str(e))
 
