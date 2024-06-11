@@ -1,111 +1,106 @@
+import os
+import threading
+import socket
 from fastapi import FastAPI, HTTPException
-from pydantic import BaseModel, Field
+from pydantic import BaseModel
 import docker
-from typing import Optional
-import os 
+import uvicorn
+import traceback
+import requests
 
 app = FastAPI()
 
 class EngineArgs(BaseModel):
     HUGGING_FACE_HUB_TOKEN: str
-    model: str = Field(default="facebook/opt-125m")
-    tokenizer: Optional[str] = None
-    skip_tokenizer_init: bool = Field(default=False)
-    revision: Optional[str] = None
-    code_revision: Optional[str] = None
-    tokenizer_revision: Optional[str] = None
-    tokenizer_mode: str = Field(default="auto", choices=["auto", "slow"])
-    trust_remote_code: bool = Field(default=False)
-    download_dir: Optional[str] = None
-    load_format: str = Field(default="auto", choices=["auto", "pt", "safetensors", "npcache", "dummy", "tensorizer", "bitsandbytes"])
-    dtype: str = Field(default="auto", choices=["auto", "half", "float16", "bfloat16", "float", "float32"])
-    kv_cache_dtype: str = Field(default="auto", choices=["auto", "fp8", "fp8_e5m2", "fp8_e4m3"])
-    quantization_param_path: Optional[str] = None
-    max_model_len: Optional[int] = Field(default=1024)
-    guided_decoding_backend: str = Field(default="outlines", choices=["outlines", "lm-format-enforcer"])
-    distributed_executor_backend: str = Field(default="mp", choices=["ray", "mp"])
-    worker_use_ray: bool = Field(default=False)
-    pipeline_parallel_size: int = Field(default=1)
-    tensor_parallel_size: int = Field(default=1)
-    max_parallel_loading_workers: Optional[int] = Field(default=1)
-    ray_workers_use_nsight: bool = Field(default=False)
-    block_size: int = Field(default=16, choices=[8, 16, 32])
-    enable_prefix_caching: bool = Field(default=False)
-    disable_sliding_window: bool = Field(default=False)
-    use_v2_block_manager: bool = Field(default=False)
-    num_lookahead_slots: int = Field(default=0)
-    seed: int = Field(default=0)
-    swap_space: int = Field(default=4)
-    gpu_memory_utilization: float = Field(default=0.9)
-    num_gpu_blocks_override: Optional[int] = Field(default=1)
-    max_num_batched_tokens: Optional[int] = None
-    max_num_seqs: int = Field(default=256)
-    max_logprobs: int = Field(default=5)
-    disable_log_stats: bool = Field(default=False)
-    quantization: Optional[str] = Field(default=None, choices=["aqlm", "awq", "deepspeedfp", "fp8", "marlin", "gptq_marlin_24", "gptq_marlin", "gptq", "squeezellm", "sparseml", "bitsandbytes", "None"])
-    rope_scaling: Optional[str] = None
-    enforce_eager: bool = Field(default=False)
-    max_context_len_to_capture: Optional[int] = None
-    max_seq_len_to_capture: int = Field(default=8192)
-    disable_custom_all_reduce: bool = Field(default=False)
-    tokenizer_pool_size: int = Field(default=0)
-    tokenizer_pool_type: str = Field(default="ray")
-    tokenizer_pool_extra_config: Optional[str] = None
-    enable_lora: bool = Field(default=False)
-    max_loras: int = Field(default=1)
-    max_lora_rank: int = Field(default=16)
-    lora_extra_vocab_size: int = Field(default=256)
-    lora_dtype: str = Field(default="auto", choices=["auto", "float16", "bfloat16", "float32"])
-    long_lora_scaling_factors: Optional[str] = None
-    max_cpu_loras: Optional[int] = None
-    fully_sharded_loras: bool = Field(default=False)
-    device: str = Field(default="auto", choices=["auto", "cuda", "neuron", "cpu"])
-    image_input_type: Optional[str] = Field(default=None, choices=["pixel_values", "image_features"])
-    image_token_id: Optional[int] = None
-    image_input_shape: Optional[str] = None
-    image_feature_size: Optional[int] = None
-    image_processor: Optional[str] = None
-    image_processor_revision: Optional[str] = None
-    disable_image_processor: bool = Field(default=False)
-    scheduler_delay_factor: float = Field(default=0.0)
-    enable_chunked_prefill: bool = Field(default=False)
-    speculative_model: Optional[str] = None
-    num_speculative_tokens: Optional[int] = None
-    speculative_max_model_len: Optional[int] = None
-    speculative_disable_by_batch_size: Optional[int] = None
-    ngram_prompt_lookup_max: Optional[int] = None
-    ngram_prompt_lookup_min: Optional[int] = None
-    model_loader_extra_config: Optional[str] = None
-    preemption_mode: Optional[str] = Field(default=None, choices=["recompute", "swap"])
-    served_model_name: Optional[str] = None
+    model: str
+
+def capture_logs(container, log_file_path):
+    with open(log_file_path, 'w') as log_file:
+        for line in container.logs(stream=True):
+            decoded_line = line.strip().decode('utf-8')
+            log_file.write(decoded_line + '\n')
+
+def find_free_port(start=8500, end=8700):
+    for port in range(start, end + 1):
+        with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
+            if s.connect_ex(('localhost', port)) != 0:
+                return port
+    raise Exception("No free port found in the specified range.")
+
+def validate_huggingface_token(token: str):
+    headers = {"Authorization": f"Bearer {token}"}
+    response = requests.get("https://huggingface.co/api/whoami-v2", headers=headers)
+    if response.status_code == 200:
+        return response.json().get("name")
+    return None
+
+def validate_huggingface_model(model: str):
+    response = requests.head(f"https://huggingface.co/{model}")
+    return response.status_code == 200
 
 @app.post("/run-docker")
 def run_docker(engine_args: EngineArgs):
-    try:
-        client = docker.from_env()
-        home_directory = os.path.expanduser("~")
-        volume_path = os.path.join(home_directory, ".cache/huggingface")
-        volumes = {volume_path: {'bind': '/root/.cache/huggingface', 'mode': 'rw'}}
-        env_vars = {'HUGGING_FACE_HUB_TOKEN': engine_args.HUGGING_FACE_HUB_TOKEN}  # Add other necessary environment variables here
-        ports = {'8000/tcp': 8001}
+    user_info = validate_huggingface_token(engine_args.HUGGING_FACE_HUB_TOKEN)
+    if user_info is None:
+        raise HTTPException(status_code=400, detail="Invalid Hugging Face token.")
+    
+    if not validate_huggingface_model(engine_args.model):
+        raise HTTPException(status_code=400, detail="Invalid Hugging Face model.")
 
-       
+    client = docker.from_env()
+
+    home_directory = os.path.expanduser("~")
+    volume_path = os.path.join(home_directory, ".cache/huggingface")
+    volumes = {volume_path: {'bind': '/root/.cache/huggingface', 'mode': 'rw'}}
+    env_vars = {'HUGGING_FACE_HUB_TOKEN': engine_args.HUGGING_FACE_HUB_TOKEN}
+
+    log_file_path = "/home/amin_sabet/dev/LLM-Chat-Bot/vLLM/file.log"
+
+    # Ensure the directory exists
+    log_dir = os.path.dirname(log_file_path)
+    if not os.path.exists(log_dir):
+        os.makedirs(log_dir)
+
+    try:
+        free_port = find_free_port()
+        ports = {f'{free_port}/tcp': free_port}
+
         container = client.containers.run(
-                'vllm/vllm-openai:latest',
-                command=f"--model {engine_args.model} --tokenizer {engine_args.tokenizer}",
-                runtime='nvidia',
-                volumes=volumes,
-                environment=env_vars,
-                ports=ports,
-                ipc_mode='host',
-                detach=True
+            'vllm/vllm-openai:latest',
+            command=f"--model {engine_args.model} --max-model-len 512",
+            runtime='nvidia',
+            volumes=volumes,
+            environment=env_vars,
+            ports=ports,
+            ipc_mode='host',
+            detach=True
         )
         
-        return {"message": "Container started successfully", "container_id": container.id}
+        # Start a thread to capture logs asynchronously
+        log_thread = threading.Thread(target=capture_logs, args=(container, log_file_path))
+        log_thread.start()
+
+        # Check container status
+        container.reload()
+        if container.status != "running":
+            raise Exception("Container failed to start. Check the logs for more details.")
+
+        logging.info(f"Container started successfully. Port: {free_port}")
+        logging.info(f"User info: {user_info}")
+        logging.info(f"container ID: {container.id}")
+        
+        return {
+            "message": "Container started successfully",
+            "vLLM_endpoint": f"http://localhost:{free_port}/v1/",
+            "user_info": user_info
+        }
     except Exception as e:
+        # Log error message to the log file
+        with open(log_file_path, 'a') as log_file:
+            log_file.write(f"Error: {str(e)}\n")
+            log_file.write(traceback.format_exc())
+
         raise HTTPException(status_code=500, detail=str(e))
 
-
 if __name__ == "__main__":
-    import uvicorn
-    uvicorn.run(app, host="0.0.0.0", port=8000)
+    uvicorn.run("app:app", host="0.0.0.0", port=8000, reload=True)
