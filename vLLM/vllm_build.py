@@ -9,7 +9,7 @@ import uvicorn
 import traceback
 import requests
 from typing import Optional
-
+import time
 app = FastAPI()
 
 class EngineArgs(BaseModel):
@@ -98,6 +98,18 @@ def validate_huggingface_model(model: str):
     response = requests.head(f"https://huggingface.co/{model}")
     return response.status_code == 200
 
+def check_vllm_health(endpoint: str, timeout: int = 60, interval: int = 5):
+    start_time = time.time()
+    while time.time() - start_time < timeout:
+        try:
+            response = requests.get(endpoint)
+            if response.status_code == 200:
+                return True
+        except requests.RequestException as e:
+            logging.error(f"Health check error: {str(e)}")
+        time.sleep(interval)
+    return False
+
 @app.post("/run-docker")
 def run_docker(engine_args: EngineArgs):
     user_info = validate_huggingface_token(engine_args.HUGGING_FACE_HUB_TOKEN)
@@ -151,15 +163,19 @@ def run_docker(engine_args: EngineArgs):
         if container.status != "running":
             raise Exception("Container failed to start. Check the logs for more details.")
 
-        logging.info(f"Container started successfully. Port: {free_port}")
-        logging.info(f"User info: {user_info}")
-        logging.info(f"Container ID: {container.id}")
-        
-        return {
-            "message": "Container started successfully",
-            "vLLM_endpoint": f"http://localhost:{free_port}/v1/completions",
-            "user_info": user_info
-        }
+        health_check_endpoint = f"http://localhost:{free_port}/metrics"
+        if check_vllm_health(health_check_endpoint):
+            logging.info(f"Container started successfully. Port: {free_port}")
+            logging.info(f"User info: {user_info}")
+            logging.info(f"Container ID: {container.id}")
+            return {
+                "message": "Container started successfully and vLLM server is healthy",
+                "vLLM_endpoint": f"http://localhost:{free_port}/v1/completions",
+                "user_info": user_info
+            }
+        else:
+            raise Exception("Container did not pass health check.")
+
     except Exception as e:
         # Log error message to the log file
         with open(log_file_path, 'a') as log_file:  # Open in append mode
@@ -168,6 +184,3 @@ def run_docker(engine_args: EngineArgs):
             log_file.flush()
 
         raise HTTPException(status_code=500, detail=str(e))
-
-if __name__ == "__main__":
-    uvicorn.run("app:app", host="0.0.0.0", port=8000, reload=True)
