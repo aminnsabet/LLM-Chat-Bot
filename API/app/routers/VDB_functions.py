@@ -45,9 +45,10 @@ async def query_vectorDB(class_name: str = Form(...),
                           file_path: Optional[str] = Form(None),
                           current_user: User = Depends(get_current_active_user),
                           file: UploadFile = File(None),
-                          file_title: Optional[str] = Form(None)):
+                          file_title: Optional[str] = Form(None),
+                          query: Optional[str] = Form(...)):
     try:
-        print(f"received data: {class_name}, {mode}, {vectorDB_type}, {file_path}, {current_user.username}")
+        print(f"received data: {class_name}, {mode}, {vectorDB_type}, {file_path}, {current_user.username}, {query}")
         print(f"Received file: {file.filename if file else 'No file'}")
         username = current_user.username
 
@@ -78,6 +79,7 @@ async def query_vectorDB(class_name: str = Form(...),
             "vectorDB_type": vectorDB_type,
             "file_path": file_path,
             "file_title": file_title,
+            "query": query,
         }
         # Send the request to the external service
         response = requests.post(f"{Ray_service_URL}/VectorDB", json=data_dict)

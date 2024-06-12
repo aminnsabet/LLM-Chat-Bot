@@ -26,6 +26,7 @@ from langchain_community.document_loaders import PyPDFLoader
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from weaviate.classes.config import Configure, Property, DataType
 from weaviate.auth import AuthApiKey
+from weaviate.classes.query import MetadataQuery
 
 
 class Config:
@@ -47,6 +48,7 @@ class VDBaseInput(BaseModel):
     vectorDB_type: Optional[str] = "Weaviate"
     file_path: Optional[str] = None
     file_title: Optional[str] = None
+    query: Optional[str] = None
 
 
 
@@ -117,7 +119,7 @@ class VectorDataBase:
         # self.weaviate_client = weaviate.Client(
         #     url=config.weaviate_client_url,   
         # )
-        self.weaviate_vectorstore = Weaviate(self.weaviate_client, 'Chatbot', 'page_content', attributes=['page_content'])
+        #self.weaviate_vectorstore = Weaviate(self.weaviate_client, 'Chatbot', 'page_content', attributes=['page_content'])
         self.num_actors = config.VD_number_actors
         self.chunk_size = config.VD_chunk_size
         self.chunk_overlap = config.VD_chunk_overlap
@@ -330,10 +332,10 @@ class VectorDataBase:
                             model=vectorizer,
                         ),
                         properties=[  # properties configuration is optional
-                        Property(name="title", data_type=DataType.TEXT),
-                        Property(name="body", data_type=DataType.TEXT),
-                    ],
-                )
+                            Property(name="title", data_type=DataType.TEXT),
+                            Property(name="body", data_type=DataType.TEXT),
+                        ],
+                    )
                 database_response = self.database.add_collection({"username": username, "collection_name": class_name})
                 if database_response:
                     self.logger.info("class name added successfully to database")     
@@ -509,6 +511,60 @@ class VectorDataBase:
         except Exception as e:
                 return {"error": str(e)}
         
+    ### SEARCH FUNCTIONS ###
+    def basic_vector_search(self, username, cls):
+        self.weaviate_client = weaviate.connect_to_local(   # `weaviate_key`: your Weaviate API key
+                    headers={
+                        "X-HuggingFace-Api-Key": "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"
+                        }
+                )
+        class_name = str(username) + "_" + str(cls)
+        selected_class = self.weaviate_client.collections.get(class_name)
+        response = selected_class.query.fetch_objects(
+            #include_vector = True,
+            limit= 2
+        )
+        return response
+    
+    def similarity_vector_search(self, username, cls, user_query):
+        self.weaviate_client = weaviate.connect_to_local(   # `weaviate_key`: your Weaviate API key
+                    headers={
+                        "X-HuggingFace-Api-Key": "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"
+                        }
+                )
+        class_name = str(username) + "_" + str(cls)
+        selected_class = self.weaviate_client.collections.get(class_name)
+        self.logger.info(f"info on query passed: {user_query} and the class name: {selected_class}")
+        response = selected_class.query.near_text(
+            query=str(user_query),
+            limit=2,
+            return_metadata=MetadataQuery(distance=True)
+        )
+        for o in response.objects:
+            self.logger.info(f"logged properties: {o.properties}")
+            self.logger.info(f"logged distance: {o.metadata.distance}")
+        return response
+
+    def keyword_search(self, username, cls, user_query):
+        self.weaviate_client = weaviate.connect_to_local(   # `weaviate_key`: your Weaviate API key
+                    headers={
+                        "X-HuggingFace-Api-Key": "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"
+                        }
+                )
+        class_name = str(username) + "_" + str(cls)
+        selected_class = self.weaviate_client.collections.get(class_name)
+        self.logger.info(f"info on query passed: {user_query} and the class name: {selected_class}")
+        response = selected_class.query.bm25(
+            query=str(user_query),
+            return_metadata=MetadataQuery(score=True),
+            limit=3
+        )
+        for o in response.objects:
+            self.logger.info(f"logged properties: {o.properties}")
+            self.logger.info(f"logged score: {o.metadata.score}")
+        return response
+
+
     @VDB_app.post("/")
     async def VectorDataBase(self, request: VDBaseInput):
             try:
@@ -516,6 +572,18 @@ class VectorDataBase:
                     #self.logger.info(f"request received {request}: %s", )
                     response  = self.process_all_docs(request.file_path, request.username, request.class_name)
                     self.logger.info(f"response: {response}: %s", )
+                elif request.mode == "basic_search":
+                    response = self.basic_vector_search(request.username, request.class_name)
+                    self.logger.info(f"Here is the response after basic search request: {response}")
+                    return response
+                elif request.mode == "similarity_search":
+                    response = self.similarity_vector_search(request.username, request.class_name, request.query)
+                    self.logger.info(f"Here is the response after similarity search request: {response}")
+                    return response
+                elif request.mode == "keyword_search":
+                    response = self.keyword_search(request.username, request.class_name, request.query)
+                    self.logger.info(f"Here is the response after keyword search request: {response}")
+                    return response
                 elif request.mode == "display_classes":
                     response = self.get_classes(request.username)
                     self.logger.info(f"classes: {response}: %s", )

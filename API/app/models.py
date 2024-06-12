@@ -55,6 +55,7 @@ class VectorDBRequest(BaseModel):
     vectorDB_type: Optional[str] = "Weaviate"
     file_path: Optional[str] = None
     file_title: Optional[str] = None
+    query: Optional[str] = None
 
 class ArxivInput(BaseModel):
     username: Optional[str]
