@@ -1,31 +1,541 @@
-2024-03-15 17:12:31,247 - INFO - Received requests to /inference endpoint
-2024-03-15 17:12:31,348 - INFO - Received a batch of request with batch size of: 1 
-2024-03-15 17:12:31,350 - INFO - Received request: {'username': 'admin', 'prompt': 'Hi', 'memory': False, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'Llama_13b'}
-2024-03-15 17:12:32,915 - INFO - Processed the request successfully
-2024-03-18 13:48:08,996 - INFO - Received requests to /inference endpoint
-2024-03-18 13:48:09,097 - INFO - Received a batch of request with batch size of: 1 
-2024-03-18 13:48:09,099 - INFO - Received request: {'username': 'admin', 'prompt': 'hi', 'memory': False, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'Llama_13b'}
-2024-03-18 13:48:11,996 - INFO - Processed the request successfully
-2024-06-12 12:27:33,147 - INFO - checking the request/ username='admin' class_name='test_1' mode='create_collection' vectorDB_type='Weaviate' file_path=None file_title=None: %s
-2024-06-12 12:27:33,164 - INFO - HTTP Request: GET http://localhost:8080/v1/.well-known/openid-configuration "HTTP/1.1 404 Not Found"
-2024-06-12 12:27:33,181 - INFO - HTTP Request: GET http://localhost:8080/v1/meta "HTTP/1.1 200 OK"
-2024-06-12 12:27:33,244 - INFO - HTTP Request: GET https://pypi.org/pypi/weaviate-client/json "HTTP/1.1 200 OK"
-2024-06-12 12:27:33,337 - INFO - HTTP Request: POST http://localhost:8080/v1/schema "HTTP/1.1 200 OK"
-2024-06-12 12:27:33,350 - INFO - class name added successfully to database
-2024-06-12 12:27:33,350 - INFO - success: class test_1 created for user admin
-2024-06-12 12:31:06,834 - INFO - HTTP Request: GET http://localhost:8080/v1/.well-known/openid-configuration "HTTP/1.1 404 Not Found"
-2024-06-12 12:31:06,851 - INFO - HTTP Request: GET http://localhost:8080/v1/meta "HTTP/1.1 200 OK"
-2024-06-12 12:31:06,910 - INFO - HTTP Request: GET https://pypi.org/pypi/weaviate-client/json "HTTP/1.1 200 OK"
-2024-06-12 12:31:06,933 - INFO - HTTP Request: GET http://localhost:8080/v1/schema "HTTP/1.1 200 OK"
-2024-06-12 12:31:06,934 - INFO - classes: {'Admin_test_1': _CollectionConfigSimple(name='Admin_test_1', description=None, generative_config=None, properties=[_Property(name='title', description=None, data_type=<DataType.TEXT: 'text'>, index_filterable=True, index_searchable=True, nested_properties=None, tokenization=<Tokenization.WORD: 'word'>, vectorizer_config=_PropertyVectorizerConfig(skip=False, vectorize_property_name=True), vectorizer='text2vec-huggingface'), _Property(name='body', description=None, data_type=<DataType.TEXT: 'text'>, index_filterable=True, index_searchable=True, nested_properties=None, tokenization=<Tokenization.WORD: 'word'>, vectorizer_config=_PropertyVectorizerConfig(skip=False, vectorize_property_name=True), vectorizer='text2vec-huggingface')], references=[], reranker_config=None, vectorizer_config=_VectorizerConfig(vectorizer=<Vectorizers.TEXT2VEC_HUGGINGFACE: 'text2vec-huggingface'>, model={'model': 'sentence-transformers/all-MiniLM-L6-v2'}, vectorize_collection_name=True), vectorizer=<Vectorizers.TEXT2VEC_HUGGINGFACE: 'text2vec-huggingface'>, vector_config=None)}: %s
-2024-06-12 12:33:14,892 - INFO - HTTP Request: GET http://localhost:8080/v1/.well-known/openid-configuration "HTTP/1.1 404 Not Found"
-2024-06-12 12:33:14,909 - INFO - HTTP Request: GET http://localhost:8080/v1/meta "HTTP/1.1 200 OK"
-2024-06-12 12:33:14,971 - INFO - HTTP Request: GET https://pypi.org/pypi/weaviate-client/json "HTTP/1.1 200 OK"
-2024-06-12 12:33:14,991 - INFO - HTTP Request: GET http://localhost:8080/v1/schema "HTTP/1.1 200 OK"
-2024-06-12 12:33:14,993 - INFO - classes: {'Admin_test_1': _CollectionConfigSimple(name='Admin_test_1', description=None, generative_config=None, properties=[_Property(name='title', description=None, data_type=<DataType.TEXT: 'text'>, index_filterable=True, index_searchable=True, nested_properties=None, tokenization=<Tokenization.WORD: 'word'>, vectorizer_config=_PropertyVectorizerConfig(skip=False, vectorize_property_name=True), vectorizer='text2vec-huggingface'), _Property(name='body', description=None, data_type=<DataType.TEXT: 'text'>, index_filterable=True, index_searchable=True, nested_properties=None, tokenization=<Tokenization.WORD: 'word'>, vectorizer_config=_PropertyVectorizerConfig(skip=False, vectorize_property_name=True), vectorizer='text2vec-huggingface')], references=[], reranker_config=None, vectorizer_config=_VectorizerConfig(vectorizer=<Vectorizers.TEXT2VEC_HUGGINGFACE: 'text2vec-huggingface'>, model={'model': 'sentence-transformers/all-MiniLM-L6-v2'}, vectorize_collection_name=True), vectorizer=<Vectorizers.TEXT2VEC_HUGGINGFACE: 'text2vec-huggingface'>, vector_config=None)}: %s
-2024-06-12 12:34:06,591 - INFO - actors creation successful [Actor(WeaviateEmbedder, d540048a86f27b2b63d829de02000000), Actor(WeaviateEmbedder, 748567124b0f1b3d2e5bb6c902000000), Actor(WeaviateEmbedder, 141cc17c5117a9b97af208c702000000)]: %s
-2024-06-12 12:34:06,610 - INFO - check 1st step of ray was successful
-2024-06-12 12:34:06,610 - INFO - check if ray was successful:
-2024-06-12 12:34:06,611 - INFO - response: {'status': 'success', 'message': 'Processed 342 documents in batches for class admin_test_1.'}: %s
-2024-06-12 12:34:06,611 - INFO - request processed successfully username='admin' class_name='test_1' mode='add_to_collection' vectorDB_type='Weaviate' file_path='/home/nilsb/LLM-Chat-Bot/API/received_files/008a2c9467f55c83' file_title=None: %s
-2024-06-12 12:36:01,957 - INFO - query success: 1 documents found
+2024-06-12 15:09:41,547 - INFO - HTTP Request: GET http://localhost:8080/v1/.well-known/openid-configuration "HTTP/1.1 404 Not Found"
+2024-06-12 15:09:41,564 - INFO - HTTP Request: GET http://localhost:8080/v1/meta "HTTP/1.1 200 OK"
+2024-06-12 15:09:41,625 - INFO - HTTP Request: GET https://pypi.org/pypi/weaviate-client/json "HTTP/1.1 200 OK"
+2024-06-12 15:09:41,646 - INFO - Here is the response after basic search request: QueryReturn(objects=[Object(uuid=_WeaviateUUIDInt('02b38b9f-401b-46c8-9d69-2d1f958a4798'), metadata=MetadataReturn(creation_time=None, last_update_time=None, distance=None, certainty=None, score=None, explain_score=None, is_consistent=None, rerank_score=None), properties={'title': None, 'page_content': '285. de Moncan 2009, p. 169.\n286. de Moncan 2009, p. 89-106.\n287. Opéra qu’il ne voit jamais abouti.\n288. de Moncan 2009, p. 39.\n289. de Moncan 2009, p. 69-70.\n290. de Moncan 2009, p. 201-202.\n291. Louis Réau, Histoire du vandalisme, Paris, 1994, cité par de Moncan 2009, p. 203.\n292. de Moncan 2009, p. 173.\n293. de Moncan 2009, p. 33-35.\n294. Milza 2007, p. 476-477.\n295. Antonetti 1986, p. 290.\n296. Anceau 2008, p. 423 et suivantes.\n297. Anceau 2008, p. 424.\n298. Milza 2007, p. 495-496.\n299. Anceau 2008, p. 424-425.\n300. Milza 2007, p. 497.\n301. Éric Anceau, p. 426.\n302. Antonetti 1986, p. 292.\n303. Milza 2007, p. 590.\n304. Anceau 2008, p. 462.\n305. Milza 2007, p. 657.\n306. Milza 2007, p. 591.\n307. Milza 2007, p. 657-658.\n308. « Chronologie indicative de l’histoire du mouvement ouvrier français de 1864 à 1870 (http://www.maitron.org/spip.p\nhp?article156) », sur Maitron.org (consulté le 7 juillet 2016), Chronologie indicative de l’histoire du mouvement\nouvrier français, 1864-1870.', 'body': None, 'document_title': 'Napoléon_III.pdf'}, references=None, vector={'default': [-0.051479388028383255, 0.08721420168876648, 0.022881509736180305, -0.033520109951496124, 0.004172426648437977, 0.01652952842414379, -0.07577482610940933, 0.07264172285795212, -0.03390935808420181, 0.018266061320900917, 0.0007766862399876118, -0.0446397140622139, 0.08274365216493607, -0.026928706094622612, -0.1053740605711937, -0.0967835783958435, -0.03866329416632652, 0.0030881750863045454, 0.07135331630706787, 0.043925490230321884, 0.027215316891670227, -0.013347514905035496, 0.09749262034893036, -0.012077422812581062, 0.05173367261886597, 0.023356277495622635, -0.07116149365901947, 0.015302558429539204, -0.03156997635960579, -0.06019223853945732, 0.027682075276970863, 0.02527356892824173, -0.025590337812900543, -0.08524008840322495, 0.002169295446947217, -0.015761910006403923, 0.033387575298547745, 0.02984132245182991, 0.01429742295295, 0.06566281616687775, -0.02234208770096302, 0.03299146518111229, -0.048132505267858505, -0.01345620397478342, -0.03530395030975342, -0.06925450265407562, -0.023391297087073326, 0.02227139286696911, -0.019414590671658516, 0.03497999906539917, 0.04282402992248535, 0.07932065427303314, -0.04683675989508629, 0.026377761736512184, -0.07221668213605881, -0.09763015061616898, -0.04266734793782234, -0.022536389529705048, 0.07438376545906067, 0.05243471637368202, -0.0123976469039917, 0.09575141221284866, -0.10852648317813873, 0.021583080291748047, -0.059735871851444244, -0.047494079917669296, -0.04456494003534317, -0.028288263827562332, -0.07947932183742523, 0.11936280131340027, 0.01848863996565342, -0.051080841571092606, -0.029691925272345543, -0.05703187361359596, -0.018700934946537018, 0.029378794133663177, -0.03410157188773155, -0.02267734706401825, -0.08227747678756714, -0.1645277887582779, 0.029209047555923462, -0.07429230213165283, -0.0010973875178024173, -0.012138841673731804, 0.034227751195430756, 0.007085335906594992, 0.07881753146648407, -0.03714681789278984, 0.0978875458240509, -0.03418131172657013, 0.0709277093410492, 0.06882365792989731, -0.024327397346496582, 0.03321508690714836, 0.022385286167263985, 0.009134335443377495, 0.019653256982564926, 0.12295201420783997, 0.033574894070625305, 0.079826720058918, 0.03361835330724716, -0.066853366792202, -0.030761605128645897, 0.05001721531152725, -0.07950213551521301, 0.03842883184552193, 0.011474820785224438, -0.01462691929191351, -0.05219005420804024, -0.0340169258415699, -0.021434234455227852, -0.07405633479356766, 0.029503650963306427, -0.022930428385734558, 0.0216655433177948, 0.05821883678436279, -0.10775813460350037, -0.07039467990398407, -0.002054954180493951, 0.04524601623415947, 0.06136597320437431, 0.011322724632918835, -0.013038030825555325, 0.06955357640981674, 0.021449197083711624, 0.02864963561296463, 0.027994586154818535, 2.5546078330940117e-33, 0.0037594090681523085, -0.01350316684693098, -0.004686733242124319, 0.0014841218944638968, -0.05330659821629524, 0.04121703281998634, -0.12612663209438324, 0.00504041463136673, -0.033348046243190765, 0.00016223084821831435, -0.05279935896396637, -0.01088196225464344, -0.04256906732916832, -0.020515287294983864, 0.037025563418865204, 0.03388691321015358, 0.09553580731153488, 0.04880436509847641, -0.06574921309947968, -0.00693405931815505, -0.00016161895473487675, 0.030583331361413002, 0.002376348013058305, 0.04538130387663841, 0.08185611665248871, 0.12533605098724365, -0.01254220586270094, -0.05302325263619423, -0.0695730522274971, 0.021652227267622948, -0.006294687744230032, -0.03360284864902496, 0.01007765531539917, 0.024714820086956024, 0.04237836226820946, 0.02475535124540329, 0.03687082231044769, -0.026877511292696, -0.037054505199193954, 0.03906380012631416, 0.02949323132634163, -0.012557714246213436, -0.024972571060061455, 0.021946439519524574, 0.03302984684705734, 0.014126375317573547, 0.011208894662559032, 0.02514416165649891, 0.07434919476509094, -0.022208642214536667, -0.034595828503370285, 0.020585883408784866, -0.0856889858841896, -0.010493453592061996, -0.022275429219007492, 0.059625402092933655, -0.06800948828458786, 0.0417032428085804, 0.024457469582557678, 0.04951619729399681, 0.10633697360754013, 0.0567873977124691, -0.005672309082001448, 0.03226408734917641, 0.061203788965940475, 0.011487827636301517, -0.003929935395717621, 0.12202988564968109, 0.08161084353923798, -0.016289114952087402, -0.0969037190079689, 0.026143452152609825, 0.0930396094918251, -0.017911862581968307, 0.1249832808971405, 0.06299003958702087, 0.04883928596973419, 0.04971495270729065, -0.06720495223999023, -0.005826292093843222, -0.09512215852737427, -0.09046051651239395, -0.04620887339115143, -0.04384978860616684, 0.02152017131447792, 0.01064828410744667, 0.09091167896986008, -0.029428977519273758, -0.04220344126224518, 0.05803736671805382, -0.053814973682165146, 0.014425616711378098, -0.06116114556789398, -0.007767905946820974, -0.10620538145303726, -3.619477145244383e-33, 0.01523223239928484, 0.04400975629687309, 0.042254310101270676, 0.013964388519525528, 0.014469882473349571, 0.028239045292139053, -0.02781156450510025, 0.07139848172664642, -0.02253737859427929, -0.06317878514528275, 0.03225846588611603, -0.04286469891667366, 0.09764311462640762, -0.07280966639518738, -0.02264501340687275, 0.001499006524682045, -0.006428001448512077, -0.005658551584929228, -0.11586213856935501, 0.00996763538569212, -0.06742602586746216, 0.03339153155684471, -0.02799972891807556, -0.0012882401933893561, -0.06759162992238998, 0.04058578982949257, 0.05486756190657616, -0.09093988686800003, -0.0316166914999485, 0.07595863193273544, -0.03287167474627495, 0.018892941996455193, -0.04481295868754387, 0.06139744073152542, 0.04262185096740723, 0.12712876498699188, 0.0412069596350193, 0.0003326093719806522, -0.013074945658445358, 0.05436854064464569, -0.013077466748654842, 0.039446815848350525, 0.05156196281313896, 0.01573326252400875, 0.08008941262960434, 0.008715106174349785, -0.043935492634773254, 0.017935732379555702, -0.01881342940032482, -0.026850486174225807, 0.04842868819832802, 0.06637544184923172, -0.043679866939783096, -0.015226228162646294, 0.02050355076789856, -0.017211172729730606, 0.000714903580956161, -0.024280725046992302, -0.029863756150007248, -0.0067413803189992905, 0.02386665903031826, 0.08558670431375504, -0.022878941148519516, -0.03466401249170303, 0.012778360396623611, -0.06801019608974457, -0.11031545698642731, 0.03752928972244263, 0.04610290378332138, 0.034921709448099136, 0.10267659276723862, -0.04223320260643959, -0.053820379078388214, 0.014723734930157661, 0.011662328615784645, 0.060331009328365326, -0.013489504344761372, 0.02319655567407608, -0.00434262678027153, 0.01632479950785637, -0.08886508643627167, 0.026626471430063248, -0.0005647809593938291, 0.0022792480885982513, -0.013694378547370434, 0.04358936473727226, -0.0878429189324379, -0.11242952197790146, 0.04129870980978012, -0.031356118619441986, 0.04655648022890091, 0.010579559952020645, 0.01310883741825819, -0.0033128000795841217, 0.022451473399996758, -6.109679162591419e-08, 0.02715013362467289, 0.06858973950147629, 0.0032518215011805296, 0.05241478979587555, 0.0464637465775013, -0.08287312090396881, -0.01019849069416523, -0.015537245199084282, -0.04454769939184189, 0.02262360043823719, 0.06927648186683655, 0.005765353795140982, 0.004989441018551588, -0.08061259984970093, -0.009575148113071918, -0.05197632685303688, -0.0039823465049266815, 0.03915352746844292, -0.03127710521221161, -0.06079476326704025, -0.017131468281149864, 0.016413995996117592, -0.0003445118782110512, -0.10424312204122543, -0.030451832339167595, -0.047462787479162216, -0.046219971030950546, -0.03949475660920143, -0.03016747161746025, -0.003164405934512615, 0.06291721016168594, -0.018604839220643044, -0.0077646947465837, -0.1764836311340332, 0.04784805700182915, 0.06092749536037445, -0.03265777975320816, -0.02699398249387741, 0.0005132879596203566, -0.030650267377495766, 0.05798178166151047, -0.003006893675774336, 0.02976631559431553, 0.036851733922958374, 0.039466533809900284, -0.009404241107404232, 0.04297725111246109, -0.045598987489938736, 0.08564777672290802, -0.0738900825381279, -0.030991429463028908, 0.04029860720038414, 0.007459983229637146, -0.01607741229236126, 0.015633121132850647, -0.034753356128931046, -0.02355353720486164, 0.013230353593826294, -0.018376290798187256, -0.06500795483589172, 0.06662746518850327, 0.0038369777612388134, -0.022805441170930862, -0.03252103179693222]}, collection='Admin_test_2'), Object(uuid=_WeaviateUUIDInt('02f64994-13ea-4220-b331-7105447511b8'), metadata=MetadataReturn(creation_time=None, last_update_time=None, distance=None, certainty=None, score=None, explain_score=None, is_consistent=None, rerank_score=None), properties={'title': None, 'page_content': "c. Le Siècle, L'Opinion nationale ; il s'agit là d'une liste non exhaustive citée par Milza 2007, p. 744 dans le chapitre\n« La légende noire ».\nd. Milza 2007, p. 741 et suivantes. Sur la légende noire, l'historien écrit : « globalement, l'historiographie républicaine,\nen position dominante dans l'université française, conserve au moins jusqu'en 1914 une position critique vis-à-vis\nde Napoléon III », « en 1919, la principale hypothèque pesant sur le régime impérial se trouva fortement allégée, la\nvoie était ouverte à la réhabilitation d'une période dont on découvrait à quel point elle avait été pour la France une\nère de prospérité, de modernisation et de rayonnement international », « L'ouvrage qui, par l'ampleur de sa\ndocumentation, largement fondée sur l'examen des archives et par la finesse de ses analyses, marque un véritable\ntournant dans la compréhension du phénomène Napoléon III est celui d'Adrien Dansette publié en deux volumes", 'body': None, 'document_title': 'Napoléon_III.pdf'}, references=None, vector={'default': [-0.11765690892934799, 0.002991834655404091, -0.011409878730773926, -0.04791748523712158, 0.03382144495844841, 0.060894422233104706, -0.029301714152097702, 0.1455349326133728, -0.08396405726671219, 0.02153622731566429, 0.002694050781428814, -0.008855585940182209, 0.08935362845659256, -0.03697099909186363, -0.0455201156437397, -0.03265605866909027, -0.03257574141025543, 0.034133635461330414, 0.010089476592838764, 0.05650557205080986, 0.026889339089393616, -0.06932443380355835, 0.05152948573231697, -0.01234121061861515, 0.023820742964744568, -0.04316822811961174, -0.07394589483737946, -0.03723108023405075, -0.023997487500309944, 0.032321687787771225, 0.009615075774490833, 0.019656136631965637, -0.01576204225420952, -0.05098940432071686, 0.10617237538099289, -0.07022952288389206, 0.055607523769140244, -0.03088456392288208, 0.02356691285967827, 0.10920336842536926, -0.03438076376914978, 0.05232936516404152, -0.12949568033218384, -0.05968835577368736, -0.04488382115960121, -0.01929766684770584, 0.05584203079342842, -0.012541170231997967, -0.09007873386144638, -0.000796826439909637, 0.021199174225330353, 0.08441152423620224, 0.024872321635484695, -0.01621401309967041, -0.05161883309483528, -0.07570529729127884, 0.006142131984233856, 0.03148680925369263, 0.008823228999972343, 0.027673469856381416, 0.013688482344150543, 0.03882637247443199, 0.01626156084239483, 0.0044038365595042706, -0.012981870211660862, -0.017422650009393692, -0.03684646263718605, 0.0021841651760041714, -0.048362407833337784, 0.06330149620771408, -0.10295461863279343, -0.0317172110080719, -0.03462779521942139, -0.0468786284327507, -0.02219066210091114, -0.021661991253495216, -0.03877832740545273, 0.07634741067886353, -0.0657549649477005, -0.13248811662197113, 0.05640829727053642, -0.020043499767780304, 0.06327643990516663, -0.010914760641753674, 0.0022384338080883026, -0.01043475791811943, 0.01327210571616888, -0.025006936863064766, 0.07615888863801956, -0.010178645141422749, 0.028724530711770058, -0.037863194942474365, -0.01669309288263321, 0.0815543457865715, 0.06474816054105759, 0.004785605240613222, 0.01699020341038704, 0.0006659097853116691, 0.0435660146176815, 0.03859621286392212, -0.008993581868708134, -0.058173518627882004, -0.028482357040047646, 0.05893964692950249, -0.009205596521496773, 0.04495164379477501, -0.021920543164014816, -0.02352583408355713, -0.017681295052170753, 0.013352601788938046, 0.026467423886060715, -0.023970788344740868, 0.0020807625260204077, -0.0008279331377707422, 0.059322383254766464, 0.0037628759164363146, -0.034301985055208206, -0.0870916023850441, 0.017747873440384865, 0.03176799416542053, 0.07419554144144058, -0.04344598203897476, 0.03224512189626694, -0.02287999540567398, 0.055535558611154556, 0.059911031275987625, 0.03989235311746597, 5.194351579230297e-33, 0.038599107414484024, 0.014781711623072624, -0.026423141360282898, -0.014509717933833599, -0.08735474199056625, 0.10008510947227478, -0.09188777208328247, 0.08055491000413895, 0.049102187156677246, -0.02841099537909031, -0.01973927766084671, 0.06257278472185135, -0.04823783040046692, -0.0009813645156100392, 0.0015503426548093557, -0.007790723815560341, 0.020506521686911583, 0.026176024228334427, 0.036087650805711746, 0.010941821150481701, -0.025321705266833305, -0.03160686045885086, 0.06022300571203232, 0.03265944495797157, 0.049745045602321625, 0.06595457345247269, -0.019556481391191483, -0.024938559159636497, -0.09434258192777634, 0.017782805487513542, -0.024579325690865517, -0.061954475939273834, -0.00861027929931879, -0.010961402207612991, 0.016187548637390137, -0.0502924770116806, -0.0005602345918305218, 0.017654210329055786, 0.021518584340810776, 0.050697751343250275, 0.04238642379641533, -0.0054515511728823185, 0.04763532802462578, -0.011001558974385262, 0.05461975932121277, -0.023791370913386345, -0.018481379374861717, 0.026830649003386497, 0.03348647058010101, -0.0394953116774559, -0.04424703121185303, -0.02845626138150692, -0.04627380520105362, -0.05816423147916794, -0.0005565965548157692, 0.016878699883818626, -0.12246613204479218, 0.04859502241015434, 0.00513943936675787, -0.047766365110874176, 0.07259565591812134, -0.023926161229610443, -0.024397924542427063, -0.0064514498226344585, 0.03360965475440025, 0.05825445055961609, -0.054870594292879105, 0.08854421973228455, 0.02644883468747139, -0.05112143233418465, -0.09489090740680695, -0.00028338839183561504, 0.03954532369971275, 0.0540529303252697, 0.11066080629825592, 0.05963943898677826, 0.043897971510887146, 0.04510512575507164, -0.12132170796394348, -0.06658298522233963, -0.07137912511825562, -0.07453306019306183, -0.07190145552158356, 0.00019923648505937308, -0.0080815888941288, -0.005110257305204868, 0.06653833389282227, 0.022532448172569275, 0.03228749334812164, -0.02513905055820942, -0.058011531829833984, -0.054532118141651154, -0.0210125595331192, 0.02902885340154171, -0.04466988518834114, -9.274225045969645e-33, 0.07273983955383301, 0.0422806479036808, -0.01179248932749033, 0.01481593120843172, 0.03817327693104744, -0.0263248011469841, -0.06108767166733742, 0.09897613525390625, -0.08699129521846771, -0.04193217679858208, 0.026791151612997055, -0.043024636805057526, -0.011908501386642456, 0.029831061139702797, -0.03843161463737488, -0.008880828507244587, -0.08208680152893066, -0.07751155644655228, -0.09775970876216888, -0.0018080404261127114, -0.05243723466992378, -0.04393402114510536, 0.025355322286486626, -0.01513516902923584, -0.09365750849246979, 0.04561993479728699, -0.02838507480919361, -0.07399342209100723, -0.05091140791773796, 0.05304913967847824, -0.04629610851407051, 0.0755896046757698, 0.02610887959599495, 0.008834677748382092, 0.055184654891490936, 0.02997264452278614, 0.032155055552721024, -0.00606239028275013, 0.003311307867988944, 0.08601013571023941, -0.02418852224946022, 0.010082640685141087, 0.020694345235824585, -0.0702250674366951, 0.08138846606016159, 0.03824717551469803, -0.13003160059452057, -0.10679040849208832, 0.018485745415091515, 0.008396320976316929, 0.008533448912203312, 0.02097421884536743, 0.009817499667406082, -0.020970182493329048, -0.02895030938088894, -0.016822295263409615, -6.98877784088836e-07, 0.008398422040045261, -0.07922858744859695, 0.031036769971251488, 0.024582576006650925, 0.09886742383241653, -0.02321147546172142, -0.009558622725307941, 0.03554300218820572, -0.019589370116591454, -0.07413119822740555, 0.0638941079378128, 0.04948797821998596, 0.021457117050886154, 0.024224910885095596, -0.0758354514837265, 0.0034301900304853916, 0.1032496839761734, 0.0040920632891356945, 0.02351958118379116, -0.05358663201332092, -0.024654434993863106, -0.0086197005584836, 0.04268411546945572, -0.1485891044139862, -0.012053652666509151, -0.041536446660757065, -0.02693217247724533, -0.055535607039928436, 0.02995157055556774, -0.08649314194917679, -0.041391193866729736, 0.03649479150772095, -0.10329348593950272, 0.0806831419467926, -0.07134022563695908, -0.03364622965455055, -0.003571795765310526, 0.058070000261068344, -6.88348507082992e-08, 0.045929204672575, 0.043306220322847366, 0.04076701030135155, 0.055602844804525375, -0.02758331596851349, -0.11507587879896164, -0.10498388111591339, -0.003057613968849182, 0.025887196883559227, 0.020582642406225204, -0.013505108654499054, 0.021595215424895287, -0.05939596891403198, -0.0734926238656044, -0.03803915157914162, -0.007818247191607952, -0.012457175180315971, -0.022702600806951523, -0.035406794399023056, -0.04947276413440704, 0.06501113623380661, -0.05128408968448639, 0.03560706973075867, -0.09033077210187912, -0.007061444688588381, -0.06044875457882881, -0.07649495452642441, -0.04685022309422493, -0.04198247939348221, 0.0036435273941606283, 0.04291404411196709, 0.046863943338394165, 0.010433020070195198, -0.14011111855506897, -0.02746863104403019, 0.03795381262898445, 0.06727241724729538, -0.035752080380916595, -0.004458447452634573, -0.07200157642364502, 0.08236797899007797, 0.003562249941751361, 0.03910890966653824, -0.03134359419345856, 0.12742112576961517, -0.03186158090829849, 0.05296235904097557, 0.013686206191778183, 0.0555555559694767, -0.015278955921530724, -0.019430767744779587, 0.07787512242794037, -0.033174067735672, 0.03918292000889778, -0.05932025611400604, 0.016741305589675903, -0.05636895075440407, 0.02299886755645275, -0.04714328795671463, -0.0907570943236351, 0.04885726794600487, 0.022846993058919907, -0.006458432879298925, -0.045223068445920944]}, collection='Admin_test_2')])
+2024-06-12 15:09:41,647 - INFO - request processed successfully username='admin' class_name='test_2' mode='basic_search' vectorDB_type='Weaviate' file_path='/home/nilsb/LLM-Chat-Bot/API/received_files/85a54fb1490d9cce' file_title=None: %s
+2024-06-12 15:10:43,393 - INFO - HTTP Request: GET http://localhost:8080/v1/.well-known/openid-configuration "HTTP/1.1 404 Not Found"
+2024-06-12 15:10:43,408 - INFO - HTTP Request: GET http://localhost:8080/v1/meta "HTTP/1.1 200 OK"
+2024-06-12 15:10:43,470 - INFO - HTTP Request: GET https://pypi.org/pypi/weaviate-client/json "HTTP/1.1 200 OK"
+2024-06-12 15:10:43,492 - INFO - Here is the response after basic search request: QueryReturn(objects=[Object(uuid=_WeaviateUUIDInt('02b38b9f-401b-46c8-9d69-2d1f958a4798'), metadata=MetadataReturn(creation_time=None, last_update_time=None, distance=None, certainty=None, score=None, explain_score=None, is_consistent=None, rerank_score=None), properties={'title': None, 'page_content': '285. de Moncan 2009, p. 169.\n286. de Moncan 2009, p. 89-106.\n287. Opéra qu’il ne voit jamais abouti.\n288. de Moncan 2009, p. 39.\n289. de Moncan 2009, p. 69-70.\n290. de Moncan 2009, p. 201-202.\n291. Louis Réau, Histoire du vandalisme, Paris, 1994, cité par de Moncan 2009, p. 203.\n292. de Moncan 2009, p. 173.\n293. de Moncan 2009, p. 33-35.\n294. Milza 2007, p. 476-477.\n295. Antonetti 1986, p. 290.\n296. Anceau 2008, p. 423 et suivantes.\n297. Anceau 2008, p. 424.\n298. Milza 2007, p. 495-496.\n299. Anceau 2008, p. 424-425.\n300. Milza 2007, p. 497.\n301. Éric Anceau, p. 426.\n302. Antonetti 1986, p. 292.\n303. Milza 2007, p. 590.\n304. Anceau 2008, p. 462.\n305. Milza 2007, p. 657.\n306. Milza 2007, p. 591.\n307. Milza 2007, p. 657-658.\n308. « Chronologie indicative de l’histoire du mouvement ouvrier français de 1864 à 1870 (http://www.maitron.org/spip.p\nhp?article156) », sur Maitron.org (consulté le 7 juillet 2016), Chronologie indicative de l’histoire du mouvement\nouvrier français, 1864-1870.', 'body': None, 'document_title': 'Napoléon_III.pdf'}, references=None, vector={}, collection='Admin_test_2'), Object(uuid=_WeaviateUUIDInt('02f64994-13ea-4220-b331-7105447511b8'), metadata=MetadataReturn(creation_time=None, last_update_time=None, distance=None, certainty=None, score=None, explain_score=None, is_consistent=None, rerank_score=None), properties={'title': None, 'page_content': "c. Le Siècle, L'Opinion nationale ; il s'agit là d'une liste non exhaustive citée par Milza 2007, p. 744 dans le chapitre\n« La légende noire ».\nd. Milza 2007, p. 741 et suivantes. Sur la légende noire, l'historien écrit : « globalement, l'historiographie républicaine,\nen position dominante dans l'université française, conserve au moins jusqu'en 1914 une position critique vis-à-vis\nde Napoléon III », « en 1919, la principale hypothèque pesant sur le régime impérial se trouva fortement allégée, la\nvoie était ouverte à la réhabilitation d'une période dont on découvrait à quel point elle avait été pour la France une\nère de prospérité, de modernisation et de rayonnement international », « L'ouvrage qui, par l'ampleur de sa\ndocumentation, largement fondée sur l'examen des archives et par la finesse de ses analyses, marque un véritable\ntournant dans la compréhension du phénomène Napoléon III est celui d'Adrien Dansette publié en deux volumes", 'body': None, 'document_title': 'Napoléon_III.pdf'}, references=None, vector={}, collection='Admin_test_2')])
+2024-06-12 15:26:00,656 - INFO - HTTP Request: GET http://localhost:8080/v1/.well-known/openid-configuration "HTTP/1.1 404 Not Found"
+2024-06-12 15:26:00,672 - INFO - HTTP Request: GET http://localhost:8080/v1/meta "HTTP/1.1 200 OK"
+2024-06-12 15:26:00,735 - INFO - HTTP Request: GET https://pypi.org/pypi/weaviate-client/json "HTTP/1.1 200 OK"
+2024-06-12 15:26:30,757 - ERROR - An error occurred: Query call with protocol GRPC search failed with message Deadline Exceeded.
+2024-06-12 15:26:49,954 - INFO - HTTP Request: GET http://localhost:8080/v1/.well-known/openid-configuration "HTTP/1.1 404 Not Found"
+2024-06-12 15:26:49,971 - INFO - HTTP Request: GET http://localhost:8080/v1/meta "HTTP/1.1 200 OK"
+2024-06-12 15:26:50,031 - INFO - HTTP Request: GET https://pypi.org/pypi/weaviate-client/json "HTTP/1.1 200 OK"
+2024-06-12 15:27:20,053 - ERROR - An error occurred: Query call with protocol GRPC search failed with message Deadline Exceeded.
+2024-06-12 15:34:39,836 - INFO - HTTP Request: GET http://localhost:8080/v1/.well-known/openid-configuration "HTTP/1.1 404 Not Found"
+2024-06-12 15:34:39,852 - INFO - HTTP Request: GET http://localhost:8080/v1/meta "HTTP/1.1 200 OK"
+2024-06-12 15:34:39,912 - INFO - HTTP Request: GET https://pypi.org/pypi/weaviate-client/json "HTTP/1.1 200 OK"
+2024-06-12 15:34:39,933 - INFO - HTTP Request: GET http://localhost:8080/v1/schema/Admin_test_2 "HTTP/1.1 200 OK"
+2024-06-12 15:34:39,934 - INFO - info on query passed: Napoleon and the class name: <weaviate.Collection config={
+  "name": "Admin_test_2",
+  "description": null,
+  "generative_config": null,
+  "inverted_index_config": {
+    "bm25": {
+      "b": 0.75,
+      "k1": 1.2
+    },
+    "cleanup_interval_seconds": 60,
+    "index_null_state": false,
+    "index_property_length": false,
+    "index_timestamps": false,
+    "stopwords": {
+      "preset": "en",
+      "additions": null,
+      "removals": null
+    }
+  },
+  "multi_tenancy_config": {
+    "enabled": false,
+    "auto_tenant_creation": false,
+    "auto_tenant_activation": false
+  },
+  "properties": [
+    {
+      "name": "title",
+      "description": null,
+      "data_type": "text",
+      "index_filterable": true,
+      "index_searchable": true,
+      "nested_properties": null,
+      "tokenization": "word",
+      "vectorizer_config": {
+        "skip": false,
+        "vectorize_property_name": true
+      },
+      "vectorizer": "text2vec-huggingface"
+    },
+    {
+      "name": "body",
+      "description": null,
+      "data_type": "text",
+      "index_filterable": true,
+      "index_searchable": true,
+      "nested_properties": null,
+      "tokenization": "word",
+      "vectorizer_config": {
+        "skip": false,
+        "vectorize_property_name": true
+      },
+      "vectorizer": "text2vec-huggingface"
+    },
+    {
+      "name": "page_content",
+      "description": "This property was generated by Weaviate's auto-schema feature on Wed Jun 12 14:31:08 2024",
+      "data_type": "text",
+      "index_filterable": true,
+      "index_searchable": true,
+      "nested_properties": null,
+      "tokenization": "word",
+      "vectorizer_config": {
+        "skip": false,
+        "vectorize_property_name": false
+      },
+      "vectorizer": "text2vec-huggingface"
+    },
+    {
+      "name": "document_title",
+      "description": "This property was generated by Weaviate's auto-schema feature on Wed Jun 12 14:31:08 2024",
+      "data_type": "text",
+      "index_filterable": true,
+      "index_searchable": true,
+      "nested_properties": null,
+      "tokenization": "word",
+      "vectorizer_config": {
+        "skip": false,
+        "vectorize_property_name": false
+      },
+      "vectorizer": "text2vec-huggingface"
+    }
+  ],
+  "references": [],
+  "replication_config": {
+    "factor": 1
+  },
+  "reranker_config": null,
+  "sharding_config": {
+    "virtual_per_physical": 128,
+    "desired_count": 1,
+    "actual_count": 1,
+    "desired_virtual_count": 128,
+    "actual_virtual_count": 128,
+    "key": "_id",
+    "strategy": "hash",
+    "function": "murmur3"
+  },
+  "vector_index_config": {
+    "quantizer": null,
+    "cleanup_interval_seconds": 300,
+    "distance_metric": "cosine",
+    "dynamic_ef_min": 100,
+    "dynamic_ef_max": 500,
+    "dynamic_ef_factor": 8,
+    "ef": -1,
+    "ef_construction": 128,
+    "flat_search_cutoff": 40000,
+    "max_connections": 64,
+    "skip": false,
+    "vector_cache_max_objects": 1000000000000
+  },
+  "vector_index_type": "hnsw",
+  "vectorizer_config": {
+    "vectorizer": "text2vec-huggingface",
+    "model": {
+      "model": "sentence-transformers/all-MiniLM-L6-v2"
+    },
+    "vectorize_collection_name": true
+  },
+  "vectorizer": "text2vec-huggingface",
+  "vector_config": null
+}>
+2024-06-12 15:34:40,069 - INFO - logged properties: {'title': None, 'page_content': "219. Anceau 2008, p. 407 et suivantes.\n220. Milza 2007, p. 571.\n221. Anceau 2008, p. 409.\n222. Milza 2007, p. 573.\n223. Maurice Paléologue, Les entretiens de l'impératrice Eugénie, Plon, 1928, p. 89 et suiv.\n224. Secrets d'histoire - Eugénie, la dernière impératrice, France 2, 4 août 2010.\n225. Paul Ganière, Le dernier exil de Napoléon III, Éd. Souvenir Napoléonien n 362, octobre 1988, p. 21-38.\n226. Antonetti 1986, p. 269.\n227. Milza 2007, p. 320-321.\n228. Milza 2007, p. 444.\n229. Milza 2007, p. 446.\n230. Milza 2007, p. 447.\n231. Milza 2007, p. 447-448.\n232. Milza 2007, p. 559-560.\n233. Milza 2007, p. 459.\n234. Milza 2007, p. 468-470.\n235. Milza 2007, p. 463.\n236. Suzanne Desternes et Henriette Chandet, Napoléon III, homme du XX siècle, Paris, Hachette, 1961, p. 303.\n237. Milza 2007, p. 564.\n238. Milza 2007, p. 568.\n239. Milza 2007, p. 568-569.\n240. Girard 1986, p. 362-363.\n241. Yon 2009, p. 61.\n242. Milza 2007, p. 584-585.\n243. Antonetti 1986, p. 278.", 'body': None, 'document_title': 'Napoléon_III.pdf'}
+2024-06-12 15:34:40,069 - INFO - logged distance: 0.40736889839172363
+2024-06-12 15:34:40,069 - INFO - logged properties: {'title': None, 'page_content': "Les archives du ministère de la maison de l'Empereur, sous Napoléon III, sont conservées aux Archives nationales dans la sous-série\nO/5 .\nIl existe de nom breuses représentations artistiques de Napoléon III réalisées de son vi vant comme après sa mort.\nAscendance de Napoléon III\nL'arbre qui suit s'appuie sur l'ouvrage de Joël Aubailly, Les Ancêtres de Napoléon III, aux éditions Christian, édité en 2008\n(ISBN 2864960699).\n                 \n 16. Sebastiano Nicolo Buonaparte\n \n     \n 8. Giuseppe Maria Bonaparte\n \n \n        \n 17. Maria Anna Tusoli di\nBocognano\n \n     \n 4. Charles Marie Bonaparte\n \n \n           \n 18. Giuseppe Maria Paravicini\n \n     \n 9. Maria Saveria Paravicini\n \n \n        \n 19. Maria Angela Salineri\n \n     \n 2. Louis Bonaparte\n \n \n              \n 20. Giovanni Agostino Ramolino\n \n     \n 10. Jean Jérôme Ramolino\n \n \n        \n 21. Angela Maria Peri\n \n     \n 5. Maria Letizia Ramolino\n \n \n           \n 22. Giuseppe Maria Pietrasanta\n \n     \n 11. Angela Maria Pietrasanta", 'body': None, 'document_title': 'Napoléon_III.pdf'}
+2024-06-12 15:34:40,069 - INFO - logged distance: 0.4213613271713257
+2024-06-12 15:34:40,069 - INFO - Here is the response after similarity search request: QueryReturn(objects=[Object(uuid=_WeaviateUUIDInt('63cf166c-2501-40b6-89de-c1c4dfce20e9'), metadata=MetadataReturn(creation_time=None, last_update_time=None, distance=0.40736889839172363, certainty=None, score=None, explain_score=None, is_consistent=None, rerank_score=None), properties={'title': None, 'page_content': "219. Anceau 2008, p. 407 et suivantes.\n220. Milza 2007, p. 571.\n221. Anceau 2008, p. 409.\n222. Milza 2007, p. 573.\n223. Maurice Paléologue, Les entretiens de l'impératrice Eugénie, Plon, 1928, p. 89 et suiv.\n224. Secrets d'histoire - Eugénie, la dernière impératrice, France 2, 4 août 2010.\n225. Paul Ganière, Le dernier exil de Napoléon III, Éd. Souvenir Napoléonien n 362, octobre 1988, p. 21-38.\n226. Antonetti 1986, p. 269.\n227. Milza 2007, p. 320-321.\n228. Milza 2007, p. 444.\n229. Milza 2007, p. 446.\n230. Milza 2007, p. 447.\n231. Milza 2007, p. 447-448.\n232. Milza 2007, p. 559-560.\n233. Milza 2007, p. 459.\n234. Milza 2007, p. 468-470.\n235. Milza 2007, p. 463.\n236. Suzanne Desternes et Henriette Chandet, Napoléon III, homme du XX siècle, Paris, Hachette, 1961, p. 303.\n237. Milza 2007, p. 564.\n238. Milza 2007, p. 568.\n239. Milza 2007, p. 568-569.\n240. Girard 1986, p. 362-363.\n241. Yon 2009, p. 61.\n242. Milza 2007, p. 584-585.\n243. Antonetti 1986, p. 278.", 'body': None, 'document_title': 'Napoléon_III.pdf'}, references=None, vector={}, collection='Admin_test_2'), Object(uuid=_WeaviateUUIDInt('8d728fdb-d759-4d9a-976f-28e3a811d88e'), metadata=MetadataReturn(creation_time=None, last_update_time=None, distance=0.4213613271713257, certainty=None, score=None, explain_score=None, is_consistent=None, rerank_score=None), properties={'title': None, 'page_content': "Les archives du ministère de la maison de l'Empereur, sous Napoléon III, sont conservées aux Archives nationales dans la sous-série\nO/5 .\nIl existe de nom breuses représentations artistiques de Napoléon III réalisées de son vi vant comme après sa mort.\nAscendance de Napoléon III\nL'arbre qui suit s'appuie sur l'ouvrage de Joël Aubailly, Les Ancêtres de Napoléon III, aux éditions Christian, édité en 2008\n(ISBN 2864960699).\n                 \n 16. Sebastiano Nicolo Buonaparte\n \n     \n 8. Giuseppe Maria Bonaparte\n \n \n        \n 17. Maria Anna Tusoli di\nBocognano\n \n     \n 4. Charles Marie Bonaparte\n \n \n           \n 18. Giuseppe Maria Paravicini\n \n     \n 9. Maria Saveria Paravicini\n \n \n        \n 19. Maria Angela Salineri\n \n     \n 2. Louis Bonaparte\n \n \n              \n 20. Giovanni Agostino Ramolino\n \n     \n 10. Jean Jérôme Ramolino\n \n \n        \n 21. Angela Maria Peri\n \n     \n 5. Maria Letizia Ramolino\n \n \n           \n 22. Giuseppe Maria Pietrasanta\n \n     \n 11. Angela Maria Pietrasanta", 'body': None, 'document_title': 'Napoléon_III.pdf'}, references=None, vector={}, collection='Admin_test_2')])
+2024-06-12 16:40:49,913 - INFO - HTTP Request: GET http://localhost:8080/v1/.well-known/openid-configuration "HTTP/1.1 404 Not Found"
+2024-06-12 16:40:49,930 - INFO - HTTP Request: GET http://localhost:8080/v1/meta "HTTP/1.1 200 OK"
+2024-06-12 16:40:49,992 - INFO - HTTP Request: GET https://pypi.org/pypi/weaviate-client/json "HTTP/1.1 200 OK"
+2024-06-12 16:40:50,013 - INFO - HTTP Request: GET http://localhost:8080/v1/schema/Admin_test_2 "HTTP/1.1 200 OK"
+2024-06-12 16:40:50,014 - INFO - info on query passed: War and the class name: <weaviate.Collection config={
+  "name": "Admin_test_2",
+  "description": null,
+  "generative_config": null,
+  "inverted_index_config": {
+    "bm25": {
+      "b": 0.75,
+      "k1": 1.2
+    },
+    "cleanup_interval_seconds": 60,
+    "index_null_state": false,
+    "index_property_length": false,
+    "index_timestamps": false,
+    "stopwords": {
+      "preset": "en",
+      "additions": null,
+      "removals": null
+    }
+  },
+  "multi_tenancy_config": {
+    "enabled": false,
+    "auto_tenant_creation": false,
+    "auto_tenant_activation": false
+  },
+  "properties": [
+    {
+      "name": "title",
+      "description": null,
+      "data_type": "text",
+      "index_filterable": true,
+      "index_searchable": true,
+      "nested_properties": null,
+      "tokenization": "word",
+      "vectorizer_config": {
+        "skip": false,
+        "vectorize_property_name": true
+      },
+      "vectorizer": "text2vec-huggingface"
+    },
+    {
+      "name": "body",
+      "description": null,
+      "data_type": "text",
+      "index_filterable": true,
+      "index_searchable": true,
+      "nested_properties": null,
+      "tokenization": "word",
+      "vectorizer_config": {
+        "skip": false,
+        "vectorize_property_name": true
+      },
+      "vectorizer": "text2vec-huggingface"
+    },
+    {
+      "name": "page_content",
+      "description": "This property was generated by Weaviate's auto-schema feature on Wed Jun 12 14:31:08 2024",
+      "data_type": "text",
+      "index_filterable": true,
+      "index_searchable": true,
+      "nested_properties": null,
+      "tokenization": "word",
+      "vectorizer_config": {
+        "skip": false,
+        "vectorize_property_name": false
+      },
+      "vectorizer": "text2vec-huggingface"
+    },
+    {
+      "name": "document_title",
+      "description": "This property was generated by Weaviate's auto-schema feature on Wed Jun 12 14:31:08 2024",
+      "data_type": "text",
+      "index_filterable": true,
+      "index_searchable": true,
+      "nested_properties": null,
+      "tokenization": "word",
+      "vectorizer_config": {
+        "skip": false,
+        "vectorize_property_name": false
+      },
+      "vectorizer": "text2vec-huggingface"
+    }
+  ],
+  "references": [],
+  "replication_config": {
+    "factor": 1
+  },
+  "reranker_config": null,
+  "sharding_config": {
+    "virtual_per_physical": 128,
+    "desired_count": 1,
+    "actual_count": 1,
+    "desired_virtual_count": 128,
+    "actual_virtual_count": 128,
+    "key": "_id",
+    "strategy": "hash",
+    "function": "murmur3"
+  },
+  "vector_index_config": {
+    "quantizer": null,
+    "cleanup_interval_seconds": 300,
+    "distance_metric": "cosine",
+    "dynamic_ef_min": 100,
+    "dynamic_ef_max": 500,
+    "dynamic_ef_factor": 8,
+    "ef": -1,
+    "ef_construction": 128,
+    "flat_search_cutoff": 40000,
+    "max_connections": 64,
+    "skip": false,
+    "vector_cache_max_objects": 1000000000000
+  },
+  "vector_index_type": "hnsw",
+  "vectorizer_config": {
+    "vectorizer": "text2vec-huggingface",
+    "model": {
+      "model": "sentence-transformers/all-MiniLM-L6-v2"
+    },
+    "vectorize_collection_name": true
+  },
+  "vectorizer": "text2vec-huggingface",
+  "vector_config": null
+}>
+2024-06-12 16:40:50,145 - INFO - logged properties: {'title': None, 'page_content': "rance/sc1865-0714.htm) », sur mjp.univ-perp.fr (consulté le 7 juillet 2016).\n359. Milza 2007, p. 631.\n360. Anceau 2008, p. 372.\n361. Yves-Jean Saint-Martin, Le Sénégal sous le Second Empire : naissance d'un empire colonial (1850-1871),\nÉditions Karthala, 1989, p. 355 et s.\n362. Milza 2007, p. 633.\n363. « Au Guangxi, un musée dénigre un saint missionnaire français du XIX siècle (https://missionsetrangeres.com/eglis\nes-asie/2016-07-12-au-guangxi-un-musee-denigre-un-saint-missionnaire-francais-du-xixe-siecle/) », sur Missions\nÉtrangères de Paris (consulté le 10 mai 2020).\n364. (en) « Opium Wars | Definition, Summary, Facts, & Causes (https://www.britannica.com/topic/Opium-Wars) », sur\nEncyclopedia Britannica (consulté le 10 mai 2020).\n365. Anceau 2008, p. 388-389.\n366. Pierre Renouvin, La Question d'Extrême-Orient, 1840-1940, Hachette, 1946.\n367. Alain Cornaille, Le Premier traité franco-japonais : son application au vu des dépêches diplomatiques de", 'body': None, 'document_title': 'Napoléon_III.pdf'}
+2024-06-12 16:40:50,145 - INFO - logged distance: 0.8614776730537415
+2024-06-12 16:40:50,145 - INFO - logged properties: {'title': None, 'page_content': "plébiscitaire, que ce fût lors du boulangisme puis plus tard lors de la montée du gaullisme. Le\nprécédent d'un président devenu empereur ainsi rendra impensable, jusqu'en 1962, toute élection du\nchef de l'État au suffrage universel direct, François Mitterrand comparant avec virulence le général\nde Gaulle à Napoléon III afin d'instruire le procès des institutions de la Cinquième République .\nPour Pierre Milza, « l'année terrible [1870]  a fortement traumatisé les contemporains, peut-être\nautant que le fera la débâcle de 1940 » ce qui explique également, en sus du 2 décembre, le « long\ndiscrédit » dont  souffre longtemps l'image de Napoléon III.417\ny\n418\n419\n414\n420\n421\n168\n422\n423\n424\n425\n426", 'body': None, 'document_title': 'Napoléon_III.pdf'}
+2024-06-12 16:40:50,145 - INFO - logged distance: 0.8922957181930542
+2024-06-12 16:40:50,146 - INFO - Here is the response after similarity search request: QueryReturn(objects=[Object(uuid=_WeaviateUUIDInt('11b63239-75a0-44b4-921d-8ff2a3cdae26'), metadata=MetadataReturn(creation_time=None, last_update_time=None, distance=0.8614776730537415, certainty=None, score=None, explain_score=None, is_consistent=None, rerank_score=None), properties={'title': None, 'page_content': "rance/sc1865-0714.htm) », sur mjp.univ-perp.fr (consulté le 7 juillet 2016).\n359. Milza 2007, p. 631.\n360. Anceau 2008, p. 372.\n361. Yves-Jean Saint-Martin, Le Sénégal sous le Second Empire : naissance d'un empire colonial (1850-1871),\nÉditions Karthala, 1989, p. 355 et s.\n362. Milza 2007, p. 633.\n363. « Au Guangxi, un musée dénigre un saint missionnaire français du XIX siècle (https://missionsetrangeres.com/eglis\nes-asie/2016-07-12-au-guangxi-un-musee-denigre-un-saint-missionnaire-francais-du-xixe-siecle/) », sur Missions\nÉtrangères de Paris (consulté le 10 mai 2020).\n364. (en) « Opium Wars | Definition, Summary, Facts, & Causes (https://www.britannica.com/topic/Opium-Wars) », sur\nEncyclopedia Britannica (consulté le 10 mai 2020).\n365. Anceau 2008, p. 388-389.\n366. Pierre Renouvin, La Question d'Extrême-Orient, 1840-1940, Hachette, 1946.\n367. Alain Cornaille, Le Premier traité franco-japonais : son application au vu des dépêches diplomatiques de", 'body': None, 'document_title': 'Napoléon_III.pdf'}, references=None, vector={}, collection='Admin_test_2'), Object(uuid=_WeaviateUUIDInt('14a3b3c5-8aa2-42d0-a84f-f5b509353040'), metadata=MetadataReturn(creation_time=None, last_update_time=None, distance=0.8922957181930542, certainty=None, score=None, explain_score=None, is_consistent=None, rerank_score=None), properties={'title': None, 'page_content': "plébiscitaire, que ce fût lors du boulangisme puis plus tard lors de la montée du gaullisme. Le\nprécédent d'un président devenu empereur ainsi rendra impensable, jusqu'en 1962, toute élection du\nchef de l'État au suffrage universel direct, François Mitterrand comparant avec virulence le général\nde Gaulle à Napoléon III afin d'instruire le procès des institutions de la Cinquième République .\nPour Pierre Milza, « l'année terrible [1870]  a fortement traumatisé les contemporains, peut-être\nautant que le fera la débâcle de 1940 » ce qui explique également, en sus du 2 décembre, le « long\ndiscrédit » dont  souffre longtemps l'image de Napoléon III.417\ny\n418\n419\n414\n420\n421\n168\n422\n423\n424\n425\n426", 'body': None, 'document_title': 'Napoléon_III.pdf'}, references=None, vector={}, collection='Admin_test_2')])
+2024-06-12 16:42:12,841 - INFO - HTTP Request: GET http://localhost:8080/v1/.well-known/openid-configuration "HTTP/1.1 404 Not Found"
+2024-06-12 16:42:12,857 - INFO - HTTP Request: GET http://localhost:8080/v1/meta "HTTP/1.1 200 OK"
+2024-06-12 16:42:12,916 - INFO - HTTP Request: GET https://pypi.org/pypi/weaviate-client/json "HTTP/1.1 200 OK"
+2024-06-12 16:42:12,938 - INFO - HTTP Request: GET http://localhost:8080/v1/schema/Admin_test_2 "HTTP/1.1 200 OK"
+2024-06-12 16:42:12,939 - INFO - info on query passed: education and the class name: <weaviate.Collection config={
+  "name": "Admin_test_2",
+  "description": null,
+  "generative_config": null,
+  "inverted_index_config": {
+    "bm25": {
+      "b": 0.75,
+      "k1": 1.2
+    },
+    "cleanup_interval_seconds": 60,
+    "index_null_state": false,
+    "index_property_length": false,
+    "index_timestamps": false,
+    "stopwords": {
+      "preset": "en",
+      "additions": null,
+      "removals": null
+    }
+  },
+  "multi_tenancy_config": {
+    "enabled": false,
+    "auto_tenant_creation": false,
+    "auto_tenant_activation": false
+  },
+  "properties": [
+    {
+      "name": "title",
+      "description": null,
+      "data_type": "text",
+      "index_filterable": true,
+      "index_searchable": true,
+      "nested_properties": null,
+      "tokenization": "word",
+      "vectorizer_config": {
+        "skip": false,
+        "vectorize_property_name": true
+      },
+      "vectorizer": "text2vec-huggingface"
+    },
+    {
+      "name": "body",
+      "description": null,
+      "data_type": "text",
+      "index_filterable": true,
+      "index_searchable": true,
+      "nested_properties": null,
+      "tokenization": "word",
+      "vectorizer_config": {
+        "skip": false,
+        "vectorize_property_name": true
+      },
+      "vectorizer": "text2vec-huggingface"
+    },
+    {
+      "name": "page_content",
+      "description": "This property was generated by Weaviate's auto-schema feature on Wed Jun 12 14:31:08 2024",
+      "data_type": "text",
+      "index_filterable": true,
+      "index_searchable": true,
+      "nested_properties": null,
+      "tokenization": "word",
+      "vectorizer_config": {
+        "skip": false,
+        "vectorize_property_name": false
+      },
+      "vectorizer": "text2vec-huggingface"
+    },
+    {
+      "name": "document_title",
+      "description": "This property was generated by Weaviate's auto-schema feature on Wed Jun 12 14:31:08 2024",
+      "data_type": "text",
+      "index_filterable": true,
+      "index_searchable": true,
+      "nested_properties": null,
+      "tokenization": "word",
+      "vectorizer_config": {
+        "skip": false,
+        "vectorize_property_name": false
+      },
+      "vectorizer": "text2vec-huggingface"
+    }
+  ],
+  "references": [],
+  "replication_config": {
+    "factor": 1
+  },
+  "reranker_config": null,
+  "sharding_config": {
+    "virtual_per_physical": 128,
+    "desired_count": 1,
+    "actual_count": 1,
+    "desired_virtual_count": 128,
+    "actual_virtual_count": 128,
+    "key": "_id",
+    "strategy": "hash",
+    "function": "murmur3"
+  },
+  "vector_index_config": {
+    "quantizer": null,
+    "cleanup_interval_seconds": 300,
+    "distance_metric": "cosine",
+    "dynamic_ef_min": 100,
+    "dynamic_ef_max": 500,
+    "dynamic_ef_factor": 8,
+    "ef": -1,
+    "ef_construction": 128,
+    "flat_search_cutoff": 40000,
+    "max_connections": 64,
+    "skip": false,
+    "vector_cache_max_objects": 1000000000000
+  },
+  "vector_index_type": "hnsw",
+  "vectorizer_config": {
+    "vectorizer": "text2vec-huggingface",
+    "model": {
+      "model": "sentence-transformers/all-MiniLM-L6-v2"
+    },
+    "vectorize_collection_name": true
+  },
+  "vectorizer": "text2vec-huggingface",
+  "vector_config": null
+}>
+2024-06-12 16:42:12,988 - INFO - logged properties: {'title': None, 'page_content': 'e.googleusercontent.com/search?hl=fr&q=cache:http://www.criminocorpus.cnrs.fr/article269.html) • Que faire ?)\no\ne', 'body': None, 'document_title': 'Napoléon_III.pdf'}
+2024-06-12 16:42:12,988 - INFO - logged distance: 0.8481264114379883
+2024-06-12 16:42:12,988 - INFO - logged properties: {'title': None, 'page_content': "IdRef (http://www.idref.fr/027274896) · LCCN (http://id.loc.gov/authorities/n79071059) ·\nGND (http://d-nb.info/gnd/118586416) · Italie (https://opac.sbn.it/nome/RAVV057238) ·\nJapon (https://id.ndl.go.jp/auth/ndlna/00551092) · CiNii (http://ci.nii.ac.jp/author/DA05197864?l=en) ·\nEspagne (http://catalogo.bne.es/uhtbin/authoritybrowse.cgi?action=display&authority_id=XX1312716) ·\nBelgique (https://opac.kbr.be/LIBRARY/doc/AUTHORITY/14081723) ·\nPays-Bas (http://data.bibliotheken.nl/id/thes/p070832870) ·\nPologne (https://dbn.bn.org.pl/descriptor-details/9810637195005606) ·\nIsraël (http://olduli.nli.org.il/F/?func=find-b&local_base=NLX10&find_code=UID&request=987007265704905171) ·\nNUKAT (http://nukat.edu.pl/aut/n%20%2001039440) ·\nCatalogne (https://cantic.bnc.cat/registre/981058524428206706) · Suède (https://libris.kb.se/auth/231872) ·\nWorldCat (http://www.worldcat.org/identities/lccn-n79-071059)\na. Il est officiellement déchu de ses fonctions par l'Assemblée nationale le 1 mars 1871.", 'body': None, 'document_title': 'Napoléon_III.pdf'}
+2024-06-12 16:42:12,989 - INFO - logged distance: 0.8489301800727844
+2024-06-12 16:42:12,989 - INFO - Here is the response after similarity search request: QueryReturn(objects=[Object(uuid=_WeaviateUUIDInt('5c602fce-9d09-40c7-b5d4-5c6b75c8a508'), metadata=MetadataReturn(creation_time=None, last_update_time=None, distance=0.8481264114379883, certainty=None, score=None, explain_score=None, is_consistent=None, rerank_score=None), properties={'title': None, 'page_content': 'e.googleusercontent.com/search?hl=fr&q=cache:http://www.criminocorpus.cnrs.fr/article269.html) • Que faire ?)\no\ne', 'body': None, 'document_title': 'Napoléon_III.pdf'}, references=None, vector={}, collection='Admin_test_2'), Object(uuid=_WeaviateUUIDInt('03c68335-7c80-438e-8bb0-0abde88e78ec'), metadata=MetadataReturn(creation_time=None, last_update_time=None, distance=0.8489301800727844, certainty=None, score=None, explain_score=None, is_consistent=None, rerank_score=None), properties={'title': None, 'page_content': "IdRef (http://www.idref.fr/027274896) · LCCN (http://id.loc.gov/authorities/n79071059) ·\nGND (http://d-nb.info/gnd/118586416) · Italie (https://opac.sbn.it/nome/RAVV057238) ·\nJapon (https://id.ndl.go.jp/auth/ndlna/00551092) · CiNii (http://ci.nii.ac.jp/author/DA05197864?l=en) ·\nEspagne (http://catalogo.bne.es/uhtbin/authoritybrowse.cgi?action=display&authority_id=XX1312716) ·\nBelgique (https://opac.kbr.be/LIBRARY/doc/AUTHORITY/14081723) ·\nPays-Bas (http://data.bibliotheken.nl/id/thes/p070832870) ·\nPologne (https://dbn.bn.org.pl/descriptor-details/9810637195005606) ·\nIsraël (http://olduli.nli.org.il/F/?func=find-b&local_base=NLX10&find_code=UID&request=987007265704905171) ·\nNUKAT (http://nukat.edu.pl/aut/n%20%2001039440) ·\nCatalogne (https://cantic.bnc.cat/registre/981058524428206706) · Suède (https://libris.kb.se/auth/231872) ·\nWorldCat (http://www.worldcat.org/identities/lccn-n79-071059)\na. Il est officiellement déchu de ses fonctions par l'Assemblée nationale le 1 mars 1871.", 'body': None, 'document_title': 'Napoléon_III.pdf'}, references=None, vector={}, collection='Admin_test_2')])
+2024-06-12 16:43:19,233 - INFO - HTTP Request: GET http://localhost:8080/v1/.well-known/openid-configuration "HTTP/1.1 404 Not Found"
+2024-06-12 16:43:19,249 - INFO - HTTP Request: GET http://localhost:8080/v1/meta "HTTP/1.1 200 OK"
+2024-06-12 16:43:19,310 - INFO - HTTP Request: GET https://pypi.org/pypi/weaviate-client/json "HTTP/1.1 200 OK"
+2024-06-12 16:43:19,332 - INFO - HTTP Request: GET http://localhost:8080/v1/schema/Admin_test_2 "HTTP/1.1 200 OK"
+2024-06-12 16:43:19,333 - INFO - info on query passed: Gaulle and the class name: <weaviate.Collection config={
+  "name": "Admin_test_2",
+  "description": null,
+  "generative_config": null,
+  "inverted_index_config": {
+    "bm25": {
+      "b": 0.75,
+      "k1": 1.2
+    },
+    "cleanup_interval_seconds": 60,
+    "index_null_state": false,
+    "index_property_length": false,
+    "index_timestamps": false,
+    "stopwords": {
+      "preset": "en",
+      "additions": null,
+      "removals": null
+    }
+  },
+  "multi_tenancy_config": {
+    "enabled": false,
+    "auto_tenant_creation": false,
+    "auto_tenant_activation": false
+  },
+  "properties": [
+    {
+      "name": "title",
+      "description": null,
+      "data_type": "text",
+      "index_filterable": true,
+      "index_searchable": true,
+      "nested_properties": null,
+      "tokenization": "word",
+      "vectorizer_config": {
+        "skip": false,
+        "vectorize_property_name": true
+      },
+      "vectorizer": "text2vec-huggingface"
+    },
+    {
+      "name": "body",
+      "description": null,
+      "data_type": "text",
+      "index_filterable": true,
+      "index_searchable": true,
+      "nested_properties": null,
+      "tokenization": "word",
+      "vectorizer_config": {
+        "skip": false,
+        "vectorize_property_name": true
+      },
+      "vectorizer": "text2vec-huggingface"
+    },
+    {
+      "name": "page_content",
+      "description": "This property was generated by Weaviate's auto-schema feature on Wed Jun 12 14:31:08 2024",
+      "data_type": "text",
+      "index_filterable": true,
+      "index_searchable": true,
+      "nested_properties": null,
+      "tokenization": "word",
+      "vectorizer_config": {
+        "skip": false,
+        "vectorize_property_name": false
+      },
+      "vectorizer": "text2vec-huggingface"
+    },
+    {
+      "name": "document_title",
+      "description": "This property was generated by Weaviate's auto-schema feature on Wed Jun 12 14:31:08 2024",
+      "data_type": "text",
+      "index_filterable": true,
+      "index_searchable": true,
+      "nested_properties": null,
+      "tokenization": "word",
+      "vectorizer_config": {
+        "skip": false,
+        "vectorize_property_name": false
+      },
+      "vectorizer": "text2vec-huggingface"
+    }
+  ],
+  "references": [],
+  "replication_config": {
+    "factor": 1
+  },
+  "reranker_config": null,
+  "sharding_config": {
+    "virtual_per_physical": 128,
+    "desired_count": 1,
+    "actual_count": 1,
+    "desired_virtual_count": 128,
+    "actual_virtual_count": 128,
+    "key": "_id",
+    "strategy": "hash",
+    "function": "murmur3"
+  },
+  "vector_index_config": {
+    "quantizer": null,
+    "cleanup_interval_seconds": 300,
+    "distance_metric": "cosine",
+    "dynamic_ef_min": 100,
+    "dynamic_ef_max": 500,
+    "dynamic_ef_factor": 8,
+    "ef": -1,
+    "ef_construction": 128,
+    "flat_search_cutoff": 40000,
+    "max_connections": 64,
+    "skip": false,
+    "vector_cache_max_objects": 1000000000000
+  },
+  "vector_index_type": "hnsw",
+  "vectorizer_config": {
+    "vectorizer": "text2vec-huggingface",
+    "model": {
+      "model": "sentence-transformers/all-MiniLM-L6-v2"
+    },
+    "vectorize_collection_name": true
+  },
+  "vectorizer": "text2vec-huggingface",
+  "vector_config": null
+}>
+2024-06-12 16:43:19,384 - INFO - logged properties: {'title': None, 'page_content': "Garcia, h. Scott, Brun, g. Bellenger, entre 1877 et 1890, 284 p., page 6.\n63. Séguin 1990, p. 124 et suivantes.\n64. Louis Désiré Véron dans ses Mémoires d'un bourgeois de Paris, tome 6, 1855, p.86, donne 5 334 226 suffrages\npour Louis-Napoléon et 1 448 107 pour Cavaignac.\n65. Alain Decaux et André Castelot (dir.), Dictionnaire d'histoire de France, Librairie Académique Perrin, 1981, p. 702-\n703.\n66. Milza 2007, p. 190.\n67. Milza 2007, p. 191.\n68. Agulhon 2002, p. 101.\n69. Milza 2007, p. 193.\n70. Agulhon 2002, p. 173-174.\n71. Alfred Colling, La Prodigieuse Histoire de la Bourse, 1949, p. 246.\n72. Milza 2007, p. 194.\n73. Milza 2007, p. 196-199.\n74. Milza 2007, p. 201.\n75. Girard 1986, p. 111.\n76. Milza 2007, p. 205-206.\n77. Milza 2007, p. 203-212.\n78. Max Gallo, Garibaldi, la force d'un destin, Fayard, 1982 (ISBN 2213011478), p. 164.\n79. Jacques Bouillon, « Les démocrates-socialistes aux élections de 1849 », Persée, vol. 6,  1956, p. 70-95 (lire en", 'body': None, 'document_title': 'Napoléon_III.pdf'}
+2024-06-12 16:43:19,385 - INFO - logged distance: 0.5784881114959717
+2024-06-12 16:43:19,385 - INFO - logged properties: {'title': None, 'page_content': "discours de Marie Ozenfant, premier secrétaire, devant l'ordre des avocats au Conseil d'État et à la cour de\nCassation.\n181. Girard 1986, p. 169-170.\n182. Girard 1986, p. 170-171.\n183. Agulhon 2002, p. 227.\n184. Sudhir Hazareesing, LA SAINT-NAPOLÉON, Quand le 14 juillet se fêtait le 15 août, traduit de l’anglais par\nGuillaume Villeneuve, 294 p. Éditions Paris Tallandier, 2007 (ISBN 978-2-84734-404-2).\n185. Milza 2007, p. 280.\n186. Milza 2007, p. 281.\n187. Milza 2007, p. 282.\n188. Sylvie Aprile, La révolution inachevée : 1815-1870, Paris, Belin, coll. « Histoire de France » (n 10), 2010, 670 p.\n(ISBN 978-2-7011-3615-8), p. 373.\n189. Milza 2007, p. 275.\n190. « Discours à Bordeaux du 9 octobre 1852 (http://choisel.info/html/histoire/texte_discours_bordeaux.htm\nl) »\n, sur choisel.info publié dans Le Moniteur du 11 octobre.\n191. Milza 2007, p. 283.\n192. « Résultats du référendum sur le rétablissement de l'Empire (http://mjp.univ-perp.fr/france/ref1852.htm) », sur", 'body': None, 'document_title': 'Napoléon_III.pdf'}
+2024-06-12 16:43:19,385 - INFO - logged distance: 0.5823450088500977
+2024-06-12 16:43:19,385 - INFO - Here is the response after similarity search request: QueryReturn(objects=[Object(uuid=_WeaviateUUIDInt('41877c39-2f58-4160-9120-4a4356b8a89b'), metadata=MetadataReturn(creation_time=None, last_update_time=None, distance=0.5784881114959717, certainty=None, score=None, explain_score=None, is_consistent=None, rerank_score=None), properties={'title': None, 'page_content': "Garcia, h. Scott, Brun, g. Bellenger, entre 1877 et 1890, 284 p., page 6.\n63. Séguin 1990, p. 124 et suivantes.\n64. Louis Désiré Véron dans ses Mémoires d'un bourgeois de Paris, tome 6, 1855, p.86, donne 5 334 226 suffrages\npour Louis-Napoléon et 1 448 107 pour Cavaignac.\n65. Alain Decaux et André Castelot (dir.), Dictionnaire d'histoire de France, Librairie Académique Perrin, 1981, p. 702-\n703.\n66. Milza 2007, p. 190.\n67. Milza 2007, p. 191.\n68. Agulhon 2002, p. 101.\n69. Milza 2007, p. 193.\n70. Agulhon 2002, p. 173-174.\n71. Alfred Colling, La Prodigieuse Histoire de la Bourse, 1949, p. 246.\n72. Milza 2007, p. 194.\n73. Milza 2007, p. 196-199.\n74. Milza 2007, p. 201.\n75. Girard 1986, p. 111.\n76. Milza 2007, p. 205-206.\n77. Milza 2007, p. 203-212.\n78. Max Gallo, Garibaldi, la force d'un destin, Fayard, 1982 (ISBN 2213011478), p. 164.\n79. Jacques Bouillon, « Les démocrates-socialistes aux élections de 1849 », Persée, vol. 6,  1956, p. 70-95 (lire en", 'body': None, 'document_title': 'Napoléon_III.pdf'}, references=None, vector={}, collection='Admin_test_2'), Object(uuid=_WeaviateUUIDInt('4c302c63-67e5-4525-8db4-3c041b9de370'), metadata=MetadataReturn(creation_time=None, last_update_time=None, distance=0.5823450088500977, certainty=None, score=None, explain_score=None, is_consistent=None, rerank_score=None), properties={'title': None, 'page_content': "discours de Marie Ozenfant, premier secrétaire, devant l'ordre des avocats au Conseil d'État et à la cour de\nCassation.\n181. Girard 1986, p. 169-170.\n182. Girard 1986, p. 170-171.\n183. Agulhon 2002, p. 227.\n184. Sudhir Hazareesing, LA SAINT-NAPOLÉON, Quand le 14 juillet se fêtait le 15 août, traduit de l’anglais par\nGuillaume Villeneuve, 294 p. Éditions Paris Tallandier, 2007 (ISBN 978-2-84734-404-2).\n185. Milza 2007, p. 280.\n186. Milza 2007, p. 281.\n187. Milza 2007, p. 282.\n188. Sylvie Aprile, La révolution inachevée : 1815-1870, Paris, Belin, coll. « Histoire de France » (n 10), 2010, 670 p.\n(ISBN 978-2-7011-3615-8), p. 373.\n189. Milza 2007, p. 275.\n190. « Discours à Bordeaux du 9 octobre 1852 (http://choisel.info/html/histoire/texte_discours_bordeaux.htm\nl) »\n, sur choisel.info publié dans Le Moniteur du 11 octobre.\n191. Milza 2007, p. 283.\n192. « Résultats du référendum sur le rétablissement de l'Empire (http://mjp.univ-perp.fr/france/ref1852.htm) », sur", 'body': None, 'document_title': 'Napoléon_III.pdf'}, references=None, vector={}, collection='Admin_test_2')])
