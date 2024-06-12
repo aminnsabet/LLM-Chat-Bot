@@ -6,3 +6,26 @@
 2024-03-18 13:48:09,097 - INFO - Received a batch of request with batch size of: 1 
 2024-03-18 13:48:09,099 - INFO - Received request: {'username': 'admin', 'prompt': 'hi', 'memory': False, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'Llama_13b'}
 2024-03-18 13:48:11,996 - INFO - Processed the request successfully
+2024-06-12 12:27:33,147 - INFO - checking the request/ username='admin' class_name='test_1' mode='create_collection' vectorDB_type='Weaviate' file_path=None file_title=None: %s
+2024-06-12 12:27:33,164 - INFO - HTTP Request: GET http://localhost:8080/v1/.well-known/openid-configuration "HTTP/1.1 404 Not Found"
+2024-06-12 12:27:33,181 - INFO - HTTP Request: GET http://localhost:8080/v1/meta "HTTP/1.1 200 OK"
+2024-06-12 12:27:33,244 - INFO - HTTP Request: GET https://pypi.org/pypi/weaviate-client/json "HTTP/1.1 200 OK"
+2024-06-12 12:27:33,337 - INFO - HTTP Request: POST http://localhost:8080/v1/schema "HTTP/1.1 200 OK"
+2024-06-12 12:27:33,350 - INFO - class name added successfully to database
+2024-06-12 12:27:33,350 - INFO - success: class test_1 created for user admin
+2024-06-12 12:31:06,834 - INFO - HTTP Request: GET http://localhost:8080/v1/.well-known/openid-configuration "HTTP/1.1 404 Not Found"
+2024-06-12 12:31:06,851 - INFO - HTTP Request: GET http://localhost:8080/v1/meta "HTTP/1.1 200 OK"
+2024-06-12 12:31:06,910 - INFO - HTTP Request: GET https://pypi.org/pypi/weaviate-client/json "HTTP/1.1 200 OK"
+2024-06-12 12:31:06,933 - INFO - HTTP Request: GET http://localhost:8080/v1/schema "HTTP/1.1 200 OK"
+2024-06-12 12:31:06,934 - INFO - classes: {'Admin_test_1': _CollectionConfigSimple(name='Admin_test_1', description=None, generative_config=None, properties=[_Property(name='title', description=None, data_type=<DataType.TEXT: 'text'>, index_filterable=True, index_searchable=True, nested_properties=None, tokenization=<Tokenization.WORD: 'word'>, vectorizer_config=_PropertyVectorizerConfig(skip=False, vectorize_property_name=True), vectorizer='text2vec-huggingface'), _Property(name='body', description=None, data_type=<DataType.TEXT: 'text'>, index_filterable=True, index_searchable=True, nested_properties=None, tokenization=<Tokenization.WORD: 'word'>, vectorizer_config=_PropertyVectorizerConfig(skip=False, vectorize_property_name=True), vectorizer='text2vec-huggingface')], references=[], reranker_config=None, vectorizer_config=_VectorizerConfig(vectorizer=<Vectorizers.TEXT2VEC_HUGGINGFACE: 'text2vec-huggingface'>, model={'model': 'sentence-transformers/all-MiniLM-L6-v2'}, vectorize_collection_name=True), vectorizer=<Vectorizers.TEXT2VEC_HUGGINGFACE: 'text2vec-huggingface'>, vector_config=None)}: %s
+2024-06-12 12:33:14,892 - INFO - HTTP Request: GET http://localhost:8080/v1/.well-known/openid-configuration "HTTP/1.1 404 Not Found"
+2024-06-12 12:33:14,909 - INFO - HTTP Request: GET http://localhost:8080/v1/meta "HTTP/1.1 200 OK"
+2024-06-12 12:33:14,971 - INFO - HTTP Request: GET https://pypi.org/pypi/weaviate-client/json "HTTP/1.1 200 OK"
+2024-06-12 12:33:14,991 - INFO - HTTP Request: GET http://localhost:8080/v1/schema "HTTP/1.1 200 OK"
+2024-06-12 12:33:14,993 - INFO - classes: {'Admin_test_1': _CollectionConfigSimple(name='Admin_test_1', description=None, generative_config=None, properties=[_Property(name='title', description=None, data_type=<DataType.TEXT: 'text'>, index_filterable=True, index_searchable=True, nested_properties=None, tokenization=<Tokenization.WORD: 'word'>, vectorizer_config=_PropertyVectorizerConfig(skip=False, vectorize_property_name=True), vectorizer='text2vec-huggingface'), _Property(name='body', description=None, data_type=<DataType.TEXT: 'text'>, index_filterable=True, index_searchable=True, nested_properties=None, tokenization=<Tokenization.WORD: 'word'>, vectorizer_config=_PropertyVectorizerConfig(skip=False, vectorize_property_name=True), vectorizer='text2vec-huggingface')], references=[], reranker_config=None, vectorizer_config=_VectorizerConfig(vectorizer=<Vectorizers.TEXT2VEC_HUGGINGFACE: 'text2vec-huggingface'>, model={'model': 'sentence-transformers/all-MiniLM-L6-v2'}, vectorize_collection_name=True), vectorizer=<Vectorizers.TEXT2VEC_HUGGINGFACE: 'text2vec-huggingface'>, vector_config=None)}: %s
+2024-06-12 12:34:06,591 - INFO - actors creation successful [Actor(WeaviateEmbedder, d540048a86f27b2b63d829de02000000), Actor(WeaviateEmbedder, 748567124b0f1b3d2e5bb6c902000000), Actor(WeaviateEmbedder, 141cc17c5117a9b97af208c702000000)]: %s
+2024-06-12 12:34:06,610 - INFO - check 1st step of ray was successful
+2024-06-12 12:34:06,610 - INFO - check if ray was successful:
+2024-06-12 12:34:06,611 - INFO - response: {'status': 'success', 'message': 'Processed 342 documents in batches for class admin_test_1.'}: %s
+2024-06-12 12:34:06,611 - INFO - request processed successfully username='admin' class_name='test_1' mode='add_to_collection' vectorDB_type='Weaviate' file_path='/home/nilsb/LLM-Chat-Bot/API/received_files/008a2c9467f55c83' file_title=None: %s
+2024-06-12 12:36:01,957 - INFO - query success: 1 documents found

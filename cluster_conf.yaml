@@ -2,7 +2,7 @@
 admin_username: admin
 admin_password: admin
 #----------------------- Hugging Configuration
-Hugging_ACCESS_TOKEN : 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
+Hugging_ACCESS_TOKEN : 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
 #----------------------- Weight and Biases Key 
 WANDB_KEY : 251320f252f36c48298b9d80fc9fc0a06cedc9e1
 WANDB_ENABLE : True
