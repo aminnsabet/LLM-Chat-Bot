@@ -44,7 +44,7 @@ async def query_vectorDB(class_name: str = Form(...),
                           vectorDB_type: str = Form("Weaviate"),
                           file_path: Optional[str] = Form(None),
                           current_user: User = Depends(get_current_active_user),
-                          file: Optional[UploadFile] = File(None),
+                          file: UploadFile = File(None),
                           file_title: Optional[str] = Form(None)):
     try:
         print(f"received data: {class_name}, {mode}, {vectorDB_type}, {file_path}, {current_user.username}")

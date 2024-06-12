@@ -24,7 +24,8 @@ import os
 import logging
 from langchain_community.document_loaders import PyPDFLoader
 from langchain.text_splitter import RecursiveCharacterTextSplitter
-
+from weaviate.classes.config import Configure, Property, DataType
+from weaviate.auth import AuthApiKey
 
 
 class Config:
@@ -52,7 +53,7 @@ class VDBaseInput(BaseModel):
 VDB_app = FastAPI()
 
 
-@ray.remote(num_gpus=config.VD_WeaviateEmbedder_num_gpus, num_cpus=12)
+@ray.remote(num_cpus=1)
 class WeaviateEmbedder:
     def __init__(self):
         self.time_taken = 0
@@ -95,20 +96,27 @@ class WeaviateEmbedder:
     def get_time_taken(self):
         return self.time_taken
     
-@serve.deployment(ray_actor_options={"num_gpus": config.VD_deployment_num_gpus}, autoscaling_config={
-        #"min_replicas": config.VD_min_replicas,
-        "initial_replicas": config.VD_initial_replicas,
-        #"max_replicas": config.VD_max_replicas,
-        #"max_concurrent_queries": config.VD_max_concurrent_queries,
-        })
+@serve.deployment(
+    # ray_actor_options={"num_gpus": config.VD_deployment_num_gpus}, autoscaling_config={
+    #     #"min_replicas": config.VD_min_replicas,
+    #     "initial_replicas": config.VD_initial_replicas,
+    #     #"max_replicas": config.VD_max_replicas,
+    #     #"max_concurrent_queries": config.VD_max_concurrent_queries,
+    #     }
+        )
 
 @serve.ingress(VDB_app)
 class VectorDataBase:
     def __init__(self):
 
-        self.weaviate_client = weaviate.Client(
-            url=config.weaviate_client_url,   
-        )
+        self.weaviate_client = weaviate.connect_to_local(   # `weaviate_key`: your Weaviate API key
+                    headers={
+                        "X-HuggingFace-Api-Key": "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"
+                        }
+                )
+        # self.weaviate_client = weaviate.Client(
+        #     url=config.weaviate_client_url,   
+        # )
         self.weaviate_vectorstore = Weaviate(self.weaviate_client, 'Chatbot', 'page_content', attributes=['page_content'])
         self.num_actors = config.VD_number_actors
         self.chunk_size = config.VD_chunk_size
@@ -289,7 +297,7 @@ class VectorDataBase:
         self.logger.info(f"check if ray was successful:", )
 
 
-    def add_vdb_class(self,username, class_name,):
+    def add_vdb_class(self,username, class_name,embedder=None):
         '''
         Description:
             Creates a new class in the Weaviate database with the specified name and username. It also adds the class to the internal database.
@@ -304,52 +312,84 @@ class VectorDataBase:
             dict: A response indicating the outcome ('success' or 'error') and relevant messages.
         '''
         try:            
-                weaviate_client = weaviate.Client("http://localhost:8080")
-                self.logger.info("checkpoint 1")
+                weaviate_client = weaviate.connect_to_local(   # `weaviate_key`: your Weaviate API key
+                    headers={
+                        "X-HuggingFace-Api-Key": "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"
+                        }
+                )
+
                 prefix = username
-                self.logger.info(f"checkpoint 2 {prefix}: %s",)
                 cls = str(prefix) + "_" + str(class_name)
-                self.logger.info(f"checkpoint 2 {cls}: %s",)
-                #class_description = str(description)
-                vectorizer = 'text2vec-transformers'
-                if cls is not None:
-                    schema = {'classes': [ 
-                        {
-                                'class': str(cls),
-                                'description': 'normal description',
-                                'vectorizer': str(vectorizer),
-                                'moduleConfig': {
-                                    str(vectorizer): {
-                                        'vectorizerClassName': False,
-                                        }
-                                },
-                                'properties': [{
-                                    'dataType': ['text'],
-                                    'description': 'the text from the documents parsed',
-                                    'moduleConfig': {
-                                        str(vectorizer): {
-                                            'skip': False,
-                                            'vectorizePropertyName': False,
-                                            }
-                                    },
-                                    'name': 'page_content',
-                                },
-                                {
-                                    'name': 'document_title',
-                                    'dataType': ['text'],
-                                }],      
-                                },
-                    ]}
-                    weaviate_client.schema.create(schema)
-                    database_response = self.database.add_collection({"username": username, "collection_name": class_name})
-                    if database_response:
-                        self.logger.info("class name added successfully to database")     
+                if embedder is None:
+                    vectorizer = "sentence-transformers/all-MiniLM-L6-v2"
+                else:
+                    vectorizer = embedder
+                weaviate_client.collections.create(
+                        cls,
+                        vectorizer_config=Configure.Vectorizer.text2vec_huggingface(
+                            model=vectorizer,
+                        ),
+                        properties=[  # properties configuration is optional
+                        Property(name="title", data_type=DataType.TEXT),
+                        Property(name="body", data_type=DataType.TEXT),
+                    ],
+                )
+                database_response = self.database.add_collection({"username": username, "collection_name": class_name})
+                if database_response:
+                    self.logger.info("class name added successfully to database")     
                     self.logger.info(f"success: class {class_name} created for user {username}")
                     return {"success": f"Class {cls} created "}
                 else:
                     return {"error": "No class name provided"}
         except Exception as e:
             return {"error": str(e)}
+
+        #         weaviate_client = weaviate.Client("http://localhost:8080")
+        #         self.logger.info("checkpoint 1")
+        #         prefix = username
+        #         self.logger.info(f"checkpoint 2 {prefix}: %s",)
+        #         cls = str(prefix) + "_" + str(class_name)
+        #         self.logger.info(f"checkpoint 2 {cls}: %s",)
+        #         #class_description = str(description)
+        #         vectorizer = 'text2vec-transformers'
+        #         if cls is not None:
+        #             schema = {'classes': [ 
+        #                 {
+        #                         'class': str(cls),
+        #                         'description': 'normal description',
+        #                         'vectorizer': str(vectorizer),
+        #                         'moduleConfig': {
+        #                             str(vectorizer): {
+        #                                 'vectorizerClassName': False,
+        #                                 }
+        #                         },
+        #                         'properties': [{
+        #                             'dataType': ['text'],
+        #                             'description': 'the text from the documents parsed',
+        #                             'moduleConfig': {
+        #                                 str(vectorizer): {
+        #                                     'skip': False,
+        #                                     'vectorizePropertyName': False,
+        #                                     }
+        #                             },
+        #                             'name': 'page_content',
+        #                         },
+        #                         {
+        #                             'name': 'document_title',
+        #                             'dataType': ['text'],
+        #                         }],      
+        #                         },
+        #             ]}
+        #             weaviate_client.schema.create(schema)
+        #             database_response = self.database.add_collection({"username": username, "collection_name": class_name})
+        #             if database_response:
+        #                 self.logger.info("class name added successfully to database")     
+        #             self.logger.info(f"success: class {class_name} created for user {username}")
+        #             return {"success": f"Class {cls} created "}
+        #         else:
+        #             return {"error": "No class name provided"}
+        # except Exception as e:
+        #     return {"error": str(e)}
 
 
     def delete_weaviate_class(self, username, class_name):
@@ -445,17 +485,27 @@ class VectorDataBase:
 
     def get_classes(self, username):
         try:
-            weaviate_client = weaviate.Client("http://localhost:8080")
+            weaviate_client = weaviate.connect_to_local(   # `weaviate_key`: your Weaviate API key
+                    headers={
+                        "X-HuggingFace-Api-Key": "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"
+                        }
+                )
+            #weaviate_client = weaviate.Client("http://localhost:8080")
             username = username
-            schema = weaviate_client.schema.get()
-            classes = schema.get('classes', []) 
-            prefix = str(username) + "_"
-            prefix = prefix.capitalize()
-            filtered_classes = [cls["class"].replace(prefix, "", 1) for cls in classes if cls["class"].startswith(prefix)] #[cls["class"] for cls in classes if cls["class"].startswith(prefix)]
-            if filtered_classes is not None:
-                return filtered_classes
+            response = weaviate_client.collections.list_all()
+            if response is not None:    
+                return response
             else:
                 return {"error": "No classes found"}
+            # schema = weaviate_client.schema.get()
+            # classes = schema.get('classes', []) 
+            # prefix = str(username) + "_"
+            # prefix = prefix.capitalize()
+            # filtered_classes = [cls["class"].replace(prefix, "", 1) for cls in classes if cls["class"].startswith(prefix)] #[cls["class"] for cls in classes if cls["class"].startswith(prefix)]
+            # if filtered_classes is not None:
+            #     return filtered_classes
+            # else:
+            #     return {"error": "No classes found"}
         except Exception as e:
                 return {"error": str(e)}
         

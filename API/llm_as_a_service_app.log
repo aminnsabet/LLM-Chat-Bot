@@ -1126,3 +1126,27 @@
 2024-06-07 11:58:07,056 - llm_as_a_service_logger - INFO - Processed the request successfully
 2024-06-07 11:58:07,056 - llm_as_a_service_logger - INFO - Processed the request successfully
 2024-06-07 11:58:07,056 - llm_as_a_service_logger - INFO - Processed the request successfully
+2024-06-12 11:53:20,129 - llm_as_a_service_logger - INFO - Wandb Logging Enabled
+2024-06-12 11:53:20,129 - llm_as_a_service_logger - INFO - Wandb Logging Enabled
+2024-06-12 11:53:20,129 - llm_as_a_service_logger - INFO - Wandb Logging Enabled
+2024-06-12 11:53:20,129 - llm_as_a_service_logger - INFO - Wandb Logging Enabled
+2024-06-12 11:54:25,908 - llm_as_a_service_logger - INFO - Wandb Logging Enabled
+2024-06-12 11:54:25,908 - llm_as_a_service_logger - INFO - Wandb Logging Enabled
+2024-06-12 11:54:25,908 - llm_as_a_service_logger - INFO - Wandb Logging Enabled
+2024-06-12 11:54:25,908 - llm_as_a_service_logger - INFO - Wandb Logging Enabled
+2024-06-12 12:27:12,651 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-06-12 12:27:12,651 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-06-12 12:27:12,651 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-06-12 12:27:12,651 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-06-12 12:27:12,651 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-06-12 12:27:12,651 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-06-12 12:32:25,240 - llm_as_a_service_logger - INFO - Wandb Logging Enabled
+2024-06-12 12:32:25,240 - llm_as_a_service_logger - INFO - Wandb Logging Enabled
+2024-06-12 12:32:25,240 - llm_as_a_service_logger - INFO - Wandb Logging Enabled
+2024-06-12 12:32:25,240 - llm_as_a_service_logger - INFO - Wandb Logging Enabled
+2024-06-12 12:32:34,562 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-06-12 12:32:34,562 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-06-12 12:32:34,562 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-06-12 12:32:34,562 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-06-12 12:32:34,562 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-06-12 12:32:34,562 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
