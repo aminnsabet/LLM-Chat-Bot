@@ -2,7 +2,7 @@ import os
 import threading
 import socket
 import logging
-from fastapi import FastAPI, HTTPException
+from fastapi import FastAPI, HTTPException,APIRouter
 from pydantic import BaseModel, field_validator
 import docker
 import uvicorn
@@ -10,8 +10,11 @@ import traceback
 import requests
 from typing import Optional
 import time
-app = FastAPI()
+from app.logging_config import setup_logger
 
+logger = setup_logger()
+
+router = APIRouter()
 class EngineArgs(BaseModel):
     HUGGING_FACE_HUB_TOKEN: str
     MODEL: str
@@ -106,11 +109,11 @@ def check_vllm_health(endpoint: str, timeout: int = 60, interval: int = 5):
             if response.status_code == 200:
                 return True
         except requests.RequestException as e:
-            logging.error(f"Health check error: {str(e)}")
+            logger.error(f"Health check error: {str(e)}")
         time.sleep(interval)
     return False
 
-@app.post("/run-docker")
+@router.post("/")
 def run_docker(engine_args: EngineArgs):
     user_info = validate_huggingface_token(engine_args.HUGGING_FACE_HUB_TOKEN)
     if user_info is None:
@@ -165,9 +168,9 @@ def run_docker(engine_args: EngineArgs):
 
         health_check_endpoint = f"http://localhost:{free_port}/metrics"
         if check_vllm_health(health_check_endpoint):
-            logging.info(f"Container started successfully. Port: {free_port}")
-            logging.info(f"User info: {user_info}")
-            logging.info(f"Container ID: {container.id}")
+            logger.info(f"Container started successfully. Port: {free_port}")
+            logger.info(f"User info: {user_info}")
+            logger.info(f"Container ID: {container.id}")
             return {
                 "message": "Container started successfully and vLLM server is healthy",
                 "vLLM_endpoint": f"http://localhost:{free_port}/v1/completions",
