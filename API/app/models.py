@@ -37,7 +37,7 @@ class InferenceRequest(BaseModel):
     conversation_number: Optional[int]
     AI_assistance: Optional[bool]
     collection_name: Optional[str]
-    llm_model: Optional[str] = "Llama_70b"
+    llm_model: Optional[str] 
 
 class DataBaseRequest(BaseModel):
     content: Optional[str]

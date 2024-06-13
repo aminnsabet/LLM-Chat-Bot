@@ -1126,3 +1126,862 @@
 2024-06-07 11:58:07,056 - llm_as_a_service_logger - INFO - Processed the request successfully
 2024-06-07 11:58:07,056 - llm_as_a_service_logger - INFO - Processed the request successfully
 2024-06-07 11:58:07,056 - llm_as_a_service_logger - INFO - Processed the request successfully
+2024-06-11 15:35:47,188 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-06-11 15:35:47,188 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-06-11 15:35:47,188 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-06-11 15:35:47,188 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-06-11 15:35:50,171 - llm_as_a_service_logger - INFO - Wandb Logging Enabled
+2024-06-11 15:35:50,171 - llm_as_a_service_logger - INFO - Wandb Logging Enabled
+2024-06-11 15:35:50,171 - llm_as_a_service_logger - INFO - Wandb Logging Enabled
+2024-06-11 15:35:50,171 - llm_as_a_service_logger - INFO - Wandb Logging Enabled
+2024-06-11 15:37:08,711 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-06-11 15:37:08,711 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-06-11 15:37:08,711 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-06-11 15:37:08,711 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-06-11 15:37:11,669 - llm_as_a_service_logger - INFO - Wandb Logging Enabled
+2024-06-11 15:37:11,669 - llm_as_a_service_logger - INFO - Wandb Logging Enabled
+2024-06-11 15:37:11,669 - llm_as_a_service_logger - INFO - Wandb Logging Enabled
+2024-06-11 15:37:11,669 - llm_as_a_service_logger - INFO - Wandb Logging Enabled
+2024-06-11 15:37:34,169 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-06-11 15:37:34,169 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-06-11 15:37:34,169 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-06-11 15:37:34,169 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-06-11 15:37:37,125 - llm_as_a_service_logger - INFO - Wandb Logging Enabled
+2024-06-11 15:37:37,125 - llm_as_a_service_logger - INFO - Wandb Logging Enabled
+2024-06-11 15:37:37,125 - llm_as_a_service_logger - INFO - Wandb Logging Enabled
+2024-06-11 15:37:37,125 - llm_as_a_service_logger - INFO - Wandb Logging Enabled
+2024-06-11 15:37:58,742 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-06-11 15:37:58,742 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-06-11 15:37:58,742 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-06-11 15:37:58,742 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-06-11 15:38:01,673 - llm_as_a_service_logger - INFO - Wandb Logging Enabled
+2024-06-11 15:38:01,673 - llm_as_a_service_logger - INFO - Wandb Logging Enabled
+2024-06-11 15:38:01,673 - llm_as_a_service_logger - INFO - Wandb Logging Enabled
+2024-06-11 15:38:01,673 - llm_as_a_service_logger - INFO - Wandb Logging Enabled
+2024-06-11 15:38:20,602 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-06-11 15:38:20,602 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-06-11 15:38:20,602 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-06-11 15:38:20,602 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-06-11 15:38:23,538 - llm_as_a_service_logger - INFO - Wandb Logging Enabled
+2024-06-11 15:38:23,538 - llm_as_a_service_logger - INFO - Wandb Logging Enabled
+2024-06-11 15:38:23,538 - llm_as_a_service_logger - INFO - Wandb Logging Enabled
+2024-06-11 15:38:23,538 - llm_as_a_service_logger - INFO - Wandb Logging Enabled
+2024-06-11 15:38:36,085 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-06-11 15:38:36,085 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-06-11 15:38:36,085 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-06-11 15:38:36,085 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-06-11 15:38:38,936 - llm_as_a_service_logger - INFO - Wandb Logging Enabled
+2024-06-11 15:38:38,936 - llm_as_a_service_logger - INFO - Wandb Logging Enabled
+2024-06-11 15:38:38,936 - llm_as_a_service_logger - INFO - Wandb Logging Enabled
+2024-06-11 15:38:38,936 - llm_as_a_service_logger - INFO - Wandb Logging Enabled
+2024-06-11 15:38:51,476 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-06-11 15:38:51,476 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-06-11 15:38:51,476 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-06-11 15:38:51,476 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-06-11 15:38:54,447 - llm_as_a_service_logger - INFO - Wandb Logging Enabled
+2024-06-11 15:38:54,447 - llm_as_a_service_logger - INFO - Wandb Logging Enabled
+2024-06-11 15:38:54,447 - llm_as_a_service_logger - INFO - Wandb Logging Enabled
+2024-06-11 15:38:54,447 - llm_as_a_service_logger - INFO - Wandb Logging Enabled
+2024-06-11 15:39:07,672 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-06-11 15:39:07,672 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-06-11 15:39:07,672 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-06-11 15:39:07,672 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-06-11 15:39:10,511 - llm_as_a_service_logger - INFO - Wandb Logging Enabled
+2024-06-11 15:39:10,511 - llm_as_a_service_logger - INFO - Wandb Logging Enabled
+2024-06-11 15:39:10,511 - llm_as_a_service_logger - INFO - Wandb Logging Enabled
+2024-06-11 15:39:10,511 - llm_as_a_service_logger - INFO - Wandb Logging Enabled
+2024-06-11 15:39:16,968 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-06-11 15:39:16,968 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-06-11 15:39:16,968 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-06-11 15:39:16,968 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-06-11 15:39:19,933 - llm_as_a_service_logger - INFO - Wandb Logging Enabled
+2024-06-11 15:39:19,933 - llm_as_a_service_logger - INFO - Wandb Logging Enabled
+2024-06-11 15:39:19,933 - llm_as_a_service_logger - INFO - Wandb Logging Enabled
+2024-06-11 15:39:19,933 - llm_as_a_service_logger - INFO - Wandb Logging Enabled
+2024-06-11 15:39:26,071 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-06-11 15:39:26,071 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-06-11 15:39:26,071 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-06-11 15:39:26,071 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-06-11 15:39:29,027 - llm_as_a_service_logger - INFO - Wandb Logging Enabled
+2024-06-11 15:39:29,027 - llm_as_a_service_logger - INFO - Wandb Logging Enabled
+2024-06-11 15:39:29,027 - llm_as_a_service_logger - INFO - Wandb Logging Enabled
+2024-06-11 15:39:29,027 - llm_as_a_service_logger - INFO - Wandb Logging Enabled
+2024-06-11 15:40:09,969 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-06-11 15:40:09,969 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-06-11 15:40:09,969 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-06-11 15:40:09,969 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-06-11 15:40:09,969 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-06-11 15:40:09,969 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-06-11 15:40:09,969 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-06-11 15:41:11,774 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-06-11 15:41:11,774 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-06-11 15:41:11,774 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-06-11 15:41:11,774 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-06-11 15:41:14,660 - llm_as_a_service_logger - INFO - Wandb Logging Enabled
+2024-06-11 15:41:14,660 - llm_as_a_service_logger - INFO - Wandb Logging Enabled
+2024-06-11 15:41:14,660 - llm_as_a_service_logger - INFO - Wandb Logging Enabled
+2024-06-11 15:41:14,660 - llm_as_a_service_logger - INFO - Wandb Logging Enabled
+2024-06-11 15:41:35,329 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-06-11 15:41:35,329 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-06-11 15:41:35,329 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-06-11 15:41:35,329 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-06-11 15:41:35,329 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-06-11 15:41:35,329 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-06-11 15:41:35,329 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-06-11 15:42:35,431 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-11 15:42:35,431 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-11 15:42:35,431 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-11 15:42:35,431 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-11 15:42:35,431 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-11 15:42:35,431 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-11 15:42:35,431 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-11 15:42:40,441 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-11 15:42:40,441 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-11 15:42:40,441 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-11 15:42:40,441 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-11 15:42:40,441 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-11 15:42:40,441 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-11 15:42:40,441 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-11 15:42:45,451 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-11 15:42:45,451 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-11 15:42:45,451 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-11 15:42:45,451 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-11 15:42:45,451 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-11 15:42:45,451 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-11 15:42:45,451 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-11 15:42:50,462 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-11 15:42:50,462 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-11 15:42:50,462 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-11 15:42:50,462 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-11 15:42:50,462 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-11 15:42:50,462 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-11 15:42:50,462 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-11 15:42:55,473 - llm_as_a_service_logger - INFO - Container started successfully. Port: 8500
+2024-06-11 15:42:55,473 - llm_as_a_service_logger - INFO - Container started successfully. Port: 8500
+2024-06-11 15:42:55,473 - llm_as_a_service_logger - INFO - Container started successfully. Port: 8500
+2024-06-11 15:42:55,473 - llm_as_a_service_logger - INFO - Container started successfully. Port: 8500
+2024-06-11 15:42:55,473 - llm_as_a_service_logger - INFO - Container started successfully. Port: 8500
+2024-06-11 15:42:55,473 - llm_as_a_service_logger - INFO - Container started successfully. Port: 8500
+2024-06-11 15:42:55,473 - llm_as_a_service_logger - INFO - Container started successfully. Port: 8500
+2024-06-11 15:42:55,474 - llm_as_a_service_logger - INFO - User info: Amin-nsclae
+2024-06-11 15:42:55,474 - llm_as_a_service_logger - INFO - User info: Amin-nsclae
+2024-06-11 15:42:55,474 - llm_as_a_service_logger - INFO - User info: Amin-nsclae
+2024-06-11 15:42:55,474 - llm_as_a_service_logger - INFO - User info: Amin-nsclae
+2024-06-11 15:42:55,474 - llm_as_a_service_logger - INFO - User info: Amin-nsclae
+2024-06-11 15:42:55,474 - llm_as_a_service_logger - INFO - User info: Amin-nsclae
+2024-06-11 15:42:55,474 - llm_as_a_service_logger - INFO - User info: Amin-nsclae
+2024-06-11 15:42:55,475 - llm_as_a_service_logger - INFO - Container ID: 20ed3be4ddb47665a00f285bcb7b9229ec752bcc9c37aa115617b4400230ff5f
+2024-06-11 15:42:55,475 - llm_as_a_service_logger - INFO - Container ID: 20ed3be4ddb47665a00f285bcb7b9229ec752bcc9c37aa115617b4400230ff5f
+2024-06-11 15:42:55,475 - llm_as_a_service_logger - INFO - Container ID: 20ed3be4ddb47665a00f285bcb7b9229ec752bcc9c37aa115617b4400230ff5f
+2024-06-11 15:42:55,475 - llm_as_a_service_logger - INFO - Container ID: 20ed3be4ddb47665a00f285bcb7b9229ec752bcc9c37aa115617b4400230ff5f
+2024-06-11 15:42:55,475 - llm_as_a_service_logger - INFO - Container ID: 20ed3be4ddb47665a00f285bcb7b9229ec752bcc9c37aa115617b4400230ff5f
+2024-06-11 15:42:55,475 - llm_as_a_service_logger - INFO - Container ID: 20ed3be4ddb47665a00f285bcb7b9229ec752bcc9c37aa115617b4400230ff5f
+2024-06-11 15:42:55,475 - llm_as_a_service_logger - INFO - Container ID: 20ed3be4ddb47665a00f285bcb7b9229ec752bcc9c37aa115617b4400230ff5f
+2024-06-12 09:10:42,161 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-06-12 09:10:42,161 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-06-12 09:10:42,161 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-06-12 09:10:42,161 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-06-12 09:10:43,703 - llm_as_a_service_logger - INFO - Wandb Logging Enabled
+2024-06-12 09:10:43,703 - llm_as_a_service_logger - INFO - Wandb Logging Enabled
+2024-06-12 09:10:43,703 - llm_as_a_service_logger - INFO - Wandb Logging Enabled
+2024-06-12 09:10:43,703 - llm_as_a_service_logger - INFO - Wandb Logging Enabled
+2024-06-12 09:12:13,058 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-06-12 09:12:13,058 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-06-12 09:12:13,058 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-06-12 09:12:13,058 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-06-12 09:12:14,611 - llm_as_a_service_logger - INFO - Wandb Logging Enabled
+2024-06-12 09:12:14,611 - llm_as_a_service_logger - INFO - Wandb Logging Enabled
+2024-06-12 09:12:14,611 - llm_as_a_service_logger - INFO - Wandb Logging Enabled
+2024-06-12 09:12:14,611 - llm_as_a_service_logger - INFO - Wandb Logging Enabled
+2024-06-12 09:12:20,759 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-06-12 09:12:20,759 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-06-12 09:12:20,759 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-06-12 09:12:20,759 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-06-12 09:12:22,256 - llm_as_a_service_logger - INFO - Wandb Logging Enabled
+2024-06-12 09:12:22,256 - llm_as_a_service_logger - INFO - Wandb Logging Enabled
+2024-06-12 09:12:22,256 - llm_as_a_service_logger - INFO - Wandb Logging Enabled
+2024-06-12 09:12:22,256 - llm_as_a_service_logger - INFO - Wandb Logging Enabled
+2024-06-12 09:12:28,266 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-06-12 09:12:28,266 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-06-12 09:12:28,266 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-06-12 09:12:28,266 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-06-12 09:12:29,794 - llm_as_a_service_logger - INFO - Wandb Logging Enabled
+2024-06-12 09:12:29,794 - llm_as_a_service_logger - INFO - Wandb Logging Enabled
+2024-06-12 09:12:29,794 - llm_as_a_service_logger - INFO - Wandb Logging Enabled
+2024-06-12 09:12:29,794 - llm_as_a_service_logger - INFO - Wandb Logging Enabled
+2024-06-12 09:14:29,306 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-06-12 09:14:29,306 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-06-12 09:14:29,306 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-06-12 09:14:29,306 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-06-12 09:14:30,895 - llm_as_a_service_logger - INFO - Wandb Logging Enabled
+2024-06-12 09:14:30,895 - llm_as_a_service_logger - INFO - Wandb Logging Enabled
+2024-06-12 09:14:30,895 - llm_as_a_service_logger - INFO - Wandb Logging Enabled
+2024-06-12 09:14:30,895 - llm_as_a_service_logger - INFO - Wandb Logging Enabled
+2024-06-12 09:14:37,392 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-06-12 09:14:37,392 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-06-12 09:14:37,392 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-06-12 09:14:37,392 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-06-12 09:14:39,051 - llm_as_a_service_logger - INFO - Wandb Logging Enabled
+2024-06-12 09:14:39,051 - llm_as_a_service_logger - INFO - Wandb Logging Enabled
+2024-06-12 09:14:39,051 - llm_as_a_service_logger - INFO - Wandb Logging Enabled
+2024-06-12 09:14:39,051 - llm_as_a_service_logger - INFO - Wandb Logging Enabled
+2024-06-12 09:16:00,353 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-06-12 09:16:00,353 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-06-12 09:16:00,353 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-06-12 09:16:00,353 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-06-12 09:16:01,936 - llm_as_a_service_logger - INFO - Wandb Logging Enabled
+2024-06-12 09:16:01,936 - llm_as_a_service_logger - INFO - Wandb Logging Enabled
+2024-06-12 09:16:01,936 - llm_as_a_service_logger - INFO - Wandb Logging Enabled
+2024-06-12 09:16:01,936 - llm_as_a_service_logger - INFO - Wandb Logging Enabled
+2024-06-12 09:16:08,411 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-06-12 09:16:08,411 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-06-12 09:16:08,411 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-06-12 09:16:08,411 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-06-12 09:16:09,887 - llm_as_a_service_logger - INFO - Wandb Logging Enabled
+2024-06-12 09:16:09,887 - llm_as_a_service_logger - INFO - Wandb Logging Enabled
+2024-06-12 09:16:09,887 - llm_as_a_service_logger - INFO - Wandb Logging Enabled
+2024-06-12 09:16:09,887 - llm_as_a_service_logger - INFO - Wandb Logging Enabled
+2024-06-12 09:16:16,300 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-06-12 09:16:16,300 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-06-12 09:16:16,300 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-06-12 09:16:16,300 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-06-12 09:16:17,804 - llm_as_a_service_logger - INFO - Wandb Logging Enabled
+2024-06-12 09:16:17,804 - llm_as_a_service_logger - INFO - Wandb Logging Enabled
+2024-06-12 09:16:17,804 - llm_as_a_service_logger - INFO - Wandb Logging Enabled
+2024-06-12 09:16:17,804 - llm_as_a_service_logger - INFO - Wandb Logging Enabled
+2024-06-12 09:16:24,162 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-06-12 09:16:24,162 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-06-12 09:16:24,162 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-06-12 09:16:24,162 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-06-12 09:16:25,721 - llm_as_a_service_logger - INFO - Wandb Logging Enabled
+2024-06-12 09:16:25,721 - llm_as_a_service_logger - INFO - Wandb Logging Enabled
+2024-06-12 09:16:25,721 - llm_as_a_service_logger - INFO - Wandb Logging Enabled
+2024-06-12 09:16:25,721 - llm_as_a_service_logger - INFO - Wandb Logging Enabled
+2024-06-12 09:16:31,682 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-06-12 09:16:31,682 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-06-12 09:16:31,682 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-06-12 09:16:31,682 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-06-12 09:16:33,272 - llm_as_a_service_logger - INFO - Wandb Logging Enabled
+2024-06-12 09:16:33,272 - llm_as_a_service_logger - INFO - Wandb Logging Enabled
+2024-06-12 09:16:33,272 - llm_as_a_service_logger - INFO - Wandb Logging Enabled
+2024-06-12 09:16:33,272 - llm_as_a_service_logger - INFO - Wandb Logging Enabled
+2024-06-12 09:16:40,507 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-06-12 09:16:40,507 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-06-12 09:16:40,507 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-06-12 09:16:40,507 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-06-12 09:16:42,041 - llm_as_a_service_logger - INFO - Wandb Logging Enabled
+2024-06-12 09:16:42,041 - llm_as_a_service_logger - INFO - Wandb Logging Enabled
+2024-06-12 09:16:42,041 - llm_as_a_service_logger - INFO - Wandb Logging Enabled
+2024-06-12 09:16:42,041 - llm_as_a_service_logger - INFO - Wandb Logging Enabled
+2024-06-12 09:17:07,786 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-06-12 09:17:07,786 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-06-12 09:17:07,786 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-06-12 09:17:07,786 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-06-12 09:17:09,461 - llm_as_a_service_logger - INFO - Wandb Logging Enabled
+2024-06-12 09:17:09,461 - llm_as_a_service_logger - INFO - Wandb Logging Enabled
+2024-06-12 09:17:09,461 - llm_as_a_service_logger - INFO - Wandb Logging Enabled
+2024-06-12 09:17:09,461 - llm_as_a_service_logger - INFO - Wandb Logging Enabled
+2024-06-12 09:17:15,627 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-06-12 09:17:15,627 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-06-12 09:17:15,627 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-06-12 09:17:15,627 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-06-12 09:17:17,180 - llm_as_a_service_logger - INFO - Wandb Logging Enabled
+2024-06-12 09:17:17,180 - llm_as_a_service_logger - INFO - Wandb Logging Enabled
+2024-06-12 09:17:17,180 - llm_as_a_service_logger - INFO - Wandb Logging Enabled
+2024-06-12 09:17:17,180 - llm_as_a_service_logger - INFO - Wandb Logging Enabled
+2024-06-12 09:17:23,337 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-06-12 09:17:23,337 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-06-12 09:17:23,337 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-06-12 09:17:23,337 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-06-12 09:17:24,865 - llm_as_a_service_logger - INFO - Wandb Logging Enabled
+2024-06-12 09:17:24,865 - llm_as_a_service_logger - INFO - Wandb Logging Enabled
+2024-06-12 09:17:24,865 - llm_as_a_service_logger - INFO - Wandb Logging Enabled
+2024-06-12 09:17:24,865 - llm_as_a_service_logger - INFO - Wandb Logging Enabled
+2024-06-12 09:21:37,923 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-12 09:21:37,923 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-12 09:21:37,923 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-12 09:21:37,923 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-12 09:21:37,923 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-12 09:21:37,923 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-12 09:21:37,923 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-12 09:21:42,930 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-12 09:21:42,930 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-12 09:21:42,930 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-12 09:21:42,930 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-12 09:21:42,930 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-12 09:21:42,930 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-12 09:21:42,930 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-12 09:21:47,938 - llm_as_a_service_logger - ERROR - Health check error: HTTPConnectionPool(host='localhost', port=8501): Max retries exceeded with url: /metrics (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f19739192d0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+2024-06-12 09:21:47,938 - llm_as_a_service_logger - ERROR - Health check error: HTTPConnectionPool(host='localhost', port=8501): Max retries exceeded with url: /metrics (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f19739192d0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+2024-06-12 09:21:47,938 - llm_as_a_service_logger - ERROR - Health check error: HTTPConnectionPool(host='localhost', port=8501): Max retries exceeded with url: /metrics (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f19739192d0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+2024-06-12 09:21:47,938 - llm_as_a_service_logger - ERROR - Health check error: HTTPConnectionPool(host='localhost', port=8501): Max retries exceeded with url: /metrics (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f19739192d0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+2024-06-12 09:21:47,938 - llm_as_a_service_logger - ERROR - Health check error: HTTPConnectionPool(host='localhost', port=8501): Max retries exceeded with url: /metrics (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f19739192d0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+2024-06-12 09:21:47,938 - llm_as_a_service_logger - ERROR - Health check error: HTTPConnectionPool(host='localhost', port=8501): Max retries exceeded with url: /metrics (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f19739192d0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+2024-06-12 09:21:47,938 - llm_as_a_service_logger - ERROR - Health check error: HTTPConnectionPool(host='localhost', port=8501): Max retries exceeded with url: /metrics (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f19739192d0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+2024-06-12 09:21:52,942 - llm_as_a_service_logger - ERROR - Health check error: HTTPConnectionPool(host='localhost', port=8501): Max retries exceeded with url: /metrics (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f1973919ab0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+2024-06-12 09:21:52,942 - llm_as_a_service_logger - ERROR - Health check error: HTTPConnectionPool(host='localhost', port=8501): Max retries exceeded with url: /metrics (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f1973919ab0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+2024-06-12 09:21:52,942 - llm_as_a_service_logger - ERROR - Health check error: HTTPConnectionPool(host='localhost', port=8501): Max retries exceeded with url: /metrics (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f1973919ab0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+2024-06-12 09:21:52,942 - llm_as_a_service_logger - ERROR - Health check error: HTTPConnectionPool(host='localhost', port=8501): Max retries exceeded with url: /metrics (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f1973919ab0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+2024-06-12 09:21:52,942 - llm_as_a_service_logger - ERROR - Health check error: HTTPConnectionPool(host='localhost', port=8501): Max retries exceeded with url: /metrics (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f1973919ab0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+2024-06-12 09:21:52,942 - llm_as_a_service_logger - ERROR - Health check error: HTTPConnectionPool(host='localhost', port=8501): Max retries exceeded with url: /metrics (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f1973919ab0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+2024-06-12 09:21:52,942 - llm_as_a_service_logger - ERROR - Health check error: HTTPConnectionPool(host='localhost', port=8501): Max retries exceeded with url: /metrics (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f1973919ab0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+2024-06-12 09:21:57,950 - llm_as_a_service_logger - ERROR - Health check error: HTTPConnectionPool(host='localhost', port=8501): Max retries exceeded with url: /metrics (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f1973a66170>: Failed to establish a new connection: [Errno 111] Connection refused'))
+2024-06-12 09:21:57,950 - llm_as_a_service_logger - ERROR - Health check error: HTTPConnectionPool(host='localhost', port=8501): Max retries exceeded with url: /metrics (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f1973a66170>: Failed to establish a new connection: [Errno 111] Connection refused'))
+2024-06-12 09:21:57,950 - llm_as_a_service_logger - ERROR - Health check error: HTTPConnectionPool(host='localhost', port=8501): Max retries exceeded with url: /metrics (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f1973a66170>: Failed to establish a new connection: [Errno 111] Connection refused'))
+2024-06-12 09:21:57,950 - llm_as_a_service_logger - ERROR - Health check error: HTTPConnectionPool(host='localhost', port=8501): Max retries exceeded with url: /metrics (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f1973a66170>: Failed to establish a new connection: [Errno 111] Connection refused'))
+2024-06-12 09:21:57,950 - llm_as_a_service_logger - ERROR - Health check error: HTTPConnectionPool(host='localhost', port=8501): Max retries exceeded with url: /metrics (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f1973a66170>: Failed to establish a new connection: [Errno 111] Connection refused'))
+2024-06-12 09:21:57,950 - llm_as_a_service_logger - ERROR - Health check error: HTTPConnectionPool(host='localhost', port=8501): Max retries exceeded with url: /metrics (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f1973a66170>: Failed to establish a new connection: [Errno 111] Connection refused'))
+2024-06-12 09:21:57,950 - llm_as_a_service_logger - ERROR - Health check error: HTTPConnectionPool(host='localhost', port=8501): Max retries exceeded with url: /metrics (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f1973a66170>: Failed to establish a new connection: [Errno 111] Connection refused'))
+2024-06-12 09:22:02,958 - llm_as_a_service_logger - ERROR - Health check error: HTTPConnectionPool(host='localhost', port=8501): Max retries exceeded with url: /metrics (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f1973919330>: Failed to establish a new connection: [Errno 111] Connection refused'))
+2024-06-12 09:22:02,958 - llm_as_a_service_logger - ERROR - Health check error: HTTPConnectionPool(host='localhost', port=8501): Max retries exceeded with url: /metrics (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f1973919330>: Failed to establish a new connection: [Errno 111] Connection refused'))
+2024-06-12 09:22:02,958 - llm_as_a_service_logger - ERROR - Health check error: HTTPConnectionPool(host='localhost', port=8501): Max retries exceeded with url: /metrics (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f1973919330>: Failed to establish a new connection: [Errno 111] Connection refused'))
+2024-06-12 09:22:02,958 - llm_as_a_service_logger - ERROR - Health check error: HTTPConnectionPool(host='localhost', port=8501): Max retries exceeded with url: /metrics (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f1973919330>: Failed to establish a new connection: [Errno 111] Connection refused'))
+2024-06-12 09:22:02,958 - llm_as_a_service_logger - ERROR - Health check error: HTTPConnectionPool(host='localhost', port=8501): Max retries exceeded with url: /metrics (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f1973919330>: Failed to establish a new connection: [Errno 111] Connection refused'))
+2024-06-12 09:22:02,958 - llm_as_a_service_logger - ERROR - Health check error: HTTPConnectionPool(host='localhost', port=8501): Max retries exceeded with url: /metrics (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f1973919330>: Failed to establish a new connection: [Errno 111] Connection refused'))
+2024-06-12 09:22:02,958 - llm_as_a_service_logger - ERROR - Health check error: HTTPConnectionPool(host='localhost', port=8501): Max retries exceeded with url: /metrics (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f1973919330>: Failed to establish a new connection: [Errno 111] Connection refused'))
+2024-06-12 09:22:06,712 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-12 09:22:06,712 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-12 09:22:06,712 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-12 09:22:06,712 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-12 09:22:06,712 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-12 09:22:06,712 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-12 09:22:06,712 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-12 09:22:07,966 - llm_as_a_service_logger - ERROR - Health check error: HTTPConnectionPool(host='localhost', port=8501): Max retries exceeded with url: /metrics (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f197391a020>: Failed to establish a new connection: [Errno 111] Connection refused'))
+2024-06-12 09:22:07,966 - llm_as_a_service_logger - ERROR - Health check error: HTTPConnectionPool(host='localhost', port=8501): Max retries exceeded with url: /metrics (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f197391a020>: Failed to establish a new connection: [Errno 111] Connection refused'))
+2024-06-12 09:22:07,966 - llm_as_a_service_logger - ERROR - Health check error: HTTPConnectionPool(host='localhost', port=8501): Max retries exceeded with url: /metrics (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f197391a020>: Failed to establish a new connection: [Errno 111] Connection refused'))
+2024-06-12 09:22:07,966 - llm_as_a_service_logger - ERROR - Health check error: HTTPConnectionPool(host='localhost', port=8501): Max retries exceeded with url: /metrics (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f197391a020>: Failed to establish a new connection: [Errno 111] Connection refused'))
+2024-06-12 09:22:07,966 - llm_as_a_service_logger - ERROR - Health check error: HTTPConnectionPool(host='localhost', port=8501): Max retries exceeded with url: /metrics (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f197391a020>: Failed to establish a new connection: [Errno 111] Connection refused'))
+2024-06-12 09:22:07,966 - llm_as_a_service_logger - ERROR - Health check error: HTTPConnectionPool(host='localhost', port=8501): Max retries exceeded with url: /metrics (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f197391a020>: Failed to establish a new connection: [Errno 111] Connection refused'))
+2024-06-12 09:22:07,966 - llm_as_a_service_logger - ERROR - Health check error: HTTPConnectionPool(host='localhost', port=8501): Max retries exceeded with url: /metrics (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f197391a020>: Failed to establish a new connection: [Errno 111] Connection refused'))
+2024-06-12 09:22:11,718 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-12 09:22:11,718 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-12 09:22:11,718 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-12 09:22:11,718 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-12 09:22:11,718 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-12 09:22:11,718 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-12 09:22:11,718 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-12 09:22:12,972 - llm_as_a_service_logger - ERROR - Health check error: HTTPConnectionPool(host='localhost', port=8501): Max retries exceeded with url: /metrics (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f197391bca0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+2024-06-12 09:22:12,972 - llm_as_a_service_logger - ERROR - Health check error: HTTPConnectionPool(host='localhost', port=8501): Max retries exceeded with url: /metrics (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f197391bca0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+2024-06-12 09:22:12,972 - llm_as_a_service_logger - ERROR - Health check error: HTTPConnectionPool(host='localhost', port=8501): Max retries exceeded with url: /metrics (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f197391bca0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+2024-06-12 09:22:12,972 - llm_as_a_service_logger - ERROR - Health check error: HTTPConnectionPool(host='localhost', port=8501): Max retries exceeded with url: /metrics (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f197391bca0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+2024-06-12 09:22:12,972 - llm_as_a_service_logger - ERROR - Health check error: HTTPConnectionPool(host='localhost', port=8501): Max retries exceeded with url: /metrics (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f197391bca0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+2024-06-12 09:22:12,972 - llm_as_a_service_logger - ERROR - Health check error: HTTPConnectionPool(host='localhost', port=8501): Max retries exceeded with url: /metrics (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f197391bca0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+2024-06-12 09:22:12,972 - llm_as_a_service_logger - ERROR - Health check error: HTTPConnectionPool(host='localhost', port=8501): Max retries exceeded with url: /metrics (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f197391bca0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+2024-06-12 09:22:16,728 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-12 09:22:16,728 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-12 09:22:16,728 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-12 09:22:16,728 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-12 09:22:16,728 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-12 09:22:16,728 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-12 09:22:16,728 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-12 09:22:17,980 - llm_as_a_service_logger - ERROR - Health check error: HTTPConnectionPool(host='localhost', port=8501): Max retries exceeded with url: /metrics (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f197391bca0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+2024-06-12 09:22:17,980 - llm_as_a_service_logger - ERROR - Health check error: HTTPConnectionPool(host='localhost', port=8501): Max retries exceeded with url: /metrics (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f197391bca0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+2024-06-12 09:22:17,980 - llm_as_a_service_logger - ERROR - Health check error: HTTPConnectionPool(host='localhost', port=8501): Max retries exceeded with url: /metrics (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f197391bca0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+2024-06-12 09:22:17,980 - llm_as_a_service_logger - ERROR - Health check error: HTTPConnectionPool(host='localhost', port=8501): Max retries exceeded with url: /metrics (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f197391bca0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+2024-06-12 09:22:17,980 - llm_as_a_service_logger - ERROR - Health check error: HTTPConnectionPool(host='localhost', port=8501): Max retries exceeded with url: /metrics (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f197391bca0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+2024-06-12 09:22:17,980 - llm_as_a_service_logger - ERROR - Health check error: HTTPConnectionPool(host='localhost', port=8501): Max retries exceeded with url: /metrics (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f197391bca0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+2024-06-12 09:22:17,980 - llm_as_a_service_logger - ERROR - Health check error: HTTPConnectionPool(host='localhost', port=8501): Max retries exceeded with url: /metrics (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f197391bca0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+2024-06-12 09:22:21,737 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-12 09:22:21,737 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-12 09:22:21,737 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-12 09:22:21,737 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-12 09:22:21,737 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-12 09:22:21,737 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-12 09:22:21,737 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-12 09:22:22,986 - llm_as_a_service_logger - ERROR - Health check error: HTTPConnectionPool(host='localhost', port=8501): Max retries exceeded with url: /metrics (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f197391a020>: Failed to establish a new connection: [Errno 111] Connection refused'))
+2024-06-12 09:22:22,986 - llm_as_a_service_logger - ERROR - Health check error: HTTPConnectionPool(host='localhost', port=8501): Max retries exceeded with url: /metrics (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f197391a020>: Failed to establish a new connection: [Errno 111] Connection refused'))
+2024-06-12 09:22:22,986 - llm_as_a_service_logger - ERROR - Health check error: HTTPConnectionPool(host='localhost', port=8501): Max retries exceeded with url: /metrics (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f197391a020>: Failed to establish a new connection: [Errno 111] Connection refused'))
+2024-06-12 09:22:22,986 - llm_as_a_service_logger - ERROR - Health check error: HTTPConnectionPool(host='localhost', port=8501): Max retries exceeded with url: /metrics (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f197391a020>: Failed to establish a new connection: [Errno 111] Connection refused'))
+2024-06-12 09:22:22,986 - llm_as_a_service_logger - ERROR - Health check error: HTTPConnectionPool(host='localhost', port=8501): Max retries exceeded with url: /metrics (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f197391a020>: Failed to establish a new connection: [Errno 111] Connection refused'))
+2024-06-12 09:22:22,986 - llm_as_a_service_logger - ERROR - Health check error: HTTPConnectionPool(host='localhost', port=8501): Max retries exceeded with url: /metrics (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f197391a020>: Failed to establish a new connection: [Errno 111] Connection refused'))
+2024-06-12 09:22:22,986 - llm_as_a_service_logger - ERROR - Health check error: HTTPConnectionPool(host='localhost', port=8501): Max retries exceeded with url: /metrics (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f197391a020>: Failed to establish a new connection: [Errno 111] Connection refused'))
+2024-06-12 09:22:26,748 - llm_as_a_service_logger - INFO - Container started successfully. Port: 8500
+2024-06-12 09:22:26,748 - llm_as_a_service_logger - INFO - Container started successfully. Port: 8500
+2024-06-12 09:22:26,748 - llm_as_a_service_logger - INFO - Container started successfully. Port: 8500
+2024-06-12 09:22:26,748 - llm_as_a_service_logger - INFO - Container started successfully. Port: 8500
+2024-06-12 09:22:26,748 - llm_as_a_service_logger - INFO - Container started successfully. Port: 8500
+2024-06-12 09:22:26,748 - llm_as_a_service_logger - INFO - Container started successfully. Port: 8500
+2024-06-12 09:22:26,748 - llm_as_a_service_logger - INFO - Container started successfully. Port: 8500
+2024-06-12 09:22:26,749 - llm_as_a_service_logger - INFO - User info: Amin-nsclae
+2024-06-12 09:22:26,749 - llm_as_a_service_logger - INFO - User info: Amin-nsclae
+2024-06-12 09:22:26,749 - llm_as_a_service_logger - INFO - User info: Amin-nsclae
+2024-06-12 09:22:26,749 - llm_as_a_service_logger - INFO - User info: Amin-nsclae
+2024-06-12 09:22:26,749 - llm_as_a_service_logger - INFO - User info: Amin-nsclae
+2024-06-12 09:22:26,749 - llm_as_a_service_logger - INFO - User info: Amin-nsclae
+2024-06-12 09:22:26,749 - llm_as_a_service_logger - INFO - User info: Amin-nsclae
+2024-06-12 09:22:26,750 - llm_as_a_service_logger - INFO - Container ID: f36a7eb75988f49ac6b96e311ead503ea51a771a9dfc656ae2c573d42ae8bbc9
+2024-06-12 09:22:26,750 - llm_as_a_service_logger - INFO - Container ID: f36a7eb75988f49ac6b96e311ead503ea51a771a9dfc656ae2c573d42ae8bbc9
+2024-06-12 09:22:26,750 - llm_as_a_service_logger - INFO - Container ID: f36a7eb75988f49ac6b96e311ead503ea51a771a9dfc656ae2c573d42ae8bbc9
+2024-06-12 09:22:26,750 - llm_as_a_service_logger - INFO - Container ID: f36a7eb75988f49ac6b96e311ead503ea51a771a9dfc656ae2c573d42ae8bbc9
+2024-06-12 09:22:26,750 - llm_as_a_service_logger - INFO - Container ID: f36a7eb75988f49ac6b96e311ead503ea51a771a9dfc656ae2c573d42ae8bbc9
+2024-06-12 09:22:26,750 - llm_as_a_service_logger - INFO - Container ID: f36a7eb75988f49ac6b96e311ead503ea51a771a9dfc656ae2c573d42ae8bbc9
+2024-06-12 09:22:26,750 - llm_as_a_service_logger - INFO - Container ID: f36a7eb75988f49ac6b96e311ead503ea51a771a9dfc656ae2c573d42ae8bbc9
+2024-06-12 09:22:27,993 - llm_as_a_service_logger - ERROR - Health check error: HTTPConnectionPool(host='localhost', port=8501): Max retries exceeded with url: /metrics (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f1973919b40>: Failed to establish a new connection: [Errno 111] Connection refused'))
+2024-06-12 09:22:27,993 - llm_as_a_service_logger - ERROR - Health check error: HTTPConnectionPool(host='localhost', port=8501): Max retries exceeded with url: /metrics (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f1973919b40>: Failed to establish a new connection: [Errno 111] Connection refused'))
+2024-06-12 09:22:27,993 - llm_as_a_service_logger - ERROR - Health check error: HTTPConnectionPool(host='localhost', port=8501): Max retries exceeded with url: /metrics (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f1973919b40>: Failed to establish a new connection: [Errno 111] Connection refused'))
+2024-06-12 09:22:27,993 - llm_as_a_service_logger - ERROR - Health check error: HTTPConnectionPool(host='localhost', port=8501): Max retries exceeded with url: /metrics (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f1973919b40>: Failed to establish a new connection: [Errno 111] Connection refused'))
+2024-06-12 09:22:27,993 - llm_as_a_service_logger - ERROR - Health check error: HTTPConnectionPool(host='localhost', port=8501): Max retries exceeded with url: /metrics (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f1973919b40>: Failed to establish a new connection: [Errno 111] Connection refused'))
+2024-06-12 09:22:27,993 - llm_as_a_service_logger - ERROR - Health check error: HTTPConnectionPool(host='localhost', port=8501): Max retries exceeded with url: /metrics (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f1973919b40>: Failed to establish a new connection: [Errno 111] Connection refused'))
+2024-06-12 09:22:27,993 - llm_as_a_service_logger - ERROR - Health check error: HTTPConnectionPool(host='localhost', port=8501): Max retries exceeded with url: /metrics (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f1973919b40>: Failed to establish a new connection: [Errno 111] Connection refused'))
+2024-06-12 09:22:33,001 - llm_as_a_service_logger - ERROR - Health check error: HTTPConnectionPool(host='localhost', port=8501): Max retries exceeded with url: /metrics (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f197391a950>: Failed to establish a new connection: [Errno 111] Connection refused'))
+2024-06-12 09:22:33,001 - llm_as_a_service_logger - ERROR - Health check error: HTTPConnectionPool(host='localhost', port=8501): Max retries exceeded with url: /metrics (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f197391a950>: Failed to establish a new connection: [Errno 111] Connection refused'))
+2024-06-12 09:22:33,001 - llm_as_a_service_logger - ERROR - Health check error: HTTPConnectionPool(host='localhost', port=8501): Max retries exceeded with url: /metrics (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f197391a950>: Failed to establish a new connection: [Errno 111] Connection refused'))
+2024-06-12 09:22:33,001 - llm_as_a_service_logger - ERROR - Health check error: HTTPConnectionPool(host='localhost', port=8501): Max retries exceeded with url: /metrics (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f197391a950>: Failed to establish a new connection: [Errno 111] Connection refused'))
+2024-06-12 09:22:33,001 - llm_as_a_service_logger - ERROR - Health check error: HTTPConnectionPool(host='localhost', port=8501): Max retries exceeded with url: /metrics (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f197391a950>: Failed to establish a new connection: [Errno 111] Connection refused'))
+2024-06-12 09:22:33,001 - llm_as_a_service_logger - ERROR - Health check error: HTTPConnectionPool(host='localhost', port=8501): Max retries exceeded with url: /metrics (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f197391a950>: Failed to establish a new connection: [Errno 111] Connection refused'))
+2024-06-12 09:22:33,001 - llm_as_a_service_logger - ERROR - Health check error: HTTPConnectionPool(host='localhost', port=8501): Max retries exceeded with url: /metrics (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f197391a950>: Failed to establish a new connection: [Errno 111] Connection refused'))
+2024-06-12 09:30:29,877 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-06-12 09:30:29,877 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-06-12 09:30:29,877 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-06-12 09:30:29,877 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-06-12 09:30:29,877 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-06-12 09:30:29,877 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-06-12 09:30:29,877 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-06-12 09:32:12,226 - llm_as_a_service_logger - INFO - Received request by router: {'username': 'admin', 'prompt': 'HI', 'memory': False, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'Llama_70b'}
+2024-06-12 09:32:12,226 - llm_as_a_service_logger - INFO - Received request by router: {'username': 'admin', 'prompt': 'HI', 'memory': False, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'Llama_70b'}
+2024-06-12 09:32:12,226 - llm_as_a_service_logger - INFO - Received request by router: {'username': 'admin', 'prompt': 'HI', 'memory': False, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'Llama_70b'}
+2024-06-12 09:32:12,226 - llm_as_a_service_logger - INFO - Received request by router: {'username': 'admin', 'prompt': 'HI', 'memory': False, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'Llama_70b'}
+2024-06-12 09:32:12,226 - llm_as_a_service_logger - INFO - Received request by router: {'username': 'admin', 'prompt': 'HI', 'memory': False, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'Llama_70b'}
+2024-06-12 09:32:12,226 - llm_as_a_service_logger - INFO - Received request by router: {'username': 'admin', 'prompt': 'HI', 'memory': False, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'Llama_70b'}
+2024-06-12 09:32:12,226 - llm_as_a_service_logger - INFO - Received request by router: {'username': 'admin', 'prompt': 'HI', 'memory': False, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'Llama_70b'}
+2024-06-12 09:32:12,226 - llm_as_a_service_logger - INFO - Received request by backend: {'username': 'admin', 'prompt': 'HI', 'memory': False, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'Llama_70b'}
+2024-06-12 09:32:12,226 - llm_as_a_service_logger - INFO - Received request by backend: {'username': 'admin', 'prompt': 'HI', 'memory': False, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'Llama_70b'}
+2024-06-12 09:32:12,226 - llm_as_a_service_logger - INFO - Received request by backend: {'username': 'admin', 'prompt': 'HI', 'memory': False, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'Llama_70b'}
+2024-06-12 09:32:12,226 - llm_as_a_service_logger - INFO - Received request by backend: {'username': 'admin', 'prompt': 'HI', 'memory': False, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'Llama_70b'}
+2024-06-12 09:32:12,226 - llm_as_a_service_logger - INFO - Received request by backend: {'username': 'admin', 'prompt': 'HI', 'memory': False, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'Llama_70b'}
+2024-06-12 09:32:12,226 - llm_as_a_service_logger - INFO - Received request by backend: {'username': 'admin', 'prompt': 'HI', 'memory': False, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'Llama_70b'}
+2024-06-12 09:32:12,226 - llm_as_a_service_logger - INFO - Received request by backend: {'username': 'admin', 'prompt': 'HI', 'memory': False, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'Llama_70b'}
+2024-06-12 09:32:12,227 - llm_as_a_service_logger - ERROR - Error processing the request: Could not import openai python package. Please install it with `pip install openai`.
+2024-06-12 09:32:12,227 - llm_as_a_service_logger - ERROR - Error processing the request: Could not import openai python package. Please install it with `pip install openai`.
+2024-06-12 09:32:12,227 - llm_as_a_service_logger - ERROR - Error processing the request: Could not import openai python package. Please install it with `pip install openai`.
+2024-06-12 09:32:12,227 - llm_as_a_service_logger - ERROR - Error processing the request: Could not import openai python package. Please install it with `pip install openai`.
+2024-06-12 09:32:12,227 - llm_as_a_service_logger - ERROR - Error processing the request: Could not import openai python package. Please install it with `pip install openai`.
+2024-06-12 09:32:12,227 - llm_as_a_service_logger - ERROR - Error processing the request: Could not import openai python package. Please install it with `pip install openai`.
+2024-06-12 09:32:12,227 - llm_as_a_service_logger - ERROR - Error processing the request: Could not import openai python package. Please install it with `pip install openai`.
+2024-06-13 12:31:17,608 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-06-13 12:31:17,608 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-06-13 12:31:17,608 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-06-13 12:31:17,608 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-06-13 12:31:17,608 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-06-13 12:31:17,608 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-06-13 12:31:17,608 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-06-13 12:38:28,394 - llm_as_a_service_logger - INFO - Received request by router: {'username': 'admin', 'prompt': 'HI', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'Llama_70b'}
+2024-06-13 12:38:28,394 - llm_as_a_service_logger - INFO - Received request by router: {'username': 'admin', 'prompt': 'HI', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'Llama_70b'}
+2024-06-13 12:38:28,394 - llm_as_a_service_logger - INFO - Received request by router: {'username': 'admin', 'prompt': 'HI', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'Llama_70b'}
+2024-06-13 12:38:28,394 - llm_as_a_service_logger - INFO - Received request by router: {'username': 'admin', 'prompt': 'HI', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'Llama_70b'}
+2024-06-13 12:38:28,394 - llm_as_a_service_logger - INFO - Received request by router: {'username': 'admin', 'prompt': 'HI', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'Llama_70b'}
+2024-06-13 12:38:28,394 - llm_as_a_service_logger - INFO - Received request by router: {'username': 'admin', 'prompt': 'HI', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'Llama_70b'}
+2024-06-13 12:38:28,394 - llm_as_a_service_logger - INFO - Received request by router: {'username': 'admin', 'prompt': 'HI', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'Llama_70b'}
+2024-06-13 12:38:28,394 - llm_as_a_service_logger - INFO - Received request by backend: {'username': 'admin', 'prompt': 'HI', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'Llama_70b'}
+2024-06-13 12:38:28,394 - llm_as_a_service_logger - INFO - Received request by backend: {'username': 'admin', 'prompt': 'HI', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'Llama_70b'}
+2024-06-13 12:38:28,394 - llm_as_a_service_logger - INFO - Received request by backend: {'username': 'admin', 'prompt': 'HI', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'Llama_70b'}
+2024-06-13 12:38:28,394 - llm_as_a_service_logger - INFO - Received request by backend: {'username': 'admin', 'prompt': 'HI', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'Llama_70b'}
+2024-06-13 12:38:28,394 - llm_as_a_service_logger - INFO - Received request by backend: {'username': 'admin', 'prompt': 'HI', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'Llama_70b'}
+2024-06-13 12:38:28,394 - llm_as_a_service_logger - INFO - Received request by backend: {'username': 'admin', 'prompt': 'HI', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'Llama_70b'}
+2024-06-13 12:38:28,394 - llm_as_a_service_logger - INFO - Received request by backend: {'username': 'admin', 'prompt': 'HI', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'Llama_70b'}
+2024-06-13 12:38:28,714 - llm_as_a_service_logger - INFO - Retrieving conversation...
+2024-06-13 12:38:28,714 - llm_as_a_service_logger - INFO - Retrieving conversation...
+2024-06-13 12:38:28,714 - llm_as_a_service_logger - INFO - Retrieving conversation...
+2024-06-13 12:38:28,714 - llm_as_a_service_logger - INFO - Retrieving conversation...
+2024-06-13 12:38:28,714 - llm_as_a_service_logger - INFO - Retrieving conversation...
+2024-06-13 12:38:28,714 - llm_as_a_service_logger - INFO - Retrieving conversation...
+2024-06-13 12:38:28,714 - llm_as_a_service_logger - INFO - Retrieving conversation...
+2024-06-13 12:38:28,719 - llm_as_a_service_logger - INFO - User found: <app.routers.LLM.backend_database.User object at 0x7f6ad57efac0>
+2024-06-13 12:38:28,719 - llm_as_a_service_logger - INFO - User found: <app.routers.LLM.backend_database.User object at 0x7f6ad57efac0>
+2024-06-13 12:38:28,719 - llm_as_a_service_logger - INFO - User found: <app.routers.LLM.backend_database.User object at 0x7f6ad57efac0>
+2024-06-13 12:38:28,719 - llm_as_a_service_logger - INFO - User found: <app.routers.LLM.backend_database.User object at 0x7f6ad57efac0>
+2024-06-13 12:38:28,719 - llm_as_a_service_logger - INFO - User found: <app.routers.LLM.backend_database.User object at 0x7f6ad57efac0>
+2024-06-13 12:38:28,719 - llm_as_a_service_logger - INFO - User found: <app.routers.LLM.backend_database.User object at 0x7f6ad57efac0>
+2024-06-13 12:38:28,719 - llm_as_a_service_logger - INFO - User found: <app.routers.LLM.backend_database.User object at 0x7f6ad57efac0>
+2024-06-13 12:38:28,722 - llm_as_a_service_logger - INFO - Conversation found: <app.routers.LLM.backend_database.Conversation object at 0x7f6ad4aafcd0>
+2024-06-13 12:38:28,722 - llm_as_a_service_logger - INFO - Conversation found: <app.routers.LLM.backend_database.Conversation object at 0x7f6ad4aafcd0>
+2024-06-13 12:38:28,722 - llm_as_a_service_logger - INFO - Conversation found: <app.routers.LLM.backend_database.Conversation object at 0x7f6ad4aafcd0>
+2024-06-13 12:38:28,722 - llm_as_a_service_logger - INFO - Conversation found: <app.routers.LLM.backend_database.Conversation object at 0x7f6ad4aafcd0>
+2024-06-13 12:38:28,722 - llm_as_a_service_logger - INFO - Conversation found: <app.routers.LLM.backend_database.Conversation object at 0x7f6ad4aafcd0>
+2024-06-13 12:38:28,722 - llm_as_a_service_logger - INFO - Conversation found: <app.routers.LLM.backend_database.Conversation object at 0x7f6ad4aafcd0>
+2024-06-13 12:38:28,722 - llm_as_a_service_logger - INFO - Conversation found: <app.routers.LLM.backend_database.Conversation object at 0x7f6ad4aafcd0>
+2024-06-13 12:38:28,722 - llm_as_a_service_logger - INFO - Conversation successfully retrieved
+2024-06-13 12:38:28,722 - llm_as_a_service_logger - INFO - Conversation successfully retrieved
+2024-06-13 12:38:28,722 - llm_as_a_service_logger - INFO - Conversation successfully retrieved
+2024-06-13 12:38:28,722 - llm_as_a_service_logger - INFO - Conversation successfully retrieved
+2024-06-13 12:38:28,722 - llm_as_a_service_logger - INFO - Conversation successfully retrieved
+2024-06-13 12:38:28,722 - llm_as_a_service_logger - INFO - Conversation successfully retrieved
+2024-06-13 12:38:28,722 - llm_as_a_service_logger - INFO - Conversation successfully retrieved
+2024-06-13 12:40:53,094 - llm_as_a_service_logger - INFO - Received request by router: {'username': 'admin', 'prompt': 'HI', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'Llama_70b'}
+2024-06-13 12:40:53,094 - llm_as_a_service_logger - INFO - Received request by router: {'username': 'admin', 'prompt': 'HI', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'Llama_70b'}
+2024-06-13 12:40:53,094 - llm_as_a_service_logger - INFO - Received request by router: {'username': 'admin', 'prompt': 'HI', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'Llama_70b'}
+2024-06-13 12:40:53,094 - llm_as_a_service_logger - INFO - Received request by router: {'username': 'admin', 'prompt': 'HI', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'Llama_70b'}
+2024-06-13 12:40:53,094 - llm_as_a_service_logger - INFO - Received request by router: {'username': 'admin', 'prompt': 'HI', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'Llama_70b'}
+2024-06-13 12:40:53,094 - llm_as_a_service_logger - INFO - Received request by router: {'username': 'admin', 'prompt': 'HI', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'Llama_70b'}
+2024-06-13 12:40:53,094 - llm_as_a_service_logger - INFO - Received request by router: {'username': 'admin', 'prompt': 'HI', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'Llama_70b'}
+2024-06-13 12:40:53,094 - llm_as_a_service_logger - INFO - Received request by backend: {'username': 'admin', 'prompt': 'HI', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'Llama_70b'}
+2024-06-13 12:40:53,094 - llm_as_a_service_logger - INFO - Received request by backend: {'username': 'admin', 'prompt': 'HI', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'Llama_70b'}
+2024-06-13 12:40:53,094 - llm_as_a_service_logger - INFO - Received request by backend: {'username': 'admin', 'prompt': 'HI', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'Llama_70b'}
+2024-06-13 12:40:53,094 - llm_as_a_service_logger - INFO - Received request by backend: {'username': 'admin', 'prompt': 'HI', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'Llama_70b'}
+2024-06-13 12:40:53,094 - llm_as_a_service_logger - INFO - Received request by backend: {'username': 'admin', 'prompt': 'HI', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'Llama_70b'}
+2024-06-13 12:40:53,094 - llm_as_a_service_logger - INFO - Received request by backend: {'username': 'admin', 'prompt': 'HI', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'Llama_70b'}
+2024-06-13 12:40:53,094 - llm_as_a_service_logger - INFO - Received request by backend: {'username': 'admin', 'prompt': 'HI', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'Llama_70b'}
+2024-06-13 12:40:53,405 - llm_as_a_service_logger - INFO - Retrieving conversation...
+2024-06-13 12:40:53,405 - llm_as_a_service_logger - INFO - Retrieving conversation...
+2024-06-13 12:40:53,405 - llm_as_a_service_logger - INFO - Retrieving conversation...
+2024-06-13 12:40:53,405 - llm_as_a_service_logger - INFO - Retrieving conversation...
+2024-06-13 12:40:53,405 - llm_as_a_service_logger - INFO - Retrieving conversation...
+2024-06-13 12:40:53,405 - llm_as_a_service_logger - INFO - Retrieving conversation...
+2024-06-13 12:40:53,405 - llm_as_a_service_logger - INFO - Retrieving conversation...
+2024-06-13 12:40:53,410 - llm_as_a_service_logger - INFO - User found: <app.routers.LLM.backend_database.User object at 0x7f74fefbc580>
+2024-06-13 12:40:53,410 - llm_as_a_service_logger - INFO - User found: <app.routers.LLM.backend_database.User object at 0x7f74fefbc580>
+2024-06-13 12:40:53,410 - llm_as_a_service_logger - INFO - User found: <app.routers.LLM.backend_database.User object at 0x7f74fefbc580>
+2024-06-13 12:40:53,410 - llm_as_a_service_logger - INFO - User found: <app.routers.LLM.backend_database.User object at 0x7f74fefbc580>
+2024-06-13 12:40:53,410 - llm_as_a_service_logger - INFO - User found: <app.routers.LLM.backend_database.User object at 0x7f74fefbc580>
+2024-06-13 12:40:53,410 - llm_as_a_service_logger - INFO - User found: <app.routers.LLM.backend_database.User object at 0x7f74fefbc580>
+2024-06-13 12:40:53,410 - llm_as_a_service_logger - INFO - User found: <app.routers.LLM.backend_database.User object at 0x7f74fefbc580>
+2024-06-13 12:40:53,413 - llm_as_a_service_logger - INFO - Conversation found: <app.routers.LLM.backend_database.Conversation object at 0x7f74fe437070>
+2024-06-13 12:40:53,413 - llm_as_a_service_logger - INFO - Conversation found: <app.routers.LLM.backend_database.Conversation object at 0x7f74fe437070>
+2024-06-13 12:40:53,413 - llm_as_a_service_logger - INFO - Conversation found: <app.routers.LLM.backend_database.Conversation object at 0x7f74fe437070>
+2024-06-13 12:40:53,413 - llm_as_a_service_logger - INFO - Conversation found: <app.routers.LLM.backend_database.Conversation object at 0x7f74fe437070>
+2024-06-13 12:40:53,413 - llm_as_a_service_logger - INFO - Conversation found: <app.routers.LLM.backend_database.Conversation object at 0x7f74fe437070>
+2024-06-13 12:40:53,413 - llm_as_a_service_logger - INFO - Conversation found: <app.routers.LLM.backend_database.Conversation object at 0x7f74fe437070>
+2024-06-13 12:40:53,413 - llm_as_a_service_logger - INFO - Conversation found: <app.routers.LLM.backend_database.Conversation object at 0x7f74fe437070>
+2024-06-13 12:40:53,413 - llm_as_a_service_logger - INFO - Conversation successfully retrieved
+2024-06-13 12:40:53,413 - llm_as_a_service_logger - INFO - Conversation successfully retrieved
+2024-06-13 12:40:53,413 - llm_as_a_service_logger - INFO - Conversation successfully retrieved
+2024-06-13 12:40:53,413 - llm_as_a_service_logger - INFO - Conversation successfully retrieved
+2024-06-13 12:40:53,413 - llm_as_a_service_logger - INFO - Conversation successfully retrieved
+2024-06-13 12:40:53,413 - llm_as_a_service_logger - INFO - Conversation successfully retrieved
+2024-06-13 12:40:53,413 - llm_as_a_service_logger - INFO - Conversation successfully retrieved
+2024-06-13 12:41:00,004 - llm_as_a_service_logger - INFO - Received request by router: {'username': 'admin', 'prompt': 'HI', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'Llama_70b'}
+2024-06-13 12:41:00,004 - llm_as_a_service_logger - INFO - Received request by router: {'username': 'admin', 'prompt': 'HI', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'Llama_70b'}
+2024-06-13 12:41:00,004 - llm_as_a_service_logger - INFO - Received request by router: {'username': 'admin', 'prompt': 'HI', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'Llama_70b'}
+2024-06-13 12:41:00,004 - llm_as_a_service_logger - INFO - Received request by router: {'username': 'admin', 'prompt': 'HI', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'Llama_70b'}
+2024-06-13 12:41:00,004 - llm_as_a_service_logger - INFO - Received request by router: {'username': 'admin', 'prompt': 'HI', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'Llama_70b'}
+2024-06-13 12:41:00,004 - llm_as_a_service_logger - INFO - Received request by router: {'username': 'admin', 'prompt': 'HI', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'Llama_70b'}
+2024-06-13 12:41:00,004 - llm_as_a_service_logger - INFO - Received request by router: {'username': 'admin', 'prompt': 'HI', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'Llama_70b'}
+2024-06-13 12:41:00,005 - llm_as_a_service_logger - INFO - Received request by backend: {'username': 'admin', 'prompt': 'HI', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'Llama_70b'}
+2024-06-13 12:41:00,005 - llm_as_a_service_logger - INFO - Received request by backend: {'username': 'admin', 'prompt': 'HI', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'Llama_70b'}
+2024-06-13 12:41:00,005 - llm_as_a_service_logger - INFO - Received request by backend: {'username': 'admin', 'prompt': 'HI', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'Llama_70b'}
+2024-06-13 12:41:00,005 - llm_as_a_service_logger - INFO - Received request by backend: {'username': 'admin', 'prompt': 'HI', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'Llama_70b'}
+2024-06-13 12:41:00,005 - llm_as_a_service_logger - INFO - Received request by backend: {'username': 'admin', 'prompt': 'HI', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'Llama_70b'}
+2024-06-13 12:41:00,005 - llm_as_a_service_logger - INFO - Received request by backend: {'username': 'admin', 'prompt': 'HI', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'Llama_70b'}
+2024-06-13 12:41:00,005 - llm_as_a_service_logger - INFO - Received request by backend: {'username': 'admin', 'prompt': 'HI', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'Llama_70b'}
+2024-06-13 12:41:00,026 - llm_as_a_service_logger - INFO - Retrieving conversation...
+2024-06-13 12:41:00,026 - llm_as_a_service_logger - INFO - Retrieving conversation...
+2024-06-13 12:41:00,026 - llm_as_a_service_logger - INFO - Retrieving conversation...
+2024-06-13 12:41:00,026 - llm_as_a_service_logger - INFO - Retrieving conversation...
+2024-06-13 12:41:00,026 - llm_as_a_service_logger - INFO - Retrieving conversation...
+2024-06-13 12:41:00,026 - llm_as_a_service_logger - INFO - Retrieving conversation...
+2024-06-13 12:41:00,026 - llm_as_a_service_logger - INFO - Retrieving conversation...
+2024-06-13 12:41:00,028 - llm_as_a_service_logger - INFO - User found: <app.routers.LLM.backend_database.User object at 0x7f74fe273040>
+2024-06-13 12:41:00,028 - llm_as_a_service_logger - INFO - User found: <app.routers.LLM.backend_database.User object at 0x7f74fe273040>
+2024-06-13 12:41:00,028 - llm_as_a_service_logger - INFO - User found: <app.routers.LLM.backend_database.User object at 0x7f74fe273040>
+2024-06-13 12:41:00,028 - llm_as_a_service_logger - INFO - User found: <app.routers.LLM.backend_database.User object at 0x7f74fe273040>
+2024-06-13 12:41:00,028 - llm_as_a_service_logger - INFO - User found: <app.routers.LLM.backend_database.User object at 0x7f74fe273040>
+2024-06-13 12:41:00,028 - llm_as_a_service_logger - INFO - User found: <app.routers.LLM.backend_database.User object at 0x7f74fe273040>
+2024-06-13 12:41:00,028 - llm_as_a_service_logger - INFO - User found: <app.routers.LLM.backend_database.User object at 0x7f74fe273040>
+2024-06-13 12:41:00,029 - llm_as_a_service_logger - INFO - Conversation found: <app.routers.LLM.backend_database.Conversation object at 0x7f74fe273130>
+2024-06-13 12:41:00,029 - llm_as_a_service_logger - INFO - Conversation found: <app.routers.LLM.backend_database.Conversation object at 0x7f74fe273130>
+2024-06-13 12:41:00,029 - llm_as_a_service_logger - INFO - Conversation found: <app.routers.LLM.backend_database.Conversation object at 0x7f74fe273130>
+2024-06-13 12:41:00,029 - llm_as_a_service_logger - INFO - Conversation found: <app.routers.LLM.backend_database.Conversation object at 0x7f74fe273130>
+2024-06-13 12:41:00,029 - llm_as_a_service_logger - INFO - Conversation found: <app.routers.LLM.backend_database.Conversation object at 0x7f74fe273130>
+2024-06-13 12:41:00,029 - llm_as_a_service_logger - INFO - Conversation found: <app.routers.LLM.backend_database.Conversation object at 0x7f74fe273130>
+2024-06-13 12:41:00,029 - llm_as_a_service_logger - INFO - Conversation found: <app.routers.LLM.backend_database.Conversation object at 0x7f74fe273130>
+2024-06-13 12:41:00,029 - llm_as_a_service_logger - INFO - Conversation successfully retrieved
+2024-06-13 12:41:00,029 - llm_as_a_service_logger - INFO - Conversation successfully retrieved
+2024-06-13 12:41:00,029 - llm_as_a_service_logger - INFO - Conversation successfully retrieved
+2024-06-13 12:41:00,029 - llm_as_a_service_logger - INFO - Conversation successfully retrieved
+2024-06-13 12:41:00,029 - llm_as_a_service_logger - INFO - Conversation successfully retrieved
+2024-06-13 12:41:00,029 - llm_as_a_service_logger - INFO - Conversation successfully retrieved
+2024-06-13 12:41:00,029 - llm_as_a_service_logger - INFO - Conversation successfully retrieved
+2024-06-13 12:41:12,903 - llm_as_a_service_logger - INFO - Received request by router: {'username': 'admin', 'prompt': 'HI', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'Llama_70b'}
+2024-06-13 12:41:12,903 - llm_as_a_service_logger - INFO - Received request by router: {'username': 'admin', 'prompt': 'HI', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'Llama_70b'}
+2024-06-13 12:41:12,903 - llm_as_a_service_logger - INFO - Received request by router: {'username': 'admin', 'prompt': 'HI', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'Llama_70b'}
+2024-06-13 12:41:12,903 - llm_as_a_service_logger - INFO - Received request by router: {'username': 'admin', 'prompt': 'HI', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'Llama_70b'}
+2024-06-13 12:41:12,903 - llm_as_a_service_logger - INFO - Received request by router: {'username': 'admin', 'prompt': 'HI', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'Llama_70b'}
+2024-06-13 12:41:12,903 - llm_as_a_service_logger - INFO - Received request by router: {'username': 'admin', 'prompt': 'HI', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'Llama_70b'}
+2024-06-13 12:41:12,903 - llm_as_a_service_logger - INFO - Received request by router: {'username': 'admin', 'prompt': 'HI', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'Llama_70b'}
+2024-06-13 12:41:12,904 - llm_as_a_service_logger - INFO - Received request by backend: {'username': 'admin', 'prompt': 'HI', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'Llama_70b'}
+2024-06-13 12:41:12,904 - llm_as_a_service_logger - INFO - Received request by backend: {'username': 'admin', 'prompt': 'HI', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'Llama_70b'}
+2024-06-13 12:41:12,904 - llm_as_a_service_logger - INFO - Received request by backend: {'username': 'admin', 'prompt': 'HI', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'Llama_70b'}
+2024-06-13 12:41:12,904 - llm_as_a_service_logger - INFO - Received request by backend: {'username': 'admin', 'prompt': 'HI', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'Llama_70b'}
+2024-06-13 12:41:12,904 - llm_as_a_service_logger - INFO - Received request by backend: {'username': 'admin', 'prompt': 'HI', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'Llama_70b'}
+2024-06-13 12:41:12,904 - llm_as_a_service_logger - INFO - Received request by backend: {'username': 'admin', 'prompt': 'HI', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'Llama_70b'}
+2024-06-13 12:41:12,904 - llm_as_a_service_logger - INFO - Received request by backend: {'username': 'admin', 'prompt': 'HI', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'Llama_70b'}
+2024-06-13 12:41:12,924 - llm_as_a_service_logger - INFO - Retrieving conversation...
+2024-06-13 12:41:12,924 - llm_as_a_service_logger - INFO - Retrieving conversation...
+2024-06-13 12:41:12,924 - llm_as_a_service_logger - INFO - Retrieving conversation...
+2024-06-13 12:41:12,924 - llm_as_a_service_logger - INFO - Retrieving conversation...
+2024-06-13 12:41:12,924 - llm_as_a_service_logger - INFO - Retrieving conversation...
+2024-06-13 12:41:12,924 - llm_as_a_service_logger - INFO - Retrieving conversation...
+2024-06-13 12:41:12,924 - llm_as_a_service_logger - INFO - Retrieving conversation...
+2024-06-13 12:41:12,925 - llm_as_a_service_logger - INFO - User found: <app.routers.LLM.backend_database.User object at 0x7f74fe28ad10>
+2024-06-13 12:41:12,925 - llm_as_a_service_logger - INFO - User found: <app.routers.LLM.backend_database.User object at 0x7f74fe28ad10>
+2024-06-13 12:41:12,925 - llm_as_a_service_logger - INFO - User found: <app.routers.LLM.backend_database.User object at 0x7f74fe28ad10>
+2024-06-13 12:41:12,925 - llm_as_a_service_logger - INFO - User found: <app.routers.LLM.backend_database.User object at 0x7f74fe28ad10>
+2024-06-13 12:41:12,925 - llm_as_a_service_logger - INFO - User found: <app.routers.LLM.backend_database.User object at 0x7f74fe28ad10>
+2024-06-13 12:41:12,925 - llm_as_a_service_logger - INFO - User found: <app.routers.LLM.backend_database.User object at 0x7f74fe28ad10>
+2024-06-13 12:41:12,925 - llm_as_a_service_logger - INFO - User found: <app.routers.LLM.backend_database.User object at 0x7f74fe28ad10>
+2024-06-13 12:41:12,927 - llm_as_a_service_logger - INFO - Conversation found: <app.routers.LLM.backend_database.Conversation object at 0x7f74fe28ae00>
+2024-06-13 12:41:12,927 - llm_as_a_service_logger - INFO - Conversation found: <app.routers.LLM.backend_database.Conversation object at 0x7f74fe28ae00>
+2024-06-13 12:41:12,927 - llm_as_a_service_logger - INFO - Conversation found: <app.routers.LLM.backend_database.Conversation object at 0x7f74fe28ae00>
+2024-06-13 12:41:12,927 - llm_as_a_service_logger - INFO - Conversation found: <app.routers.LLM.backend_database.Conversation object at 0x7f74fe28ae00>
+2024-06-13 12:41:12,927 - llm_as_a_service_logger - INFO - Conversation found: <app.routers.LLM.backend_database.Conversation object at 0x7f74fe28ae00>
+2024-06-13 12:41:12,927 - llm_as_a_service_logger - INFO - Conversation found: <app.routers.LLM.backend_database.Conversation object at 0x7f74fe28ae00>
+2024-06-13 12:41:12,927 - llm_as_a_service_logger - INFO - Conversation found: <app.routers.LLM.backend_database.Conversation object at 0x7f74fe28ae00>
+2024-06-13 12:41:12,927 - llm_as_a_service_logger - INFO - Conversation successfully retrieved
+2024-06-13 12:41:12,927 - llm_as_a_service_logger - INFO - Conversation successfully retrieved
+2024-06-13 12:41:12,927 - llm_as_a_service_logger - INFO - Conversation successfully retrieved
+2024-06-13 12:41:12,927 - llm_as_a_service_logger - INFO - Conversation successfully retrieved
+2024-06-13 12:41:12,927 - llm_as_a_service_logger - INFO - Conversation successfully retrieved
+2024-06-13 12:41:12,927 - llm_as_a_service_logger - INFO - Conversation successfully retrieved
+2024-06-13 12:41:12,927 - llm_as_a_service_logger - INFO - Conversation successfully retrieved
+2024-06-13 12:45:38,828 - llm_as_a_service_logger - INFO - Received request by router: {'username': 'admin', 'prompt': 'HI', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'Llama_70b'}
+2024-06-13 12:45:38,828 - llm_as_a_service_logger - INFO - Received request by router: {'username': 'admin', 'prompt': 'HI', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'Llama_70b'}
+2024-06-13 12:45:38,828 - llm_as_a_service_logger - INFO - Received request by router: {'username': 'admin', 'prompt': 'HI', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'Llama_70b'}
+2024-06-13 12:45:38,828 - llm_as_a_service_logger - INFO - Received request by router: {'username': 'admin', 'prompt': 'HI', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'Llama_70b'}
+2024-06-13 12:45:38,828 - llm_as_a_service_logger - INFO - Received request by router: {'username': 'admin', 'prompt': 'HI', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'Llama_70b'}
+2024-06-13 12:45:38,828 - llm_as_a_service_logger - INFO - Received request by router: {'username': 'admin', 'prompt': 'HI', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'Llama_70b'}
+2024-06-13 12:45:38,828 - llm_as_a_service_logger - INFO - Received request by router: {'username': 'admin', 'prompt': 'HI', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'Llama_70b'}
+2024-06-13 12:45:38,829 - llm_as_a_service_logger - INFO - Received request by backend: {'username': 'admin', 'prompt': 'HI', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'Llama_70b'}
+2024-06-13 12:45:38,829 - llm_as_a_service_logger - INFO - Received request by backend: {'username': 'admin', 'prompt': 'HI', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'Llama_70b'}
+2024-06-13 12:45:38,829 - llm_as_a_service_logger - INFO - Received request by backend: {'username': 'admin', 'prompt': 'HI', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'Llama_70b'}
+2024-06-13 12:45:38,829 - llm_as_a_service_logger - INFO - Received request by backend: {'username': 'admin', 'prompt': 'HI', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'Llama_70b'}
+2024-06-13 12:45:38,829 - llm_as_a_service_logger - INFO - Received request by backend: {'username': 'admin', 'prompt': 'HI', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'Llama_70b'}
+2024-06-13 12:45:38,829 - llm_as_a_service_logger - INFO - Received request by backend: {'username': 'admin', 'prompt': 'HI', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'Llama_70b'}
+2024-06-13 12:45:38,829 - llm_as_a_service_logger - INFO - Received request by backend: {'username': 'admin', 'prompt': 'HI', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'Llama_70b'}
+2024-06-13 12:45:39,145 - llm_as_a_service_logger - INFO - Retrieving conversation...
+2024-06-13 12:45:39,145 - llm_as_a_service_logger - INFO - Retrieving conversation...
+2024-06-13 12:45:39,145 - llm_as_a_service_logger - INFO - Retrieving conversation...
+2024-06-13 12:45:39,145 - llm_as_a_service_logger - INFO - Retrieving conversation...
+2024-06-13 12:45:39,145 - llm_as_a_service_logger - INFO - Retrieving conversation...
+2024-06-13 12:45:39,145 - llm_as_a_service_logger - INFO - Retrieving conversation...
+2024-06-13 12:45:39,145 - llm_as_a_service_logger - INFO - Retrieving conversation...
+2024-06-13 12:45:39,150 - llm_as_a_service_logger - INFO - User found: <app.routers.LLM.backend_database.User object at 0x7f118fcd8190>
+2024-06-13 12:45:39,150 - llm_as_a_service_logger - INFO - User found: <app.routers.LLM.backend_database.User object at 0x7f118fcd8190>
+2024-06-13 12:45:39,150 - llm_as_a_service_logger - INFO - User found: <app.routers.LLM.backend_database.User object at 0x7f118fcd8190>
+2024-06-13 12:45:39,150 - llm_as_a_service_logger - INFO - User found: <app.routers.LLM.backend_database.User object at 0x7f118fcd8190>
+2024-06-13 12:45:39,150 - llm_as_a_service_logger - INFO - User found: <app.routers.LLM.backend_database.User object at 0x7f118fcd8190>
+2024-06-13 12:45:39,150 - llm_as_a_service_logger - INFO - User found: <app.routers.LLM.backend_database.User object at 0x7f118fcd8190>
+2024-06-13 12:45:39,150 - llm_as_a_service_logger - INFO - User found: <app.routers.LLM.backend_database.User object at 0x7f118fcd8190>
+2024-06-13 12:45:39,153 - llm_as_a_service_logger - INFO - Conversation found: <app.routers.LLM.backend_database.Conversation object at 0x7f118f14f0a0>
+2024-06-13 12:45:39,153 - llm_as_a_service_logger - INFO - Conversation found: <app.routers.LLM.backend_database.Conversation object at 0x7f118f14f0a0>
+2024-06-13 12:45:39,153 - llm_as_a_service_logger - INFO - Conversation found: <app.routers.LLM.backend_database.Conversation object at 0x7f118f14f0a0>
+2024-06-13 12:45:39,153 - llm_as_a_service_logger - INFO - Conversation found: <app.routers.LLM.backend_database.Conversation object at 0x7f118f14f0a0>
+2024-06-13 12:45:39,153 - llm_as_a_service_logger - INFO - Conversation found: <app.routers.LLM.backend_database.Conversation object at 0x7f118f14f0a0>
+2024-06-13 12:45:39,153 - llm_as_a_service_logger - INFO - Conversation found: <app.routers.LLM.backend_database.Conversation object at 0x7f118f14f0a0>
+2024-06-13 12:45:39,153 - llm_as_a_service_logger - INFO - Conversation found: <app.routers.LLM.backend_database.Conversation object at 0x7f118f14f0a0>
+2024-06-13 12:45:39,153 - llm_as_a_service_logger - INFO - Conversation successfully retrieved
+2024-06-13 12:45:39,153 - llm_as_a_service_logger - INFO - Conversation successfully retrieved
+2024-06-13 12:45:39,153 - llm_as_a_service_logger - INFO - Conversation successfully retrieved
+2024-06-13 12:45:39,153 - llm_as_a_service_logger - INFO - Conversation successfully retrieved
+2024-06-13 12:45:39,153 - llm_as_a_service_logger - INFO - Conversation successfully retrieved
+2024-06-13 12:45:39,153 - llm_as_a_service_logger - INFO - Conversation successfully retrieved
+2024-06-13 12:45:39,153 - llm_as_a_service_logger - INFO - Conversation successfully retrieved
+2024-06-13 12:47:23,888 - llm_as_a_service_logger - INFO - Received request by router: {'username': 'admin', 'prompt': 'HI', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'Llama_70b'}
+2024-06-13 12:47:23,888 - llm_as_a_service_logger - INFO - Received request by router: {'username': 'admin', 'prompt': 'HI', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'Llama_70b'}
+2024-06-13 12:47:23,888 - llm_as_a_service_logger - INFO - Received request by router: {'username': 'admin', 'prompt': 'HI', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'Llama_70b'}
+2024-06-13 12:47:23,888 - llm_as_a_service_logger - INFO - Received request by router: {'username': 'admin', 'prompt': 'HI', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'Llama_70b'}
+2024-06-13 12:47:23,888 - llm_as_a_service_logger - INFO - Received request by router: {'username': 'admin', 'prompt': 'HI', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'Llama_70b'}
+2024-06-13 12:47:23,888 - llm_as_a_service_logger - INFO - Received request by router: {'username': 'admin', 'prompt': 'HI', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'Llama_70b'}
+2024-06-13 12:47:23,888 - llm_as_a_service_logger - INFO - Received request by router: {'username': 'admin', 'prompt': 'HI', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'Llama_70b'}
+2024-06-13 12:47:23,889 - llm_as_a_service_logger - INFO - Received request by backend: {'username': 'admin', 'prompt': 'HI', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'Llama_70b'}
+2024-06-13 12:47:23,889 - llm_as_a_service_logger - INFO - Received request by backend: {'username': 'admin', 'prompt': 'HI', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'Llama_70b'}
+2024-06-13 12:47:23,889 - llm_as_a_service_logger - INFO - Received request by backend: {'username': 'admin', 'prompt': 'HI', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'Llama_70b'}
+2024-06-13 12:47:23,889 - llm_as_a_service_logger - INFO - Received request by backend: {'username': 'admin', 'prompt': 'HI', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'Llama_70b'}
+2024-06-13 12:47:23,889 - llm_as_a_service_logger - INFO - Received request by backend: {'username': 'admin', 'prompt': 'HI', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'Llama_70b'}
+2024-06-13 12:47:23,889 - llm_as_a_service_logger - INFO - Received request by backend: {'username': 'admin', 'prompt': 'HI', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'Llama_70b'}
+2024-06-13 12:47:23,889 - llm_as_a_service_logger - INFO - Received request by backend: {'username': 'admin', 'prompt': 'HI', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'Llama_70b'}
+2024-06-13 12:47:24,208 - llm_as_a_service_logger - INFO - Retrieving conversation...
+2024-06-13 12:47:24,208 - llm_as_a_service_logger - INFO - Retrieving conversation...
+2024-06-13 12:47:24,208 - llm_as_a_service_logger - INFO - Retrieving conversation...
+2024-06-13 12:47:24,208 - llm_as_a_service_logger - INFO - Retrieving conversation...
+2024-06-13 12:47:24,208 - llm_as_a_service_logger - INFO - Retrieving conversation...
+2024-06-13 12:47:24,208 - llm_as_a_service_logger - INFO - Retrieving conversation...
+2024-06-13 12:47:24,208 - llm_as_a_service_logger - INFO - Retrieving conversation...
+2024-06-13 12:47:24,214 - llm_as_a_service_logger - INFO - User found: <app.routers.LLM.backend_database.User object at 0x7f05e69fc520>
+2024-06-13 12:47:24,214 - llm_as_a_service_logger - INFO - User found: <app.routers.LLM.backend_database.User object at 0x7f05e69fc520>
+2024-06-13 12:47:24,214 - llm_as_a_service_logger - INFO - User found: <app.routers.LLM.backend_database.User object at 0x7f05e69fc520>
+2024-06-13 12:47:24,214 - llm_as_a_service_logger - INFO - User found: <app.routers.LLM.backend_database.User object at 0x7f05e69fc520>
+2024-06-13 12:47:24,214 - llm_as_a_service_logger - INFO - User found: <app.routers.LLM.backend_database.User object at 0x7f05e69fc520>
+2024-06-13 12:47:24,214 - llm_as_a_service_logger - INFO - User found: <app.routers.LLM.backend_database.User object at 0x7f05e69fc520>
+2024-06-13 12:47:24,214 - llm_as_a_service_logger - INFO - User found: <app.routers.LLM.backend_database.User object at 0x7f05e69fc520>
+2024-06-13 12:47:24,217 - llm_as_a_service_logger - INFO - Conversation found: <app.routers.LLM.backend_database.Conversation object at 0x7f05e5e7b0a0>
+2024-06-13 12:47:24,217 - llm_as_a_service_logger - INFO - Conversation found: <app.routers.LLM.backend_database.Conversation object at 0x7f05e5e7b0a0>
+2024-06-13 12:47:24,217 - llm_as_a_service_logger - INFO - Conversation found: <app.routers.LLM.backend_database.Conversation object at 0x7f05e5e7b0a0>
+2024-06-13 12:47:24,217 - llm_as_a_service_logger - INFO - Conversation found: <app.routers.LLM.backend_database.Conversation object at 0x7f05e5e7b0a0>
+2024-06-13 12:47:24,217 - llm_as_a_service_logger - INFO - Conversation found: <app.routers.LLM.backend_database.Conversation object at 0x7f05e5e7b0a0>
+2024-06-13 12:47:24,217 - llm_as_a_service_logger - INFO - Conversation found: <app.routers.LLM.backend_database.Conversation object at 0x7f05e5e7b0a0>
+2024-06-13 12:47:24,217 - llm_as_a_service_logger - INFO - Conversation found: <app.routers.LLM.backend_database.Conversation object at 0x7f05e5e7b0a0>
+2024-06-13 12:47:24,217 - llm_as_a_service_logger - INFO - Conversation successfully retrieved
+2024-06-13 12:47:24,217 - llm_as_a_service_logger - INFO - Conversation successfully retrieved
+2024-06-13 12:47:24,217 - llm_as_a_service_logger - INFO - Conversation successfully retrieved
+2024-06-13 12:47:24,217 - llm_as_a_service_logger - INFO - Conversation successfully retrieved
+2024-06-13 12:47:24,217 - llm_as_a_service_logger - INFO - Conversation successfully retrieved
+2024-06-13 12:47:24,217 - llm_as_a_service_logger - INFO - Conversation successfully retrieved
+2024-06-13 12:47:24,217 - llm_as_a_service_logger - INFO - Conversation successfully retrieved
+2024-06-13 12:48:26,005 - llm_as_a_service_logger - INFO - Received request by router: {'username': 'admin', 'prompt': 'HI', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'Llama_70b'}
+2024-06-13 12:48:26,005 - llm_as_a_service_logger - INFO - Received request by router: {'username': 'admin', 'prompt': 'HI', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'Llama_70b'}
+2024-06-13 12:48:26,005 - llm_as_a_service_logger - INFO - Received request by router: {'username': 'admin', 'prompt': 'HI', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'Llama_70b'}
+2024-06-13 12:48:26,005 - llm_as_a_service_logger - INFO - Received request by router: {'username': 'admin', 'prompt': 'HI', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'Llama_70b'}
+2024-06-13 12:48:26,005 - llm_as_a_service_logger - INFO - Received request by router: {'username': 'admin', 'prompt': 'HI', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'Llama_70b'}
+2024-06-13 12:48:26,005 - llm_as_a_service_logger - INFO - Received request by router: {'username': 'admin', 'prompt': 'HI', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'Llama_70b'}
+2024-06-13 12:48:26,005 - llm_as_a_service_logger - INFO - Received request by router: {'username': 'admin', 'prompt': 'HI', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'Llama_70b'}
+2024-06-13 12:48:26,006 - llm_as_a_service_logger - INFO - Received request by backend: {'username': 'admin', 'prompt': 'HI', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'Llama_70b'}
+2024-06-13 12:48:26,006 - llm_as_a_service_logger - INFO - Received request by backend: {'username': 'admin', 'prompt': 'HI', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'Llama_70b'}
+2024-06-13 12:48:26,006 - llm_as_a_service_logger - INFO - Received request by backend: {'username': 'admin', 'prompt': 'HI', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'Llama_70b'}
+2024-06-13 12:48:26,006 - llm_as_a_service_logger - INFO - Received request by backend: {'username': 'admin', 'prompt': 'HI', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'Llama_70b'}
+2024-06-13 12:48:26,006 - llm_as_a_service_logger - INFO - Received request by backend: {'username': 'admin', 'prompt': 'HI', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'Llama_70b'}
+2024-06-13 12:48:26,006 - llm_as_a_service_logger - INFO - Received request by backend: {'username': 'admin', 'prompt': 'HI', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'Llama_70b'}
+2024-06-13 12:48:26,006 - llm_as_a_service_logger - INFO - Received request by backend: {'username': 'admin', 'prompt': 'HI', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'Llama_70b'}
+2024-06-13 12:52:10,522 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-06-13 12:52:10,522 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-06-13 12:52:10,522 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-06-13 12:52:10,522 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-06-13 12:52:10,522 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-06-13 12:52:10,522 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-06-13 12:52:10,522 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-06-13 12:52:19,150 - llm_as_a_service_logger - INFO - Received request by router: {'username': 'string', 'prompt': 'string', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'string'}
+2024-06-13 12:52:19,150 - llm_as_a_service_logger - INFO - Received request by router: {'username': 'string', 'prompt': 'string', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'string'}
+2024-06-13 12:52:19,150 - llm_as_a_service_logger - INFO - Received request by router: {'username': 'string', 'prompt': 'string', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'string'}
+2024-06-13 12:52:19,150 - llm_as_a_service_logger - INFO - Received request by router: {'username': 'string', 'prompt': 'string', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'string'}
+2024-06-13 12:52:19,150 - llm_as_a_service_logger - INFO - Received request by router: {'username': 'string', 'prompt': 'string', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'string'}
+2024-06-13 12:52:19,150 - llm_as_a_service_logger - INFO - Received request by router: {'username': 'string', 'prompt': 'string', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'string'}
+2024-06-13 12:52:19,150 - llm_as_a_service_logger - INFO - Received request by router: {'username': 'string', 'prompt': 'string', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'string'}
+2024-06-13 12:53:55,449 - llm_as_a_service_logger - INFO - Received request by router: {'username': 'string', 'prompt': 'string', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'string'}
+2024-06-13 12:53:55,449 - llm_as_a_service_logger - INFO - Received request by router: {'username': 'string', 'prompt': 'string', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'string'}
+2024-06-13 12:53:55,449 - llm_as_a_service_logger - INFO - Received request by router: {'username': 'string', 'prompt': 'string', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'string'}
+2024-06-13 12:53:55,449 - llm_as_a_service_logger - INFO - Received request by router: {'username': 'string', 'prompt': 'string', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'string'}
+2024-06-13 12:53:55,449 - llm_as_a_service_logger - INFO - Received request by router: {'username': 'string', 'prompt': 'string', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'string'}
+2024-06-13 12:53:55,449 - llm_as_a_service_logger - INFO - Received request by router: {'username': 'string', 'prompt': 'string', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'string'}
+2024-06-13 12:53:55,449 - llm_as_a_service_logger - INFO - Received request by router: {'username': 'string', 'prompt': 'string', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'string'}
+2024-06-13 12:53:55,450 - llm_as_a_service_logger - INFO - Received request by backend: {'username': 'admin', 'prompt': 'string', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'string'}
+2024-06-13 12:53:55,450 - llm_as_a_service_logger - INFO - Received request by backend: {'username': 'admin', 'prompt': 'string', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'string'}
+2024-06-13 12:53:55,450 - llm_as_a_service_logger - INFO - Received request by backend: {'username': 'admin', 'prompt': 'string', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'string'}
+2024-06-13 12:53:55,450 - llm_as_a_service_logger - INFO - Received request by backend: {'username': 'admin', 'prompt': 'string', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'string'}
+2024-06-13 12:53:55,450 - llm_as_a_service_logger - INFO - Received request by backend: {'username': 'admin', 'prompt': 'string', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'string'}
+2024-06-13 12:53:55,450 - llm_as_a_service_logger - INFO - Received request by backend: {'username': 'admin', 'prompt': 'string', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'string'}
+2024-06-13 12:53:55,450 - llm_as_a_service_logger - INFO - Received request by backend: {'username': 'admin', 'prompt': 'string', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'string'}
+2024-06-13 12:54:32,199 - llm_as_a_service_logger - INFO - Received request by router: {'username': 'string', 'prompt': 'string', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'string'}
+2024-06-13 12:54:32,199 - llm_as_a_service_logger - INFO - Received request by router: {'username': 'string', 'prompt': 'string', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'string'}
+2024-06-13 12:54:32,199 - llm_as_a_service_logger - INFO - Received request by router: {'username': 'string', 'prompt': 'string', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'string'}
+2024-06-13 12:54:32,199 - llm_as_a_service_logger - INFO - Received request by router: {'username': 'string', 'prompt': 'string', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'string'}
+2024-06-13 12:54:32,199 - llm_as_a_service_logger - INFO - Received request by router: {'username': 'string', 'prompt': 'string', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'string'}
+2024-06-13 12:54:32,199 - llm_as_a_service_logger - INFO - Received request by router: {'username': 'string', 'prompt': 'string', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'string'}
+2024-06-13 12:54:32,199 - llm_as_a_service_logger - INFO - Received request by router: {'username': 'string', 'prompt': 'string', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'string'}
+2024-06-13 12:54:32,199 - llm_as_a_service_logger - INFO - Received request by backend: {'username': 'admin', 'prompt': 'string', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'string'}
+2024-06-13 12:54:32,199 - llm_as_a_service_logger - INFO - Received request by backend: {'username': 'admin', 'prompt': 'string', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'string'}
+2024-06-13 12:54:32,199 - llm_as_a_service_logger - INFO - Received request by backend: {'username': 'admin', 'prompt': 'string', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'string'}
+2024-06-13 12:54:32,199 - llm_as_a_service_logger - INFO - Received request by backend: {'username': 'admin', 'prompt': 'string', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'string'}
+2024-06-13 12:54:32,199 - llm_as_a_service_logger - INFO - Received request by backend: {'username': 'admin', 'prompt': 'string', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'string'}
+2024-06-13 12:54:32,199 - llm_as_a_service_logger - INFO - Received request by backend: {'username': 'admin', 'prompt': 'string', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'string'}
+2024-06-13 12:54:32,199 - llm_as_a_service_logger - INFO - Received request by backend: {'username': 'admin', 'prompt': 'string', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'string'}
+2024-06-13 12:56:11,228 - llm_as_a_service_logger - INFO - Received request by router: {'username': 'string', 'prompt': 'string', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'string'}
+2024-06-13 12:56:11,228 - llm_as_a_service_logger - INFO - Received request by router: {'username': 'string', 'prompt': 'string', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'string'}
+2024-06-13 12:56:11,228 - llm_as_a_service_logger - INFO - Received request by router: {'username': 'string', 'prompt': 'string', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'string'}
+2024-06-13 12:56:11,228 - llm_as_a_service_logger - INFO - Received request by router: {'username': 'string', 'prompt': 'string', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'string'}
+2024-06-13 12:56:11,228 - llm_as_a_service_logger - INFO - Received request by router: {'username': 'string', 'prompt': 'string', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'string'}
+2024-06-13 12:56:11,228 - llm_as_a_service_logger - INFO - Received request by router: {'username': 'string', 'prompt': 'string', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'string'}
+2024-06-13 12:56:11,228 - llm_as_a_service_logger - INFO - Received request by router: {'username': 'string', 'prompt': 'string', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'string'}
+2024-06-13 12:56:11,229 - llm_as_a_service_logger - INFO - Received request by backend: {'username': 'admin', 'prompt': 'string', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'string'}
+2024-06-13 12:56:11,229 - llm_as_a_service_logger - INFO - Received request by backend: {'username': 'admin', 'prompt': 'string', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'string'}
+2024-06-13 12:56:11,229 - llm_as_a_service_logger - INFO - Received request by backend: {'username': 'admin', 'prompt': 'string', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'string'}
+2024-06-13 12:56:11,229 - llm_as_a_service_logger - INFO - Received request by backend: {'username': 'admin', 'prompt': 'string', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'string'}
+2024-06-13 12:56:11,229 - llm_as_a_service_logger - INFO - Received request by backend: {'username': 'admin', 'prompt': 'string', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'string'}
+2024-06-13 12:56:11,229 - llm_as_a_service_logger - INFO - Received request by backend: {'username': 'admin', 'prompt': 'string', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'string'}
+2024-06-13 12:56:11,229 - llm_as_a_service_logger - INFO - Received request by backend: {'username': 'admin', 'prompt': 'string', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'string'}
+2024-06-13 12:57:23,265 - llm_as_a_service_logger - INFO - Received request by router: {'username': 'string', 'prompt': 'string', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'string'}
+2024-06-13 12:57:23,265 - llm_as_a_service_logger - INFO - Received request by router: {'username': 'string', 'prompt': 'string', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'string'}
+2024-06-13 12:57:23,265 - llm_as_a_service_logger - INFO - Received request by router: {'username': 'string', 'prompt': 'string', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'string'}
+2024-06-13 12:57:23,265 - llm_as_a_service_logger - INFO - Received request by router: {'username': 'string', 'prompt': 'string', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'string'}
+2024-06-13 12:57:23,265 - llm_as_a_service_logger - INFO - Received request by router: {'username': 'string', 'prompt': 'string', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'string'}
+2024-06-13 12:57:23,265 - llm_as_a_service_logger - INFO - Received request by router: {'username': 'string', 'prompt': 'string', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'string'}
+2024-06-13 12:57:23,265 - llm_as_a_service_logger - INFO - Received request by router: {'username': 'string', 'prompt': 'string', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'string'}
+2024-06-13 12:57:23,266 - llm_as_a_service_logger - INFO - Received request by backend: {'username': 'admin', 'prompt': 'string', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'string'}
+2024-06-13 12:57:23,266 - llm_as_a_service_logger - INFO - Received request by backend: {'username': 'admin', 'prompt': 'string', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'string'}
+2024-06-13 12:57:23,266 - llm_as_a_service_logger - INFO - Received request by backend: {'username': 'admin', 'prompt': 'string', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'string'}
+2024-06-13 12:57:23,266 - llm_as_a_service_logger - INFO - Received request by backend: {'username': 'admin', 'prompt': 'string', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'string'}
+2024-06-13 12:57:23,266 - llm_as_a_service_logger - INFO - Received request by backend: {'username': 'admin', 'prompt': 'string', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'string'}
+2024-06-13 12:57:23,266 - llm_as_a_service_logger - INFO - Received request by backend: {'username': 'admin', 'prompt': 'string', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'string'}
+2024-06-13 12:57:23,266 - llm_as_a_service_logger - INFO - Received request by backend: {'username': 'admin', 'prompt': 'string', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'string'}
+2024-06-13 12:57:23,586 - llm_as_a_service_logger - INFO - Received request by router: {'username': 'string', 'prompt': 'string', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'string'}
+2024-06-13 12:57:23,586 - llm_as_a_service_logger - INFO - Received request by router: {'username': 'string', 'prompt': 'string', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'string'}
+2024-06-13 12:57:23,586 - llm_as_a_service_logger - INFO - Received request by router: {'username': 'string', 'prompt': 'string', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'string'}
+2024-06-13 12:57:23,586 - llm_as_a_service_logger - INFO - Received request by router: {'username': 'string', 'prompt': 'string', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'string'}
+2024-06-13 12:57:23,586 - llm_as_a_service_logger - INFO - Received request by router: {'username': 'string', 'prompt': 'string', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'string'}
+2024-06-13 12:57:23,586 - llm_as_a_service_logger - INFO - Received request by router: {'username': 'string', 'prompt': 'string', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'string'}
+2024-06-13 12:57:23,586 - llm_as_a_service_logger - INFO - Received request by router: {'username': 'string', 'prompt': 'string', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'string'}
+2024-06-13 12:57:23,587 - llm_as_a_service_logger - INFO - Received request by backend: {'username': 'admin', 'prompt': 'string', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'string'}
+2024-06-13 12:57:23,587 - llm_as_a_service_logger - INFO - Received request by backend: {'username': 'admin', 'prompt': 'string', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'string'}
+2024-06-13 12:57:23,587 - llm_as_a_service_logger - INFO - Received request by backend: {'username': 'admin', 'prompt': 'string', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'string'}
+2024-06-13 12:57:23,587 - llm_as_a_service_logger - INFO - Received request by backend: {'username': 'admin', 'prompt': 'string', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'string'}
+2024-06-13 12:57:23,587 - llm_as_a_service_logger - INFO - Received request by backend: {'username': 'admin', 'prompt': 'string', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'string'}
+2024-06-13 12:57:23,587 - llm_as_a_service_logger - INFO - Received request by backend: {'username': 'admin', 'prompt': 'string', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'string'}
+2024-06-13 12:57:23,587 - llm_as_a_service_logger - INFO - Received request by backend: {'username': 'admin', 'prompt': 'string', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'string'}
+2024-06-13 12:58:32,550 - llm_as_a_service_logger - INFO - Received request by router: {'username': 'string', 'prompt': 'string', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'string'}
+2024-06-13 12:58:32,550 - llm_as_a_service_logger - INFO - Received request by router: {'username': 'string', 'prompt': 'string', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'string'}
+2024-06-13 12:58:32,550 - llm_as_a_service_logger - INFO - Received request by router: {'username': 'string', 'prompt': 'string', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'string'}
+2024-06-13 12:58:32,550 - llm_as_a_service_logger - INFO - Received request by router: {'username': 'string', 'prompt': 'string', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'string'}
+2024-06-13 12:58:32,550 - llm_as_a_service_logger - INFO - Received request by router: {'username': 'string', 'prompt': 'string', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'string'}
+2024-06-13 12:58:32,550 - llm_as_a_service_logger - INFO - Received request by router: {'username': 'string', 'prompt': 'string', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'string'}
+2024-06-13 12:58:32,550 - llm_as_a_service_logger - INFO - Received request by router: {'username': 'string', 'prompt': 'string', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'string'}
+2024-06-13 12:58:32,551 - llm_as_a_service_logger - INFO - Received request by backend: {'username': 'admin', 'prompt': 'string', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'string'}
+2024-06-13 12:58:32,551 - llm_as_a_service_logger - INFO - Received request by backend: {'username': 'admin', 'prompt': 'string', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'string'}
+2024-06-13 12:58:32,551 - llm_as_a_service_logger - INFO - Received request by backend: {'username': 'admin', 'prompt': 'string', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'string'}
+2024-06-13 12:58:32,551 - llm_as_a_service_logger - INFO - Received request by backend: {'username': 'admin', 'prompt': 'string', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'string'}
+2024-06-13 12:58:32,551 - llm_as_a_service_logger - INFO - Received request by backend: {'username': 'admin', 'prompt': 'string', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'string'}
+2024-06-13 12:58:32,551 - llm_as_a_service_logger - INFO - Received request by backend: {'username': 'admin', 'prompt': 'string', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'string'}
+2024-06-13 12:58:32,551 - llm_as_a_service_logger - INFO - Received request by backend: {'username': 'admin', 'prompt': 'string', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'string'}
+2024-06-13 12:58:56,893 - llm_as_a_service_logger - INFO - Received request by router: {'username': 'string', 'prompt': 'string', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'string'}
+2024-06-13 12:58:56,893 - llm_as_a_service_logger - INFO - Received request by router: {'username': 'string', 'prompt': 'string', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'string'}
+2024-06-13 12:58:56,893 - llm_as_a_service_logger - INFO - Received request by router: {'username': 'string', 'prompt': 'string', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'string'}
+2024-06-13 12:58:56,893 - llm_as_a_service_logger - INFO - Received request by router: {'username': 'string', 'prompt': 'string', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'string'}
+2024-06-13 12:58:56,893 - llm_as_a_service_logger - INFO - Received request by router: {'username': 'string', 'prompt': 'string', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'string'}
+2024-06-13 12:58:56,893 - llm_as_a_service_logger - INFO - Received request by router: {'username': 'string', 'prompt': 'string', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'string'}
+2024-06-13 12:58:56,893 - llm_as_a_service_logger - INFO - Received request by router: {'username': 'string', 'prompt': 'string', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'string'}
+2024-06-13 12:58:56,894 - llm_as_a_service_logger - INFO - Received request by backend: {'username': 'admin', 'prompt': 'string', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'string'}
+2024-06-13 12:58:56,894 - llm_as_a_service_logger - INFO - Received request by backend: {'username': 'admin', 'prompt': 'string', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'string'}
+2024-06-13 12:58:56,894 - llm_as_a_service_logger - INFO - Received request by backend: {'username': 'admin', 'prompt': 'string', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'string'}
+2024-06-13 12:58:56,894 - llm_as_a_service_logger - INFO - Received request by backend: {'username': 'admin', 'prompt': 'string', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'string'}
+2024-06-13 12:58:56,894 - llm_as_a_service_logger - INFO - Received request by backend: {'username': 'admin', 'prompt': 'string', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'string'}
+2024-06-13 12:58:56,894 - llm_as_a_service_logger - INFO - Received request by backend: {'username': 'admin', 'prompt': 'string', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'string'}
+2024-06-13 12:58:56,894 - llm_as_a_service_logger - INFO - Received request by backend: {'username': 'admin', 'prompt': 'string', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'string'}
+2024-06-13 13:00:10,779 - llm_as_a_service_logger - INFO - Received request by router: {'username': 'string', 'prompt': 'string', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'string'}
+2024-06-13 13:00:10,779 - llm_as_a_service_logger - INFO - Received request by router: {'username': 'string', 'prompt': 'string', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'string'}
+2024-06-13 13:00:10,779 - llm_as_a_service_logger - INFO - Received request by router: {'username': 'string', 'prompt': 'string', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'string'}
+2024-06-13 13:00:10,779 - llm_as_a_service_logger - INFO - Received request by router: {'username': 'string', 'prompt': 'string', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'string'}
+2024-06-13 13:00:10,779 - llm_as_a_service_logger - INFO - Received request by router: {'username': 'string', 'prompt': 'string', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'string'}
+2024-06-13 13:00:10,779 - llm_as_a_service_logger - INFO - Received request by router: {'username': 'string', 'prompt': 'string', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'string'}
+2024-06-13 13:00:10,779 - llm_as_a_service_logger - INFO - Received request by router: {'username': 'string', 'prompt': 'string', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'string'}
+2024-06-13 13:00:10,780 - llm_as_a_service_logger - INFO - Received request by backend: {'username': 'admin', 'prompt': 'string', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'string'}
+2024-06-13 13:00:10,780 - llm_as_a_service_logger - INFO - Received request by backend: {'username': 'admin', 'prompt': 'string', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'string'}
+2024-06-13 13:00:10,780 - llm_as_a_service_logger - INFO - Received request by backend: {'username': 'admin', 'prompt': 'string', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'string'}
+2024-06-13 13:00:10,780 - llm_as_a_service_logger - INFO - Received request by backend: {'username': 'admin', 'prompt': 'string', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'string'}
+2024-06-13 13:00:10,780 - llm_as_a_service_logger - INFO - Received request by backend: {'username': 'admin', 'prompt': 'string', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'string'}
+2024-06-13 13:00:10,780 - llm_as_a_service_logger - INFO - Received request by backend: {'username': 'admin', 'prompt': 'string', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'string'}
+2024-06-13 13:00:10,780 - llm_as_a_service_logger - INFO - Received request by backend: {'username': 'admin', 'prompt': 'string', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'string'}
+2024-06-13 13:01:14,576 - llm_as_a_service_logger - INFO - Received request by router: {'username': 'Hi my name is AMin', 'prompt': 'string', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'string'}
+2024-06-13 13:01:14,576 - llm_as_a_service_logger - INFO - Received request by router: {'username': 'Hi my name is AMin', 'prompt': 'string', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'string'}
+2024-06-13 13:01:14,576 - llm_as_a_service_logger - INFO - Received request by router: {'username': 'Hi my name is AMin', 'prompt': 'string', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'string'}
+2024-06-13 13:01:14,576 - llm_as_a_service_logger - INFO - Received request by router: {'username': 'Hi my name is AMin', 'prompt': 'string', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'string'}
+2024-06-13 13:01:14,576 - llm_as_a_service_logger - INFO - Received request by router: {'username': 'Hi my name is AMin', 'prompt': 'string', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'string'}
+2024-06-13 13:01:14,576 - llm_as_a_service_logger - INFO - Received request by router: {'username': 'Hi my name is AMin', 'prompt': 'string', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'string'}
+2024-06-13 13:01:14,576 - llm_as_a_service_logger - INFO - Received request by router: {'username': 'Hi my name is AMin', 'prompt': 'string', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'string'}
+2024-06-13 13:01:14,577 - llm_as_a_service_logger - INFO - Received request by backend: {'username': 'admin', 'prompt': 'string', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'string'}
+2024-06-13 13:01:14,577 - llm_as_a_service_logger - INFO - Received request by backend: {'username': 'admin', 'prompt': 'string', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'string'}
+2024-06-13 13:01:14,577 - llm_as_a_service_logger - INFO - Received request by backend: {'username': 'admin', 'prompt': 'string', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'string'}
+2024-06-13 13:01:14,577 - llm_as_a_service_logger - INFO - Received request by backend: {'username': 'admin', 'prompt': 'string', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'string'}
+2024-06-13 13:01:14,577 - llm_as_a_service_logger - INFO - Received request by backend: {'username': 'admin', 'prompt': 'string', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'string'}
+2024-06-13 13:01:14,577 - llm_as_a_service_logger - INFO - Received request by backend: {'username': 'admin', 'prompt': 'string', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'string'}
+2024-06-13 13:01:14,577 - llm_as_a_service_logger - INFO - Received request by backend: {'username': 'admin', 'prompt': 'string', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'string'}
+2024-06-13 13:02:47,562 - llm_as_a_service_logger - INFO - Received request by router: {'username': 'Hi my name is AMin', 'prompt': 'string', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'string'}
+2024-06-13 13:02:47,562 - llm_as_a_service_logger - INFO - Received request by router: {'username': 'Hi my name is AMin', 'prompt': 'string', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'string'}
+2024-06-13 13:02:47,562 - llm_as_a_service_logger - INFO - Received request by router: {'username': 'Hi my name is AMin', 'prompt': 'string', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'string'}
+2024-06-13 13:02:47,562 - llm_as_a_service_logger - INFO - Received request by router: {'username': 'Hi my name is AMin', 'prompt': 'string', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'string'}
+2024-06-13 13:02:47,562 - llm_as_a_service_logger - INFO - Received request by router: {'username': 'Hi my name is AMin', 'prompt': 'string', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'string'}
+2024-06-13 13:02:47,562 - llm_as_a_service_logger - INFO - Received request by router: {'username': 'Hi my name is AMin', 'prompt': 'string', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'string'}
+2024-06-13 13:02:47,562 - llm_as_a_service_logger - INFO - Received request by router: {'username': 'Hi my name is AMin', 'prompt': 'string', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'string'}
+2024-06-13 13:02:47,563 - llm_as_a_service_logger - INFO - Received request by backend: {'username': 'admin', 'prompt': 'string', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'string'}
+2024-06-13 13:02:47,563 - llm_as_a_service_logger - INFO - Received request by backend: {'username': 'admin', 'prompt': 'string', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'string'}
+2024-06-13 13:02:47,563 - llm_as_a_service_logger - INFO - Received request by backend: {'username': 'admin', 'prompt': 'string', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'string'}
+2024-06-13 13:02:47,563 - llm_as_a_service_logger - INFO - Received request by backend: {'username': 'admin', 'prompt': 'string', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'string'}
+2024-06-13 13:02:47,563 - llm_as_a_service_logger - INFO - Received request by backend: {'username': 'admin', 'prompt': 'string', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'string'}
+2024-06-13 13:02:47,563 - llm_as_a_service_logger - INFO - Received request by backend: {'username': 'admin', 'prompt': 'string', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'string'}
+2024-06-13 13:02:47,563 - llm_as_a_service_logger - INFO - Received request by backend: {'username': 'admin', 'prompt': 'string', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'string'}
