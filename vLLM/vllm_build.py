@@ -19,7 +19,7 @@ class EngineArgs(BaseModel):
     MAX_MODEL_LEN: Optional[int] = 512
     TENSOR_PARALLEL_SIZE: Optional[int] = 1
     SEED: Optional[int] = 42
-    QUANTIZATION: Optional[str] = None
+    QUANTIZATION: Optional[str]
 
     @field_validator('HUGGING_FACE_HUB_TOKEN')
     def validate_huggingface_token(cls, value):
@@ -67,9 +67,9 @@ class EngineArgs(BaseModel):
         valid_options = [
             "aqlm", "awq", "deepspeedfp", "fp8", "marlin",
             "gptq_marlin_24", "gptq_marlin", "gptq", "squeezellm",
-            "compressed-tensors", "bitsandbytes"
+            "compressed-tensors", "bitsandbytes","None"
         ]
-        if value is not None and value not in valid_options:
+        if value not in valid_options:
             raise ValueError(f"QUANTIZATION must be one of {valid_options}.")
         return value
 
