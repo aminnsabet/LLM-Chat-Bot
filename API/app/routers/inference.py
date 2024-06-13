@@ -7,7 +7,7 @@ import yaml
 import pathlib
 import yaml
 import logging
-from app.routers.LLM.backend_hfTextGen import LLMDeployment
+from app.routers.LLM.backend_vLLM import LLMDeployment
 from app.logging_config import setup_logger
 current_path = pathlib.Path(__file__)
 
@@ -31,7 +31,6 @@ router = APIRouter()
 async def create_inference(data: InferenceRequest, current_user: User = Depends(get_current_active_user)):
     logger.info("Received request by router: %s", data.dict())
     try:
-        #data.memory = False
         data.username = current_user.username
         response = llm.InferenceCall(data)
         return {"username": current_user.username, "data":response}

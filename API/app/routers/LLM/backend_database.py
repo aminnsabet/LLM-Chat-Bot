@@ -6,6 +6,7 @@ from dotenv import load_dotenv
 from sqlalchemy import Boolean
 from passlib.context import CryptContext
 import yaml
+from langchain_core.chat_history import BaseChatMessageHistory
 import pathlib
 from app.logging_config import setup_logger
 # from app.logging_config import setup_logger
@@ -63,7 +64,6 @@ class Conversation(Base):
     id = Column(Integer, primary_key=True, index=True)
     user_id = Column(Integer, index=True)
     conversation_number = Column(Integer)  # Add conversation number column
-    content = Column(String)
     timestamp = Column(DateTime(timezone=True), server_default=func.now())
     conversation_name = Column(String)
 
@@ -95,7 +95,6 @@ class Database:
             conversation = Conversation(
                 user_id=user.id,
                 conversation_number=conversation_number,
-                content=input["content"],
                 conversation_name=input["conversation_name"],
             )
             self.db.add(conversation)
@@ -128,7 +127,6 @@ class Database:
                     conversation = Conversation(
                         user_id=user.id,
                         conversation_number=conversation_number,
-                        content=input["content"],
                         conversation_name=input.get("conversation_name", ""),
                     )
                     self.db.add(conversation)
@@ -150,7 +148,6 @@ class Database:
                     self.db.close()
                     return {"error": "Conversation not found"}
 
-            conversation.content = input["content"]
 
             if input.get("prompt_token_number"):
                 user.prompt_token_number += input["prompt_token_number"]
@@ -208,8 +205,6 @@ class Database:
 
             self.logger.info(f"Conversation found: {conversation}")
 
-            if not conversation.content:
-                conversation.content = "No previous context"
 
             self.logger.info("Conversation successfully retrieved")
             self.db.close()
@@ -217,7 +212,6 @@ class Database:
             return {
                 "user_id": conversation.user_id,
                 "conversation_number": conversation.conversation_number,
-                "content": conversation.content,
                 "timestamp": conversation.timestamp,
                 "conversation_name": conversation.conversation_name,
             }
