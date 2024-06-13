@@ -46,7 +46,7 @@ async def query_vectorDB(class_name: str = Form(...),
                           current_user: User = Depends(get_current_active_user),
                           file: UploadFile = File(None),
                           file_title: Optional[str] = Form(None),
-                          query: Optional[str] = Form(...)):
+                          query: Optional[str] = Form(None)):
     try:
         print(f"received data: {class_name}, {mode}, {vectorDB_type}, {file_path}, {current_user.username}, {query}")
         print(f"Received file: {file.filename if file else 'No file'}")

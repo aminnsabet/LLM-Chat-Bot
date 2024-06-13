@@ -27,6 +27,7 @@ from langchain.text_splitter import RecursiveCharacterTextSplitter
 from weaviate.classes.config import Configure, Property, DataType
 from weaviate.auth import AuthApiKey
 from weaviate.classes.query import MetadataQuery
+from weaviate.classes.query import Filter
 
 
 class Config:
@@ -409,12 +410,14 @@ class VectorDataBase:
                 dict: A response indicating the outcome ('success' or 'error') and relevant messages
             '''
             try: 
-                weaviate_client = weaviate.Client("http://localhost:8080")
-                username = username
-                class_name = class_name
+                weaviate_client = weaviate.connect_to_local(   # `weaviate_key`: your Weaviate API key
+                    headers={
+                        "X-HuggingFace-Api-Key": "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"
+                        }
+                )
                 full_class_name = str(username) + "_" + str(class_name)
                 if full_class_name is not None:
-                    weaviate_client.schema.delete_class(full_class_name)
+                    weaviate_client.collections.delete(full_class_name)
                     self.database.delete_collection({"username": username, "collection_name": class_name})
                     return {"success": f"Class {full_class_name} has been removed"}
                 else:
@@ -422,7 +425,7 @@ class VectorDataBase:
             except Exception as e:
                 return {"error": str(e)}
 
-    def delete_weaviate_document(self, name, cls_name):
+    def delete_weaviate_document(self, name, class_name):
         '''
         Description:
             Deletes a document from Weaviate based on its title and class name.
@@ -434,14 +437,18 @@ class VectorDataBase:
         '''
         try:
             document_name = str(name)
-            self.weaviate_client.batch.delete_objects(
-                class_name=cls_name,
-                where={
-                    "path": ["document_title"],
-                    "operator": "Like",
-                    "valueText": document_name,
-                }
+            selected_class = self.weaviate_client.collections.get(str(class_name))
+            selected_class.data.delete_many(
+                where=Filter.by_property("document_title").like(str(document_name))
             )
+            # self.weaviate_client.batch.delete_objects(
+            #     class_name=cls_name,
+            #     where={
+            #         "path": ["document_title"],
+            #         "operator": "Like",
+            #         "valueText": document_name,
+            #     }
+            #)
         except Exception as e:
                 return {"error": str(e)}
 

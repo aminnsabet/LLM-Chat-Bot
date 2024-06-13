@@ -1186,3 +1186,21 @@
 2024-06-12 15:34:13,775 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
 2024-06-12 15:34:13,775 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
 2024-06-12 15:34:13,775 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-06-13 09:03:13,510 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-06-13 09:03:13,510 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-06-13 09:03:13,510 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-06-13 09:03:13,510 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-06-13 09:03:15,636 - llm_as_a_service_logger - INFO - Wandb Logging Enabled
+2024-06-13 09:03:15,636 - llm_as_a_service_logger - INFO - Wandb Logging Enabled
+2024-06-13 09:03:15,636 - llm_as_a_service_logger - INFO - Wandb Logging Enabled
+2024-06-13 09:03:15,636 - llm_as_a_service_logger - INFO - Wandb Logging Enabled
+2024-06-13 11:33:12,506 - llm_as_a_service_logger - INFO - Wandb Logging Enabled
+2024-06-13 11:33:12,506 - llm_as_a_service_logger - INFO - Wandb Logging Enabled
+2024-06-13 11:33:12,506 - llm_as_a_service_logger - INFO - Wandb Logging Enabled
+2024-06-13 11:33:12,506 - llm_as_a_service_logger - INFO - Wandb Logging Enabled
+2024-06-13 11:33:30,956 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-06-13 11:33:30,956 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-06-13 11:33:30,956 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-06-13 11:33:30,956 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-06-13 11:33:30,956 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-06-13 11:33:30,956 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
