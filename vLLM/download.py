@@ -17,7 +17,7 @@ from langchain.prompts import ChatPromptTemplate, MessagesPlaceholder
 # Define the LLM
 model = VLLMOpenAI(
     openai_api_key="EMPTY",
-    openai_api_base="http://localhost:8000/v1",
+    openai_api_base="http://localhost:8500/v1",
     model_name="meta-llama/Llama-2-7b-chat-hf",
     model_kwargs={"stop": ["."]},
 )
