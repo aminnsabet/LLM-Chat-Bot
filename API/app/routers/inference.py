@@ -32,7 +32,7 @@ async def create_inference(data: InferenceRequest, current_user: User = Depends(
     logger.info("Received request by router: %s", data.dict())
     try:
         data.username = current_user.username
-        response = llm.InferenceCall(data)
+        response = await llm.InferenceCall(data)
         return {"username": current_user.username, "data":response}
 
     except requests.HTTPError as e:

@@ -9,8 +9,10 @@ import yaml
 from langchain_core.chat_history import BaseChatMessageHistory
 import pathlib
 from app.logging_config import setup_logger
+import secrets
+import string
 # from app.logging_config import setup_logger
-
+from sqlalchemy import UniqueConstraint
 current_path = pathlib.Path(__file__).parent.parent.parent.parent
 config_path = current_path/ 'cluster_conf.yaml'
 # Environment and DB setup
@@ -52,7 +54,8 @@ class User(Base):
     timestamp = Column(DateTime(timezone=True), server_default=func.now())
     hashed_password = Column(String)
     disabled = Column(Boolean, default=False)
-    token_limit = Column(Integer, default=1000)
+    gen_token_limit = Column(Integer, default=1000)
+    prompt_token_limit = Column(Integer, default=10000)
     role = Column(String, default="User")
     collection_names = Column(String, default="")
 
@@ -66,6 +69,8 @@ class Conversation(Base):
     conversation_number = Column(Integer)  # Add conversation number column
     timestamp = Column(DateTime(timezone=True), server_default=func.now())
     conversation_name = Column(String)
+    conversation_id = Column(String, unique=True, index=True)
+    __table_args__ = (UniqueConstraint('conversation_id', name='_conversation_id_uc'),)
 
 
 # Create database engine
@@ -80,7 +85,9 @@ class Database:
     def __init__(self):
         self.db = SessionLocal()
         self.logger = setup_logger()
-
+    def generate_random_name(self, length=12):
+        characters = string.ascii_letters + string.digits
+        return ''.join(secrets.choice(characters) for _ in range(length))
     def add_conversation(self, input: dict):
         try:
             user = self.db.query(User).filter(User.username == input["username"]).first()
@@ -91,21 +98,25 @@ class Database:
                 return {"error": f"User {input['username']} not found"}
 
             conversation_number = self.db.query(Conversation).filter(Conversation.user_id == user.id).count() + 1
+            conversation_id = f"{user.username}_{user.id}_Conv_{conversation_number}"
+
+            conversation_name = input.get("conversation_name", self.generate_random_name())
 
             conversation = Conversation(
                 user_id=user.id,
                 conversation_number=conversation_number,
-                conversation_name=input["conversation_name"],
+                conversation_name=conversation_name,
+                conversation_id=conversation_id  # Set the unique conversation_id
             )
             self.db.add(conversation)
             self.db.commit()
             self.db.close()
-            return {"message": "Conversation added"}
+            return {"message": "Conversation added", "conversation_id": conversation_id}
         except Exception as e:
             self.logger.error(f"Error occurred: {e}")
             return {"error": "An unexpected error occurred. Please try again later."}
 
-    def update_conversation(self, input):
+    def update_token_usage(self, input):
         try:
             user = self.db.query(User).filter(User.username == input["username"]).first()
 
@@ -114,40 +125,7 @@ class Database:
                 self.db.close()
                 return {f"User {input['username']} not found"}
 
-            if "conversation_number" not in input or not input["conversation_number"]:
-                conversation = (
-                    self.db.query(Conversation)
-                    .filter(Conversation.user_id == user.id)
-                    .order_by(Conversation.conversation_number.desc())
-                    .first()
-                )
-
-                if not conversation:
-                    conversation_number = self.db.query(Conversation).filter(Conversation.user_id == user.id).count() + 1
-                    conversation = Conversation(
-                        user_id=user.id,
-                        conversation_number=conversation_number,
-                        conversation_name=input.get("conversation_name", ""),
-                    )
-                    self.db.add(conversation)
-                    self.db.commit()
-                    self.db.close()
-                    return {"message": "New conversation added"}
-            else:
-                conversation = (
-                    self.db.query(Conversation)
-                    .filter(
-                        Conversation.conversation_number == input["conversation_number"],
-                        Conversation.user_id == user.id,
-                    )
-                    .first()
-                )
-
-                if not conversation:
-                    self.logger.error("Conversation not found")
-                    self.db.close()
-                    return {"error": "Conversation not found"}
-
+        
 
             if input.get("prompt_token_number"):
                 user.prompt_token_number += input["prompt_token_number"]
@@ -155,9 +133,10 @@ class Database:
             if input.get("gen_token_number"):
                 user.gen_token_number += input["gen_token_number"]
 
-                if user.gen_token_number > user.token_limit:
+                if user.gen_token_number > user.gen_token_limit  or user.prompt_token_number > user.prompt_token_limit:
                     user.disabled = True
-                    user.token_limit = 0
+                    user.gen_token_number = 0
+                    user.prompt_token_number = 0
 
             self.db.commit()
             self.db.close()
@@ -214,6 +193,7 @@ class Database:
                 "conversation_number": conversation.conversation_number,
                 "timestamp": conversation.timestamp,
                 "conversation_name": conversation.conversation_name,
+                "conversation_id": conversation.conversation_id,
             }
         except Exception as e:
             self.logger.error(f"Error occurred: {e}")
