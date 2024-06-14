@@ -28,6 +28,8 @@ from weaviate.classes.config import Configure, Property, DataType
 from weaviate.auth import AuthApiKey
 from weaviate.classes.query import MetadataQuery
 from weaviate.classes.query import Filter
+from langchain_community.llms import VLLMOpenAI
+from langchain_weaviate.vectorstores import WeaviateVectorStore
 
 
 class Config:
@@ -55,6 +57,49 @@ class VDBaseInput(BaseModel):
 
 VDB_app = FastAPI()
 
+class VLLMManager:
+    def __init__(self, api_key, api_base, model_name, model_kwargs):
+
+        logging.basicConfig(
+            level=logging.INFO,
+            format="%(asctime)s - %(levelname)s - %(message)s",
+            filename="app.log",  # specify the file name if you want logging to be stored in a file
+            filemode="a",  # append to the log file if it exists
+        )
+
+        self.logger = logging.getLogger(__name__)
+        self.logger.propagate = True
+
+        self.api_key = api_key,
+        self.api_base = api_base,
+        self.model_name = model_name,
+        self.model_kwargs = model_kwargs
+        self.model = None
+
+        self.logger.info(f"Checking the init of VLLMManager and parameters: api_key {self.api_key}, base {self.api_base}, model name: {self.model_name}, kwargs: {self.model_kwargs}")
+
+    def run_vllm_model(self):
+        if self.model is None:
+            self.model = VLLMOpenAI(
+                openai_api_key=self.api_key,
+                openai_api_base=self.api_base,
+                model_name=self.model_name,
+                model_kwargs=self.model_kwargs,
+            )
+            self.logger.info(f"Checking the result of run_vllm_model, output is model: {self.model}")
+            return self.model
+        
+    def vllm_running_status(self):
+        model_check = self.model
+        self.logger.info(f"Checking the vllm running status: {model_check}")
+        if model_check is None:
+            return False
+        else:
+            return True
+
+    def shutdown_model(self):
+        self.model = None
+        self.logger.info(f"Shutting down model: {self.model}")
 
 @ray.remote(num_cpus=1)
 class WeaviateEmbedder:
@@ -117,14 +162,14 @@ class VectorDataBase:
                         "X-HuggingFace-Api-Key": "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"
                         }
                 )
-        # self.weaviate_client = weaviate.Client(
-        #     url=config.weaviate_client_url,   
-        # )
-        #self.weaviate_vectorstore = Weaviate(self.weaviate_client, 'Chatbot', 'page_content', attributes=['page_content'])
+
         self.num_actors = config.VD_number_actors
         self.chunk_size = config.VD_chunk_size
         self.chunk_overlap = config.VD_chunk_overlap
         self.database = Database()
+
+        self.vllm_manager = None
+
         logging.basicConfig(
             level=logging.INFO,
             format="%(asctime)s - %(levelname)s - %(message)s",
@@ -570,7 +615,23 @@ class VectorDataBase:
             self.logger.info(f"logged properties: {o.properties}")
             self.logger.info(f"logged score: {o.metadata.score}")
         return response
+    
+    ### Retriever functions ###
+    def initialize_vllm_manager(self, api_key, api_base, model_name, model_kwargs):
+        if api_key and api_base and model_name and model_kwargs is not None:   
+            self.vllm_manager = VLLMManager(api_key, api_base, model_name, model_kwargs)
+            self.logger.info(f"check the success init status: {self.vllm_manager}")
+            return self.vllm_manager
+        else: 
+            self.logger.info(f"check the failed init status: {self.vllm_manager}")
+            return None
 
+    def retrieval_augmented_generation(self):
+        self.logger.info(f"pre checking the vllm manager before RAG: {self.vllm_manager}")
+        qa_chain = RetrievalQA.from_chain_type(
+            self.vllm_manager,
+
+        )
 
     @VDB_app.post("/")
     async def VectorDataBase(self, request: VDBaseInput):

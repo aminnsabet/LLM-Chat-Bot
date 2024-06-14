@@ -129,7 +129,7 @@ def run_docker(engine_args: EngineArgs):
     volumes = {volume_path: {'bind': '/root/.cache/huggingface', 'mode': 'rw'}}
     env_vars = {'HUGGING_FACE_HUB_TOKEN': engine_args.HUGGING_FACE_HUB_TOKEN}
 
-    log_file_path = "/home/amin_sabet/dev/LLM-Chat-Bot/vLLM/file.log"
+    log_file_path = "./file.log"
 
     # Ensure the directory exists
     log_dir = os.path.dirname(log_file_path)
