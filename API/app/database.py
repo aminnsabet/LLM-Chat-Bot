@@ -8,6 +8,7 @@ from passlib.context import CryptContext
 import pathlib
 #from app.logging_config import setup_logger
 import yaml
+from sqlalchemy import UniqueConstraint
 
 current_path = pathlib.Path(__file__)
 
@@ -45,9 +46,10 @@ class User(Base):
     timestamp = Column(DateTime(timezone=True), server_default=func.now())
     hashed_password = Column(String)
     disabled = Column(Boolean, default=False)
-    token_limit = Column(Integer, default=1000)
-    role = Column(String, default="User") 
-    collection_names = Column(String, default="") 
+    gen_token_limit = Column(Integer, default=1000)
+    prompt_token_limit = Column(Integer, default=10000)
+    role = Column(String, default="User")
+    collection_names = Column(String, default="")
 
 # Conversation model
 class Conversation(Base):
@@ -56,9 +58,10 @@ class Conversation(Base):
     id = Column(Integer, primary_key=True, index=True)
     user_id = Column(Integer, index=True)
     conversation_number = Column(Integer)  # Add conversation number column
-    content = Column(String)
     timestamp = Column(DateTime(timezone=True), server_default=func.now())
     conversation_name = Column(String)
+    conversation_id = Column(String, unique=True, index=True)
+    __table_args__ = (UniqueConstraint('conversation_id', name='_conversation_id_uc'),)
 
 # Create database engine
 engine = create_engine(DATABASE_URL)
