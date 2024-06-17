@@ -7,7 +7,7 @@ import yaml
 import pathlib
 import yaml
 import logging
-from app.routers.LLM.backend_vLLM import LLMDeployment
+from app.routers.LLM.backend_vLLM import vLLM_Inference
 from app.logging_config import setup_logger
 current_path = pathlib.Path(__file__)
 
@@ -24,8 +24,9 @@ def get_route_prefix_for_llm(llm_name):
     return None
 
 Ray_service_URL = config.get("Ray_service_URL")
-llm = LLMDeployment(model_tokenizer="meta-llama/Llama-2-7b-chat-hf")
+llm = vLLM_Inference()
 router = APIRouter()
+
 
 @router.post("/")
 async def create_inference(data: InferenceRequest, current_user: User = Depends(get_current_active_user)):

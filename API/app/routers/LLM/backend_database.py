@@ -49,15 +49,17 @@ class User(Base):
     __tablename__ = "users"
     id = Column(Integer, primary_key=True, index=True)
     username = Column(String, unique=True, index=True)
+    hashed_password = Column(String)
+    disabled = Column(Boolean, default=False)
+    role = Column(String, default="User")
+    available_models = Column(String, default="")
+    gen_token_limit = Column(Integer, default=1000)
+    prompt_token_limit = Column(Integer, default=10000)
     prompt_token_number = Column(Integer, default=0)
     gen_token_number = Column(Integer, default=0)
     timestamp = Column(DateTime(timezone=True), server_default=func.now())
-    hashed_password = Column(String)
-    disabled = Column(Boolean, default=False)
-    gen_token_limit = Column(Integer, default=1000)
-    prompt_token_limit = Column(Integer, default=10000)
-    role = Column(String, default="User")
     collection_names = Column(String, default="")
+    
 
 
 # Conversation model
@@ -135,8 +137,8 @@ class Database:
 
                 if user.gen_token_number > user.gen_token_limit  or user.prompt_token_number > user.prompt_token_limit:
                     user.disabled = True
-                    user.gen_token_number = 0
-                    user.prompt_token_number = 0
+                    user.gen_token_limit = 0
+                    user.prompt_token_limit = 0
 
             self.db.commit()
             self.db.close()
@@ -305,7 +307,8 @@ class Database:
                     "gen_token_number": user.gen_token_number,
                     "timestamp": user.timestamp,
                     "disabled": user.disabled,
-                    "token_limit": user.token_limit,
+                    "gen_token_limit": user.gen_token_limit,
+                    "prompt_token_limit": user.prompt_token_limit,
                     "role": user.role,
                     "collection_names": user.collection_names.split(","),
                     "conversations": []
@@ -317,7 +320,6 @@ class Database:
                         user_data["conversations"].append({
                             "conversation_id": conversation.id,
                             "conversation_number": conversation.conversation_number,
-                            "content": conversation.content,
                             "timestamp": conversation.timestamp,
                             "conversation_name": conversation.conversation_name
                         })

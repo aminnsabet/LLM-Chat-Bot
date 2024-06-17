@@ -11,19 +11,14 @@ import requests
 from typing import Optional
 import time
 from app.logging_config import setup_logger
-
+from app.models import VllmBuildRequest
 logger = setup_logger()
 
-router = APIRouter()
-class EngineArgs(BaseModel):
-    HUGGING_FACE_HUB_TOKEN: str
-    MODEL: str
-    TOKENIZER: Optional[str] = 'auto'
-    MAX_MODEL_LEN: Optional[int] = 512
-    TENSOR_PARALLEL_SIZE: Optional[int] = 1
-    SEED: Optional[int] = 42
-    QUANTIZATION: Optional[str]
 
+router = APIRouter()
+
+class VllmBuildRequest(VllmBuildRequest):
+    
     @field_validator('HUGGING_FACE_HUB_TOKEN')
     def validate_huggingface_token(cls, value):
         headers = {"Authorization": f"Bearer {value}"}
@@ -113,8 +108,9 @@ def check_vllm_health(endpoint: str, timeout: int = 60, interval: int = 5):
         time.sleep(interval)
     return False
 
+
 @router.post("/")
-def run_docker(engine_args: EngineArgs):
+def run_docker(engine_args: VllmBuildRequest):
     user_info = validate_huggingface_token(engine_args.HUGGING_FACE_HUB_TOKEN)
     if user_info is None:
         raise HTTPException(status_code=400, detail="Invalid Hugging Face token.")

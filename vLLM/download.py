@@ -63,3 +63,5 @@ print(with_message_history.invoke(
 messages = SQLChatMessageHistory("abc126","sqlite:///memory.db").get_messages()
 for message in messages:
     print(message)
+
+# "http://localhost:8500/v1"
