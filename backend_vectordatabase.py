@@ -31,6 +31,8 @@ from weaviate.classes.query import Filter
 from langchain_community.llms import VLLMOpenAI
 from langchain_weaviate.vectorstores import WeaviateVectorStore
 
+from sentence_transformers import SentenceTransformer
+
 
 class Config:
     def __init__(self, **entries):
@@ -58,7 +60,7 @@ class VDBaseInput(BaseModel):
 VDB_app = FastAPI()
 
 class VLLMManager:
-    def __init__(self, api_key, api_base, model_name, model_kwargs):
+    def __init__(self):
 
         logging.basicConfig(
             level=logging.INFO,
@@ -70,23 +72,25 @@ class VLLMManager:
         self.logger = logging.getLogger(__name__)
         self.logger.propagate = True
 
-        self.api_key = api_key,
-        self.api_base = api_base,
-        self.model_name = model_name,
-        self.model_kwargs = model_kwargs
+        # self.api_key = api_key,
+        # self.api_base = api_base,
+        # self.model_name = model_name,
+        # self.model_kwargs = model_kwargs
         self.model = None
 
-        self.logger.info(f"Checking the init of VLLMManager and parameters: api_key {self.api_key}, base {self.api_base}, model name: {self.model_name}, kwargs: {self.model_kwargs}")
+        # self.logger.info(f"Checking the init of VLLMManager and parameters: api_key {self.api_key}, base {self.api_base}, model name: {self.model_name}, kwargs: {self.model_kwargs}")
 
     def run_vllm_model(self):
         if self.model is None:
             self.model = VLLMOpenAI(
-                openai_api_key=self.api_key,
-                openai_api_base=self.api_base,
-                model_name=self.model_name,
-                model_kwargs=self.model_kwargs,
+                openai_api_key="EMPTY",
+                openai_api_base="http://localhost:8500/v1",
+                model_name="meta-llama/Llama-2-7b-chat-hf",
+                model_kwargs={"stop": ["."]},
             )
-            self.logger.info(f"Checking the result of run_vllm_model, output is model: {self.model}")
+            text_to_log = self.model.invoke("Hi how are you?")
+            self.logger.info(f"Checking the result of run_vllm_model, output is model: {self.model} and logged text is : {text_to_log}")
+            
             return self.model
         
     def vllm_running_status(self):
@@ -159,7 +163,7 @@ class VectorDataBase:
 
         self.weaviate_client = weaviate.connect_to_local(   # `weaviate_key`: your Weaviate API key
                     headers={
-                        "X-HuggingFace-Api-Key": "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"
+                        "X-HuggingFace-Api-Key": "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"
                         }
                 )
 
@@ -169,6 +173,7 @@ class VectorDataBase:
         self.database = Database()
 
         self.vllm_manager = None
+        self.embedder_model = None
 
         logging.basicConfig(
             level=logging.INFO,
@@ -179,6 +184,8 @@ class VectorDataBase:
 
         self.logger = logging.getLogger(__name__)
         self.logger.propagate = True
+
+        self.logger.info(f"At initilization stage embedding model is: {self.embedder_model} and vllm model is: {self.vllm_manager}")
 
     def weaviate_serialize_document(self,doc):
         '''
@@ -362,7 +369,7 @@ class VectorDataBase:
         try:            
                 weaviate_client = weaviate.connect_to_local(   # `weaviate_key`: your Weaviate API key
                     headers={
-                        "X-HuggingFace-Api-Key": "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"
+                        "X-HuggingFace-Api-Key": "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"
                         }
                 )
 
@@ -457,7 +464,7 @@ class VectorDataBase:
             try: 
                 weaviate_client = weaviate.connect_to_local(   # `weaviate_key`: your Weaviate API key
                     headers={
-                        "X-HuggingFace-Api-Key": "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"
+                        "X-HuggingFace-Api-Key": "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"
                         }
                 )
                 full_class_name = str(username) + "_" + str(class_name)
@@ -541,7 +548,7 @@ class VectorDataBase:
         try:
             weaviate_client = weaviate.connect_to_local(   # `weaviate_key`: your Weaviate API key
                     headers={
-                        "X-HuggingFace-Api-Key": "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"
+                        "X-HuggingFace-Api-Key": "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"
                         }
                 )
             #weaviate_client = weaviate.Client("http://localhost:8080")
@@ -567,7 +574,7 @@ class VectorDataBase:
     def basic_vector_search(self, username, cls):
         self.weaviate_client = weaviate.connect_to_local(   # `weaviate_key`: your Weaviate API key
                     headers={
-                        "X-HuggingFace-Api-Key": "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"
+                        "X-HuggingFace-Api-Key": "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"
                         }
                 )
         class_name = str(username) + "_" + str(cls)
@@ -581,7 +588,7 @@ class VectorDataBase:
     def similarity_vector_search(self, username, cls, user_query):
         self.weaviate_client = weaviate.connect_to_local(   # `weaviate_key`: your Weaviate API key
                     headers={
-                        "X-HuggingFace-Api-Key": "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"
+                        "X-HuggingFace-Api-Key": "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"
                         }
                 )
         class_name = str(username) + "_" + str(cls)
@@ -600,7 +607,7 @@ class VectorDataBase:
     def keyword_search(self, username, cls, user_query):
         self.weaviate_client = weaviate.connect_to_local(   # `weaviate_key`: your Weaviate API key
                     headers={
-                        "X-HuggingFace-Api-Key": "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"
+                        "X-HuggingFace-Api-Key": "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"
                         }
                 )
         class_name = str(username) + "_" + str(cls)
@@ -625,6 +632,16 @@ class VectorDataBase:
         else: 
             self.logger.info(f"check the failed init status: {self.vllm_manager}")
             return None
+
+    def initilize_embedder(self, embedder_name=None):
+        if embedder_name == None:
+            self.embedder_model = SentenceTransformer('sentence-transformers/all-MiniLM-L6-v2')
+            self.logger.info(f"Checking the embedding model mini: {self.embedder_model}")
+            return self.embedder_model
+        else:
+            self.embedder_model = SentenceTransformer(str(embedder_name))
+            self.logger.info(f"Checking the embedding model cutsom: {self.embedder_model}")
+            return self.embedder_model
 
     def retrieval_augmented_generation(self):
         self.logger.info(f"pre checking the vllm manager before RAG: {self.vllm_manager}")
