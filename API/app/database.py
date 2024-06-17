@@ -41,15 +41,17 @@ class User(Base):
     __tablename__ = "users"
     id = Column(Integer, primary_key=True, index=True)
     username = Column(String, unique=True, index=True)
+    hashed_password = Column(String)
+    disabled = Column(Boolean, default=False)
+    role = Column(String, default="User")
+    available_models = Column(String, default="")
+    gen_token_limit = Column(Integer, default=1000)
+    prompt_token_limit = Column(Integer, default=10000)
     prompt_token_number = Column(Integer, default=0)
     gen_token_number = Column(Integer, default=0)
     timestamp = Column(DateTime(timezone=True), server_default=func.now())
-    hashed_password = Column(String)
-    disabled = Column(Boolean, default=False)
-    gen_token_limit = Column(Integer, default=1000)
-    prompt_token_limit = Column(Integer, default=10000)
-    role = Column(String, default="User")
     collection_names = Column(String, default="")
+
 
 # Conversation model
 class Conversation(Base):

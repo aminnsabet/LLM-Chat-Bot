@@ -712,3 +712,332 @@
 2024-06-14 12:34:09,358 - llm_as_a_service_logger - INFO - Conversation successfully retrieved
 2024-06-14 12:34:09,358 - llm_as_a_service_logger - INFO - Conversation successfully retrieved
 2024-06-14 12:34:09,358 - llm_as_a_service_logger - INFO - Conversation successfully retrieved
+2024-06-14 12:50:28,452 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-06-14 12:50:28,452 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-06-14 12:50:28,452 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-06-14 12:50:28,452 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-06-14 12:50:28,452 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-06-14 12:50:28,452 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-06-14 12:50:28,452 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-06-14 13:09:15,374 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-06-14 13:09:15,374 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-06-14 13:09:15,374 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-06-14 13:09:15,374 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-06-14 13:09:15,374 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-06-14 13:09:15,374 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-06-14 13:09:15,374 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-06-14 13:10:24,561 - llm_as_a_service_logger - INFO - Received request by router: {'username': 'string', 'prompt': 'Hi Nscale chatbot', 'memory': False, 'conversation_number': -1, 'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1'}
+2024-06-14 13:10:24,561 - llm_as_a_service_logger - INFO - Received request by router: {'username': 'string', 'prompt': 'Hi Nscale chatbot', 'memory': False, 'conversation_number': -1, 'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1'}
+2024-06-14 13:10:24,561 - llm_as_a_service_logger - INFO - Received request by router: {'username': 'string', 'prompt': 'Hi Nscale chatbot', 'memory': False, 'conversation_number': -1, 'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1'}
+2024-06-14 13:10:24,561 - llm_as_a_service_logger - INFO - Received request by router: {'username': 'string', 'prompt': 'Hi Nscale chatbot', 'memory': False, 'conversation_number': -1, 'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1'}
+2024-06-14 13:10:24,561 - llm_as_a_service_logger - INFO - Received request by router: {'username': 'string', 'prompt': 'Hi Nscale chatbot', 'memory': False, 'conversation_number': -1, 'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1'}
+2024-06-14 13:10:24,561 - llm_as_a_service_logger - INFO - Received request by router: {'username': 'string', 'prompt': 'Hi Nscale chatbot', 'memory': False, 'conversation_number': -1, 'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1'}
+2024-06-14 13:10:24,561 - llm_as_a_service_logger - INFO - Received request by router: {'username': 'string', 'prompt': 'Hi Nscale chatbot', 'memory': False, 'conversation_number': -1, 'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1'}
+2024-06-14 13:10:24,562 - llm_as_a_service_logger - INFO - Received request by backend: {'username': 'admin', 'prompt': 'Hi Nscale chatbot', 'memory': False, 'conversation_number': -1, 'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1'}
+2024-06-14 13:10:24,562 - llm_as_a_service_logger - INFO - Received request by backend: {'username': 'admin', 'prompt': 'Hi Nscale chatbot', 'memory': False, 'conversation_number': -1, 'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1'}
+2024-06-14 13:10:24,562 - llm_as_a_service_logger - INFO - Received request by backend: {'username': 'admin', 'prompt': 'Hi Nscale chatbot', 'memory': False, 'conversation_number': -1, 'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1'}
+2024-06-14 13:10:24,562 - llm_as_a_service_logger - INFO - Received request by backend: {'username': 'admin', 'prompt': 'Hi Nscale chatbot', 'memory': False, 'conversation_number': -1, 'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1'}
+2024-06-14 13:10:24,562 - llm_as_a_service_logger - INFO - Received request by backend: {'username': 'admin', 'prompt': 'Hi Nscale chatbot', 'memory': False, 'conversation_number': -1, 'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1'}
+2024-06-14 13:10:24,562 - llm_as_a_service_logger - INFO - Received request by backend: {'username': 'admin', 'prompt': 'Hi Nscale chatbot', 'memory': False, 'conversation_number': -1, 'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1'}
+2024-06-14 13:10:24,562 - llm_as_a_service_logger - INFO - Received request by backend: {'username': 'admin', 'prompt': 'Hi Nscale chatbot', 'memory': False, 'conversation_number': -1, 'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1'}
+2024-06-14 13:10:24,825 - llm_as_a_service_logger - ERROR - Error in Inference Call: name 'memory' is not defined
+2024-06-14 13:10:24,825 - llm_as_a_service_logger - ERROR - Error in Inference Call: name 'memory' is not defined
+2024-06-14 13:10:24,825 - llm_as_a_service_logger - ERROR - Error in Inference Call: name 'memory' is not defined
+2024-06-14 13:10:24,825 - llm_as_a_service_logger - ERROR - Error in Inference Call: name 'memory' is not defined
+2024-06-14 13:10:24,825 - llm_as_a_service_logger - ERROR - Error in Inference Call: name 'memory' is not defined
+2024-06-14 13:10:24,825 - llm_as_a_service_logger - ERROR - Error in Inference Call: name 'memory' is not defined
+2024-06-14 13:10:24,825 - llm_as_a_service_logger - ERROR - Error in Inference Call: name 'memory' is not defined
+2024-06-14 13:10:46,450 - llm_as_a_service_logger - INFO - Received request by router: {'username': 'string', 'prompt': 'Hi Nscale chatbot', 'memory': False, 'conversation_number': -1, 'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1'}
+2024-06-14 13:10:46,450 - llm_as_a_service_logger - INFO - Received request by router: {'username': 'string', 'prompt': 'Hi Nscale chatbot', 'memory': False, 'conversation_number': -1, 'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1'}
+2024-06-14 13:10:46,450 - llm_as_a_service_logger - INFO - Received request by router: {'username': 'string', 'prompt': 'Hi Nscale chatbot', 'memory': False, 'conversation_number': -1, 'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1'}
+2024-06-14 13:10:46,450 - llm_as_a_service_logger - INFO - Received request by router: {'username': 'string', 'prompt': 'Hi Nscale chatbot', 'memory': False, 'conversation_number': -1, 'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1'}
+2024-06-14 13:10:46,450 - llm_as_a_service_logger - INFO - Received request by router: {'username': 'string', 'prompt': 'Hi Nscale chatbot', 'memory': False, 'conversation_number': -1, 'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1'}
+2024-06-14 13:10:46,450 - llm_as_a_service_logger - INFO - Received request by router: {'username': 'string', 'prompt': 'Hi Nscale chatbot', 'memory': False, 'conversation_number': -1, 'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1'}
+2024-06-14 13:10:46,450 - llm_as_a_service_logger - INFO - Received request by router: {'username': 'string', 'prompt': 'Hi Nscale chatbot', 'memory': False, 'conversation_number': -1, 'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1'}
+2024-06-14 13:10:46,450 - llm_as_a_service_logger - INFO - Received request by backend: {'username': 'admin', 'prompt': 'Hi Nscale chatbot', 'memory': False, 'conversation_number': -1, 'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1'}
+2024-06-14 13:10:46,450 - llm_as_a_service_logger - INFO - Received request by backend: {'username': 'admin', 'prompt': 'Hi Nscale chatbot', 'memory': False, 'conversation_number': -1, 'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1'}
+2024-06-14 13:10:46,450 - llm_as_a_service_logger - INFO - Received request by backend: {'username': 'admin', 'prompt': 'Hi Nscale chatbot', 'memory': False, 'conversation_number': -1, 'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1'}
+2024-06-14 13:10:46,450 - llm_as_a_service_logger - INFO - Received request by backend: {'username': 'admin', 'prompt': 'Hi Nscale chatbot', 'memory': False, 'conversation_number': -1, 'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1'}
+2024-06-14 13:10:46,450 - llm_as_a_service_logger - INFO - Received request by backend: {'username': 'admin', 'prompt': 'Hi Nscale chatbot', 'memory': False, 'conversation_number': -1, 'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1'}
+2024-06-14 13:10:46,450 - llm_as_a_service_logger - INFO - Received request by backend: {'username': 'admin', 'prompt': 'Hi Nscale chatbot', 'memory': False, 'conversation_number': -1, 'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1'}
+2024-06-14 13:10:46,450 - llm_as_a_service_logger - INFO - Received request by backend: {'username': 'admin', 'prompt': 'Hi Nscale chatbot', 'memory': False, 'conversation_number': -1, 'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1'}
+2024-06-14 13:10:46,717 - llm_as_a_service_logger - ERROR - Error in Inference Call: name 'username' is not defined
+2024-06-14 13:10:46,717 - llm_as_a_service_logger - ERROR - Error in Inference Call: name 'username' is not defined
+2024-06-14 13:10:46,717 - llm_as_a_service_logger - ERROR - Error in Inference Call: name 'username' is not defined
+2024-06-14 13:10:46,717 - llm_as_a_service_logger - ERROR - Error in Inference Call: name 'username' is not defined
+2024-06-14 13:10:46,717 - llm_as_a_service_logger - ERROR - Error in Inference Call: name 'username' is not defined
+2024-06-14 13:10:46,717 - llm_as_a_service_logger - ERROR - Error in Inference Call: name 'username' is not defined
+2024-06-14 13:10:46,717 - llm_as_a_service_logger - ERROR - Error in Inference Call: name 'username' is not defined
+2024-06-14 13:11:51,047 - llm_as_a_service_logger - INFO - Received request by router: {'username': 'string', 'prompt': 'Hi Nscale chatbot', 'memory': False, 'conversation_number': -1, 'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1'}
+2024-06-14 13:11:51,047 - llm_as_a_service_logger - INFO - Received request by router: {'username': 'string', 'prompt': 'Hi Nscale chatbot', 'memory': False, 'conversation_number': -1, 'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1'}
+2024-06-14 13:11:51,047 - llm_as_a_service_logger - INFO - Received request by router: {'username': 'string', 'prompt': 'Hi Nscale chatbot', 'memory': False, 'conversation_number': -1, 'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1'}
+2024-06-14 13:11:51,047 - llm_as_a_service_logger - INFO - Received request by router: {'username': 'string', 'prompt': 'Hi Nscale chatbot', 'memory': False, 'conversation_number': -1, 'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1'}
+2024-06-14 13:11:51,047 - llm_as_a_service_logger - INFO - Received request by router: {'username': 'string', 'prompt': 'Hi Nscale chatbot', 'memory': False, 'conversation_number': -1, 'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1'}
+2024-06-14 13:11:51,047 - llm_as_a_service_logger - INFO - Received request by router: {'username': 'string', 'prompt': 'Hi Nscale chatbot', 'memory': False, 'conversation_number': -1, 'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1'}
+2024-06-14 13:11:51,047 - llm_as_a_service_logger - INFO - Received request by router: {'username': 'string', 'prompt': 'Hi Nscale chatbot', 'memory': False, 'conversation_number': -1, 'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1'}
+2024-06-14 13:11:51,048 - llm_as_a_service_logger - INFO - Received request by backend: {'username': 'admin', 'prompt': 'Hi Nscale chatbot', 'memory': False, 'conversation_number': -1, 'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1'}
+2024-06-14 13:11:51,048 - llm_as_a_service_logger - INFO - Received request by backend: {'username': 'admin', 'prompt': 'Hi Nscale chatbot', 'memory': False, 'conversation_number': -1, 'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1'}
+2024-06-14 13:11:51,048 - llm_as_a_service_logger - INFO - Received request by backend: {'username': 'admin', 'prompt': 'Hi Nscale chatbot', 'memory': False, 'conversation_number': -1, 'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1'}
+2024-06-14 13:11:51,048 - llm_as_a_service_logger - INFO - Received request by backend: {'username': 'admin', 'prompt': 'Hi Nscale chatbot', 'memory': False, 'conversation_number': -1, 'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1'}
+2024-06-14 13:11:51,048 - llm_as_a_service_logger - INFO - Received request by backend: {'username': 'admin', 'prompt': 'Hi Nscale chatbot', 'memory': False, 'conversation_number': -1, 'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1'}
+2024-06-14 13:11:51,048 - llm_as_a_service_logger - INFO - Received request by backend: {'username': 'admin', 'prompt': 'Hi Nscale chatbot', 'memory': False, 'conversation_number': -1, 'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1'}
+2024-06-14 13:11:51,048 - llm_as_a_service_logger - INFO - Received request by backend: {'username': 'admin', 'prompt': 'Hi Nscale chatbot', 'memory': False, 'conversation_number': -1, 'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1'}
+2024-06-14 13:39:43,795 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-06-14 13:39:43,795 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-06-14 13:39:43,795 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-06-14 13:39:43,795 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-06-14 13:39:43,795 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-06-14 13:39:43,795 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-06-14 13:39:43,795 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-06-14 15:19:57,736 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-06-14 15:19:57,736 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-06-14 15:19:57,736 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-06-14 15:19:57,736 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-06-14 15:19:57,736 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-06-14 15:19:57,736 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-06-14 15:19:57,736 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-06-14 15:31:16,174 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-06-14 15:31:16,174 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-06-14 15:31:16,174 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-06-14 15:31:16,174 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-06-14 15:31:16,174 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-06-14 15:31:16,174 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-06-14 15:31:16,174 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-06-14 15:32:05,973 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-06-14 15:32:05,973 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-06-14 15:32:05,973 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-06-14 15:32:05,973 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-06-14 15:32:05,973 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-06-14 15:32:05,973 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-06-14 15:32:05,973 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-06-14 15:33:29,940 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-06-14 15:33:29,940 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-06-14 15:33:29,940 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-06-14 15:33:29,940 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-06-14 15:33:29,940 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-06-14 15:33:29,940 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-06-14 15:33:29,940 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-06-14 15:48:39,911 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-06-14 15:48:39,911 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-06-14 15:48:39,911 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-06-14 15:48:39,911 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-06-14 15:48:39,911 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-06-14 15:48:39,911 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-06-14 15:48:39,911 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-06-14 15:54:17,467 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-06-14 15:54:17,467 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-06-14 15:54:17,467 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-06-14 15:54:17,467 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-06-14 15:54:17,467 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-06-14 15:54:17,467 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-06-14 15:54:17,467 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-06-14 15:55:19,114 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-06-14 15:55:19,114 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-06-14 15:55:19,114 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-06-14 15:55:19,114 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-06-14 15:55:19,114 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-06-14 15:55:19,114 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-06-14 15:55:19,114 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-06-14 16:02:15,822 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-06-14 16:02:15,822 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-06-14 16:02:15,822 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-06-14 16:02:15,822 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-06-14 16:02:15,822 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-06-14 16:02:15,822 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-06-14 16:02:15,822 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-06-14 16:04:26,555 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-06-14 16:04:26,555 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-06-14 16:04:26,555 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-06-14 16:04:26,555 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-06-14 16:04:26,555 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-06-14 16:04:26,555 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-06-14 16:04:26,555 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-06-14 16:09:13,100 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-06-14 16:09:13,100 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-06-14 16:09:13,100 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-06-14 16:09:13,100 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-06-14 16:09:13,100 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-06-14 16:09:13,100 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-06-14 16:09:13,100 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-06-14 16:26:00,012 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-06-14 16:26:00,012 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-06-14 16:26:00,012 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-06-14 16:26:00,012 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-06-14 16:26:00,012 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-06-14 16:26:00,012 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-06-14 16:26:00,012 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-06-14 16:52:55,939 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-06-14 16:52:55,939 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-06-14 16:52:55,939 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-06-14 16:52:55,939 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-06-14 16:52:55,939 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-06-14 16:52:55,939 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-06-14 16:52:55,939 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-06-14 16:55:26,501 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-14 16:55:26,501 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-14 16:55:26,501 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-14 16:55:26,501 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-14 16:55:26,501 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-14 16:55:26,501 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-14 16:55:26,501 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-14 16:55:31,510 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-14 16:55:31,510 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-14 16:55:31,510 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-14 16:55:31,510 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-14 16:55:31,510 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-14 16:55:31,510 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-14 16:55:31,510 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-14 16:55:36,514 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-14 16:55:36,514 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-14 16:55:36,514 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-14 16:55:36,514 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-14 16:55:36,514 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-14 16:55:36,514 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-14 16:55:36,514 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-14 16:55:41,520 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-14 16:55:41,520 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-14 16:55:41,520 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-14 16:55:41,520 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-14 16:55:41,520 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-14 16:55:41,520 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-14 16:55:41,520 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-14 16:55:46,527 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-14 16:55:46,527 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-14 16:55:46,527 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-14 16:55:46,527 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-14 16:55:46,527 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-14 16:55:46,527 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-14 16:55:46,527 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-14 16:55:51,535 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-14 16:55:51,535 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-14 16:55:51,535 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-14 16:55:51,535 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-14 16:55:51,535 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-14 16:55:51,535 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-14 16:55:51,535 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-14 16:55:56,543 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-14 16:55:56,543 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-14 16:55:56,543 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-14 16:55:56,543 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-14 16:55:56,543 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-14 16:55:56,543 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-14 16:55:56,543 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-14 16:56:01,551 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-14 16:56:01,551 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-14 16:56:01,551 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-14 16:56:01,551 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-14 16:56:01,551 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-14 16:56:01,551 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-14 16:56:01,551 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-14 16:56:06,558 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-14 16:56:06,558 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-14 16:56:06,558 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-14 16:56:06,558 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-14 16:56:06,558 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-14 16:56:06,558 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-14 16:56:06,558 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-14 16:56:11,562 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-14 16:56:11,562 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-14 16:56:11,562 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-14 16:56:11,562 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-14 16:56:11,562 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-14 16:56:11,562 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-14 16:56:11,562 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-14 16:56:16,570 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-14 16:56:16,570 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-14 16:56:16,570 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-14 16:56:16,570 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-14 16:56:16,570 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-14 16:56:16,570 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-14 16:56:16,570 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-14 16:56:21,581 - llm_as_a_service_logger - INFO - Container started successfully. Port: 8500
+2024-06-14 16:56:21,581 - llm_as_a_service_logger - INFO - Container started successfully. Port: 8500
+2024-06-14 16:56:21,581 - llm_as_a_service_logger - INFO - Container started successfully. Port: 8500
+2024-06-14 16:56:21,581 - llm_as_a_service_logger - INFO - Container started successfully. Port: 8500
+2024-06-14 16:56:21,581 - llm_as_a_service_logger - INFO - Container started successfully. Port: 8500
+2024-06-14 16:56:21,581 - llm_as_a_service_logger - INFO - Container started successfully. Port: 8500
+2024-06-14 16:56:21,581 - llm_as_a_service_logger - INFO - Container started successfully. Port: 8500
+2024-06-14 16:56:21,582 - llm_as_a_service_logger - INFO - User info: Amin-nsclae
+2024-06-14 16:56:21,582 - llm_as_a_service_logger - INFO - User info: Amin-nsclae
+2024-06-14 16:56:21,582 - llm_as_a_service_logger - INFO - User info: Amin-nsclae
+2024-06-14 16:56:21,582 - llm_as_a_service_logger - INFO - User info: Amin-nsclae
+2024-06-14 16:56:21,582 - llm_as_a_service_logger - INFO - User info: Amin-nsclae
+2024-06-14 16:56:21,582 - llm_as_a_service_logger - INFO - User info: Amin-nsclae
+2024-06-14 16:56:21,582 - llm_as_a_service_logger - INFO - User info: Amin-nsclae
+2024-06-14 16:56:21,582 - llm_as_a_service_logger - INFO - Container ID: 32442febd68d9ffa1b7820b8a2a6e02c1ead2f4754944c730cb5deef52238166
+2024-06-14 16:56:21,582 - llm_as_a_service_logger - INFO - Container ID: 32442febd68d9ffa1b7820b8a2a6e02c1ead2f4754944c730cb5deef52238166
+2024-06-14 16:56:21,582 - llm_as_a_service_logger - INFO - Container ID: 32442febd68d9ffa1b7820b8a2a6e02c1ead2f4754944c730cb5deef52238166
+2024-06-14 16:56:21,582 - llm_as_a_service_logger - INFO - Container ID: 32442febd68d9ffa1b7820b8a2a6e02c1ead2f4754944c730cb5deef52238166
+2024-06-14 16:56:21,582 - llm_as_a_service_logger - INFO - Container ID: 32442febd68d9ffa1b7820b8a2a6e02c1ead2f4754944c730cb5deef52238166
+2024-06-14 16:56:21,582 - llm_as_a_service_logger - INFO - Container ID: 32442febd68d9ffa1b7820b8a2a6e02c1ead2f4754944c730cb5deef52238166
+2024-06-14 16:56:21,582 - llm_as_a_service_logger - INFO - Container ID: 32442febd68d9ffa1b7820b8a2a6e02c1ead2f4754944c730cb5deef52238166
+2024-06-17 09:19:22,905 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-06-17 09:19:22,905 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-06-17 09:19:22,905 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-06-17 09:19:22,905 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-06-17 09:19:22,905 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-06-17 09:19:22,905 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-06-17 09:19:22,905 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-06-17 09:20:09,266 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user amin
+2024-06-17 09:20:09,266 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user amin
+2024-06-17 09:20:09,266 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user amin
+2024-06-17 09:20:09,266 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user amin
+2024-06-17 09:20:09,266 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user amin
+2024-06-17 09:20:09,266 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user amin
+2024-06-17 09:20:09,266 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user amin
+2024-06-17 09:27:21,587 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user amin
+2024-06-17 09:27:21,587 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user amin
+2024-06-17 09:27:21,587 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user amin
+2024-06-17 09:27:21,587 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user amin
+2024-06-17 09:27:21,587 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user amin
+2024-06-17 09:27:21,587 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user amin
+2024-06-17 09:27:21,587 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user amin
+2024-06-17 09:49:24,290 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user amin
+2024-06-17 09:49:24,290 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user amin
+2024-06-17 09:49:24,290 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user amin
+2024-06-17 09:49:24,290 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user amin
+2024-06-17 09:49:24,290 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user amin
+2024-06-17 09:49:24,290 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user amin
+2024-06-17 09:49:24,290 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user amin
+2024-06-17 12:23:26,709 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user amin
+2024-06-17 12:23:26,709 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user amin
+2024-06-17 12:23:26,709 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user amin
+2024-06-17 12:23:26,709 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user amin
+2024-06-17 12:23:26,709 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user amin
+2024-06-17 12:23:26,709 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user amin
+2024-06-17 12:23:26,709 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user amin
+2024-06-17 12:24:10,641 - llm_as_a_service_logger - INFO - Received request by router: {'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1', 'prompt': 'Hi', 'memory': False, 'conversation_number': -1, 'username': 'amin'}
+2024-06-17 12:24:10,641 - llm_as_a_service_logger - INFO - Received request by router: {'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1', 'prompt': 'Hi', 'memory': False, 'conversation_number': -1, 'username': 'amin'}
+2024-06-17 12:24:10,641 - llm_as_a_service_logger - INFO - Received request by router: {'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1', 'prompt': 'Hi', 'memory': False, 'conversation_number': -1, 'username': 'amin'}
+2024-06-17 12:24:10,641 - llm_as_a_service_logger - INFO - Received request by router: {'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1', 'prompt': 'Hi', 'memory': False, 'conversation_number': -1, 'username': 'amin'}
+2024-06-17 12:24:10,641 - llm_as_a_service_logger - INFO - Received request by router: {'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1', 'prompt': 'Hi', 'memory': False, 'conversation_number': -1, 'username': 'amin'}
+2024-06-17 12:24:10,641 - llm_as_a_service_logger - INFO - Received request by router: {'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1', 'prompt': 'Hi', 'memory': False, 'conversation_number': -1, 'username': 'amin'}
+2024-06-17 12:24:10,641 - llm_as_a_service_logger - INFO - Received request by router: {'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1', 'prompt': 'Hi', 'memory': False, 'conversation_number': -1, 'username': 'amin'}
+2024-06-17 12:24:10,642 - llm_as_a_service_logger - INFO - Received request by backend: {'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1', 'prompt': 'Hi', 'memory': False, 'conversation_number': -1, 'username': 'amin'}
+2024-06-17 12:24:10,642 - llm_as_a_service_logger - INFO - Received request by backend: {'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1', 'prompt': 'Hi', 'memory': False, 'conversation_number': -1, 'username': 'amin'}
+2024-06-17 12:24:10,642 - llm_as_a_service_logger - INFO - Received request by backend: {'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1', 'prompt': 'Hi', 'memory': False, 'conversation_number': -1, 'username': 'amin'}
+2024-06-17 12:24:10,642 - llm_as_a_service_logger - INFO - Received request by backend: {'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1', 'prompt': 'Hi', 'memory': False, 'conversation_number': -1, 'username': 'amin'}
+2024-06-17 12:24:10,642 - llm_as_a_service_logger - INFO - Received request by backend: {'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1', 'prompt': 'Hi', 'memory': False, 'conversation_number': -1, 'username': 'amin'}
+2024-06-17 12:24:10,642 - llm_as_a_service_logger - INFO - Received request by backend: {'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1', 'prompt': 'Hi', 'memory': False, 'conversation_number': -1, 'username': 'amin'}
+2024-06-17 12:24:10,642 - llm_as_a_service_logger - INFO - Received request by backend: {'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1', 'prompt': 'Hi', 'memory': False, 'conversation_number': -1, 'username': 'amin'}
+2024-06-17 12:24:53,259 - llm_as_a_service_logger - INFO - Received request by router: {'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1', 'prompt': 'Hi', 'memory': False, 'conversation_number': -1, 'username': 'amin'}
+2024-06-17 12:24:53,259 - llm_as_a_service_logger - INFO - Received request by router: {'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1', 'prompt': 'Hi', 'memory': False, 'conversation_number': -1, 'username': 'amin'}
+2024-06-17 12:24:53,259 - llm_as_a_service_logger - INFO - Received request by router: {'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1', 'prompt': 'Hi', 'memory': False, 'conversation_number': -1, 'username': 'amin'}
+2024-06-17 12:24:53,259 - llm_as_a_service_logger - INFO - Received request by router: {'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1', 'prompt': 'Hi', 'memory': False, 'conversation_number': -1, 'username': 'amin'}
+2024-06-17 12:24:53,259 - llm_as_a_service_logger - INFO - Received request by router: {'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1', 'prompt': 'Hi', 'memory': False, 'conversation_number': -1, 'username': 'amin'}
+2024-06-17 12:24:53,259 - llm_as_a_service_logger - INFO - Received request by router: {'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1', 'prompt': 'Hi', 'memory': False, 'conversation_number': -1, 'username': 'amin'}
+2024-06-17 12:24:53,259 - llm_as_a_service_logger - INFO - Received request by router: {'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1', 'prompt': 'Hi', 'memory': False, 'conversation_number': -1, 'username': 'amin'}
+2024-06-17 12:24:53,260 - llm_as_a_service_logger - INFO - Received request by backend: {'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1', 'prompt': 'Hi', 'memory': False, 'conversation_number': -1, 'username': 'amin'}
+2024-06-17 12:24:53,260 - llm_as_a_service_logger - INFO - Received request by backend: {'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1', 'prompt': 'Hi', 'memory': False, 'conversation_number': -1, 'username': 'amin'}
+2024-06-17 12:24:53,260 - llm_as_a_service_logger - INFO - Received request by backend: {'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1', 'prompt': 'Hi', 'memory': False, 'conversation_number': -1, 'username': 'amin'}
+2024-06-17 12:24:53,260 - llm_as_a_service_logger - INFO - Received request by backend: {'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1', 'prompt': 'Hi', 'memory': False, 'conversation_number': -1, 'username': 'amin'}
+2024-06-17 12:24:53,260 - llm_as_a_service_logger - INFO - Received request by backend: {'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1', 'prompt': 'Hi', 'memory': False, 'conversation_number': -1, 'username': 'amin'}
+2024-06-17 12:24:53,260 - llm_as_a_service_logger - INFO - Received request by backend: {'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1', 'prompt': 'Hi', 'memory': False, 'conversation_number': -1, 'username': 'amin'}
+2024-06-17 12:24:53,260 - llm_as_a_service_logger - INFO - Received request by backend: {'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1', 'prompt': 'Hi', 'memory': False, 'conversation_number': -1, 'username': 'amin'}
+2024-06-17 19:18:20,577 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-06-17 19:18:20,577 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-06-17 19:18:20,577 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-06-17 19:18:20,577 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-06-17 19:18:20,577 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-06-17 19:18:20,577 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-06-17 19:18:20,577 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin

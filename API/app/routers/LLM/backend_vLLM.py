@@ -16,47 +16,20 @@ from app.routers.LLM.backend_database import Database
 from langchain_community.llms import VLLMOpenAI
 import tiktoken
 from fastapi import FastAPI
+from ... models import InferenceRequest
+
 
 app = FastAPI()
 
-# Configuration class to load YAML configurations
-class Config:
-    def __init__(self, **entries):
-        self.__dict__.update(entries)
-
-# Input model defining the expected structure of the API request
-class Input(BaseModel):
-    username: Optional[str]
-    prompt: Optional[str]
-    memory: Optional[bool]
-    conversation_number: Optional[int]
-    AI_assistance: Optional[bool]
-    collection_name: Optional[str]
-    llm_model: Optional[str]
 
 # LLM Deployment class encapsulates the model interaction logic
-class LLMDeployment:
-    def __init__(self, model_tokenizer, temperature=0.01, max_new_tokens=512, repetition_penalty=1.1, batch_size=2):
-        self.logger = setup_logger()
-        
-        # Load configurations
-        current_path = pathlib.Path(__file__).parent.parent.parent.parent
-        config_path = current_path / 'cluster_conf.yaml'
-        self.RAG_enabled = True
-
-        with open(config_path, 'r') as file:
-            self.config = yaml.safe_load(file)
-            self.config = Config(**self.config)
-
+class vLLM_Inference:
+    def __init__(self):
+        # Initialize logger
+        self.logger = setup_logger()     
         # Initialize tokenizer and model parameters
         self.tokenizer = tiktoken.get_encoding('cl100k_base')
-        self.temperature = temperature
-        self.max_new_tokens = max_new_tokens
-        self.repetition_penalty = repetition_penalty
-        self.batch_size = batch_size
         self.loop = asyncio.get_running_loop()
-        self.access_token = self.config.Hugging_ACCESS_TOKEN
-
         # Define system prompt template
         self.system_prompt = ChatPromptTemplate.from_messages([
             ("system", "You're an AI assistant who is answering user questions"),
@@ -123,36 +96,34 @@ class LLMDeployment:
             return str(e)
 
     # Asynchronous method to handle the inference call
-    async def InferenceCall(self, request: Input):
+    async def InferenceCall(self, request: InferenceRequest):
+
         try:
-            self.database.add_conversation({"username": request.username})
             self.logger.info("Received request by backend: %s", request.dict())
-            input_prompt = request.prompt
-            AI_assistance = request.AI_assistance
-            username = request.username
-            memory = request.memory
-            conversation_number = request.conversation_number
-            collection_name = request.collection_name
-            
+            if not request.model or not request.inference_endpoint:
+                raise Exception("Model name or inference endpoint not provided")
+                return "Error: Model name not provided"
+
             # Initialize the LLM with given parameters
             llm = VLLMOpenAI(
                 openai_api_key="EMPTY",
-                openai_api_base="http://localhost:8500/v1",
-                model_name="meta-llama/Llama-2-7b-chat-hf",
+                openai_api_base=request.inference_endpoint,
+                model_name=request.model,
                 model_kwargs={"stop": ["."]},
                 streaming=True,
             )
+            
             conversation_id = None
 
             # Handle memory retrieval if enabled
-            if memory:
+            if request.memory:
                 if conversation_number <= 0 or conversation_number is None:
-                    conversation_id = self.database.retrieve_conversation({"username": username})["conversation_id"]
+                    conversation_id = self.database.retrieve_conversation({"username": request.username})["conversation_id"]
                 else:
-                    conversation_id = self.database.retrieve_conversation({"username": username, "conversation_number": conversation_number})["conversation_id"]
+                    conversation_id = self.database.retrieve_conversation({"username": request.username, "conversation_number": conversation_number})["conversation_id"]
 
                 logging.getLogger().setLevel(logging.ERROR)
-                
+    
                 runnable: Runnable = self.system_prompt | llm
 
                 llm_with_message_history = RunnableWithMessageHistory(
@@ -161,10 +132,10 @@ class LLMDeployment:
                     input_messages_key="input",
                     history_messages_key="history",
                 )
-                response = await self.invoke(username, input_prompt, self.database, llm_with_message_history, conversation_id)
+                response = await self.invoke(request.username, request.prompt, self.database, llm_with_message_history, conversation_id)
                 return response
             else:
-                response = await self.invoke(username, input_prompt, self.database, llm, conversation_id)
+                response = await self.invoke(request.username, request.prompt, self.database, llm, conversation_id)
             return response
 
         except Exception as e:
