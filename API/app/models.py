@@ -19,7 +19,7 @@ class UserInDB(LoginUser):
 class Data(BaseModel): 
     prompt: str
 
-
+# 
 class VllmBuildRequest(BaseModel):
     HUGGING_FACE_HUB_TOKEN: str
     MODEL: str
@@ -30,6 +30,13 @@ class VllmBuildRequest(BaseModel):
     QUANTIZATION: Optional[str]="None"
 
 
+class InferenceRequest(BaseModel):
+    model: str= None
+    inference_endpoint:str = None
+    prompt: Optional[str]="Hi Nscale chatbot"
+    memory: Optional[bool]=False
+    conversation_number: Optional[int]=-1
+    username: Optional[str]="None" 
 
 class UserRequest(BaseModel):
     username: Optional[str] = None
@@ -40,14 +47,6 @@ class UserRequest(BaseModel):
     prompt_token_limit: Optional[int] = None
 
 
-class InferenceRequest(BaseModel):
-    model: str= None
-    inference_endpoint:str = None
-    prompt: Optional[str]="Hi Nscale chatbot"
-    memory: Optional[bool]=False
-    conversation_number: Optional[int]=-1
-    username: Optional[str]="None"
-    
 class DataBaseRequest(BaseModel):
     username: Optional[str] = None
     conversation_number: Optional[int] = None

@@ -1041,3 +1041,892 @@
 2024-06-17 19:18:20,577 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
 2024-06-17 19:18:20,577 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
 2024-06-17 19:18:20,577 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-06-18 07:49:53,492 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user amin
+2024-06-18 07:49:53,492 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user amin
+2024-06-18 07:49:53,492 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user amin
+2024-06-18 07:49:53,492 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user amin
+2024-06-18 07:49:53,492 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user amin
+2024-06-18 07:49:53,492 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user amin
+2024-06-18 07:49:53,492 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user amin
+2024-06-18 07:51:16,552 - llm_as_a_service_logger - INFO - Received request by router: {'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1', 'prompt': 'Where is the capital of the UK?', 'memory': False, 'conversation_number': 1, 'username': 'amin'}
+2024-06-18 07:51:16,552 - llm_as_a_service_logger - INFO - Received request by router: {'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1', 'prompt': 'Where is the capital of the UK?', 'memory': False, 'conversation_number': 1, 'username': 'amin'}
+2024-06-18 07:51:16,552 - llm_as_a_service_logger - INFO - Received request by router: {'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1', 'prompt': 'Where is the capital of the UK?', 'memory': False, 'conversation_number': 1, 'username': 'amin'}
+2024-06-18 07:51:16,552 - llm_as_a_service_logger - INFO - Received request by router: {'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1', 'prompt': 'Where is the capital of the UK?', 'memory': False, 'conversation_number': 1, 'username': 'amin'}
+2024-06-18 07:51:16,552 - llm_as_a_service_logger - INFO - Received request by router: {'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1', 'prompt': 'Where is the capital of the UK?', 'memory': False, 'conversation_number': 1, 'username': 'amin'}
+2024-06-18 07:51:16,552 - llm_as_a_service_logger - INFO - Received request by router: {'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1', 'prompt': 'Where is the capital of the UK?', 'memory': False, 'conversation_number': 1, 'username': 'amin'}
+2024-06-18 07:51:16,552 - llm_as_a_service_logger - INFO - Received request by router: {'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1', 'prompt': 'Where is the capital of the UK?', 'memory': False, 'conversation_number': 1, 'username': 'amin'}
+2024-06-18 07:51:16,553 - llm_as_a_service_logger - INFO - Received request by backend: {'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1', 'prompt': 'Where is the capital of the UK?', 'memory': False, 'conversation_number': 1, 'username': 'amin'}
+2024-06-18 07:51:16,553 - llm_as_a_service_logger - INFO - Received request by backend: {'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1', 'prompt': 'Where is the capital of the UK?', 'memory': False, 'conversation_number': 1, 'username': 'amin'}
+2024-06-18 07:51:16,553 - llm_as_a_service_logger - INFO - Received request by backend: {'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1', 'prompt': 'Where is the capital of the UK?', 'memory': False, 'conversation_number': 1, 'username': 'amin'}
+2024-06-18 07:51:16,553 - llm_as_a_service_logger - INFO - Received request by backend: {'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1', 'prompt': 'Where is the capital of the UK?', 'memory': False, 'conversation_number': 1, 'username': 'amin'}
+2024-06-18 07:51:16,553 - llm_as_a_service_logger - INFO - Received request by backend: {'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1', 'prompt': 'Where is the capital of the UK?', 'memory': False, 'conversation_number': 1, 'username': 'amin'}
+2024-06-18 07:51:16,553 - llm_as_a_service_logger - INFO - Received request by backend: {'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1', 'prompt': 'Where is the capital of the UK?', 'memory': False, 'conversation_number': 1, 'username': 'amin'}
+2024-06-18 07:51:16,553 - llm_as_a_service_logger - INFO - Received request by backend: {'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1', 'prompt': 'Where is the capital of the UK?', 'memory': False, 'conversation_number': 1, 'username': 'amin'}
+2024-06-18 07:51:39,931 - llm_as_a_service_logger - INFO - Received request by router: {'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1', 'prompt': 'what was my previous question about?', 'memory': False, 'conversation_number': 1, 'username': 'amin'}
+2024-06-18 07:51:39,931 - llm_as_a_service_logger - INFO - Received request by router: {'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1', 'prompt': 'what was my previous question about?', 'memory': False, 'conversation_number': 1, 'username': 'amin'}
+2024-06-18 07:51:39,931 - llm_as_a_service_logger - INFO - Received request by router: {'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1', 'prompt': 'what was my previous question about?', 'memory': False, 'conversation_number': 1, 'username': 'amin'}
+2024-06-18 07:51:39,931 - llm_as_a_service_logger - INFO - Received request by router: {'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1', 'prompt': 'what was my previous question about?', 'memory': False, 'conversation_number': 1, 'username': 'amin'}
+2024-06-18 07:51:39,931 - llm_as_a_service_logger - INFO - Received request by router: {'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1', 'prompt': 'what was my previous question about?', 'memory': False, 'conversation_number': 1, 'username': 'amin'}
+2024-06-18 07:51:39,931 - llm_as_a_service_logger - INFO - Received request by router: {'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1', 'prompt': 'what was my previous question about?', 'memory': False, 'conversation_number': 1, 'username': 'amin'}
+2024-06-18 07:51:39,931 - llm_as_a_service_logger - INFO - Received request by router: {'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1', 'prompt': 'what was my previous question about?', 'memory': False, 'conversation_number': 1, 'username': 'amin'}
+2024-06-18 07:51:39,932 - llm_as_a_service_logger - INFO - Received request by backend: {'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1', 'prompt': 'what was my previous question about?', 'memory': False, 'conversation_number': 1, 'username': 'amin'}
+2024-06-18 07:51:39,932 - llm_as_a_service_logger - INFO - Received request by backend: {'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1', 'prompt': 'what was my previous question about?', 'memory': False, 'conversation_number': 1, 'username': 'amin'}
+2024-06-18 07:51:39,932 - llm_as_a_service_logger - INFO - Received request by backend: {'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1', 'prompt': 'what was my previous question about?', 'memory': False, 'conversation_number': 1, 'username': 'amin'}
+2024-06-18 07:51:39,932 - llm_as_a_service_logger - INFO - Received request by backend: {'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1', 'prompt': 'what was my previous question about?', 'memory': False, 'conversation_number': 1, 'username': 'amin'}
+2024-06-18 07:51:39,932 - llm_as_a_service_logger - INFO - Received request by backend: {'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1', 'prompt': 'what was my previous question about?', 'memory': False, 'conversation_number': 1, 'username': 'amin'}
+2024-06-18 07:51:39,932 - llm_as_a_service_logger - INFO - Received request by backend: {'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1', 'prompt': 'what was my previous question about?', 'memory': False, 'conversation_number': 1, 'username': 'amin'}
+2024-06-18 07:51:39,932 - llm_as_a_service_logger - INFO - Received request by backend: {'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1', 'prompt': 'what was my previous question about?', 'memory': False, 'conversation_number': 1, 'username': 'amin'}
+2024-06-18 07:52:12,361 - llm_as_a_service_logger - INFO - Received request by router: {'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1', 'prompt': 'give me a summary of our conversation', 'memory': False, 'conversation_number': 1, 'username': 'amin'}
+2024-06-18 07:52:12,361 - llm_as_a_service_logger - INFO - Received request by router: {'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1', 'prompt': 'give me a summary of our conversation', 'memory': False, 'conversation_number': 1, 'username': 'amin'}
+2024-06-18 07:52:12,361 - llm_as_a_service_logger - INFO - Received request by router: {'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1', 'prompt': 'give me a summary of our conversation', 'memory': False, 'conversation_number': 1, 'username': 'amin'}
+2024-06-18 07:52:12,361 - llm_as_a_service_logger - INFO - Received request by router: {'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1', 'prompt': 'give me a summary of our conversation', 'memory': False, 'conversation_number': 1, 'username': 'amin'}
+2024-06-18 07:52:12,361 - llm_as_a_service_logger - INFO - Received request by router: {'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1', 'prompt': 'give me a summary of our conversation', 'memory': False, 'conversation_number': 1, 'username': 'amin'}
+2024-06-18 07:52:12,361 - llm_as_a_service_logger - INFO - Received request by router: {'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1', 'prompt': 'give me a summary of our conversation', 'memory': False, 'conversation_number': 1, 'username': 'amin'}
+2024-06-18 07:52:12,361 - llm_as_a_service_logger - INFO - Received request by router: {'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1', 'prompt': 'give me a summary of our conversation', 'memory': False, 'conversation_number': 1, 'username': 'amin'}
+2024-06-18 07:52:12,362 - llm_as_a_service_logger - INFO - Received request by backend: {'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1', 'prompt': 'give me a summary of our conversation', 'memory': False, 'conversation_number': 1, 'username': 'amin'}
+2024-06-18 07:52:12,362 - llm_as_a_service_logger - INFO - Received request by backend: {'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1', 'prompt': 'give me a summary of our conversation', 'memory': False, 'conversation_number': 1, 'username': 'amin'}
+2024-06-18 07:52:12,362 - llm_as_a_service_logger - INFO - Received request by backend: {'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1', 'prompt': 'give me a summary of our conversation', 'memory': False, 'conversation_number': 1, 'username': 'amin'}
+2024-06-18 07:52:12,362 - llm_as_a_service_logger - INFO - Received request by backend: {'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1', 'prompt': 'give me a summary of our conversation', 'memory': False, 'conversation_number': 1, 'username': 'amin'}
+2024-06-18 07:52:12,362 - llm_as_a_service_logger - INFO - Received request by backend: {'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1', 'prompt': 'give me a summary of our conversation', 'memory': False, 'conversation_number': 1, 'username': 'amin'}
+2024-06-18 07:52:12,362 - llm_as_a_service_logger - INFO - Received request by backend: {'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1', 'prompt': 'give me a summary of our conversation', 'memory': False, 'conversation_number': 1, 'username': 'amin'}
+2024-06-18 07:52:12,362 - llm_as_a_service_logger - INFO - Received request by backend: {'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1', 'prompt': 'give me a summary of our conversation', 'memory': False, 'conversation_number': 1, 'username': 'amin'}
+2024-06-18 07:52:41,732 - llm_as_a_service_logger - INFO - Received request by router: {'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1', 'prompt': 'Where is the capital of the UK?', 'memory': True, 'conversation_number': 1, 'username': 'amin'}
+2024-06-18 07:52:41,732 - llm_as_a_service_logger - INFO - Received request by router: {'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1', 'prompt': 'Where is the capital of the UK?', 'memory': True, 'conversation_number': 1, 'username': 'amin'}
+2024-06-18 07:52:41,732 - llm_as_a_service_logger - INFO - Received request by router: {'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1', 'prompt': 'Where is the capital of the UK?', 'memory': True, 'conversation_number': 1, 'username': 'amin'}
+2024-06-18 07:52:41,732 - llm_as_a_service_logger - INFO - Received request by router: {'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1', 'prompt': 'Where is the capital of the UK?', 'memory': True, 'conversation_number': 1, 'username': 'amin'}
+2024-06-18 07:52:41,732 - llm_as_a_service_logger - INFO - Received request by router: {'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1', 'prompt': 'Where is the capital of the UK?', 'memory': True, 'conversation_number': 1, 'username': 'amin'}
+2024-06-18 07:52:41,732 - llm_as_a_service_logger - INFO - Received request by router: {'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1', 'prompt': 'Where is the capital of the UK?', 'memory': True, 'conversation_number': 1, 'username': 'amin'}
+2024-06-18 07:52:41,732 - llm_as_a_service_logger - INFO - Received request by router: {'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1', 'prompt': 'Where is the capital of the UK?', 'memory': True, 'conversation_number': 1, 'username': 'amin'}
+2024-06-18 07:52:41,732 - llm_as_a_service_logger - INFO - Received request by backend: {'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1', 'prompt': 'Where is the capital of the UK?', 'memory': True, 'conversation_number': 1, 'username': 'amin'}
+2024-06-18 07:52:41,732 - llm_as_a_service_logger - INFO - Received request by backend: {'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1', 'prompt': 'Where is the capital of the UK?', 'memory': True, 'conversation_number': 1, 'username': 'amin'}
+2024-06-18 07:52:41,732 - llm_as_a_service_logger - INFO - Received request by backend: {'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1', 'prompt': 'Where is the capital of the UK?', 'memory': True, 'conversation_number': 1, 'username': 'amin'}
+2024-06-18 07:52:41,732 - llm_as_a_service_logger - INFO - Received request by backend: {'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1', 'prompt': 'Where is the capital of the UK?', 'memory': True, 'conversation_number': 1, 'username': 'amin'}
+2024-06-18 07:52:41,732 - llm_as_a_service_logger - INFO - Received request by backend: {'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1', 'prompt': 'Where is the capital of the UK?', 'memory': True, 'conversation_number': 1, 'username': 'amin'}
+2024-06-18 07:52:41,732 - llm_as_a_service_logger - INFO - Received request by backend: {'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1', 'prompt': 'Where is the capital of the UK?', 'memory': True, 'conversation_number': 1, 'username': 'amin'}
+2024-06-18 07:52:41,732 - llm_as_a_service_logger - INFO - Received request by backend: {'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1', 'prompt': 'Where is the capital of the UK?', 'memory': True, 'conversation_number': 1, 'username': 'amin'}
+2024-06-18 07:52:41,760 - llm_as_a_service_logger - ERROR - Error in Inference Call: name 'conversation_number' is not defined
+2024-06-18 07:52:41,760 - llm_as_a_service_logger - ERROR - Error in Inference Call: name 'conversation_number' is not defined
+2024-06-18 07:52:41,760 - llm_as_a_service_logger - ERROR - Error in Inference Call: name 'conversation_number' is not defined
+2024-06-18 07:52:41,760 - llm_as_a_service_logger - ERROR - Error in Inference Call: name 'conversation_number' is not defined
+2024-06-18 07:52:41,760 - llm_as_a_service_logger - ERROR - Error in Inference Call: name 'conversation_number' is not defined
+2024-06-18 07:52:41,760 - llm_as_a_service_logger - ERROR - Error in Inference Call: name 'conversation_number' is not defined
+2024-06-18 07:52:41,760 - llm_as_a_service_logger - ERROR - Error in Inference Call: name 'conversation_number' is not defined
+2024-06-18 08:00:55,295 - llm_as_a_service_logger - INFO - Received request by router: {'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1', 'prompt': 'where is London?', 'memory': True, 'conversation_number': 1, 'username': 'amin'}
+2024-06-18 08:00:55,295 - llm_as_a_service_logger - INFO - Received request by router: {'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1', 'prompt': 'where is London?', 'memory': True, 'conversation_number': 1, 'username': 'amin'}
+2024-06-18 08:00:55,295 - llm_as_a_service_logger - INFO - Received request by router: {'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1', 'prompt': 'where is London?', 'memory': True, 'conversation_number': 1, 'username': 'amin'}
+2024-06-18 08:00:55,295 - llm_as_a_service_logger - INFO - Received request by router: {'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1', 'prompt': 'where is London?', 'memory': True, 'conversation_number': 1, 'username': 'amin'}
+2024-06-18 08:00:55,295 - llm_as_a_service_logger - INFO - Received request by router: {'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1', 'prompt': 'where is London?', 'memory': True, 'conversation_number': 1, 'username': 'amin'}
+2024-06-18 08:00:55,295 - llm_as_a_service_logger - INFO - Received request by router: {'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1', 'prompt': 'where is London?', 'memory': True, 'conversation_number': 1, 'username': 'amin'}
+2024-06-18 08:00:55,295 - llm_as_a_service_logger - INFO - Received request by router: {'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1', 'prompt': 'where is London?', 'memory': True, 'conversation_number': 1, 'username': 'amin'}
+2024-06-18 08:00:55,296 - llm_as_a_service_logger - INFO - Received request by backend: {'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1', 'prompt': 'where is London?', 'memory': True, 'conversation_number': 1, 'username': 'amin'}
+2024-06-18 08:00:55,296 - llm_as_a_service_logger - INFO - Received request by backend: {'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1', 'prompt': 'where is London?', 'memory': True, 'conversation_number': 1, 'username': 'amin'}
+2024-06-18 08:00:55,296 - llm_as_a_service_logger - INFO - Received request by backend: {'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1', 'prompt': 'where is London?', 'memory': True, 'conversation_number': 1, 'username': 'amin'}
+2024-06-18 08:00:55,296 - llm_as_a_service_logger - INFO - Received request by backend: {'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1', 'prompt': 'where is London?', 'memory': True, 'conversation_number': 1, 'username': 'amin'}
+2024-06-18 08:00:55,296 - llm_as_a_service_logger - INFO - Received request by backend: {'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1', 'prompt': 'where is London?', 'memory': True, 'conversation_number': 1, 'username': 'amin'}
+2024-06-18 08:00:55,296 - llm_as_a_service_logger - INFO - Received request by backend: {'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1', 'prompt': 'where is London?', 'memory': True, 'conversation_number': 1, 'username': 'amin'}
+2024-06-18 08:00:55,296 - llm_as_a_service_logger - INFO - Received request by backend: {'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1', 'prompt': 'where is London?', 'memory': True, 'conversation_number': 1, 'username': 'amin'}
+2024-06-18 08:00:55,558 - llm_as_a_service_logger - INFO - Retrieving conversation...
+2024-06-18 08:00:55,558 - llm_as_a_service_logger - INFO - Retrieving conversation...
+2024-06-18 08:00:55,558 - llm_as_a_service_logger - INFO - Retrieving conversation...
+2024-06-18 08:00:55,558 - llm_as_a_service_logger - INFO - Retrieving conversation...
+2024-06-18 08:00:55,558 - llm_as_a_service_logger - INFO - Retrieving conversation...
+2024-06-18 08:00:55,558 - llm_as_a_service_logger - INFO - Retrieving conversation...
+2024-06-18 08:00:55,558 - llm_as_a_service_logger - INFO - Retrieving conversation...
+2024-06-18 08:00:55,563 - llm_as_a_service_logger - INFO - User found: <app.routers.LLM.backend_database.User object at 0x7f878576fc40>
+2024-06-18 08:00:55,563 - llm_as_a_service_logger - INFO - User found: <app.routers.LLM.backend_database.User object at 0x7f878576fc40>
+2024-06-18 08:00:55,563 - llm_as_a_service_logger - INFO - User found: <app.routers.LLM.backend_database.User object at 0x7f878576fc40>
+2024-06-18 08:00:55,563 - llm_as_a_service_logger - INFO - User found: <app.routers.LLM.backend_database.User object at 0x7f878576fc40>
+2024-06-18 08:00:55,563 - llm_as_a_service_logger - INFO - User found: <app.routers.LLM.backend_database.User object at 0x7f878576fc40>
+2024-06-18 08:00:55,563 - llm_as_a_service_logger - INFO - User found: <app.routers.LLM.backend_database.User object at 0x7f878576fc40>
+2024-06-18 08:00:55,563 - llm_as_a_service_logger - INFO - User found: <app.routers.LLM.backend_database.User object at 0x7f878576fc40>
+2024-06-18 08:00:55,566 - llm_as_a_service_logger - INFO - Conversation found: <app.routers.LLM.backend_database.Conversation object at 0x7f8783a4ad70>
+2024-06-18 08:00:55,566 - llm_as_a_service_logger - INFO - Conversation found: <app.routers.LLM.backend_database.Conversation object at 0x7f8783a4ad70>
+2024-06-18 08:00:55,566 - llm_as_a_service_logger - INFO - Conversation found: <app.routers.LLM.backend_database.Conversation object at 0x7f8783a4ad70>
+2024-06-18 08:00:55,566 - llm_as_a_service_logger - INFO - Conversation found: <app.routers.LLM.backend_database.Conversation object at 0x7f8783a4ad70>
+2024-06-18 08:00:55,566 - llm_as_a_service_logger - INFO - Conversation found: <app.routers.LLM.backend_database.Conversation object at 0x7f8783a4ad70>
+2024-06-18 08:00:55,566 - llm_as_a_service_logger - INFO - Conversation found: <app.routers.LLM.backend_database.Conversation object at 0x7f8783a4ad70>
+2024-06-18 08:00:55,566 - llm_as_a_service_logger - INFO - Conversation found: <app.routers.LLM.backend_database.Conversation object at 0x7f8783a4ad70>
+2024-06-18 08:00:55,566 - llm_as_a_service_logger - INFO - Conversation successfully retrieved
+2024-06-18 08:00:55,566 - llm_as_a_service_logger - INFO - Conversation successfully retrieved
+2024-06-18 08:00:55,566 - llm_as_a_service_logger - INFO - Conversation successfully retrieved
+2024-06-18 08:00:55,566 - llm_as_a_service_logger - INFO - Conversation successfully retrieved
+2024-06-18 08:00:55,566 - llm_as_a_service_logger - INFO - Conversation successfully retrieved
+2024-06-18 08:00:55,566 - llm_as_a_service_logger - INFO - Conversation successfully retrieved
+2024-06-18 08:00:55,566 - llm_as_a_service_logger - INFO - Conversation successfully retrieved
+2024-06-18 08:01:15,712 - llm_as_a_service_logger - INFO - Received request by router: {'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1', 'prompt': 'what was my previous question about?', 'memory': True, 'conversation_number': 1, 'username': 'amin'}
+2024-06-18 08:01:15,712 - llm_as_a_service_logger - INFO - Received request by router: {'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1', 'prompt': 'what was my previous question about?', 'memory': True, 'conversation_number': 1, 'username': 'amin'}
+2024-06-18 08:01:15,712 - llm_as_a_service_logger - INFO - Received request by router: {'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1', 'prompt': 'what was my previous question about?', 'memory': True, 'conversation_number': 1, 'username': 'amin'}
+2024-06-18 08:01:15,712 - llm_as_a_service_logger - INFO - Received request by router: {'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1', 'prompt': 'what was my previous question about?', 'memory': True, 'conversation_number': 1, 'username': 'amin'}
+2024-06-18 08:01:15,712 - llm_as_a_service_logger - INFO - Received request by router: {'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1', 'prompt': 'what was my previous question about?', 'memory': True, 'conversation_number': 1, 'username': 'amin'}
+2024-06-18 08:01:15,712 - llm_as_a_service_logger - INFO - Received request by router: {'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1', 'prompt': 'what was my previous question about?', 'memory': True, 'conversation_number': 1, 'username': 'amin'}
+2024-06-18 08:01:15,712 - llm_as_a_service_logger - INFO - Received request by router: {'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1', 'prompt': 'what was my previous question about?', 'memory': True, 'conversation_number': 1, 'username': 'amin'}
+2024-06-18 08:01:15,713 - llm_as_a_service_logger - INFO - Received request by backend: {'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1', 'prompt': 'what was my previous question about?', 'memory': True, 'conversation_number': 1, 'username': 'amin'}
+2024-06-18 08:01:15,713 - llm_as_a_service_logger - INFO - Received request by backend: {'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1', 'prompt': 'what was my previous question about?', 'memory': True, 'conversation_number': 1, 'username': 'amin'}
+2024-06-18 08:01:15,713 - llm_as_a_service_logger - INFO - Received request by backend: {'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1', 'prompt': 'what was my previous question about?', 'memory': True, 'conversation_number': 1, 'username': 'amin'}
+2024-06-18 08:01:15,713 - llm_as_a_service_logger - INFO - Received request by backend: {'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1', 'prompt': 'what was my previous question about?', 'memory': True, 'conversation_number': 1, 'username': 'amin'}
+2024-06-18 08:01:15,713 - llm_as_a_service_logger - INFO - Received request by backend: {'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1', 'prompt': 'what was my previous question about?', 'memory': True, 'conversation_number': 1, 'username': 'amin'}
+2024-06-18 08:01:15,713 - llm_as_a_service_logger - INFO - Received request by backend: {'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1', 'prompt': 'what was my previous question about?', 'memory': True, 'conversation_number': 1, 'username': 'amin'}
+2024-06-18 08:01:15,713 - llm_as_a_service_logger - INFO - Received request by backend: {'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1', 'prompt': 'what was my previous question about?', 'memory': True, 'conversation_number': 1, 'username': 'amin'}
+2024-06-18 08:01:15,735 - llm_as_a_service_logger - INFO - Retrieving conversation...
+2024-06-18 08:01:15,735 - llm_as_a_service_logger - INFO - Retrieving conversation...
+2024-06-18 08:01:15,735 - llm_as_a_service_logger - INFO - Retrieving conversation...
+2024-06-18 08:01:15,735 - llm_as_a_service_logger - INFO - Retrieving conversation...
+2024-06-18 08:01:15,735 - llm_as_a_service_logger - INFO - Retrieving conversation...
+2024-06-18 08:01:15,735 - llm_as_a_service_logger - INFO - Retrieving conversation...
+2024-06-18 08:01:15,735 - llm_as_a_service_logger - INFO - Retrieving conversation...
+2024-06-18 08:01:15,736 - llm_as_a_service_logger - INFO - User found: <app.routers.LLM.backend_database.User object at 0x7f87838041f0>
+2024-06-18 08:01:15,736 - llm_as_a_service_logger - INFO - User found: <app.routers.LLM.backend_database.User object at 0x7f87838041f0>
+2024-06-18 08:01:15,736 - llm_as_a_service_logger - INFO - User found: <app.routers.LLM.backend_database.User object at 0x7f87838041f0>
+2024-06-18 08:01:15,736 - llm_as_a_service_logger - INFO - User found: <app.routers.LLM.backend_database.User object at 0x7f87838041f0>
+2024-06-18 08:01:15,736 - llm_as_a_service_logger - INFO - User found: <app.routers.LLM.backend_database.User object at 0x7f87838041f0>
+2024-06-18 08:01:15,736 - llm_as_a_service_logger - INFO - User found: <app.routers.LLM.backend_database.User object at 0x7f87838041f0>
+2024-06-18 08:01:15,736 - llm_as_a_service_logger - INFO - User found: <app.routers.LLM.backend_database.User object at 0x7f87838041f0>
+2024-06-18 08:01:15,738 - llm_as_a_service_logger - INFO - Conversation found: <app.routers.LLM.backend_database.Conversation object at 0x7f87838070a0>
+2024-06-18 08:01:15,738 - llm_as_a_service_logger - INFO - Conversation found: <app.routers.LLM.backend_database.Conversation object at 0x7f87838070a0>
+2024-06-18 08:01:15,738 - llm_as_a_service_logger - INFO - Conversation found: <app.routers.LLM.backend_database.Conversation object at 0x7f87838070a0>
+2024-06-18 08:01:15,738 - llm_as_a_service_logger - INFO - Conversation found: <app.routers.LLM.backend_database.Conversation object at 0x7f87838070a0>
+2024-06-18 08:01:15,738 - llm_as_a_service_logger - INFO - Conversation found: <app.routers.LLM.backend_database.Conversation object at 0x7f87838070a0>
+2024-06-18 08:01:15,738 - llm_as_a_service_logger - INFO - Conversation found: <app.routers.LLM.backend_database.Conversation object at 0x7f87838070a0>
+2024-06-18 08:01:15,738 - llm_as_a_service_logger - INFO - Conversation found: <app.routers.LLM.backend_database.Conversation object at 0x7f87838070a0>
+2024-06-18 08:01:15,738 - llm_as_a_service_logger - INFO - Conversation successfully retrieved
+2024-06-18 08:01:15,738 - llm_as_a_service_logger - INFO - Conversation successfully retrieved
+2024-06-18 08:01:15,738 - llm_as_a_service_logger - INFO - Conversation successfully retrieved
+2024-06-18 08:01:15,738 - llm_as_a_service_logger - INFO - Conversation successfully retrieved
+2024-06-18 08:01:15,738 - llm_as_a_service_logger - INFO - Conversation successfully retrieved
+2024-06-18 08:01:15,738 - llm_as_a_service_logger - INFO - Conversation successfully retrieved
+2024-06-18 08:01:15,738 - llm_as_a_service_logger - INFO - Conversation successfully retrieved
+2024-06-18 08:14:52,245 - llm_as_a_service_logger - INFO - Received request by router: {'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1', 'prompt': 'Hi', 'memory': True, 'conversation_number': 1, 'username': 'amin'}
+2024-06-18 08:14:52,245 - llm_as_a_service_logger - INFO - Received request by router: {'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1', 'prompt': 'Hi', 'memory': True, 'conversation_number': 1, 'username': 'amin'}
+2024-06-18 08:14:52,245 - llm_as_a_service_logger - INFO - Received request by router: {'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1', 'prompt': 'Hi', 'memory': True, 'conversation_number': 1, 'username': 'amin'}
+2024-06-18 08:14:52,245 - llm_as_a_service_logger - INFO - Received request by router: {'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1', 'prompt': 'Hi', 'memory': True, 'conversation_number': 1, 'username': 'amin'}
+2024-06-18 08:14:52,245 - llm_as_a_service_logger - INFO - Received request by router: {'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1', 'prompt': 'Hi', 'memory': True, 'conversation_number': 1, 'username': 'amin'}
+2024-06-18 08:14:52,245 - llm_as_a_service_logger - INFO - Received request by router: {'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1', 'prompt': 'Hi', 'memory': True, 'conversation_number': 1, 'username': 'amin'}
+2024-06-18 08:14:52,245 - llm_as_a_service_logger - INFO - Received request by router: {'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1', 'prompt': 'Hi', 'memory': True, 'conversation_number': 1, 'username': 'amin'}
+2024-06-18 08:14:52,245 - llm_as_a_service_logger - INFO - Received request by backend: {'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1', 'prompt': 'Hi', 'memory': True, 'conversation_number': 1, 'username': 'amin'}
+2024-06-18 08:14:52,245 - llm_as_a_service_logger - INFO - Received request by backend: {'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1', 'prompt': 'Hi', 'memory': True, 'conversation_number': 1, 'username': 'amin'}
+2024-06-18 08:14:52,245 - llm_as_a_service_logger - INFO - Received request by backend: {'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1', 'prompt': 'Hi', 'memory': True, 'conversation_number': 1, 'username': 'amin'}
+2024-06-18 08:14:52,245 - llm_as_a_service_logger - INFO - Received request by backend: {'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1', 'prompt': 'Hi', 'memory': True, 'conversation_number': 1, 'username': 'amin'}
+2024-06-18 08:14:52,245 - llm_as_a_service_logger - INFO - Received request by backend: {'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1', 'prompt': 'Hi', 'memory': True, 'conversation_number': 1, 'username': 'amin'}
+2024-06-18 08:14:52,245 - llm_as_a_service_logger - INFO - Received request by backend: {'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1', 'prompt': 'Hi', 'memory': True, 'conversation_number': 1, 'username': 'amin'}
+2024-06-18 08:14:52,245 - llm_as_a_service_logger - INFO - Received request by backend: {'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1', 'prompt': 'Hi', 'memory': True, 'conversation_number': 1, 'username': 'amin'}
+2024-06-18 08:14:52,268 - llm_as_a_service_logger - INFO - Retrieving conversation...
+2024-06-18 08:14:52,268 - llm_as_a_service_logger - INFO - Retrieving conversation...
+2024-06-18 08:14:52,268 - llm_as_a_service_logger - INFO - Retrieving conversation...
+2024-06-18 08:14:52,268 - llm_as_a_service_logger - INFO - Retrieving conversation...
+2024-06-18 08:14:52,268 - llm_as_a_service_logger - INFO - Retrieving conversation...
+2024-06-18 08:14:52,268 - llm_as_a_service_logger - INFO - Retrieving conversation...
+2024-06-18 08:14:52,268 - llm_as_a_service_logger - INFO - Retrieving conversation...
+2024-06-18 08:14:52,269 - llm_as_a_service_logger - INFO - User found: <app.routers.LLM.backend_database.User object at 0x7f878383d900>
+2024-06-18 08:14:52,269 - llm_as_a_service_logger - INFO - User found: <app.routers.LLM.backend_database.User object at 0x7f878383d900>
+2024-06-18 08:14:52,269 - llm_as_a_service_logger - INFO - User found: <app.routers.LLM.backend_database.User object at 0x7f878383d900>
+2024-06-18 08:14:52,269 - llm_as_a_service_logger - INFO - User found: <app.routers.LLM.backend_database.User object at 0x7f878383d900>
+2024-06-18 08:14:52,269 - llm_as_a_service_logger - INFO - User found: <app.routers.LLM.backend_database.User object at 0x7f878383d900>
+2024-06-18 08:14:52,269 - llm_as_a_service_logger - INFO - User found: <app.routers.LLM.backend_database.User object at 0x7f878383d900>
+2024-06-18 08:14:52,269 - llm_as_a_service_logger - INFO - User found: <app.routers.LLM.backend_database.User object at 0x7f878383d900>
+2024-06-18 08:14:52,270 - llm_as_a_service_logger - INFO - Conversation found: <app.routers.LLM.backend_database.Conversation object at 0x7f878383db40>
+2024-06-18 08:14:52,270 - llm_as_a_service_logger - INFO - Conversation found: <app.routers.LLM.backend_database.Conversation object at 0x7f878383db40>
+2024-06-18 08:14:52,270 - llm_as_a_service_logger - INFO - Conversation found: <app.routers.LLM.backend_database.Conversation object at 0x7f878383db40>
+2024-06-18 08:14:52,270 - llm_as_a_service_logger - INFO - Conversation found: <app.routers.LLM.backend_database.Conversation object at 0x7f878383db40>
+2024-06-18 08:14:52,270 - llm_as_a_service_logger - INFO - Conversation found: <app.routers.LLM.backend_database.Conversation object at 0x7f878383db40>
+2024-06-18 08:14:52,270 - llm_as_a_service_logger - INFO - Conversation found: <app.routers.LLM.backend_database.Conversation object at 0x7f878383db40>
+2024-06-18 08:14:52,270 - llm_as_a_service_logger - INFO - Conversation found: <app.routers.LLM.backend_database.Conversation object at 0x7f878383db40>
+2024-06-18 08:14:52,270 - llm_as_a_service_logger - INFO - Conversation successfully retrieved
+2024-06-18 08:14:52,270 - llm_as_a_service_logger - INFO - Conversation successfully retrieved
+2024-06-18 08:14:52,270 - llm_as_a_service_logger - INFO - Conversation successfully retrieved
+2024-06-18 08:14:52,270 - llm_as_a_service_logger - INFO - Conversation successfully retrieved
+2024-06-18 08:14:52,270 - llm_as_a_service_logger - INFO - Conversation successfully retrieved
+2024-06-18 08:14:52,270 - llm_as_a_service_logger - INFO - Conversation successfully retrieved
+2024-06-18 08:14:52,270 - llm_as_a_service_logger - INFO - Conversation successfully retrieved
+2024-06-18 08:15:10,212 - llm_as_a_service_logger - INFO - Received request by router: {'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1', 'prompt': 'Hi', 'memory': True, 'conversation_number': 1, 'username': 'amin'}
+2024-06-18 08:15:10,212 - llm_as_a_service_logger - INFO - Received request by router: {'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1', 'prompt': 'Hi', 'memory': True, 'conversation_number': 1, 'username': 'amin'}
+2024-06-18 08:15:10,212 - llm_as_a_service_logger - INFO - Received request by router: {'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1', 'prompt': 'Hi', 'memory': True, 'conversation_number': 1, 'username': 'amin'}
+2024-06-18 08:15:10,212 - llm_as_a_service_logger - INFO - Received request by router: {'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1', 'prompt': 'Hi', 'memory': True, 'conversation_number': 1, 'username': 'amin'}
+2024-06-18 08:15:10,212 - llm_as_a_service_logger - INFO - Received request by router: {'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1', 'prompt': 'Hi', 'memory': True, 'conversation_number': 1, 'username': 'amin'}
+2024-06-18 08:15:10,212 - llm_as_a_service_logger - INFO - Received request by router: {'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1', 'prompt': 'Hi', 'memory': True, 'conversation_number': 1, 'username': 'amin'}
+2024-06-18 08:15:10,212 - llm_as_a_service_logger - INFO - Received request by router: {'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1', 'prompt': 'Hi', 'memory': True, 'conversation_number': 1, 'username': 'amin'}
+2024-06-18 08:15:10,213 - llm_as_a_service_logger - INFO - Received request by backend: {'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1', 'prompt': 'Hi', 'memory': True, 'conversation_number': 1, 'username': 'amin'}
+2024-06-18 08:15:10,213 - llm_as_a_service_logger - INFO - Received request by backend: {'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1', 'prompt': 'Hi', 'memory': True, 'conversation_number': 1, 'username': 'amin'}
+2024-06-18 08:15:10,213 - llm_as_a_service_logger - INFO - Received request by backend: {'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1', 'prompt': 'Hi', 'memory': True, 'conversation_number': 1, 'username': 'amin'}
+2024-06-18 08:15:10,213 - llm_as_a_service_logger - INFO - Received request by backend: {'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1', 'prompt': 'Hi', 'memory': True, 'conversation_number': 1, 'username': 'amin'}
+2024-06-18 08:15:10,213 - llm_as_a_service_logger - INFO - Received request by backend: {'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1', 'prompt': 'Hi', 'memory': True, 'conversation_number': 1, 'username': 'amin'}
+2024-06-18 08:15:10,213 - llm_as_a_service_logger - INFO - Received request by backend: {'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1', 'prompt': 'Hi', 'memory': True, 'conversation_number': 1, 'username': 'amin'}
+2024-06-18 08:15:10,213 - llm_as_a_service_logger - INFO - Received request by backend: {'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1', 'prompt': 'Hi', 'memory': True, 'conversation_number': 1, 'username': 'amin'}
+2024-06-18 08:15:10,234 - llm_as_a_service_logger - INFO - Retrieving conversation...
+2024-06-18 08:15:10,234 - llm_as_a_service_logger - INFO - Retrieving conversation...
+2024-06-18 08:15:10,234 - llm_as_a_service_logger - INFO - Retrieving conversation...
+2024-06-18 08:15:10,234 - llm_as_a_service_logger - INFO - Retrieving conversation...
+2024-06-18 08:15:10,234 - llm_as_a_service_logger - INFO - Retrieving conversation...
+2024-06-18 08:15:10,234 - llm_as_a_service_logger - INFO - Retrieving conversation...
+2024-06-18 08:15:10,234 - llm_as_a_service_logger - INFO - Retrieving conversation...
+2024-06-18 08:15:10,235 - llm_as_a_service_logger - INFO - User found: <app.routers.LLM.backend_database.User object at 0x7f87838231f0>
+2024-06-18 08:15:10,235 - llm_as_a_service_logger - INFO - User found: <app.routers.LLM.backend_database.User object at 0x7f87838231f0>
+2024-06-18 08:15:10,235 - llm_as_a_service_logger - INFO - User found: <app.routers.LLM.backend_database.User object at 0x7f87838231f0>
+2024-06-18 08:15:10,235 - llm_as_a_service_logger - INFO - User found: <app.routers.LLM.backend_database.User object at 0x7f87838231f0>
+2024-06-18 08:15:10,235 - llm_as_a_service_logger - INFO - User found: <app.routers.LLM.backend_database.User object at 0x7f87838231f0>
+2024-06-18 08:15:10,235 - llm_as_a_service_logger - INFO - User found: <app.routers.LLM.backend_database.User object at 0x7f87838231f0>
+2024-06-18 08:15:10,235 - llm_as_a_service_logger - INFO - User found: <app.routers.LLM.backend_database.User object at 0x7f87838231f0>
+2024-06-18 08:15:10,237 - llm_as_a_service_logger - INFO - Conversation found: <app.routers.LLM.backend_database.Conversation object at 0x7f87838233a0>
+2024-06-18 08:15:10,237 - llm_as_a_service_logger - INFO - Conversation found: <app.routers.LLM.backend_database.Conversation object at 0x7f87838233a0>
+2024-06-18 08:15:10,237 - llm_as_a_service_logger - INFO - Conversation found: <app.routers.LLM.backend_database.Conversation object at 0x7f87838233a0>
+2024-06-18 08:15:10,237 - llm_as_a_service_logger - INFO - Conversation found: <app.routers.LLM.backend_database.Conversation object at 0x7f87838233a0>
+2024-06-18 08:15:10,237 - llm_as_a_service_logger - INFO - Conversation found: <app.routers.LLM.backend_database.Conversation object at 0x7f87838233a0>
+2024-06-18 08:15:10,237 - llm_as_a_service_logger - INFO - Conversation found: <app.routers.LLM.backend_database.Conversation object at 0x7f87838233a0>
+2024-06-18 08:15:10,237 - llm_as_a_service_logger - INFO - Conversation found: <app.routers.LLM.backend_database.Conversation object at 0x7f87838233a0>
+2024-06-18 08:15:10,237 - llm_as_a_service_logger - INFO - Conversation successfully retrieved
+2024-06-18 08:15:10,237 - llm_as_a_service_logger - INFO - Conversation successfully retrieved
+2024-06-18 08:15:10,237 - llm_as_a_service_logger - INFO - Conversation successfully retrieved
+2024-06-18 08:15:10,237 - llm_as_a_service_logger - INFO - Conversation successfully retrieved
+2024-06-18 08:15:10,237 - llm_as_a_service_logger - INFO - Conversation successfully retrieved
+2024-06-18 08:15:10,237 - llm_as_a_service_logger - INFO - Conversation successfully retrieved
+2024-06-18 08:15:10,237 - llm_as_a_service_logger - INFO - Conversation successfully retrieved
+2024-06-18 08:15:19,308 - llm_as_a_service_logger - INFO - Received request by router: {'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1', 'prompt': 'Where is London?', 'memory': True, 'conversation_number': 1, 'username': 'amin'}
+2024-06-18 08:15:19,308 - llm_as_a_service_logger - INFO - Received request by router: {'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1', 'prompt': 'Where is London?', 'memory': True, 'conversation_number': 1, 'username': 'amin'}
+2024-06-18 08:15:19,308 - llm_as_a_service_logger - INFO - Received request by router: {'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1', 'prompt': 'Where is London?', 'memory': True, 'conversation_number': 1, 'username': 'amin'}
+2024-06-18 08:15:19,308 - llm_as_a_service_logger - INFO - Received request by router: {'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1', 'prompt': 'Where is London?', 'memory': True, 'conversation_number': 1, 'username': 'amin'}
+2024-06-18 08:15:19,308 - llm_as_a_service_logger - INFO - Received request by router: {'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1', 'prompt': 'Where is London?', 'memory': True, 'conversation_number': 1, 'username': 'amin'}
+2024-06-18 08:15:19,308 - llm_as_a_service_logger - INFO - Received request by router: {'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1', 'prompt': 'Where is London?', 'memory': True, 'conversation_number': 1, 'username': 'amin'}
+2024-06-18 08:15:19,308 - llm_as_a_service_logger - INFO - Received request by router: {'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1', 'prompt': 'Where is London?', 'memory': True, 'conversation_number': 1, 'username': 'amin'}
+2024-06-18 08:15:19,309 - llm_as_a_service_logger - INFO - Received request by backend: {'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1', 'prompt': 'Where is London?', 'memory': True, 'conversation_number': 1, 'username': 'amin'}
+2024-06-18 08:15:19,309 - llm_as_a_service_logger - INFO - Received request by backend: {'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1', 'prompt': 'Where is London?', 'memory': True, 'conversation_number': 1, 'username': 'amin'}
+2024-06-18 08:15:19,309 - llm_as_a_service_logger - INFO - Received request by backend: {'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1', 'prompt': 'Where is London?', 'memory': True, 'conversation_number': 1, 'username': 'amin'}
+2024-06-18 08:15:19,309 - llm_as_a_service_logger - INFO - Received request by backend: {'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1', 'prompt': 'Where is London?', 'memory': True, 'conversation_number': 1, 'username': 'amin'}
+2024-06-18 08:15:19,309 - llm_as_a_service_logger - INFO - Received request by backend: {'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1', 'prompt': 'Where is London?', 'memory': True, 'conversation_number': 1, 'username': 'amin'}
+2024-06-18 08:15:19,309 - llm_as_a_service_logger - INFO - Received request by backend: {'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1', 'prompt': 'Where is London?', 'memory': True, 'conversation_number': 1, 'username': 'amin'}
+2024-06-18 08:15:19,309 - llm_as_a_service_logger - INFO - Received request by backend: {'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1', 'prompt': 'Where is London?', 'memory': True, 'conversation_number': 1, 'username': 'amin'}
+2024-06-18 08:15:19,330 - llm_as_a_service_logger - INFO - Retrieving conversation...
+2024-06-18 08:15:19,330 - llm_as_a_service_logger - INFO - Retrieving conversation...
+2024-06-18 08:15:19,330 - llm_as_a_service_logger - INFO - Retrieving conversation...
+2024-06-18 08:15:19,330 - llm_as_a_service_logger - INFO - Retrieving conversation...
+2024-06-18 08:15:19,330 - llm_as_a_service_logger - INFO - Retrieving conversation...
+2024-06-18 08:15:19,330 - llm_as_a_service_logger - INFO - Retrieving conversation...
+2024-06-18 08:15:19,330 - llm_as_a_service_logger - INFO - Retrieving conversation...
+2024-06-18 08:15:19,332 - llm_as_a_service_logger - INFO - User found: <app.routers.LLM.backend_database.User object at 0x7f878385f4c0>
+2024-06-18 08:15:19,332 - llm_as_a_service_logger - INFO - User found: <app.routers.LLM.backend_database.User object at 0x7f878385f4c0>
+2024-06-18 08:15:19,332 - llm_as_a_service_logger - INFO - User found: <app.routers.LLM.backend_database.User object at 0x7f878385f4c0>
+2024-06-18 08:15:19,332 - llm_as_a_service_logger - INFO - User found: <app.routers.LLM.backend_database.User object at 0x7f878385f4c0>
+2024-06-18 08:15:19,332 - llm_as_a_service_logger - INFO - User found: <app.routers.LLM.backend_database.User object at 0x7f878385f4c0>
+2024-06-18 08:15:19,332 - llm_as_a_service_logger - INFO - User found: <app.routers.LLM.backend_database.User object at 0x7f878385f4c0>
+2024-06-18 08:15:19,332 - llm_as_a_service_logger - INFO - User found: <app.routers.LLM.backend_database.User object at 0x7f878385f4c0>
+2024-06-18 08:15:19,333 - llm_as_a_service_logger - INFO - Conversation found: <app.routers.LLM.backend_database.Conversation object at 0x7f878385f700>
+2024-06-18 08:15:19,333 - llm_as_a_service_logger - INFO - Conversation found: <app.routers.LLM.backend_database.Conversation object at 0x7f878385f700>
+2024-06-18 08:15:19,333 - llm_as_a_service_logger - INFO - Conversation found: <app.routers.LLM.backend_database.Conversation object at 0x7f878385f700>
+2024-06-18 08:15:19,333 - llm_as_a_service_logger - INFO - Conversation found: <app.routers.LLM.backend_database.Conversation object at 0x7f878385f700>
+2024-06-18 08:15:19,333 - llm_as_a_service_logger - INFO - Conversation found: <app.routers.LLM.backend_database.Conversation object at 0x7f878385f700>
+2024-06-18 08:15:19,333 - llm_as_a_service_logger - INFO - Conversation found: <app.routers.LLM.backend_database.Conversation object at 0x7f878385f700>
+2024-06-18 08:15:19,333 - llm_as_a_service_logger - INFO - Conversation found: <app.routers.LLM.backend_database.Conversation object at 0x7f878385f700>
+2024-06-18 08:15:19,333 - llm_as_a_service_logger - INFO - Conversation successfully retrieved
+2024-06-18 08:15:19,333 - llm_as_a_service_logger - INFO - Conversation successfully retrieved
+2024-06-18 08:15:19,333 - llm_as_a_service_logger - INFO - Conversation successfully retrieved
+2024-06-18 08:15:19,333 - llm_as_a_service_logger - INFO - Conversation successfully retrieved
+2024-06-18 08:15:19,333 - llm_as_a_service_logger - INFO - Conversation successfully retrieved
+2024-06-18 08:15:19,333 - llm_as_a_service_logger - INFO - Conversation successfully retrieved
+2024-06-18 08:15:19,333 - llm_as_a_service_logger - INFO - Conversation successfully retrieved
+2024-06-18 08:34:39,271 - llm_as_a_service_logger - INFO - Received request by router: {'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1', 'prompt': 'Hi Nscale chatbot', 'memory': False, 'conversation_number': -1, 'username': 'None'}
+2024-06-18 08:34:39,271 - llm_as_a_service_logger - INFO - Received request by router: {'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1', 'prompt': 'Hi Nscale chatbot', 'memory': False, 'conversation_number': -1, 'username': 'None'}
+2024-06-18 08:34:39,271 - llm_as_a_service_logger - INFO - Received request by router: {'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1', 'prompt': 'Hi Nscale chatbot', 'memory': False, 'conversation_number': -1, 'username': 'None'}
+2024-06-18 08:34:39,271 - llm_as_a_service_logger - INFO - Received request by router: {'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1', 'prompt': 'Hi Nscale chatbot', 'memory': False, 'conversation_number': -1, 'username': 'None'}
+2024-06-18 08:34:39,271 - llm_as_a_service_logger - INFO - Received request by router: {'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1', 'prompt': 'Hi Nscale chatbot', 'memory': False, 'conversation_number': -1, 'username': 'None'}
+2024-06-18 08:34:39,271 - llm_as_a_service_logger - INFO - Received request by router: {'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1', 'prompt': 'Hi Nscale chatbot', 'memory': False, 'conversation_number': -1, 'username': 'None'}
+2024-06-18 08:34:39,271 - llm_as_a_service_logger - INFO - Received request by router: {'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1', 'prompt': 'Hi Nscale chatbot', 'memory': False, 'conversation_number': -1, 'username': 'None'}
+2024-06-18 08:34:39,271 - llm_as_a_service_logger - INFO - Received request by backend: {'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1', 'prompt': 'Hi Nscale chatbot', 'memory': False, 'conversation_number': -1, 'username': 'admin'}
+2024-06-18 08:34:39,271 - llm_as_a_service_logger - INFO - Received request by backend: {'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1', 'prompt': 'Hi Nscale chatbot', 'memory': False, 'conversation_number': -1, 'username': 'admin'}
+2024-06-18 08:34:39,271 - llm_as_a_service_logger - INFO - Received request by backend: {'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1', 'prompt': 'Hi Nscale chatbot', 'memory': False, 'conversation_number': -1, 'username': 'admin'}
+2024-06-18 08:34:39,271 - llm_as_a_service_logger - INFO - Received request by backend: {'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1', 'prompt': 'Hi Nscale chatbot', 'memory': False, 'conversation_number': -1, 'username': 'admin'}
+2024-06-18 08:34:39,271 - llm_as_a_service_logger - INFO - Received request by backend: {'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1', 'prompt': 'Hi Nscale chatbot', 'memory': False, 'conversation_number': -1, 'username': 'admin'}
+2024-06-18 08:34:39,271 - llm_as_a_service_logger - INFO - Received request by backend: {'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1', 'prompt': 'Hi Nscale chatbot', 'memory': False, 'conversation_number': -1, 'username': 'admin'}
+2024-06-18 08:34:39,271 - llm_as_a_service_logger - INFO - Received request by backend: {'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1', 'prompt': 'Hi Nscale chatbot', 'memory': False, 'conversation_number': -1, 'username': 'admin'}
+2024-06-18 10:54:31,800 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user amin
+2024-06-18 10:54:31,800 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user amin
+2024-06-18 10:54:31,800 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user amin
+2024-06-18 10:54:31,800 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user amin
+2024-06-18 10:54:31,800 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user amin
+2024-06-18 10:54:31,800 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user amin
+2024-06-18 10:54:31,800 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user amin
+2024-06-18 12:18:46,618 - llm_as_a_service_logger - INFO - Received request by router: {'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1', 'prompt': 'Where is the Paris?', 'memory': True, 'conversation_number': 1, 'username': 'amin'}
+2024-06-18 12:18:46,618 - llm_as_a_service_logger - INFO - Received request by router: {'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1', 'prompt': 'Where is the Paris?', 'memory': True, 'conversation_number': 1, 'username': 'amin'}
+2024-06-18 12:18:46,618 - llm_as_a_service_logger - INFO - Received request by router: {'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1', 'prompt': 'Where is the Paris?', 'memory': True, 'conversation_number': 1, 'username': 'amin'}
+2024-06-18 12:18:46,618 - llm_as_a_service_logger - INFO - Received request by router: {'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1', 'prompt': 'Where is the Paris?', 'memory': True, 'conversation_number': 1, 'username': 'amin'}
+2024-06-18 12:18:46,618 - llm_as_a_service_logger - INFO - Received request by router: {'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1', 'prompt': 'Where is the Paris?', 'memory': True, 'conversation_number': 1, 'username': 'amin'}
+2024-06-18 12:18:46,618 - llm_as_a_service_logger - INFO - Received request by router: {'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1', 'prompt': 'Where is the Paris?', 'memory': True, 'conversation_number': 1, 'username': 'amin'}
+2024-06-18 12:18:46,618 - llm_as_a_service_logger - INFO - Received request by router: {'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1', 'prompt': 'Where is the Paris?', 'memory': True, 'conversation_number': 1, 'username': 'amin'}
+2024-06-18 12:18:46,619 - llm_as_a_service_logger - INFO - Received request by backend: {'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1', 'prompt': 'Where is the Paris?', 'memory': True, 'conversation_number': 1, 'username': 'amin'}
+2024-06-18 12:18:46,619 - llm_as_a_service_logger - INFO - Received request by backend: {'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1', 'prompt': 'Where is the Paris?', 'memory': True, 'conversation_number': 1, 'username': 'amin'}
+2024-06-18 12:18:46,619 - llm_as_a_service_logger - INFO - Received request by backend: {'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1', 'prompt': 'Where is the Paris?', 'memory': True, 'conversation_number': 1, 'username': 'amin'}
+2024-06-18 12:18:46,619 - llm_as_a_service_logger - INFO - Received request by backend: {'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1', 'prompt': 'Where is the Paris?', 'memory': True, 'conversation_number': 1, 'username': 'amin'}
+2024-06-18 12:18:46,619 - llm_as_a_service_logger - INFO - Received request by backend: {'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1', 'prompt': 'Where is the Paris?', 'memory': True, 'conversation_number': 1, 'username': 'amin'}
+2024-06-18 12:18:46,619 - llm_as_a_service_logger - INFO - Received request by backend: {'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1', 'prompt': 'Where is the Paris?', 'memory': True, 'conversation_number': 1, 'username': 'amin'}
+2024-06-18 12:18:46,619 - llm_as_a_service_logger - INFO - Received request by backend: {'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1', 'prompt': 'Where is the Paris?', 'memory': True, 'conversation_number': 1, 'username': 'amin'}
+2024-06-18 12:18:46,899 - llm_as_a_service_logger - INFO - Retrieving conversation...
+2024-06-18 12:18:46,899 - llm_as_a_service_logger - INFO - Retrieving conversation...
+2024-06-18 12:18:46,899 - llm_as_a_service_logger - INFO - Retrieving conversation...
+2024-06-18 12:18:46,899 - llm_as_a_service_logger - INFO - Retrieving conversation...
+2024-06-18 12:18:46,899 - llm_as_a_service_logger - INFO - Retrieving conversation...
+2024-06-18 12:18:46,899 - llm_as_a_service_logger - INFO - Retrieving conversation...
+2024-06-18 12:18:46,899 - llm_as_a_service_logger - INFO - Retrieving conversation...
+2024-06-18 12:18:46,904 - llm_as_a_service_logger - INFO - User found: <app.routers.LLM.backend_database.User object at 0x7f19829f8310>
+2024-06-18 12:18:46,904 - llm_as_a_service_logger - INFO - User found: <app.routers.LLM.backend_database.User object at 0x7f19829f8310>
+2024-06-18 12:18:46,904 - llm_as_a_service_logger - INFO - User found: <app.routers.LLM.backend_database.User object at 0x7f19829f8310>
+2024-06-18 12:18:46,904 - llm_as_a_service_logger - INFO - User found: <app.routers.LLM.backend_database.User object at 0x7f19829f8310>
+2024-06-18 12:18:46,904 - llm_as_a_service_logger - INFO - User found: <app.routers.LLM.backend_database.User object at 0x7f19829f8310>
+2024-06-18 12:18:46,904 - llm_as_a_service_logger - INFO - User found: <app.routers.LLM.backend_database.User object at 0x7f19829f8310>
+2024-06-18 12:18:46,904 - llm_as_a_service_logger - INFO - User found: <app.routers.LLM.backend_database.User object at 0x7f19829f8310>
+2024-06-18 12:18:46,907 - llm_as_a_service_logger - INFO - Conversation found: <app.routers.LLM.backend_database.Conversation object at 0x7f19829f8580>
+2024-06-18 12:18:46,907 - llm_as_a_service_logger - INFO - Conversation found: <app.routers.LLM.backend_database.Conversation object at 0x7f19829f8580>
+2024-06-18 12:18:46,907 - llm_as_a_service_logger - INFO - Conversation found: <app.routers.LLM.backend_database.Conversation object at 0x7f19829f8580>
+2024-06-18 12:18:46,907 - llm_as_a_service_logger - INFO - Conversation found: <app.routers.LLM.backend_database.Conversation object at 0x7f19829f8580>
+2024-06-18 12:18:46,907 - llm_as_a_service_logger - INFO - Conversation found: <app.routers.LLM.backend_database.Conversation object at 0x7f19829f8580>
+2024-06-18 12:18:46,907 - llm_as_a_service_logger - INFO - Conversation found: <app.routers.LLM.backend_database.Conversation object at 0x7f19829f8580>
+2024-06-18 12:18:46,907 - llm_as_a_service_logger - INFO - Conversation found: <app.routers.LLM.backend_database.Conversation object at 0x7f19829f8580>
+2024-06-18 12:18:46,907 - llm_as_a_service_logger - INFO - Conversation successfully retrieved
+2024-06-18 12:18:46,907 - llm_as_a_service_logger - INFO - Conversation successfully retrieved
+2024-06-18 12:18:46,907 - llm_as_a_service_logger - INFO - Conversation successfully retrieved
+2024-06-18 12:18:46,907 - llm_as_a_service_logger - INFO - Conversation successfully retrieved
+2024-06-18 12:18:46,907 - llm_as_a_service_logger - INFO - Conversation successfully retrieved
+2024-06-18 12:18:46,907 - llm_as_a_service_logger - INFO - Conversation successfully retrieved
+2024-06-18 12:18:46,907 - llm_as_a_service_logger - INFO - Conversation successfully retrieved
+2024-06-18 13:19:00,920 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:19:00,920 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:19:00,920 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:19:00,920 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:19:00,920 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:19:00,920 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:19:00,920 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:19:05,929 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:19:05,929 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:19:05,929 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:19:05,929 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:19:05,929 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:19:05,929 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:19:05,929 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:19:10,934 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:19:10,934 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:19:10,934 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:19:10,934 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:19:10,934 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:19:10,934 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:19:10,934 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:19:15,938 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:19:15,938 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:19:15,938 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:19:15,938 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:19:15,938 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:19:15,938 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:19:15,938 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:19:17,832 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user amin
+2024-06-18 13:19:17,832 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user amin
+2024-06-18 13:19:17,832 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user amin
+2024-06-18 13:19:17,832 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user amin
+2024-06-18 13:19:17,832 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user amin
+2024-06-18 13:19:17,832 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user amin
+2024-06-18 13:19:17,832 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user amin
+2024-06-18 13:19:20,947 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:19:20,947 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:19:20,947 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:19:20,947 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:19:20,947 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:19:20,947 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:19:20,947 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:19:25,955 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:19:25,955 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:19:25,955 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:19:25,955 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:19:25,955 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:19:25,955 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:19:25,955 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:19:30,963 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:19:30,963 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:19:30,963 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:19:30,963 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:19:30,963 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:19:30,963 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:19:30,963 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:19:35,971 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:19:35,971 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:19:35,971 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:19:35,971 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:19:35,971 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:19:35,971 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:19:35,971 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:19:40,981 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:19:40,981 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:19:40,981 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:19:40,981 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:19:40,981 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:19:40,981 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:19:40,981 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:19:45,990 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:19:45,990 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:19:45,990 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:19:45,990 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:19:45,990 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:19:45,990 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:19:45,990 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:19:50,998 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:19:50,998 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:19:50,998 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:19:50,998 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:19:50,998 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:19:50,998 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:19:50,998 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:19:56,004 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:19:56,004 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:19:56,004 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:19:56,004 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:19:56,004 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:19:56,004 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:19:56,004 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:21:20,574 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:21:20,574 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:21:20,574 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:21:20,574 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:21:20,574 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:21:20,574 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:21:20,574 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:21:25,582 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:21:25,582 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:21:25,582 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:21:25,582 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:21:25,582 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:21:25,582 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:21:25,582 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:21:30,587 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:21:30,587 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:21:30,587 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:21:30,587 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:21:30,587 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:21:30,587 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:21:30,587 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:21:35,597 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:21:35,597 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:21:35,597 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:21:35,597 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:21:35,597 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:21:35,597 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:21:35,597 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:21:40,606 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:21:40,606 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:21:40,606 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:21:40,606 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:21:40,606 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:21:40,606 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:21:40,606 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:21:45,615 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:21:45,615 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:21:45,615 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:21:45,615 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:21:45,615 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:21:45,615 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:21:45,615 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:21:50,623 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:21:50,623 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:21:50,623 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:21:50,623 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:21:50,623 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:21:50,623 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:21:50,623 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:21:55,630 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:21:55,630 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:21:55,630 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:21:55,630 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:21:55,630 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:21:55,630 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:21:55,630 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:22:00,635 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:22:00,635 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:22:00,635 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:22:00,635 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:22:00,635 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:22:00,635 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:22:00,635 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:22:05,639 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:22:05,639 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:22:05,639 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:22:05,639 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:22:05,639 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:22:05,639 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:22:05,639 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:22:10,651 - llm_as_a_service_logger - INFO - Container started successfully. Port: 8500
+2024-06-18 13:22:10,651 - llm_as_a_service_logger - INFO - Container started successfully. Port: 8500
+2024-06-18 13:22:10,651 - llm_as_a_service_logger - INFO - Container started successfully. Port: 8500
+2024-06-18 13:22:10,651 - llm_as_a_service_logger - INFO - Container started successfully. Port: 8500
+2024-06-18 13:22:10,651 - llm_as_a_service_logger - INFO - Container started successfully. Port: 8500
+2024-06-18 13:22:10,651 - llm_as_a_service_logger - INFO - Container started successfully. Port: 8500
+2024-06-18 13:22:10,651 - llm_as_a_service_logger - INFO - Container started successfully. Port: 8500
+2024-06-18 13:22:10,651 - llm_as_a_service_logger - INFO - User info: Amin-nsclae
+2024-06-18 13:22:10,651 - llm_as_a_service_logger - INFO - User info: Amin-nsclae
+2024-06-18 13:22:10,651 - llm_as_a_service_logger - INFO - User info: Amin-nsclae
+2024-06-18 13:22:10,651 - llm_as_a_service_logger - INFO - User info: Amin-nsclae
+2024-06-18 13:22:10,651 - llm_as_a_service_logger - INFO - User info: Amin-nsclae
+2024-06-18 13:22:10,651 - llm_as_a_service_logger - INFO - User info: Amin-nsclae
+2024-06-18 13:22:10,651 - llm_as_a_service_logger - INFO - User info: Amin-nsclae
+2024-06-18 13:22:10,652 - llm_as_a_service_logger - INFO - Container ID: 82b7bf9464aad19ef5c11c18436448187363b0e884ce2c62b6473007f3f4e0d4
+2024-06-18 13:22:10,652 - llm_as_a_service_logger - INFO - Container ID: 82b7bf9464aad19ef5c11c18436448187363b0e884ce2c62b6473007f3f4e0d4
+2024-06-18 13:22:10,652 - llm_as_a_service_logger - INFO - Container ID: 82b7bf9464aad19ef5c11c18436448187363b0e884ce2c62b6473007f3f4e0d4
+2024-06-18 13:22:10,652 - llm_as_a_service_logger - INFO - Container ID: 82b7bf9464aad19ef5c11c18436448187363b0e884ce2c62b6473007f3f4e0d4
+2024-06-18 13:22:10,652 - llm_as_a_service_logger - INFO - Container ID: 82b7bf9464aad19ef5c11c18436448187363b0e884ce2c62b6473007f3f4e0d4
+2024-06-18 13:22:10,652 - llm_as_a_service_logger - INFO - Container ID: 82b7bf9464aad19ef5c11c18436448187363b0e884ce2c62b6473007f3f4e0d4
+2024-06-18 13:22:10,652 - llm_as_a_service_logger - INFO - Container ID: 82b7bf9464aad19ef5c11c18436448187363b0e884ce2c62b6473007f3f4e0d4
+2024-06-18 13:26:55,587 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:26:55,587 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:26:55,587 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:26:55,587 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:26:55,587 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:26:55,587 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:26:55,587 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:27:00,596 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:27:00,596 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:27:00,596 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:27:00,596 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:27:00,596 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:27:00,596 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:27:00,596 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:27:05,607 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:27:05,607 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:27:05,607 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:27:05,607 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:27:05,607 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:27:05,607 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:27:05,607 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:27:10,615 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:27:10,615 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:27:10,615 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:27:10,615 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:27:10,615 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:27:10,615 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:27:10,615 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:27:15,623 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:27:15,623 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:27:15,623 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:27:15,623 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:27:15,623 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:27:15,623 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:27:15,623 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:27:20,630 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:27:20,630 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:27:20,630 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:27:20,630 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:27:20,630 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:27:20,630 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:27:20,630 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:27:25,639 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:27:25,639 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:27:25,639 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:27:25,639 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:27:25,639 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:27:25,639 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:27:25,639 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:27:30,648 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:27:30,648 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:27:30,648 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:27:30,648 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:27:30,648 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:27:30,648 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:27:30,648 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:27:35,655 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:27:35,655 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:27:35,655 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:27:35,655 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:27:35,655 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:27:35,655 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:27:35,655 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:27:40,663 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:27:40,663 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:27:40,663 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:27:40,663 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:27:40,663 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:27:40,663 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:27:40,663 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:27:45,670 - llm_as_a_service_logger - INFO - Container started successfully. Port: 8500
+2024-06-18 13:27:45,670 - llm_as_a_service_logger - INFO - Container started successfully. Port: 8500
+2024-06-18 13:27:45,670 - llm_as_a_service_logger - INFO - Container started successfully. Port: 8500
+2024-06-18 13:27:45,670 - llm_as_a_service_logger - INFO - Container started successfully. Port: 8500
+2024-06-18 13:27:45,670 - llm_as_a_service_logger - INFO - Container started successfully. Port: 8500
+2024-06-18 13:27:45,670 - llm_as_a_service_logger - INFO - Container started successfully. Port: 8500
+2024-06-18 13:27:45,670 - llm_as_a_service_logger - INFO - Container started successfully. Port: 8500
+2024-06-18 13:27:45,670 - llm_as_a_service_logger - INFO - User info: Amin-nsclae
+2024-06-18 13:27:45,670 - llm_as_a_service_logger - INFO - User info: Amin-nsclae
+2024-06-18 13:27:45,670 - llm_as_a_service_logger - INFO - User info: Amin-nsclae
+2024-06-18 13:27:45,670 - llm_as_a_service_logger - INFO - User info: Amin-nsclae
+2024-06-18 13:27:45,670 - llm_as_a_service_logger - INFO - User info: Amin-nsclae
+2024-06-18 13:27:45,670 - llm_as_a_service_logger - INFO - User info: Amin-nsclae
+2024-06-18 13:27:45,670 - llm_as_a_service_logger - INFO - User info: Amin-nsclae
+2024-06-18 13:27:45,671 - llm_as_a_service_logger - INFO - Container ID: 3e95fd47a8e25e9d205dbe60ac5ead38879395b45d0f4bc0b9e9c58822f5103d
+2024-06-18 13:27:45,671 - llm_as_a_service_logger - INFO - Container ID: 3e95fd47a8e25e9d205dbe60ac5ead38879395b45d0f4bc0b9e9c58822f5103d
+2024-06-18 13:27:45,671 - llm_as_a_service_logger - INFO - Container ID: 3e95fd47a8e25e9d205dbe60ac5ead38879395b45d0f4bc0b9e9c58822f5103d
+2024-06-18 13:27:45,671 - llm_as_a_service_logger - INFO - Container ID: 3e95fd47a8e25e9d205dbe60ac5ead38879395b45d0f4bc0b9e9c58822f5103d
+2024-06-18 13:27:45,671 - llm_as_a_service_logger - INFO - Container ID: 3e95fd47a8e25e9d205dbe60ac5ead38879395b45d0f4bc0b9e9c58822f5103d
+2024-06-18 13:27:45,671 - llm_as_a_service_logger - INFO - Container ID: 3e95fd47a8e25e9d205dbe60ac5ead38879395b45d0f4bc0b9e9c58822f5103d
+2024-06-18 13:27:45,671 - llm_as_a_service_logger - INFO - Container ID: 3e95fd47a8e25e9d205dbe60ac5ead38879395b45d0f4bc0b9e9c58822f5103d
+2024-06-18 13:30:25,284 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2024-06-18 13:30:25,284 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2024-06-18 13:30:25,284 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2024-06-18 13:30:25,284 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2024-06-18 13:30:25,284 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2024-06-18 13:30:25,284 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2024-06-18 13:30:25,284 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2024-06-18 13:30:30,294 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:30:30,294 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:30:30,294 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:30:30,294 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:30:30,294 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:30:30,294 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:30:30,294 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:30:35,302 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:30:35,302 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:30:35,302 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:30:35,302 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:30:35,302 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:30:35,302 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:30:35,302 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:30:40,310 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:30:40,310 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:30:40,310 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:30:40,310 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:30:40,310 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:30:40,310 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:30:40,310 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:30:45,319 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:30:45,319 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:30:45,319 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:30:45,319 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:30:45,319 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:30:45,319 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:30:45,319 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:30:50,330 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:30:50,330 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:30:50,330 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:30:50,330 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:30:50,330 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:30:50,330 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:30:50,330 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:30:55,340 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:30:55,340 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:30:55,340 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:30:55,340 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:30:55,340 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:30:55,340 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:30:55,340 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:31:00,348 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:31:00,348 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:31:00,348 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:31:00,348 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:31:00,348 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:31:00,348 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:31:00,348 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:31:05,354 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:31:05,354 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:31:05,354 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:31:05,354 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:31:05,354 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:31:05,354 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:31:05,354 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:31:10,362 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:31:10,362 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:31:10,362 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:31:10,362 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:31:10,362 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:31:10,362 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:31:10,362 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:31:15,378 - llm_as_a_service_logger - INFO - Container started successfully. Port: 8500
+2024-06-18 13:31:15,378 - llm_as_a_service_logger - INFO - Container started successfully. Port: 8500
+2024-06-18 13:31:15,378 - llm_as_a_service_logger - INFO - Container started successfully. Port: 8500
+2024-06-18 13:31:15,378 - llm_as_a_service_logger - INFO - Container started successfully. Port: 8500
+2024-06-18 13:31:15,378 - llm_as_a_service_logger - INFO - Container started successfully. Port: 8500
+2024-06-18 13:31:15,378 - llm_as_a_service_logger - INFO - Container started successfully. Port: 8500
+2024-06-18 13:31:15,378 - llm_as_a_service_logger - INFO - Container started successfully. Port: 8500
+2024-06-18 13:31:15,378 - llm_as_a_service_logger - INFO - User info: Amin-nsclae
+2024-06-18 13:31:15,378 - llm_as_a_service_logger - INFO - User info: Amin-nsclae
+2024-06-18 13:31:15,378 - llm_as_a_service_logger - INFO - User info: Amin-nsclae
+2024-06-18 13:31:15,378 - llm_as_a_service_logger - INFO - User info: Amin-nsclae
+2024-06-18 13:31:15,378 - llm_as_a_service_logger - INFO - User info: Amin-nsclae
+2024-06-18 13:31:15,378 - llm_as_a_service_logger - INFO - User info: Amin-nsclae
+2024-06-18 13:31:15,378 - llm_as_a_service_logger - INFO - User info: Amin-nsclae
+2024-06-18 13:31:15,379 - llm_as_a_service_logger - INFO - Container ID: e1fb2c14bf69383380d36a62b5d459715ab025feb119919cfb6115a88d68319c
+2024-06-18 13:31:15,379 - llm_as_a_service_logger - INFO - Container ID: e1fb2c14bf69383380d36a62b5d459715ab025feb119919cfb6115a88d68319c
+2024-06-18 13:31:15,379 - llm_as_a_service_logger - INFO - Container ID: e1fb2c14bf69383380d36a62b5d459715ab025feb119919cfb6115a88d68319c
+2024-06-18 13:31:15,379 - llm_as_a_service_logger - INFO - Container ID: e1fb2c14bf69383380d36a62b5d459715ab025feb119919cfb6115a88d68319c
+2024-06-18 13:31:15,379 - llm_as_a_service_logger - INFO - Container ID: e1fb2c14bf69383380d36a62b5d459715ab025feb119919cfb6115a88d68319c
+2024-06-18 13:31:15,379 - llm_as_a_service_logger - INFO - Container ID: e1fb2c14bf69383380d36a62b5d459715ab025feb119919cfb6115a88d68319c
+2024-06-18 13:31:15,379 - llm_as_a_service_logger - INFO - Container ID: e1fb2c14bf69383380d36a62b5d459715ab025feb119919cfb6115a88d68319c
+2024-06-18 13:32:30,307 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:32:30,307 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:32:30,307 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:32:30,307 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:32:30,307 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:32:30,307 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:32:30,307 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:32:35,315 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:32:35,315 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:32:35,315 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:32:35,315 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:32:35,315 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:32:35,315 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:32:35,315 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:32:40,323 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:32:40,323 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:32:40,323 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:32:40,323 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:32:40,323 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:32:40,323 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:32:40,323 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:32:45,331 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:32:45,331 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:32:45,331 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:32:45,331 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:32:45,331 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:32:45,331 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:32:45,331 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:32:50,338 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:32:50,338 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:32:50,338 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:32:50,338 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:32:50,338 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:32:50,338 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:32:50,338 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:32:55,346 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:32:55,346 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:32:55,346 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:32:55,346 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:32:55,346 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:32:55,346 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:32:55,346 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:33:00,354 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:33:00,354 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:33:00,354 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:33:00,354 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:33:00,354 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:33:00,354 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:33:00,354 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:33:05,361 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:33:05,361 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:33:05,361 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:33:05,361 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:33:05,361 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:33:05,361 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:33:05,361 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:33:10,369 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:33:10,369 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:33:10,369 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:33:10,369 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:33:10,369 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:33:10,369 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:33:10,369 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:33:15,375 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:33:15,375 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:33:15,375 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:33:15,375 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:33:15,375 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:33:15,375 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:33:15,375 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:33:20,382 - llm_as_a_service_logger - INFO - Container started successfully. Port: 8500
+2024-06-18 13:33:20,382 - llm_as_a_service_logger - INFO - Container started successfully. Port: 8500
+2024-06-18 13:33:20,382 - llm_as_a_service_logger - INFO - Container started successfully. Port: 8500
+2024-06-18 13:33:20,382 - llm_as_a_service_logger - INFO - Container started successfully. Port: 8500
+2024-06-18 13:33:20,382 - llm_as_a_service_logger - INFO - Container started successfully. Port: 8500
+2024-06-18 13:33:20,382 - llm_as_a_service_logger - INFO - Container started successfully. Port: 8500
+2024-06-18 13:33:20,382 - llm_as_a_service_logger - INFO - Container started successfully. Port: 8500
+2024-06-18 13:33:20,383 - llm_as_a_service_logger - INFO - User info: Amin-nsclae
+2024-06-18 13:33:20,383 - llm_as_a_service_logger - INFO - User info: Amin-nsclae
+2024-06-18 13:33:20,383 - llm_as_a_service_logger - INFO - User info: Amin-nsclae
+2024-06-18 13:33:20,383 - llm_as_a_service_logger - INFO - User info: Amin-nsclae
+2024-06-18 13:33:20,383 - llm_as_a_service_logger - INFO - User info: Amin-nsclae
+2024-06-18 13:33:20,383 - llm_as_a_service_logger - INFO - User info: Amin-nsclae
+2024-06-18 13:33:20,383 - llm_as_a_service_logger - INFO - User info: Amin-nsclae
+2024-06-18 13:33:20,383 - llm_as_a_service_logger - INFO - Container ID: ac7774f390a97c643e048c2101f878c3fee0046a369acf92245c6153a2bd54eb
+2024-06-18 13:33:20,383 - llm_as_a_service_logger - INFO - Container ID: ac7774f390a97c643e048c2101f878c3fee0046a369acf92245c6153a2bd54eb
+2024-06-18 13:33:20,383 - llm_as_a_service_logger - INFO - Container ID: ac7774f390a97c643e048c2101f878c3fee0046a369acf92245c6153a2bd54eb
+2024-06-18 13:33:20,383 - llm_as_a_service_logger - INFO - Container ID: ac7774f390a97c643e048c2101f878c3fee0046a369acf92245c6153a2bd54eb
+2024-06-18 13:33:20,383 - llm_as_a_service_logger - INFO - Container ID: ac7774f390a97c643e048c2101f878c3fee0046a369acf92245c6153a2bd54eb
+2024-06-18 13:33:20,383 - llm_as_a_service_logger - INFO - Container ID: ac7774f390a97c643e048c2101f878c3fee0046a369acf92245c6153a2bd54eb
+2024-06-18 13:33:20,383 - llm_as_a_service_logger - INFO - Container ID: ac7774f390a97c643e048c2101f878c3fee0046a369acf92245c6153a2bd54eb
+2024-06-18 13:34:02,069 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:34:02,069 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:34:02,069 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:34:02,069 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:34:02,069 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:34:02,069 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:34:02,069 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:34:07,078 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:34:07,078 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:34:07,078 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:34:07,078 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:34:07,078 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:34:07,078 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:34:07,078 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:34:12,087 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:34:12,087 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:34:12,087 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:34:12,087 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:34:12,087 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:34:12,087 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:34:12,087 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:34:17,094 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:34:17,094 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:34:17,094 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:34:17,094 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:34:17,094 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:34:17,094 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:34:17,094 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:34:22,103 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:34:22,103 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:34:22,103 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:34:22,103 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:34:22,103 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:34:22,103 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:34:22,103 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:34:27,111 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:34:27,111 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:34:27,111 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:34:27,111 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:34:27,111 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:34:27,111 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:34:27,111 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:34:32,118 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:34:32,118 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:34:32,118 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:34:32,118 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:34:32,118 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:34:32,118 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:34:32,118 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:34:37,122 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:34:37,122 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:34:37,122 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:34:37,122 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:34:37,122 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:34:37,122 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:34:37,122 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:34:42,130 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:34:42,130 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:34:42,130 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:34:42,130 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:34:42,130 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:34:42,130 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:34:42,130 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:34:47,139 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:34:47,139 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:34:47,139 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:34:47,139 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:34:47,139 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:34:47,139 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:34:47,139 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-18 13:34:52,149 - llm_as_a_service_logger - INFO - Container started successfully. Port: 8500
+2024-06-18 13:34:52,149 - llm_as_a_service_logger - INFO - Container started successfully. Port: 8500
+2024-06-18 13:34:52,149 - llm_as_a_service_logger - INFO - Container started successfully. Port: 8500
+2024-06-18 13:34:52,149 - llm_as_a_service_logger - INFO - Container started successfully. Port: 8500
+2024-06-18 13:34:52,149 - llm_as_a_service_logger - INFO - Container started successfully. Port: 8500
+2024-06-18 13:34:52,149 - llm_as_a_service_logger - INFO - Container started successfully. Port: 8500
+2024-06-18 13:34:52,149 - llm_as_a_service_logger - INFO - Container started successfully. Port: 8500
+2024-06-18 13:34:52,149 - llm_as_a_service_logger - INFO - User info: Amin-nsclae
+2024-06-18 13:34:52,149 - llm_as_a_service_logger - INFO - User info: Amin-nsclae
+2024-06-18 13:34:52,149 - llm_as_a_service_logger - INFO - User info: Amin-nsclae
+2024-06-18 13:34:52,149 - llm_as_a_service_logger - INFO - User info: Amin-nsclae
+2024-06-18 13:34:52,149 - llm_as_a_service_logger - INFO - User info: Amin-nsclae
+2024-06-18 13:34:52,149 - llm_as_a_service_logger - INFO - User info: Amin-nsclae
+2024-06-18 13:34:52,149 - llm_as_a_service_logger - INFO - User info: Amin-nsclae
+2024-06-18 13:34:52,150 - llm_as_a_service_logger - INFO - Container ID: c218316116e8fb1c3287a2df19bfee2dcef3e911660cfe918ef4e1cd5d7d1f06
+2024-06-18 13:34:52,150 - llm_as_a_service_logger - INFO - Container ID: c218316116e8fb1c3287a2df19bfee2dcef3e911660cfe918ef4e1cd5d7d1f06
+2024-06-18 13:34:52,150 - llm_as_a_service_logger - INFO - Container ID: c218316116e8fb1c3287a2df19bfee2dcef3e911660cfe918ef4e1cd5d7d1f06
+2024-06-18 13:34:52,150 - llm_as_a_service_logger - INFO - Container ID: c218316116e8fb1c3287a2df19bfee2dcef3e911660cfe918ef4e1cd5d7d1f06
+2024-06-18 13:34:52,150 - llm_as_a_service_logger - INFO - Container ID: c218316116e8fb1c3287a2df19bfee2dcef3e911660cfe918ef4e1cd5d7d1f06
+2024-06-18 13:34:52,150 - llm_as_a_service_logger - INFO - Container ID: c218316116e8fb1c3287a2df19bfee2dcef3e911660cfe918ef4e1cd5d7d1f06
+2024-06-18 13:34:52,150 - llm_as_a_service_logger - INFO - Container ID: c218316116e8fb1c3287a2df19bfee2dcef3e911660cfe918ef4e1cd5d7d1f06

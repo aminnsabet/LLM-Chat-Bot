@@ -117,10 +117,10 @@ class vLLM_Inference:
 
             # Handle memory retrieval if enabled
             if request.memory:
-                if conversation_number <= 0 or conversation_number is None:
+                if request.conversation_number <= 0 or request.conversation_number is None:
                     conversation_id = self.database.retrieve_conversation({"username": request.username})["conversation_id"]
                 else:
-                    conversation_id = self.database.retrieve_conversation({"username": request.username, "conversation_number": conversation_number})["conversation_id"]
+                    conversation_id = self.database.retrieve_conversation({"username": request.username, "conversation_number": request.conversation_number})["conversation_id"]
 
                 logging.getLogger().setLevel(logging.ERROR)
     

@@ -170,7 +170,8 @@ def run_docker(engine_args: VllmBuildRequest):
             return {
                 "message": "Container started successfully and vLLM server is healthy",
                 "vLLM_endpoint": f"http://localhost:{free_port}/v1/completions",
-                "user_info": user_info
+                "user_info": user_info,
+                "status": "healthy"
             }
         else:
             raise Exception("Container did not pass health check.")
