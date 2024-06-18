@@ -1,118 +1,295 @@
 import streamlit as st
-from oauthlib.oauth2 import WebApplicationClient
-import os
 import requests
 
-# Google OAuth 2.0 Configuration
-GOOGLE_CLIENT_ID = "539506164308-5du69hk8kn8p0q3uodi5fte4vn2pppjj.apps.googleusercontent.com"
-GOOGLE_CLIENT_SECRET = "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"
-GOOGLE_DISCOVERY_URL = "https://accounts.google.com/.well-known/openid-configuration"
+from langchain.document_loaders import YoutubeLoader
+import os
+import streamlit as st
+import requests
+import json
+import time
+from langchain.schema import messages_from_dict, messages_to_dict
+from langchain.memory.chat_message_histories import StreamlitChatMessageHistory
+import random
+from langchain_community.chat_message_histories import SQLChatMessageHistory
 
-# Allow insecure transport for local development
-os.environ['OAUTHLIB_INSECURE_TRANSPORT'] = '1'
+BASE_URL = "http://localhost:8086"
+Weaviate_endpoint = "/vector_DB_request/"
 
-# Get Google's authorization endpoint
-def get_google_provider_cfg():
-    return requests.get(GOOGLE_DISCOVERY_URL).json()
+def process_text(text):
+    # Remove quotes from the beginning and end of the text, if present
+    if text.startswith('"') and text.endswith('"'):
+        text = text[1:-1]
 
-# Set up the OAuth client
-client = WebApplicationClient(GOOGLE_CLIENT_ID)
+    # Replace \n with an actual new line
+    text = text.replace("\\n", "\n")
 
-# Streamlit App
-st.title("Streamlit Google Login")
+    return text
 
-# Check if the user is logged in
-if "email" not in st.session_state:
-    google_provider_cfg = get_google_provider_cfg()
-    authorization_endpoint = google_provider_cfg["authorization_endpoint"]
+def display_user_classes(username, access_token):
+    params = {
+        "username": username,
+        "mode": "display_classes",
+        "vectorDB_type": "Weaviate",
+        "mode": "display_classes",
+        "class_name": "string"
+        }
+    file_path = None
 
-    redirect_uri = "http://localhost:8501/chatbot"
-    request_uri = client.prepare_request_uri(
-        authorization_endpoint,
-        redirect_uri=redirect_uri,
-        scope=["openid", "email", "profile"],
+    #headers = {"Authorization": f"Bearer {access_token}"}
+    resp = send_vector_db_request(access_token, params, Weaviate_endpoint)
+    #resp = requests.post(f"{BASE_URL}/vector_DB_request/",json=params, headers=headers)
+        # Handle the response
+    print("the response", resp, resp.content)
+
+    response_content = resp.content.decode("utf-8")
+    print("respcontent", response_content)
+    user_classes = json.loads(response_content)
+    if resp.status_code == 200:
+        print(resp.status_code, resp.content)
+        return user_classes
+    else:
+        print(resp.status_code, resp.content)
+        return 
+    
+def send_vector_db_request(access_token, json_data, endpoint, uploaded_file=None):
+    headers = {"Authorization": f"Bearer {access_token}"}
+
+
+    response = requests.post(f"{BASE_URL}{endpoint}", data=json_data,headers=headers, files=uploaded_file)
+
+    return response    
+
+def authentication(username, password):
+    data = {"username": username, "password": password}
+    resp = requests.post(
+        f"{BASE_URL}/token", data=data
     )
+    if "access_token" not in resp.json():
+        return None
+    return resp.json()["access_token"]
 
-    st.write("## Login with Google")
-    st.markdown(f"[Login with Google]({request_uri})")
+def add_user(username, password,gen_token_limit,prompt_token_limit,access_token):
 
-    # After the user logs in, Google will redirect them back to the redirect_uri with a code.
-    query_params = st.experimental_get_query_params()
-    if "code" in query_params:
-        code = query_params["code"][0]
-        try:
-            token_url = google_provider_cfg["token_endpoint"]
-            token_params = {
-                "code": code,
-                "redirect_uri": redirect_uri,
-                "client_id": GOOGLE_CLIENT_ID,
-                "client_secret": GOOGLE_CLIENT_SECRET,
+    headers = {"Authorization": f"Bearer {access_token}"}
+    query_data = {
+        "username": username,
+        "password": password,
+        "prompt_token_number": int(0),
+        "gen_token_number": int(0),
+        "gen_token_limit": int(gen_token_limit),
+        "prompt_token_limit": int(prompt_token_limit)
+        }
+    resp = requests.post(f"{BASE_URL}/db_request/add_user/", json=query_data, headers=headers)
+    return True
+
+def get_all_users_info(access_token):   
+    headers = {"Authorization": f"Bearer {access_token}"}
+    resp = requests.get(f"{BASE_URL}/db_request/get_all_users/", headers=headers)
+    if resp.status_code == 200:
+        return resp.json()
+    else:
+        return None
+
+def retrieve_latest_conversation(username, access_token):
+    query_data = {
+  "username": username
+}
+    headers = {"Authorization": f"Bearer {access_token}"}
+    resp = requests.post(f"{BASE_URL}/db_request/get_user_conversations/",json=query_data, headers=headers)
+    if resp.status_code == 200:
+        conversations = resp.json()['conversations']
+        names = [d["name"] for d in conversations]
+        if names:
+            return {"names": names, "conversations": conversations}
+        return None
+    else:
+        return None
+    
+def add_conversation(username, conversation,access_token):
+    query_data = {
+  "username": username,
+  "content": json.dumps(conversation),
+  "conversation_name": "Current Conversation",
+}
+    headers = {"Authorization": f"Bearer {access_token}"}
+    resp = requests.post(f"{BASE_URL}/db_request/add_conversation/",json=query_data, headers=headers)
+    if resp.status_code == 200:
+        return True
+    else:
+        return False
+
+def chat(model, inference_endpoint,prompt, memory, username, conversation_number,access_token):
+    headers = {"Authorization": f"Bearer {access_token}"}
+    quesry_data = {
+        "model": model,
+        "inference_endpoint":  inference_endpoint   ,
+        "prompt": prompt,
+        "memory": memory,
+        "conversation_number": conversation_number,
+        "username": username
+        }
+    resp = requests.post(f"{BASE_URL}/llm_request",json=quesry_data, headers=headers)
+    return resp.json()
+
+def retrieving_messages(username,access_token, converation_number=None):
+
+    headers = {"Authorization": f"Bearer {access_token}"}
+    if converation_number:  
+        query_data = {
+        "username": username,
+        "conversation_number": converation_number
+        }
+    else:
+        query_data = {
+            "username": username
             }
-            body = client.prepare_request_body(**token_params)
-            headers = {'Content-Type': 'application/x-www-form-urlencoded'}
-            token_response = requests.post(token_url, headers=headers, data=body)
+    resp = requests.post(f"{BASE_URL}/db_request/retrieve_conversation",json=query_data, headers=headers)
+    
+    if resp.status_code == 200:
+        if resp.json()["conversation_id"]:
+            messages = SQLChatMessageHistory(resp.json()["conversation_id"],"sqlite:////home/amin_sabet/dev/LLM-Chat-Bot/API/memory.db").get_messages()
+            return messages
+        else:
+            return None
+    else:
+        return None
 
-            token_response.raise_for_status()
-            token_data = token_response.json()
+    
 
-            # Store token_data in session state
-            st.session_state["token_data"] = token_data
+def add_conversation(username, conversation_name,access_token):
+    if not conversation_name:
+        query_data = {
+                        "username": username,
+                        "conversation_name": conversation_name
+                        }
+    else:
+        query_data = {
+                        "username": username,
+                        "conversation_name": conversation_name
+                        }
+    headers = {"Authorization": f"Bearer {access_token}"}
+    resp = requests.post(f"{BASE_URL}/db_request/add_conversation/",json=query_data, headers=headers)
+    if resp.status_code == 200:
+        return resp.json()
+    else:   
+        return None
+def add_LLM(model_name, access_token, HF_ACCESS_TOKEN, MAX_MODEL_LEN, SEED):
+    headers = {"Authorization": f"Bearer {access_token}"}
+    query_data = {
+        "HUGGING_FACE_HUB_TOKEN": str(HF_ACCESS_TOKEN),
+        "MODEL": str(model_name),
+        "TOKENIZER": "auto",
+        "MAX_MODEL_LEN": int(MAX_MODEL_LEN),
+        "TENSOR_PARALLEL_SIZE": 1,
+        "SEED": int(SEED),
+        "QUANTIZATION": "None"
+    }
 
-            # Verify token response and fetch user info if successful
-            if 'access_token' in token_data:
-                userinfo_endpoint = google_provider_cfg["userinfo_endpoint"]
-                headers = {'Authorization': f'Bearer {token_data["access_token"]}'}
-                userinfo_response = requests.get(userinfo_endpoint, headers=headers)
+    resp = requests.post(f"{BASE_URL}/vllm_init", json=query_data, headers=headers)
 
-                userinfo_response.raise_for_status()
-                userinfo_data = userinfo_response.json()
+    if resp.status_code == 200:
+        if resp.json()["status"] == "healthy":
+            return resp.json()
+        else:
+            return false
+    else:
+        return False
 
-                if userinfo_data.get("email_verified"):
-                    st.session_state["email"] = userinfo_data["email"]
-                    st.session_state["name"] = userinfo_data["name"]
-                    st.session_state["picture"] = userinfo_data["picture"]
-                    st.experimental_rerun()  # Rerun to update the state and refresh the UI
+if "username" not in st.session_state or st.sidebar.button("Logout"):
+    # Login form
+    if "username" not in st.session_state:
+        username = st.text_input("Enter your username:")
+        password = st.text_input('Enter your password', type='password') 
+    else:
+        username = st.session_state.username
+
+    if  st.button("Login"):  # Add password field
+                token =  authentication(username, password)
+                if token:
+                    st.session_state.token = token
+                    st.session_state.username = username
+                    st.session_state.show_logged_in_message = True
                 else:
-                    st.error("User email not available or not verified by Google.")
-            else:
-                st.error("Token request did not succeed.")
+                    st.error("Invalid User")
 
-        except requests.exceptions.HTTPError as e:
-            st.error(f"HTTP error occurred: {e.response.text}")
-        except Exception as e:
-            st.error(f"An error occurred: {e}")
 else:
-    st.write(f"Logged in as {st.session_state['name']}")
-    st.image(st.session_state["picture"])
-    st.write(f"Email: {st.session_state['email']}")
+    if "show_logged_in_message" not in st.session_state:
+        st.session_state.show_logged_in_message = False
 
-    if st.button("Logout"):
-        try:
-            # Check if token_data exists in session state
-            if "token_data" in st.session_state:
-                token_data = st.session_state["token_data"]
-                # Revoke token to invalidate it
-                if 'access_token' in token_data:
-                    revoke_url = 'https://oauth2.googleapis.com/revoke'
-                    revoke_params = {'token': token_data['access_token']}
-                    revoke_response = requests.post(revoke_url, params=revoke_params)
+    if st.session_state.show_logged_in_message:
+        logedin_username = st.session_state.username
+        #classes = display_user_classes(st.session_state.username, st.session_state.token)
+        
 
-                    if revoke_response.status_code == 200:
-                        st.success("Successfully logged out.")
-                    else:
-                        st.error(f"Failed to revoke token: {revoke_response.text}")
+        if logedin_username == "admin":
+            # Section to add new users
+            st.header("Admin Panel - Add Users")
+            new_user = st.text_input("Enter a new user:")
+            new_user_password = st.text_input("Enter password for user:", type="password")
+            gen_token_limit = st.slider('Adjust the generated token limit', min_value=0, max_value=100000, value=1000)
+            prompt_token_limit = st.slider('Adjust the Input prompt token limit', min_value=0, max_value=100000, value=10000)
+
+            if st.button("Add User") and new_user and new_user_password:
+                new_user = add_user(new_user, new_user_password, gen_token_limit, prompt_token_limit, st.session_state.token)
+                if new_user:
+                    st.success("New user added successfully!")
                 else:
-                    st.error("Access token not found in token_data.")
-            else:
-                st.error("Token data not found in session state.")
-        
-            # Clear session state
-            for key in list(st.session_state.keys()):
-                del st.session_state[key]
-            
-            st.experimental_rerun()  # Rerun to update the state and refresh the UI
-        
-        except requests.exceptions.HTTPError as e:
-            st.error(f"HTTP error occurred during logout: {e.response.text}")
-        except Exception as e:
-            st.error(f"An error occurred during logout: {e}")
+                    st.error("User already exists")
+
+        else:
+            # Section for Non-admin users
+
+            # Sidebar to show user Access Token
+            st.sidebar.markdown("---")
+            st.sidebar.markdown("<br>", unsafe_allow_html=True)
+            st.sidebar.subheader("User Access Token:")
+            show_token = st.sidebar.button("Show Token")
+            if show_token:
+                st.sidebar.code(st.session_state.token)
+
+            # Sidebar to allow user adding new model 
+            # Sidebar to allow user adding new model 
+            st.sidebar.markdown("---")
+            st.sidebar.markdown("<br>", unsafe_allow_html=True)
+            expander = st.sidebar.expander("Add New Model")
+            model_name = expander.text_input("Enter the model name from Huggingface:")
+            HF_ACCESS_TOKEN = expander.text_input("Enter your Huggingface Access Token:")
+            MAX_MODEL_LEN = expander.slider('Adjust the maximum model length', min_value=32, max_value=1024, value=512)
+            SEED = expander.slider('Adjust the seed', min_value=1, max_value=100, value=42)
+            add_model = expander.button("Add")
+            if add_model:
+                with expander:
+                    with st.spinner("Adding model..."):
+                     # Simulate some delay
+                        response = add_LLM(model_name, logedin_username, HF_ACCESS_TOKEN, MAX_MODEL_LEN, SEED)
+                        if response:
+                            expander.success("Model added successfully!")
+                        else:
+                            expander.error("Error adding model")
+
+             
+
+            # Check if the user has any previous conversations, if Yes retrives the latest conversation, if not creates a new conversation
+            msgs = retrieving_messages(logedin_username,st.session_state.token)
+            if len(msgs) == 0:
+                    st.chat_message("ai").write("How can I help you?")
+            else: 
+                for msg in msgs:
+                    st.chat_message(msg.type).write(msg.content)
+
+
+            if prompt := st.chat_input():  # (disabled=not replicate_api):
+                st.session_state.messages.append({"role": "user", "content": prompt})
+                with st.chat_message("user"):
+                    if st.session_state.messages[-1]["role"] != "assistant":
+                        with st.chat_message("assistant"):
+                            with st.spinner("Thinking..."):
+                                response = chat(model="meta-llama/Llama-2-7b-chat-hf", inference_endpoint="http://localhost:8500/v1",prompt=prompt, memory=True, username=logedin_username, conversation_number='1',access_token=st.session_state.token)
+                                if response:   
+                                    response = response["data"]
+                                    placeholder = st.empty()
+                                    full_response = process_text(response)
+                                    placeholder.markdown(full_response)
+
+                            message = {"role": "assistant", "content": full_response}
+                            st.session_state.messages.append(message)
