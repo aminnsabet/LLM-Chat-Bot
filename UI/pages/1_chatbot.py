@@ -129,7 +129,6 @@ def chat(model, inference_endpoint,prompt, memory, username, conversation_number
         "username": username
         }
     resp = requests.post(f"{BASE_URL}/llm_request",json=quesry_data, headers=headers)
-        
     return resp.json()
 
 def retrieving_messages(username,access_token, converation_number=None):
@@ -145,13 +144,17 @@ def retrieving_messages(username,access_token, converation_number=None):
             "username": username
             }
     resp = requests.post(f"{BASE_URL}/db_request/retrieve_conversation",json=query_data, headers=headers)
+    
     if resp.status_code == 200:
-        return resp.json()
+        if resp.json()["conversation_id"]:
+            messages = SQLChatMessageHistory(resp.json()["conversation_id"],"sqlite:////home/amin_sabet/dev/LLM-Chat-Bot/API/memory.db").get_messages()
+            return messages
+        else:
+            return None
     else:
         return None
 
-    #messages = SQLChatMessageHistory("abc126","/home/amin_sabet/dev/LLM-Chat-Bot/API/sqlite:///memory.db").get_messages()
-
+    
 
 def add_conversation(username, conversation_name,access_token):
     if not conversation_name:
@@ -170,6 +173,27 @@ def add_conversation(username, conversation_name,access_token):
         return resp.json()
     else:   
         return None
+def add_LLM(model_name, access_token, HF_ACCESS_TOKEN, MAX_MODEL_LEN, SEED):
+    headers = {"Authorization": f"Bearer {access_token}"}
+    query_data = {
+        "HUGGING_FACE_HUB_TOKEN": str(HF_ACCESS_TOKEN),
+        "MODEL": str(model_name),
+        "TOKENIZER": "auto",
+        "MAX_MODEL_LEN": int(MAX_MODEL_LEN),
+        "TENSOR_PARALLEL_SIZE": 1,
+        "SEED": int(SEED),
+        "QUANTIZATION": "None"
+    }
+
+    resp = requests.post(f"{BASE_URL}/vllm_init", json=query_data, headers=headers)
+
+    if resp.status_code == 200:
+        if resp.json()["status"] == "healthy":
+            return resp.json()
+        else:
+            return false
+    else:
+        return False
 
 if "username" not in st.session_state or st.sidebar.button("Logout"):
     # Login form
@@ -213,17 +237,59 @@ else:
                     st.error("User already exists")
 
         else:
+            # Section for Non-admin users
 
-            if "messages" not in st.session_state:
-                st.session_state["messages"] = [{"role": "assistant", "content": "How can I help you?"}]
+            # Sidebar to show user Access Token
+            st.sidebar.markdown("---")
+            st.sidebar.markdown("<br>", unsafe_allow_html=True)
+            st.sidebar.subheader("User Access Token:")
+            show_token = st.sidebar.button("Show Token")
+            if show_token:
+                st.sidebar.code(st.session_state.token)
+
+            # Sidebar to allow user adding new model 
+            # Sidebar to allow user adding new model 
+            st.sidebar.markdown("---")
+            st.sidebar.markdown("<br>", unsafe_allow_html=True)
+            expander = st.sidebar.expander("Add New Model")
+            model_name = expander.text_input("Enter the model name from Huggingface:")
+            HF_ACCESS_TOKEN = expander.text_input("Enter your Huggingface Access Token:")
+            MAX_MODEL_LEN = expander.slider('Adjust the maximum model length', min_value=32, max_value=1024, value=512)
+            SEED = expander.slider('Adjust the seed', min_value=1, max_value=100, value=42)
+            add_model = expander.button("Add")
+            if add_model:
+                with expander:
+                    with st.spinner("Adding model..."):
+                     # Simulate some delay
+                        response = add_LLM(model_name, logedin_username, HF_ACCESS_TOKEN, MAX_MODEL_LEN, SEED)
+                        if response:
+                            expander.success("Model added successfully!")
+                        else:
+                            expander.error("Error adding model")
+
+             
+
+            # Check if the user has any previous conversations, if Yes retrives the latest conversation, if not creates a new conversation
+            msgs = retrieving_messages(logedin_username,st.session_state.token)
+            if len(msgs) == 0:
+                    st.chat_message("ai").write("How can I help you?")
+            else: 
+                for msg in msgs:
+                    st.chat_message(msg.type).write(msg.content)
 
 
-            for msg in st.session_state.messages:
-                st.chat_message(msg["role"]).write(msg["content"])
+            if prompt := st.chat_input():  # (disabled=not replicate_api):
+                st.session_state.messages.append({"role": "user", "content": prompt})
+                with st.chat_message("user"):
+                    if st.session_state.messages[-1]["role"] != "assistant":
+                        with st.chat_message("assistant"):
+                            with st.spinner("Thinking..."):
+                                response = chat(model="meta-llama/Llama-2-7b-chat-hf", inference_endpoint="http://localhost:8500/v1",prompt=prompt, memory=True, username=logedin_username, conversation_number='1',access_token=st.session_state.token)
+                                if response:   
+                                    response = response["data"]
+                                    placeholder = st.empty()
+                                    full_response = process_text(response)
+                                    placeholder.markdown(full_response)
 
-
-            if prompt := st.chat_input(key="prompt"):    
-                    #response = chat(model="meta-llama/Llama-2-7b-chat-hf", inference_endpoint="http://localhost:8500/v1",prompt=prompt, memory=False, username=logedin_username, conversation_number=-1,access_token=st.session_state.token)
-                    response = retrieving_messages(username=logedin_username,converation_number='1' ,access_token=st.session_state.token)
-                    st.chat_message("human").write(response)
-                    #st.chat_message("human").write(response["data"])
+                            message = {"role": "assistant", "content": full_response}
+                            st.session_state.messages.append(message)
