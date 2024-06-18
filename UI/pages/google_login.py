@@ -4,9 +4,9 @@ import os
 import requests
 
 # Google OAuth 2.0 Configuration
-GOOGLE_CLIENT_ID = "539506164308-5du69hk8kn8p0q3uodi5fte4vn2pppjj.apps.googleusercontent.com"
-GOOGLE_CLIENT_SECRET = "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"
-GOOGLE_DISCOVERY_URL = "https://accounts.google.com/.well-known/openid-configuration"
+GOOGLE_CLIENT_ID = 
+GOOGLE_CLIENT_SECRET =
+GOOGLE_DISCOVERY_URL = 
 
 # Allow insecure transport for local development
 os.environ['OAUTHLIB_INSECURE_TRANSPORT'] = '1'
