@@ -14,6 +14,7 @@ from langchain_community.chat_message_histories import SQLChatMessageHistory
 from langchain_core.runnables.history import RunnableWithMessageHistory
 from langchain_core.runnables import Runnable
 from langchain.prompts import ChatPromptTemplate, MessagesPlaceholder
+
 # Define the LLM
 model = VLLMOpenAI(
     openai_api_key="EMPTY",
@@ -53,12 +54,14 @@ with_message_history = RunnableWithMessageHistory(
 
 print(with_message_history.invoke(
     {"input": "my Name is Amin?"},
-    config={"configurable": {"session_id": "abc126"}},
+    config={"configurable": {"session_id": "abc127"}},
 ))
 print(with_message_history.invoke(
     {"input": "What was my name?"},
-    config={"configurable": {"session_id": "abc126"}},
+    config={"configurable": {"session_id": "abc127"}},
 ))
 messages = SQLChatMessageHistory("abc126","sqlite:///memory.db").get_messages()
 for message in messages:
     print(message)
+
+# "http://localhost:8500/v1"

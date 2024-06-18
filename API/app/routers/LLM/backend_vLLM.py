@@ -1,223 +1,143 @@
-from langchain.chains.conversation.memory import ConversationBufferMemory
-
 import json
 import re
 from typing import Optional
 from pydantic import BaseModel
 import textwrap
-from langchain.chains import RetrievalQA
 import logging
-from langchain_community.vectorstores import Weaviate
-import weaviate
-import wandb
-from app.routers.LLM.backend_database import Database
-from langchain.schema import messages_from_dict, messages_to_dict
-from langchain.memory.chat_message_histories.in_memory import ChatMessageHistory
-from langchain import LLMChain
-from typing import List
-import json
 import yaml
-import time
-import asyncio
-from langchain_community.llms import HuggingFaceTextGenInference
-from langchain.chains import LLMChain
-from langchain.chains import LLMChain
-from langchain.memory import ConversationBufferMemory
-from langchain.chains import LLMChain
 import pathlib
-import os
-import transformers
-from torch import cuda, bfloat16
-from langchain.chains import RetrievalQA
-from langchain import PromptTemplate
-from langchain_community.vectorstores import Weaviate
-from app.logging_config import setup_logger
-from langchain import hub
-from langchain_community.llms import VLLMOpenAI
-import os
-from sqlalchemy import create_engine
-from langchain_community.llms import VLLMOpenAI
-from langchain_core.messages import HumanMessage
-from langchain_community.chat_message_histories import SQLChatMessageHistory
+import asyncio
+from langchain.prompts import ChatPromptTemplate, MessagesPlaceholder
 from langchain_core.runnables.history import RunnableWithMessageHistory
 from langchain_core.runnables import Runnable
-from langchain.prompts import ChatPromptTemplate, MessagesPlaceholder
 from langchain_community.chat_message_histories import SQLChatMessageHistory
-# ------------------- Configuration --------------------
-class Config:
-    def __init__(self, **entries):
-        self.__dict__.update(entries)
+from app.logging_config import setup_logger
+from app.routers.LLM.backend_database import Database
+from langchain_community.llms import VLLMOpenAI
+import tiktoken
+from fastapi import FastAPI
+from ... models import InferenceRequest
 
 
-
-class Input(BaseModel):
-    username: Optional[str]
-    prompt: Optional[str]
-    memory: Optional[bool]
-    conversation_number: Optional[int]
-    AI_assistance: Optional[bool]
-    collection_name: Optional[str]
-    llm_model: Optional[str]
+app = FastAPI()
 
 
-# ------------------------------ LLM Deployment -------------------------------
-class LLMDeployment:
-    def __init__(self, model_tokenizer,
-                 temperature =  0.01,
-                 max_new_tokens=  512,
-                 repetition_penalty= 1.1,
-                 batch_size= 2):
-        
-
-        self.logger = setup_logger()
-
-        current_path = pathlib.Path(__file__).parent.parent.parent.parent
-        config_path = current_path/ 'cluster_conf.yaml'
-        self.RAG_enabled = True
-        # Environment variables setup
-        with open(config_path, 'r') as self.file:
-            self.config = yaml.safe_load(self.file)
-            self.config = Config(**self.config)
-        # Initialize Weaviate client for RAG
-
-
-        # try:
-        #     self.weaviate_client = weaviate.Client(
-        #         url=self.config.weaviate_client_url,   
-        #     )
-        # except:
-        #     self.logger.error("Error in connecting to Weaviate")
-        #     self.RAG_enabled = False
-
-        # #setting up weight and bias logging
-        # self.wandb_logging_enabled = self.config.WANDB_ENABLE
-        # if self.wandb_logging_enabled:
-        #     try:
-        #         wandb.login(key = self.config.WANDB_KEY)
-        #         wandb.init(project="Service Metrics", notes="custom step")
-        #         wandb.define_metric("The number of input tokens")
-        #         wandb.define_metric("The number of generated tokens")
-        #         wandb.define_metric("Inference Time")
-        #         wandb.define_metric("token/second")
-        #         self.logger.info("Wandb Logging Enabled")
-        #     except:
-        #         self.wandb_logging_enabled = False
-        #         self.logger.info("Wandb Logging Not Enabled")
-        #         pass
-        
-
-        # Initialize deployment class
-        self.model_tokenizer = model_tokenizer
-        self.temperature = temperature
-        self.max_new_tokens = max_new_tokens
-        self.repetition_penalty = repetition_penalty
-        self.batch_size = batch_size
+# LLM Deployment class encapsulates the model interaction logic
+class vLLM_Inference:
+    def __init__(self):
+        # Initialize logger
+        self.logger = setup_logger()     
+        # Initialize tokenizer and model parameters
+        self.tokenizer = tiktoken.get_encoding('cl100k_base')
         self.loop = asyncio.get_running_loop()
-        self.access_token = self.config.Hugging_ACCESS_TOKEN
-
-
-        # initialize Prompt 
-        
-        #prompt_hub = hub.pull("llmchatbot/default",api_key = self.config.Langchain_access_key, api_url="https://api.hub.langchain.com")
-        
-
-        
-        
-
-        # Initialize Memory
+        # Define system prompt template
+        self.system_prompt = ChatPromptTemplate.from_messages([
+            ("system", "You're an AI assistant who is answering user questions"),
+            MessagesPlaceholder(variable_name="history"),
+            ("human", "{input}"),
+        ])
 
         self.database = Database()
 
-    
-    
-    
-
+    # Method to truncate text based on the given prompt
     def cut_off_text(self, text, prompt):
-        cutoff_phrase = prompt
-        index = text.find(cutoff_phrase)
-        if index != -1:
-            return text[:index]
-        else:
-            return text
+        index = text.find(prompt)
+        return text[:index] if index != -1 else text
 
+    # Method to remove a specific substring from a string
     def remove_substring(self, string, substring):
         return string.replace(substring, "")
 
-
+    # Method to clear the chat memory
     def cleaning_memory(self):
         print(self.memory.chat_memory.messages)
         self.memory.clear()
         print("Chat History Deleted")
 
+    # Method to parse and clean the response text
     def parse_text(self, text):
-        pattern = r"\s*Assistant:\s*"
-        pattern2 = r"\s*AI:\s*"
-        cleaned_text = re.sub(pattern, "", text)
-        cleaned_text = re.sub(pattern2, "", cleaned_text)
-        wrapped_text = textwrap.fill(cleaned_text, width=100)
-        return wrapped_text
-    def get_session_history(self, session_id,db_path="sqlite:///memory.db"):
-                    return SQLChatMessageHistory(session_id,db_path )
+        cleaned_text = re.sub(r"\s*Assistant:\s*", "", text)
+        cleaned_text = re.sub(r"\s*AI:\s*", "", cleaned_text)
+        return textwrap.fill(cleaned_text, width=100)
 
-    def InferenceCall(self, request: Input):
-      
+    # Method to retrieve session history from the database
+    def get_session_history(self, session_id, db_path="sqlite:///memory.db"):
+        return SQLChatMessageHistory(session_id, db_path)
+
+    # Method to count the number of tokens in a given text
+    def count_tokens(self, text):
+        return len(self.tokenizer.encode(text))
+
+    # Asynchronous method to update token usage in the database
+    async def update_tokens_and_database(self, username, input_prompt, response):
+        try:
+            input_tokens = self.count_tokens(input_prompt)
+            gen_tokens = self.count_tokens(response)
+            updated_tokens = {"username": username, "prompt_token_number": input_tokens, "gen_token_number": gen_tokens}
+            await self.loop.run_in_executor(None, self.database.update_token_usage, updated_tokens)
+        except Exception as e:
+            self.logger.error("Error in updating token usage: %s", e)
+
+    # Asynchronous method to invoke the LLM and handle responses
+    async def invoke(self, username, input_prompt, database, llm, conversation_id):
+        try:
+            # Invoke the LLM based on the presence of a conversation ID
+            if conversation_id:
+                config = {"configurable": {"session_id": conversation_id}}
+                response = llm.invoke({"input": input_prompt}, config={"configurable": {"session_id": conversation_id}})
+            else:
+                response = llm.invoke(input_prompt)
+            
+            # Schedule the token update task asynchronously
+            asyncio.create_task(self.update_tokens_and_database(username, input_prompt, response))
+            return response
+        except Exception as e:
+            self.logger.error("Error in Inference Call: %s", e)
+            return str(e)
+
+    # Asynchronous method to handle the inference call
+    async def InferenceCall(self, request: InferenceRequest):
+
+        try:
             self.logger.info("Received request by backend: %s", request.dict())
-            input_prompt = request.prompt
-            AI_assistance = request.AI_assistance
-            username = request.username
-            memory = request.memory
-            conversation_number = request.conversation_number
-            collection_name = request.collection_name
+            if not request.model or not request.inference_endpoint:
+                raise Exception("Model name or inference endpoint not provided")
+                return "Error: Model name not provided"
 
+            # Initialize the LLM with given parameters
             llm = VLLMOpenAI(
                 openai_api_key="EMPTY",
-                openai_api_base="http://localhost:8000/v1",
-                model_name="meta-llama/Llama-2-7b-chat-hf",
+                openai_api_base=request.inference_endpoint,
+                model_name=request.model,
                 model_kwargs={"stop": ["."]},
+                streaming=True,
             )
+            
+            conversation_id = None
 
-            if memory:
-                
-                # # Retrieve conversation ID from Database
-                # if conversation_number <= 0 or conversation_number is None:
+            # Handle memory retrieval if enabled
+            if request.memory:
+                if conversation_number <= 0 or conversation_number is None:
+                    conversation_id = self.database.retrieve_conversation({"username": request.username})["conversation_id"]
+                else:
+                    conversation_id = self.database.retrieve_conversation({"username": request.username, "conversation_number": conversation_number})["conversation_id"]
 
-                #     conversation_id = self.database.retrieve_conversation(
-                #         {
-                #             "username": username,
-                #         }
-                #     )
-                # else:
-                #     conversation_id = self.database.retrieve_conversation(
-                #         {
-                #             "username": username,
-                #             "conversation_number": conversation_number,
-                #         }
-                #     )
-                import logging
                 logging.getLogger().setLevel(logging.ERROR)
-                
-                self.prompt =  ChatPromptTemplate.from_messages(
-    [
-        (
-            "system",
-            "You're an chatbot assistant who is answering user's questions. Do add ",
-        ),
-        MessagesPlaceholder(variable_name="history"),
-        ("human", "{input}"),
-    ]
-)
-                runnable: Runnable = self.prompt | llm
-                with_message_history = RunnableWithMessageHistory(
+    
+                runnable: Runnable = self.system_prompt | llm
+
+                llm_with_message_history = RunnableWithMessageHistory(
                     runnable,
                     self.get_session_history,
                     input_messages_key="input",
                     history_messages_key="history",
                 )
-                reponse = with_message_history.invoke(
-                    {"input": "My name is Amin."},
-                    config={"configurable": {"session_id": "123"}},
-                )
-    
-                return reponse
-            
-                
+                response = await self.invoke(request.username, request.prompt, self.database, llm_with_message_history, conversation_id)
+                return response
+            else:
+                response = await self.invoke(request.username, request.prompt, self.database, llm, conversation_id)
+            return response
+
+        except Exception as e:
+            self.logger.error("Error in Inference Call: %s", e)
+            return str(e)

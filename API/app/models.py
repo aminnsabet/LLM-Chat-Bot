@@ -19,34 +19,51 @@ class UserInDB(LoginUser):
 class Data(BaseModel): 
     prompt: str
 
-class Input(BaseModel):
-    username: Optional[str]
-    password: Optional[str]
-    content: Optional[str]
-    conversation_number: Optional[int]
-    conversation_name: Optional[str]
-    user_id: Optional[int]
-    prompt_token_number: Optional[int]
-    gen_token_number: Optional[int]
-    token_limit: Optional[int]
+
+class VllmBuildRequest(BaseModel):
+    HUGGING_FACE_HUB_TOKEN: str
+    MODEL: str
+    TOKENIZER: Optional[str] = 'auto'
+    MAX_MODEL_LEN: Optional[int] = 512
+    TENSOR_PARALLEL_SIZE: Optional[int] = 1
+    SEED: Optional[int] = 42
+    QUANTIZATION: Optional[str]="None"
+
+
+
+class UserRequest(BaseModel):
+    username: Optional[str] = None
+    password: Optional[str] = None
+    prompt_token_number: Optional[int] = None
+    gen_token_number: Optional[int] = None
+    gen_token_limit: Optional[int] = None
+    prompt_token_limit: Optional[int] = None
+
 
 class InferenceRequest(BaseModel):
-    username: Optional[str]
-    prompt: Optional[str]
-    memory: Optional[bool]
-    conversation_number: Optional[int]
-    AI_assistance: Optional[bool]
-    collection_name: Optional[str]
-    llm_model: Optional[str] 
+    model: str= None
+    inference_endpoint:str = None
+    prompt: Optional[str]="Hi Nscale chatbot"
+    memory: Optional[bool]=False
+    conversation_number: Optional[int]=-1
+    
+    
+class InferenceRequestRag(BaseModel):
+    model: str = None
+    inference_endpoint:str=None
+    prompt: Optional[str] = "hello"
+    memory: Optional[bool]=False
+    conversation_number: Optional[int]=-1
+    username: Optional[str]="None"
 
 class DataBaseRequest(BaseModel):
-    content: Optional[str]
-    conversation_number: Optional[int]
-    conversation_name: Optional[str]
-    user_id: Optional[int]
-    prompt_token_number: Optional[int]
-    gen_token_number: Optional[int]
-    token_limit: Optional[int]
+    username: Optional[str] = None
+    conversation_number: Optional[int] = None
+    conversation_name: Optional[str]=None
+    user_id: Optional[int]=None
+    gen_token_number: Optional[int] = None
+    gen_token_limit: Optional[int] = None
+    prompt_token_limit: Optional[int] = None
 
 class VectorDBRequest(BaseModel):
     username: Optional[str] 
@@ -56,6 +73,12 @@ class VectorDBRequest(BaseModel):
     file_path: Optional[str] = None
     file_title: Optional[str] = None
     query: Optional[str] = None
+    model: Optional[str] = None
+    inference_endpoint:Optional[str]=None
+    memory: Optional[bool]=False
+    conversation_number: Optional[int]=-1
+    embedder: Optional[str]="sentence-transformers/all-MiniLM-L6-v2"
+
 
 class ArxivInput(BaseModel):
     username: Optional[str]
