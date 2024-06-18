@@ -1,14 +1,22 @@
 from fastapi import APIRouter, Depends, HTTPException, status, Security
 from sqlalchemy.orm import Session
-from app.models import LoginUser, Input, DataBaseRequest
-from app.depencencies.security import get_current_active_user
-from app.database import get_db
-from app.database import User, Conversation
+from ..models import LoginUser, UserRequest, DataBaseRequest
+from ..depencencies.security import get_current_active_user
+from ..database import get_db, User, Conversation
+# from app.models import LoginUser, UserRequest, DataBaseRequest
+# from app.depencencies.security import get_current_active_user
+# from app.database import get_db
+# from app.database import User, Conversation
 from functools import wraps
 from passlib.context import CryptContext
-
+import string
+import secrets
 pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
 
+
+def generate_random_name( length=12):
+        characters = string.ascii_letters + string.digits
+        return ''.join(secrets.choice(characters) for _ in range(length))
 
 def role_required(role: str):
     """
@@ -49,7 +57,7 @@ router = APIRouter()
 @router.post("/add_user/")
 @role_required("Admin")
 async def add_user(
-    input: Input,
+    input: UserRequest,
     current_user: LoginUser = Security(
         get_current_active_user
     ),
@@ -108,10 +116,12 @@ async def add_user(
         )
 
         # Set token_limit if provided
-        if input.token_limit is not None:
-            user.token_limit = input.token_limit
+        if input.gen_token_limit is not None:
+            user.gen_token_limit = input.gen_token_limit
         else:
-            user.token_limit = 100
+            user.token_limit = 1000
+        if input.prompt_token_limit is not None:
+            user.prompt_token_limit = input.prompt_token_limit
 
         db.add(user)
         db.commit()
@@ -125,7 +135,7 @@ async def add_user(
 @router.post("/update_token_limit/")
 @role_required("Admin")  # Only an Admin can add a update_token_limit
 async def update_token_limit(
-    input: Input,
+    input: UserRequest,
     current_user: LoginUser = Security(get_current_active_user),
     db: Session = Depends(get_db),  #
 ):
@@ -185,8 +195,9 @@ async def get_all_data(
                 "username": user.username,
                 "prompt_token_number": user.prompt_token_number,
                 "gen_token_number": user.gen_token_number,
+                "gen_token_limit": user.gen_token_limit,
+                "prompt_token_limit": user.prompt_token_limit,
                 "conversations": [],
-                "token_limit": user.token_limit,
                 "role": user.role,
                 "disabled": user.disabled,
                 "collection_names": user.collection_names
@@ -220,7 +231,7 @@ async def get_all_data(
 @router.delete("/delete_user/")
 @role_required("Admin")
 async def delete_user(
-    input: Input,
+    input: UserRequest,
     current_user: LoginUser = Security(
         get_current_active_user
     ),  # Use Security for dependencies that return a user
@@ -255,7 +266,7 @@ async def delete_user(
 @router.post("/check_user_existence/")
 @role_required("Admin")
 async def check_user_existence(
-    input: Input,
+    input: UserRequest,
     current_user: LoginUser = Security(
         get_current_active_user
     ),  # Use Security for dependencies that return a user
@@ -288,7 +299,7 @@ async def check_user_existence(
 @router.put("/disable_user/")
 @role_required("Admin")
 async def disable_user(
-    input: Input,
+    input: UserRequest,
     current_user: LoginUser = Security(
         get_current_active_user
     ),  # Use Security for dependencies that return a user
@@ -321,7 +332,7 @@ async def disable_user(
 @router.post("/update_token_number/")
 @role_required("Admin")
 async def update_token_number(
-    input: Input,
+    input: UserRequest,
     current_user: LoginUser = Security(get_current_active_user),
     db: Session = Depends(get_db),
 ):
@@ -361,7 +372,7 @@ async def update_token_number(
 # ------------------------------------ user Access methods ------------------------------------
 @router.post("/add_conversation/")
 async def add_conversation(
-    input: Input,
+    input: DataBaseRequest,
     current_user: LoginUser = Security(get_current_active_user),
     db: Session = Depends(get_db),
 ):
@@ -377,39 +388,39 @@ async def add_conversation(
         dict: A dictionary containing a success message if the conversation was added successfully, or an error message if there was an exception.
     """
     try:
-        # Check if the user exists by username
-        user = db.query(User).filter(User.username == current_user.username).first()
-        if not user:
-            # If the user doesn't exist, add it using the add_user function
-            user_id = add_user(input)
-            user = db.query(User).get(
-                user_id["user_id"]
-            )  # Retrieve the user object with the new ID
-        else:
-            user_id = user.id
+            user = db.query(User).filter(User.username == input.username).first()
+            if not user:
+                raise HTTPException(status_code=404, detail="User not found")
 
-        # Calculate the conversation number for the user
-        conversation_number = (
-            db.query(Conversation).filter(Conversation.user_id == user.id).count() + 1
-        )
+            if not user:
+                db.close()
+                return {"error": f"User {current_user.username} not found"}
 
-        # Add the conversation
-        conversation = Conversation(
-            user_id=user.id,
-            conversation_number=conversation_number,
-            content=input.content,
-            conversation_name=input.conversation_name,  # Save the name of the conversation
-        )
-        db.add(conversation)
-        db.commit()
-        return {"success": "Conversation added"}
+            conversation_number = db.query(Conversation).filter(Conversation.user_id == user.id).count() + 1
+            conversation_id = f"{user.username}_{user.id}_Conv_{conversation_number}"
+
+            if not input.conversation_name:
+                conversation_name =  generate_random_name()
+            else:
+                conversation_name = input.conversation_name
+
+            conversation = Conversation(
+                user_id=user.id,
+                conversation_number=conversation_number,
+                conversation_name=conversation_name,
+                conversation_id=conversation_id  # Set the unique conversation_id
+            )
+            db.add(conversation)
+            db.commit()
+            db.close()
+            return {"message": "Conversation added", "conversation_id": conversation_id}
     except Exception as e:
-        return {"error": str(e)}
+            return {"error": str(e)}
 
 
 @router.delete("/delete_conversation/")
 async def delete_conversation(
-    input: Input,
+    input: UserRequest,
     current_user: LoginUser = Security(get_current_active_user),
     db: Session = Depends(get_db),
 ):
@@ -451,7 +462,7 @@ async def delete_conversation(
 
 @router.post("/retrieve_conversation/")
 async def retrieve_conversation(
-    input: Input,
+    input: DataBaseRequest,
     current_user: LoginUser = Security(get_current_active_user),
     db: Session = Depends(get_db),
 ):
@@ -470,31 +481,45 @@ async def retrieve_conversation(
         HTTPException: If the user or conversation is not found in the database.
     """
     try:
-        user = db.query(User).filter(User.username == current_user.username).first()
-        if not user:
-            raise HTTPException(status_code=404, detail="User not found")
+            user = db.query(User).filter(User.username == input.username).first()
+            if not user:
+                db.close()
+                return {"error": f"User {input.username} not found"}
 
-        conversation = (
-            db.query(Conversation)
-            .filter(
-                Conversation.conversation_number == input.conversation_number,
-                Conversation.user_id == user.id,
-            )
-            .first()
-        )
 
-        if not conversation:
-            raise HTTPException(status_code=404, detail="Conversation not found")
+            # Check if conversation_number is provided in the input
+            if input.conversation_number:
+                conversation = (
+                    db.query(Conversation)
+                    .filter(
+                        Conversation.conversation_number == input.conversation_number,
+                        Conversation.user_id == user.id,
+                    )
+                    .first()
+                )
+            else:
+                # Get the latest conversation for the user
+                conversation = (
+                    db.query(Conversation)
+                    .filter(Conversation.user_id == user.id)
+                    .order_by(Conversation.timestamp.desc())
+                    .first()
+                )
+            if not conversation:
+                db.close()
+                return {"error": "Conversation not found"}
+            db.close()
 
-        return {
-            "user_id": conversation.user_id,
-            "conversation_id": conversation.conversation_number,
-            "content": conversation.content,
-            "timestamp": conversation.timestamp,
-            "conversation_name": conversation.conversation_name,
-        }
+            return {
+                "user_id": conversation.user_id,
+                "conversation_number": conversation.conversation_number,
+                "timestamp": conversation.timestamp,
+                "conversation_name": conversation.conversation_name,
+                "conversation_id": conversation.conversation_id,
+            }
     except Exception as e:
-        return {"error": str(e)}
+            return {"error": str(e)}
+
 
 
 @router.post("/retrieve_latest_conversation/")
@@ -552,7 +577,7 @@ async def retrieve_latest_conversation(input: DataBaseRequest,
 
 @router.post("/update_conversation/")
 async def update_conversation(
-    input: Input,
+    input: UserRequest,
     current_user: LoginUser = Security(get_current_active_user),
     db: Session = Depends(get_db),
 ):
@@ -609,7 +634,7 @@ async def update_conversation(
 
 @router.post("/update_conversation_name/")
 async def update_conversation_name(
-    input: Input,
+    input: UserRequest,
     current_user: LoginUser = Security(get_current_active_user),
     db: Session = Depends(get_db),
 ):
@@ -695,7 +720,7 @@ async def retrieve_all_conversations(
 
 @router.post("/get_user_conversations/")
 async def get_user_conversations(
-    input: Input,
+    input: UserRequest,
     current_user: LoginUser = Security(get_current_active_user),
     db: Session = Depends(get_db),
 ):

@@ -46,10 +46,15 @@ async def query_vectorDB(class_name: str = Form(...),
                           current_user: User = Depends(get_current_active_user),
                           file: UploadFile = File(None),
                           file_title: Optional[str] = Form(None),
-                          query: Optional[str] = Form(None)):
+                          query: Optional[str] = Form(None),
+                          model: Optional[str] = Form(None),
+                          inference_endpoint: Optional[str] = Form(None),
+                          embedder: Optional[str] = Form("sentence-transformers/all-MiniLM-L6-v2")
+                          ):
     try:
         print(f"received data: {class_name}, {mode}, {vectorDB_type}, {file_path}, {current_user.username}, {query}")
         print(f"Received file: {file.filename if file else 'No file'}")
+        print(f"Checking the new request parameters: query {query}, model {model}, endpoint {inference_endpoint}, and embedder: {embedder}")
         username = current_user.username
 
         # Check if a file is included in the request
@@ -80,10 +85,15 @@ async def query_vectorDB(class_name: str = Form(...),
             "file_path": file_path,
             "file_title": file_title,
             "query": query,
-        }
+            "model": model,
+            "inference_endpoint": inference_endpoint,
+            "embedder": embedder
+            
+                    }
         # Send the request to the external service
         response = requests.post(f"{Ray_service_URL}/VectorDB", json=data_dict)
         print('response', response) 
+        logger.info(f"checkpoint logging: {response}")
         response.raise_for_status()  # Raises an HTTPError for unsuccessful status codes
         response_data = response.json()
         return {"username": current_user.username, "response": response_data}
