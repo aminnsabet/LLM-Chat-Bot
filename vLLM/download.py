@@ -43,7 +43,7 @@ from langchain_community.chat_message_histories import SQLChatMessageHistory
 
 
 def get_session_history(session_id):
-    return SQLChatMessageHistory(session_id, "sqlite:///memory.db")
+    return SQLChatMessageHistory(session_id, "sqlite:////home/amin_sabet/dev/LLM-Chat-Bot/API/memory.db")
 
 with_message_history = RunnableWithMessageHistory(
     runnable,
@@ -54,13 +54,13 @@ with_message_history = RunnableWithMessageHistory(
 
 print(with_message_history.invoke(
     {"input": "my Name is Amin?"},
-    config={"configurable": {"session_id": "abc127"}},
+    config={"configurable": {"session_id": "abc122"}},
 ))
 print(with_message_history.invoke(
     {"input": "What was my name?"},
-    config={"configurable": {"session_id": "abc127"}},
+    config={"configurable": {"session_id": "abc122"}},
 ))
-messages = SQLChatMessageHistory("abc126","sqlite:///memory.db").get_messages()
+messages = SQLChatMessageHistory("abc122","sqlite:////home/amin_sabet/dev/LLM-Chat-Bot/API/memory.db").get_messages()
 for message in messages:
     print(message)
 
