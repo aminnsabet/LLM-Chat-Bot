@@ -120,6 +120,7 @@ class VLLMManager:
         else:
             return True
 
+
     def shutdown_model(self):
         self.model = None
         self.logger.info(f"Shutting down model: {self.model}")
@@ -240,7 +241,7 @@ class VectorDataBase:
             list: A list of serialized document chunks.
         ''' 
         #text_splitter = CharacterTextSplitter(chunk_size=self.chunk_size, chunk_overlap=self.chunk_overlap)
-        text_splitter = RecursiveCharacterTextSplitter(chunk_size=200, chunk_overlap=40)
+        text_splitter = RecursiveCharacterTextSplitter(chunk_size=800, chunk_overlap=80)
         text_docs = text_splitter.split_documents(docs)
 
         serialized_docs = [
@@ -464,6 +465,7 @@ class VectorDataBase:
                         vectorizer_config=Configure.Vectorizer.text2vec_huggingface(
                             model=vectorizer,
                         ),
+                        vector_index_config=Configure.VectorIndex.flat(),
                         properties=[  # properties configuration is optional
                             Property(name="document_title", data_type=DataType.TEXT),
                             Property(name="page_content", data_type=DataType.TEXT),
@@ -789,6 +791,101 @@ class VectorDataBase:
 
         return response
 
+    def multi_query_retrieval_augmented_generation(self, username, class_name, model, inference_endpoint, embedder_name, query):
+        from langchain_core.runnables import chain
+        from operator import itemgetter
+        self.current_llm = self.initialize_vllm_manager(username, model, inference_endpoint)
+        full_class_name = str(username) + "_" + str(class_name)
+        retriever = self.get_collection_based_retriver(self.weaviate_client, str(full_class_name), embedder_name)
+
+        multi_query_template = """You are an AI language model assistant. Your task is to generate three different version of the given user question 
+        to retrieve relevant documents from a vector database. By generating multiple perspectives on the user question, your goal is to help
+        the user overcome some of the limitations of similarity search. 
+        Provide these laternative questions separated by newlines, Original question: {question}"""
+        prompt_perspectives = ChatPromptTemplate.from_template(multi_query_template)
+
+        generate_queries = (
+            prompt_perspectives
+            | self.current_llm
+            | StrOutputParser()
+            | (lambda x: x.split("\n"))
+        )
+
+        def get_unique_union(documents: list[list]):
+            from langchain.load import dumps, loads
+            flatten = [dumps(doc) for sublist in documents for doc in sublist]
+            unique_doc = list(set(flatten))
+            return [loads(doc) for doc in unique_doc]
+        
+        question = query
+        ret_chain = generate_queries | retriever.map() | get_unique_union
+        docs = ret_chain.invoke({"question":question})
+        self.logger.info(f"Checking the generated queries: {docs}")
+
+        template = """Answer the following question based on this context:
+
+        {context}
+
+        Question: {question}
+        """
+        prompt = ChatPromptTemplate.from_template(template)
+        final_chain = (
+            {"context": ret_chain,
+             "question": itemgetter("question")}
+             |prompt
+             |self.current_llm
+             |StrOutputParser()
+        )
+        response = final_chain.invoke({"question":question})
+        self.logger.info(f"Checking the response after multi queries: {response}")
+        return response
+
+    
+
+    def hyde_retrieval_augmented_gneneration(self, username, class_name, model, inference_endpoint, embedder_name, query):
+        from langchain_core.runnables import chain
+        self.current_llm = self.initialize_vllm_manager(username, model, inference_endpoint)
+        full_class_name = str(username) + "_" + str(class_name)
+        retriever = self.get_collection_based_retriver(self.weaviate_client, str(full_class_name), embedder_name)
+
+
+        hyde_template = """
+            Even if you do not know the full answer, generate a one-paragraph hypothetical answer to the below question.
+
+            {question}"""
+        
+        hyde_prompt = ChatPromptTemplate.from_template(hyde_template)
+        hyde_retriever = hyde_prompt | self.current_llm | StrOutputParser()
+
+        @chain
+        def hyde_ret(question):
+            hypothetical_document = hyde_retriever.invoke({"question":question})
+            self.logger.info(f"Checking the hypo documents: {hypothetical_document}")
+            return retriever.invoke(hypothetical_document)
+        
+        template = """
+            Answer the question based only on the following context:
+            {context}
+            Question: {question}
+            """
+        
+        prompt = ChatPromptTemplate.from_template(template)
+
+        answer_chain = prompt | self.current_llm | StrOutputParser()
+
+        @chain
+        def final_chain(question):
+            documents = hyde_ret.invoke({"question": question})
+            self.logger.info(f"Logging the documents in hyde: {documents}")
+            print("hyde documents: ", documents)
+            for s in answer_chain.stream({"question":question,"context":documents}):
+                yield s
+
+        response =  final_chain.invoke(str(query))
+        self.logger.info(f"logging the response of hyde: {response}")
+        return response
+            
+    
 
     @VDB_app.post("/")
     async def VectorDataBase(self, request: VDBaseInput):
@@ -857,7 +954,14 @@ class VectorDataBase:
                     response = self.retrieval_augmented_generation(request.username, request.class_name, request.embedder, request.model, request.inference_endpoint, request.query)
                     self.logger.info(f"Checking the response of do rag: {response}")
                     return response
-                    #retrieval_augmented_generation(self, username, class_name, embedder_name, model, inference_endpoint, query):
+                elif request.mode == "do_rag_hyde":
+                    response = self.hyde_retrieval_augmented_gneneration(request.username, request.class_name, request.model, request.inference_endpoint, request.embedder, request.query)
+                    self.logger.info(f"CHecking after hyde the response: {response}")
+                    return response
+                elif request.mode == "do_rag_mq":
+                    response = self.multi_query_retrieval_augmented_generation(request.username, request.class_name, request.model, request.inference_endpoint, request.embedder, request.query)
+                    self.logger.info(f"Checking the response after MQ RAG: {response}")
+                    return response
                 self.logger.info(f"request processed successfully {request}: %s", )
                 return {"username": request.username, "response": response}
             except Exception as e:
