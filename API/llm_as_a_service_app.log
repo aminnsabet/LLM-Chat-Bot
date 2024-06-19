@@ -2084,3 +2084,66 @@
 2024-06-19 14:37:23,938 - llm_as_a_service_logger - INFO - Conversation successfully retrieved
 2024-06-19 14:37:23,938 - llm_as_a_service_logger - INFO - Conversation successfully retrieved
 2024-06-19 14:37:23,938 - llm_as_a_service_logger - INFO - Conversation successfully retrieved
+2024-06-19 15:24:36,559 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-06-19 15:24:36,559 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-06-19 15:24:36,559 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-06-19 15:24:36,559 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-06-19 15:24:36,559 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-06-19 15:24:36,559 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-06-19 15:24:36,559 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-06-19 15:25:10,565 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user amin
+2024-06-19 15:25:10,565 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user amin
+2024-06-19 15:25:10,565 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user amin
+2024-06-19 15:25:10,565 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user amin
+2024-06-19 15:25:10,565 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user amin
+2024-06-19 15:25:10,565 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user amin
+2024-06-19 15:25:10,565 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user amin
+2024-06-19 15:33:32,616 - llm_as_a_service_logger - INFO - Received request by router: {'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1', 'prompt': 'hi', 'memory': True, 'conversation_number': 1, 'username': 'amin'}
+2024-06-19 15:33:32,616 - llm_as_a_service_logger - INFO - Received request by router: {'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1', 'prompt': 'hi', 'memory': True, 'conversation_number': 1, 'username': 'amin'}
+2024-06-19 15:33:32,616 - llm_as_a_service_logger - INFO - Received request by router: {'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1', 'prompt': 'hi', 'memory': True, 'conversation_number': 1, 'username': 'amin'}
+2024-06-19 15:33:32,616 - llm_as_a_service_logger - INFO - Received request by router: {'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1', 'prompt': 'hi', 'memory': True, 'conversation_number': 1, 'username': 'amin'}
+2024-06-19 15:33:32,616 - llm_as_a_service_logger - INFO - Received request by router: {'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1', 'prompt': 'hi', 'memory': True, 'conversation_number': 1, 'username': 'amin'}
+2024-06-19 15:33:32,616 - llm_as_a_service_logger - INFO - Received request by router: {'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1', 'prompt': 'hi', 'memory': True, 'conversation_number': 1, 'username': 'amin'}
+2024-06-19 15:33:32,616 - llm_as_a_service_logger - INFO - Received request by router: {'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1', 'prompt': 'hi', 'memory': True, 'conversation_number': 1, 'username': 'amin'}
+2024-06-19 15:33:32,618 - llm_as_a_service_logger - INFO - Received request by backend: {'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1', 'prompt': 'hi', 'memory': True, 'conversation_number': 1, 'username': 'amin'}
+2024-06-19 15:33:32,618 - llm_as_a_service_logger - INFO - Received request by backend: {'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1', 'prompt': 'hi', 'memory': True, 'conversation_number': 1, 'username': 'amin'}
+2024-06-19 15:33:32,618 - llm_as_a_service_logger - INFO - Received request by backend: {'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1', 'prompt': 'hi', 'memory': True, 'conversation_number': 1, 'username': 'amin'}
+2024-06-19 15:33:32,618 - llm_as_a_service_logger - INFO - Received request by backend: {'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1', 'prompt': 'hi', 'memory': True, 'conversation_number': 1, 'username': 'amin'}
+2024-06-19 15:33:32,618 - llm_as_a_service_logger - INFO - Received request by backend: {'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1', 'prompt': 'hi', 'memory': True, 'conversation_number': 1, 'username': 'amin'}
+2024-06-19 15:33:32,618 - llm_as_a_service_logger - INFO - Received request by backend: {'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1', 'prompt': 'hi', 'memory': True, 'conversation_number': 1, 'username': 'amin'}
+2024-06-19 15:33:32,618 - llm_as_a_service_logger - INFO - Received request by backend: {'model': 'meta-llama/Llama-2-7b-chat-hf', 'inference_endpoint': 'http://localhost:8500/v1', 'prompt': 'hi', 'memory': True, 'conversation_number': 1, 'username': 'amin'}
+2024-06-19 15:33:32,889 - llm_as_a_service_logger - INFO - Retrieving conversation...
+2024-06-19 15:33:32,889 - llm_as_a_service_logger - INFO - Retrieving conversation...
+2024-06-19 15:33:32,889 - llm_as_a_service_logger - INFO - Retrieving conversation...
+2024-06-19 15:33:32,889 - llm_as_a_service_logger - INFO - Retrieving conversation...
+2024-06-19 15:33:32,889 - llm_as_a_service_logger - INFO - Retrieving conversation...
+2024-06-19 15:33:32,889 - llm_as_a_service_logger - INFO - Retrieving conversation...
+2024-06-19 15:33:32,889 - llm_as_a_service_logger - INFO - Retrieving conversation...
+2024-06-19 15:33:32,899 - llm_as_a_service_logger - INFO - User found: <app.routers.LLM.backend_database.User object at 0x7f1d054ad690>
+2024-06-19 15:33:32,899 - llm_as_a_service_logger - INFO - User found: <app.routers.LLM.backend_database.User object at 0x7f1d054ad690>
+2024-06-19 15:33:32,899 - llm_as_a_service_logger - INFO - User found: <app.routers.LLM.backend_database.User object at 0x7f1d054ad690>
+2024-06-19 15:33:32,899 - llm_as_a_service_logger - INFO - User found: <app.routers.LLM.backend_database.User object at 0x7f1d054ad690>
+2024-06-19 15:33:32,899 - llm_as_a_service_logger - INFO - User found: <app.routers.LLM.backend_database.User object at 0x7f1d054ad690>
+2024-06-19 15:33:32,899 - llm_as_a_service_logger - INFO - User found: <app.routers.LLM.backend_database.User object at 0x7f1d054ad690>
+2024-06-19 15:33:32,899 - llm_as_a_service_logger - INFO - User found: <app.routers.LLM.backend_database.User object at 0x7f1d054ad690>
+2024-06-19 15:33:32,901 - llm_as_a_service_logger - INFO - Conversation found: <app.routers.LLM.backend_database.Conversation object at 0x7f1d03b1dd80>
+2024-06-19 15:33:32,901 - llm_as_a_service_logger - INFO - Conversation found: <app.routers.LLM.backend_database.Conversation object at 0x7f1d03b1dd80>
+2024-06-19 15:33:32,901 - llm_as_a_service_logger - INFO - Conversation found: <app.routers.LLM.backend_database.Conversation object at 0x7f1d03b1dd80>
+2024-06-19 15:33:32,901 - llm_as_a_service_logger - INFO - Conversation found: <app.routers.LLM.backend_database.Conversation object at 0x7f1d03b1dd80>
+2024-06-19 15:33:32,901 - llm_as_a_service_logger - INFO - Conversation found: <app.routers.LLM.backend_database.Conversation object at 0x7f1d03b1dd80>
+2024-06-19 15:33:32,901 - llm_as_a_service_logger - INFO - Conversation found: <app.routers.LLM.backend_database.Conversation object at 0x7f1d03b1dd80>
+2024-06-19 15:33:32,901 - llm_as_a_service_logger - INFO - Conversation found: <app.routers.LLM.backend_database.Conversation object at 0x7f1d03b1dd80>
+2024-06-19 15:33:32,902 - llm_as_a_service_logger - INFO - Conversation successfully retrieved
+2024-06-19 15:33:32,902 - llm_as_a_service_logger - INFO - Conversation successfully retrieved
+2024-06-19 15:33:32,902 - llm_as_a_service_logger - INFO - Conversation successfully retrieved
+2024-06-19 15:33:32,902 - llm_as_a_service_logger - INFO - Conversation successfully retrieved
+2024-06-19 15:33:32,902 - llm_as_a_service_logger - INFO - Conversation successfully retrieved
+2024-06-19 15:33:32,902 - llm_as_a_service_logger - INFO - Conversation successfully retrieved
+2024-06-19 15:33:32,902 - llm_as_a_service_logger - INFO - Conversation successfully retrieved
+2024-06-19 15:34:02,784 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user amin
+2024-06-19 15:34:02,784 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user amin
+2024-06-19 15:34:02,784 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user amin
+2024-06-19 15:34:02,784 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user amin
+2024-06-19 15:34:02,784 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user amin
+2024-06-19 15:34:02,784 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user amin
+2024-06-19 15:34:02,784 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user amin

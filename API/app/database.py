@@ -6,6 +6,20 @@ from sqlalchemy.sql import func
 from sqlalchemy import Boolean
 from passlib.context import CryptContext
 import pathlib
+from sqlalchemy.orm import relationship
+import os
+from sqlalchemy.orm import relationship
+from sqlalchemy import create_engine, Column, Integer, String, DateTime, ForeignKey, UniqueConstraint, Boolean
+from sqlalchemy.orm import sessionmaker, declarative_base
+from sqlalchemy.sql import func
+from passlib.context import CryptContext
+import yaml
+from langchain_core.chat_history import BaseChatMessageHistory
+import pathlib
+from app.logging_config import setup_logger
+import secrets
+import string
+from dotenv import load_dotenv
 #from app.logging_config import setup_logger
 import yaml
 from sqlalchemy import UniqueConstraint
@@ -37,6 +51,7 @@ Base = declarative_base()
 
 pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
 
+
 class User(Base):
     __tablename__ = "users"
     id = Column(Integer, primary_key=True, index=True)
@@ -44,22 +59,33 @@ class User(Base):
     hashed_password = Column(String)
     disabled = Column(Boolean, default=False)
     role = Column(String, default="User")
-    available_models = Column(String, default="")
     gen_token_limit = Column(Integer, default=1000)
     prompt_token_limit = Column(Integer, default=10000)
     prompt_token_number = Column(Integer, default=0)
     gen_token_number = Column(Integer, default=0)
     timestamp = Column(DateTime(timezone=True), server_default=func.now())
     collection_names = Column(String, default="")
+    engines = relationship("VLLM_Engine", back_populates="user")
 
+class VLLM_Engine(Base):
+    __tablename__ = "vllm_engines"
+    id = Column(Integer, primary_key=True, index=True)
+    engine_name = Column(String, unique=True, index=True)
+    container_id = Column(String, unique=True, index=True)
+    model_name = Column(String, default="VLLM")
+    quantized = Column(String, default="None")
+    timestamp = Column(DateTime(timezone=True), server_default=func.now())
+    max_model_length = Column(Integer, default=512)
+    seed = Column(Integer, default=42)
+    user_id = Column(Integer, ForeignKey('users.id'))
+    user = relationship("User", back_populates="engines")
+    __table_args__ = (UniqueConstraint('engine_name', name='_engine_name_uc'),)
 
-# Conversation model
 class Conversation(Base):
     __tablename__ = "conversations"
-
     id = Column(Integer, primary_key=True, index=True)
     user_id = Column(Integer, index=True)
-    conversation_number = Column(Integer)  # Add conversation number column
+    conversation_number = Column(Integer)
     timestamp = Column(DateTime(timezone=True), server_default=func.now())
     conversation_name = Column(String)
     conversation_id = Column(String, unique=True, index=True)

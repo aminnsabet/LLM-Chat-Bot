@@ -60,19 +60,7 @@ def retrieve_latest_conversation(username, access_token):
         return None
     else:
         return None
-    
-def add_conversation(username, conversation, access_token):
-    query_data = {
-        "username": username,
-        "content": json.dumps(conversation),
-        "conversation_name": "Current Conversation",
-    }
-    headers = {"Authorization": f"Bearer {access_token}"}
-    resp = requests.post(f"{BASE_URL}/db_request/add_conversation/", json=query_data, headers=headers)
-    if resp.status_code == 200:
-        return True
-    else:
-        return False
+
 
 def chat(model, inference_endpoint, prompt, memory, username, conversation_number, access_token):
     headers = {"Authorization": f"Bearer {access_token}"}
@@ -131,6 +119,26 @@ def retrieve_user_conversations_info(username, access_token):
     resp = requests.post(f"{BASE_URL}/db_request/retrieve_all_conversations/", json=query_data, headers=headers)
     if resp.status_code == 200:
         return resp.json()
+    else:
+        return None
+
+def add_conversation(username,access_token, conversation_name=None):
+    if not conversation_name:
+        query_data = {
+        "username": username,
+        "conversation_name": conversation_name
+        }
+    else:
+        query_data = {
+        "username": username,
+        "conversation_name": conversation_name
+        }
+    headers = {"Authorization": f"Bearer {access_token}"}
+    resp = requests.post(f"{BASE_URL}/db_request/add_conversation/",json=query_data, headers=headers)
+    if resp.status_code == 200:
+        return resp.json()
+    else:
+        return None
 
 if "username" not in st.session_state or st.sidebar.button("Logout"):
     if "username" not in st.session_state:
@@ -200,13 +208,16 @@ else:
                 user_chat_list = retrieve_user_conversations_info(logedin_username, st.session_state.token)
 
             user_chat_list = retrieve_user_conversations_info(logedin_username, st.session_state.token)
-            if len(user_chat_list) < 0:
+
+            if not user_chat_list:
                 st.sidebar.write("No previous chats")
-            selected_chat = st.sidebar.radio(
-                "Select a conversation:",
-                user_chat_list["conversation_numbers"],
-                index=len(user_chat_list["conversation_numbers"]) - 1,
-            )
+                selected_chat = None
+            else:
+                selected_chat = st.sidebar.radio(
+                    "Select a conversation:",
+                    user_chat_list["conversation_numbers"],
+                    index=len(user_chat_list["conversation_numbers"]) - 1,
+                )
 
             if "messages" not in st.session_state:
                 st.session_state.messages = []

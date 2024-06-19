@@ -1,9 +1,8 @@
 import os
-from sqlalchemy import create_engine, Column, Integer, String, DateTime
+from sqlalchemy.orm import relationship
+from sqlalchemy import create_engine, Column, Integer, String, DateTime, ForeignKey, UniqueConstraint, Boolean
 from sqlalchemy.orm import sessionmaker, declarative_base
 from sqlalchemy.sql import func
-from dotenv import load_dotenv
-from sqlalchemy import Boolean
 from passlib.context import CryptContext
 import yaml
 from langchain_core.chat_history import BaseChatMessageHistory
@@ -11,34 +10,31 @@ import pathlib
 from app.logging_config import setup_logger
 import secrets
 import string
-# from app.logging_config import setup_logger
-from sqlalchemy import UniqueConstraint
+from dotenv import load_dotenv
+
+
 current_path = pathlib.Path(__file__).parent.parent.parent.parent
-config_path = current_path/ 'cluster_conf.yaml'
+config_path = current_path / 'cluster_conf.yaml'
+
 # Environment and DB setup
 with open(config_path, 'r') as file:
     config = yaml.safe_load(file)
 
-
-
 DATABASE_URL = config.get("DATABASE_URL")
-
 DB_SERVICE_URL = config.get("DB_SERVICE_URL")  # Make sure this is used somewhere in your application
 DB_DIR = config.get("DB_DIR")
 if DB_DIR == "CURRENT_DIR":
     DB_DIR = os.getcwd()
 
-
-db_name = config.get("DB_name","chat_bot_db")
+db_name = config.get("DB_name", "chat_bot_db")
 db_path = os.path.join(DB_DIR, f"{db_name}.db")
 DATABASE_URL = f"sqlite:///{db_path}"
 
 # Check if the database file exists
 if not os.path.exists(db_path):
-    raise FileNotFoundError("Database file not found in ",db_path)
+    raise FileNotFoundError("Database file not found in ", db_path)
 else:
     print(f"Database file {db_path} found.")
-
 
 # SQLAlchemy base class
 Base = declarative_base()
@@ -52,44 +48,52 @@ class User(Base):
     hashed_password = Column(String)
     disabled = Column(Boolean, default=False)
     role = Column(String, default="User")
-    available_models = Column(String, default="")
     gen_token_limit = Column(Integer, default=1000)
     prompt_token_limit = Column(Integer, default=10000)
     prompt_token_number = Column(Integer, default=0)
     gen_token_number = Column(Integer, default=0)
     timestamp = Column(DateTime(timezone=True), server_default=func.now())
     collection_names = Column(String, default="")
-    
+    engines = relationship("VLLM_Engine", back_populates="user")
 
+class VLLM_Engine(Base):
+    __tablename__ = "vllm_engines"
+    id = Column(Integer, primary_key=True, index=True)
+    engine_name = Column(String, unique=True, index=True)
+    container_id = Column(String, unique=True, index=True)
+    model_name = Column(String, default="VLLM")
+    quantized = Column(String, default="None")
+    timestamp = Column(DateTime(timezone=True), server_default=func.now())
+    max_model_length = Column(Integer, default=512)
+    seed = Column(Integer, default=42)
+    user_id = Column(Integer, ForeignKey('users.id'))
+    user = relationship("User", back_populates="engines")
+    __table_args__ = (UniqueConstraint('engine_name', name='_engine_name_uc'),)
 
-# Conversation model
 class Conversation(Base):
     __tablename__ = "conversations"
-
     id = Column(Integer, primary_key=True, index=True)
     user_id = Column(Integer, index=True)
-    conversation_number = Column(Integer)  # Add conversation number column
+    conversation_number = Column(Integer)
     timestamp = Column(DateTime(timezone=True), server_default=func.now())
     conversation_name = Column(String)
     conversation_id = Column(String, unique=True, index=True)
     __table_args__ = (UniqueConstraint('conversation_id', name='_conversation_id_uc'),)
-
 
 # Create database engine
 engine = create_engine(DATABASE_URL)
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 Base.metadata.create_all(bind=engine)
 
-
-# Create tables if they don't exist
-# Database session generator
 class Database:
     def __init__(self):
         self.db = SessionLocal()
         self.logger = setup_logger()
+
     def generate_random_name(self, length=12):
         characters = string.ascii_letters + string.digits
         return ''.join(secrets.choice(characters) for _ in range(length))
+
     def add_conversation(self, input: dict):
         try:
             user = self.db.query(User).filter(User.username == input["username"]).first()
@@ -108,7 +112,7 @@ class Database:
                 user_id=user.id,
                 conversation_number=conversation_number,
                 conversation_name=conversation_name,
-                conversation_id=conversation_id  # Set the unique conversation_id
+                conversation_id=conversation_id
             )
             self.db.add(conversation)
             self.db.commit()
@@ -127,15 +131,13 @@ class Database:
                 self.db.close()
                 return {f"User {input['username']} not found"}
 
-        
-
             if input.get("prompt_token_number"):
                 user.prompt_token_number += input["prompt_token_number"]
 
             if input.get("gen_token_number"):
                 user.gen_token_number += input["gen_token_number"]
 
-                if user.gen_token_number > user.gen_token_limit  or user.prompt_token_number > user.prompt_token_limit:
+                if user.gen_token_number > user.gen_token_limit or user.prompt_token_number > user.prompt_token_limit:
                     user.disabled = True
                     user.gen_token_limit = 0
                     user.prompt_token_limit = 0
@@ -146,7 +148,6 @@ class Database:
         except Exception as e:
             self.logger.error(f"Error occurred: {e}")
             return {"error": "An unexpected error occurred. Please try again later."}
-
 
     def retrieve_conversation(self, input):
         try:
@@ -160,7 +161,6 @@ class Database:
 
             self.logger.info(f"User found: {user}")
 
-            # Check if conversation_number is provided in the input
             if "conversation_number" in input and input["conversation_number"]:
                 conversation = (
                     self.db.query(Conversation)
@@ -171,7 +171,6 @@ class Database:
                     .first()
                 )
             else:
-                # Get the latest conversation for the user
                 conversation = (
                     self.db.query(Conversation)
                     .filter(Conversation.user_id == user.id)
@@ -186,7 +185,6 @@ class Database:
 
             self.logger.info(f"Conversation found: {conversation}")
 
-
             self.logger.info("Conversation successfully retrieved")
             self.db.close()
 
@@ -200,8 +198,6 @@ class Database:
         except Exception as e:
             self.logger.error(f"Error occurred: {e}")
             return {"error": "An unexpected error occurred. Please try again later."}
-
-        
 
     def add_collection(self, input):
         try:
@@ -226,7 +222,7 @@ class Database:
         except Exception as e:
             self.logger.error(f"Error occurred: {e}")
             return {"error": "An unexpected error occurred. Please try again later."}
-    
+
     def check_collection_exists(self, input):
         try:
             user = self.db.query(User).filter(User.username == input["username"]).first()
@@ -261,7 +257,7 @@ class Database:
         except Exception as e:
             self.logger.error(f"Error occurred: {e}")
             return {"error": "An unexpected error occurred. Please try again later."}
-    
+
     def delete_collection(self, input):
         try:
             user = self.db.query(User).filter(User.username == input["username"]).first()
@@ -290,8 +286,7 @@ class Database:
         except Exception as e:
             self.logger.error(f"Error occurred: {e}")
             return {"error": "An unexpected error occurred. Please try again later."}
-    
-    
+
     def get_all_data(self):
         try:
             self.db = SessionLocal()
@@ -311,10 +306,10 @@ class Database:
                     "prompt_token_limit": user.prompt_token_limit,
                     "role": user.role,
                     "collection_names": user.collection_names.split(","),
+                    "engines": [engine.engine_name for engine in user.engines],
                     "conversations": []
                 }
 
-                # Add user's conversations
                 for conversation in conversations:
                     if conversation.user_id == user.id:
                         user_data["conversations"].append({
@@ -332,3 +327,64 @@ class Database:
             return {"error": "An unexpected error occurred. Please try again later."}
         finally:
             self.db.close()
+
+    def add_engine_to_user(self, username, engine_info):
+        try:
+            user = self.db.query(User).filter(User.username == username).first()
+            if not user:
+                self.logger.error(f"User {username} not found")
+                return {"error": f"User {username} not found"}
+
+            engine_name = f"{username}_{engine_info['model_name']}"
+            engine = VLLM_Engine(
+                engine_name=engine_name,
+                container_id=engine_info['container_id'],
+                model_name=engine_info.get('model_name', 'VLLM'),
+                quantized=engine_info.get('quantized', 'None'),
+                max_model_length=engine_info.get('max_model_length', 512),
+                seed=engine_info.get('seed', 42),
+                user_id=user.id
+            )
+            self.db.add(engine)
+            self.db.commit()
+            return {"message": "Engine added", "engine_name": engine_name}
+        except Exception as e:
+            self.logger.error(f"Error occurred: {e}")
+            return {"error": "An unexpected error occurred. Please try again later."}
+
+    def get_user_engines(self, username):
+        try:
+            user = self.db.query(User).filter(User.username == username).first()
+            if not user:
+                self.logger.error(f"User {username} not found")
+                return {"error": f"User {username} not found"}
+
+            engines = [engine.engine_name for engine in user.engines]
+            return {"engines": engines}
+        except Exception as e:
+            self.logger.error(f"Error occurred: {e}")
+            return {"error": "An unexpected error occurred. Please try again later."}
+
+    def remove_engine_from_user(self, username, engine_identifier):
+        try:
+            user = self.db.query(User).filter(User.username == username).first()
+            if not user:
+                self.logger.error(f"User {username} not found")
+                return {"error": f"User {username} not found"}
+
+            engine = self.db.query(VLLM_Engine).filter(
+                (VLLM_Engine.engine_name == engine_identifier) |
+                (VLLM_Engine.container_id == engine_identifier),
+                VLLM_Engine.user_id == user.id
+            ).first()
+
+            if not engine:
+                self.logger.error(f"Engine {engine_identifier} not found for user {username}")
+                return {"error": f"Engine {engine_identifier} not found for user {username}"}
+
+            self.db.delete(engine)
+            self.db.commit()
+            return {"message": "Engine removed"}
+        except Exception as e:
+            self.logger.error(f"Error occurred: {e}")
+            return {"error": "An unexpected error occurred. Please try again later."}
