@@ -2,7 +2,9 @@ import os
 import threading
 import socket
 import logging
-from fastapi import FastAPI, HTTPException,APIRouter
+from fastapi import FastAPI, HTTPException,APIRouter,Depends
+from app.depencencies.security import get_current_active_user
+from app.database import User
 from pydantic import BaseModel, field_validator
 import docker
 import uvicorn
@@ -12,6 +14,7 @@ from typing import Optional
 import time
 from app.logging_config import setup_logger
 from app.models import VllmBuildRequest
+from app.routers.LLM.backend_database import Database
 logger = setup_logger()
 
 
@@ -108,9 +111,13 @@ def check_vllm_health(endpoint: str, timeout: int = 60, interval: int = 5):
         time.sleep(interval)
     return False
 
+def update_user_vLLM(user_id,engine_name,container_id,model_name,quantized,max_model_length,seed):
+    database = Database()
+    response= database.add_engine_to_user({"username": user_id, "engine_name": engine_name, "container_id": container_id, "model_name": model_name, "quantized": quantized, "max_model_length": max_model_length, "seed": seed})
+    return response
 
 @router.post("/")
-def run_docker(engine_args: VllmBuildRequest):
+def run_docker(engine_args: VllmBuildRequest,user: User = Depends(get_current_active_user)):
     user_info = validate_huggingface_token(engine_args.HUGGING_FACE_HUB_TOKEN)
     if user_info is None:
         raise HTTPException(status_code=400, detail="Invalid Hugging Face token.")
@@ -167,6 +174,9 @@ def run_docker(engine_args: VllmBuildRequest):
             logger.info(f"Container started successfully. Port: {free_port}")
             logger.info(f"User info: {user_info}")
             logger.info(f"Container ID: {container.id}")
+            if not engine_args.QUANTIZATION:
+                engine_args.QUANTIZATION = "None"
+            update_user_vLLM(user.username,container.id,engine_args.MODEL,engine_args.QUANTIZATION,engine_args.MAX_MODEL_LEN,engine_args.SEED)  
             return {
                 "message": "Container started successfully and vLLM server is healthy",
                 "vLLM_endpoint": f"http://localhost:{free_port}/v1/completions",

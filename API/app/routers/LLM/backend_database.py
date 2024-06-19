@@ -63,6 +63,7 @@ class VLLM_Engine(Base):
     container_id = Column(String, unique=True, index=True)
     model_name = Column(String, default="VLLM")
     quantized = Column(String, default="None")
+    end_point = Column(String, default="None")
     timestamp = Column(DateTime(timezone=True), server_default=func.now())
     max_model_length = Column(Integer, default=512)
     seed = Column(Integer, default=42)
@@ -328,21 +329,22 @@ class Database:
         finally:
             self.db.close()
 
-    def add_engine_to_user(self, username, engine_info):
+    def add_engine_to_user(self, input):
         try:
-            user = self.db.query(User).filter(User.username == username).first()
+            user = self.db.query(User).filter(User.username ==input["username"] ).first()
             if not user:
-                self.logger.error(f"User {username} not found")
-                return {"error": f"User {username} not found"}
+                self.logger.error("User not found")
+                return {"error": "User not found"}
 
-            engine_name = f"{username}_{engine_info['model_name']}"
+            engine_name = input["username"]+"_"+input['model_name']+f"_{self.generate_random_name()}"
             engine = VLLM_Engine(
                 engine_name=engine_name,
-                container_id=engine_info['container_id'],
-                model_name=engine_info.get('model_name', 'VLLM'),
-                quantized=engine_info.get('quantized', 'None'),
-                max_model_length=engine_info.get('max_model_length', 512),
-                seed=engine_info.get('seed', 42),
+                container_id=input['container_id'],
+                end_point=input.get('end_point', 'None'),
+                model_name=input.get('model_name', 'VLLM'),
+                quantized=input.get('quantized', 'None'),
+                max_model_length=input.get('max_model_length', 512),
+                seed=input.get('seed', 42),
                 user_id=user.id
             )
             self.db.add(engine)
@@ -350,11 +352,11 @@ class Database:
             return {"message": "Engine added", "engine_name": engine_name}
         except Exception as e:
             self.logger.error(f"Error occurred: {e}")
-            return {"error": "An unexpected error occurred. Please try again later."}
+            return {"error": str(e)}
 
     def get_user_engines(self, username):
         try:
-            user = self.db.query(User).filter(User.username == username).first()
+            user = self.db.query(User).filter(User.username == input["username"]).first()
             if not user:
                 self.logger.error(f"User {username} not found")
                 return {"error": f"User {username} not found"}
@@ -365,22 +367,22 @@ class Database:
             self.logger.error(f"Error occurred: {e}")
             return {"error": "An unexpected error occurred. Please try again later."}
 
-    def remove_engine_from_user(self, username, engine_identifier):
+    def remove_engine_from_user(self, input):
         try:
-            user = self.db.query(User).filter(User.username == username).first()
+            user = self.db.query(User).filter(User.username == input["username"]).first()
             if not user:
-                self.logger.error(f"User {username} not found")
-                return {"error": f"User {username} not found"}
+                self.logger.error(f"User not found")
+                return {"error": f"User  not found"}
 
             engine = self.db.query(VLLM_Engine).filter(
-                (VLLM_Engine.engine_name == engine_identifier) |
-                (VLLM_Engine.container_id == engine_identifier),
+                (VLLM_Engine.engine_name == input["engine_name"]) |
+                (VLLM_Engine.container_id == input["container_id"]),
                 VLLM_Engine.user_id == user.id
             ).first()
 
             if not engine:
-                self.logger.error(f"Engine {engine_identifier} not found for user {username}")
-                return {"error": f"Engine {engine_identifier} not found for user {username}"}
+                self.logger.error(f"Engine not found for user")
+                return {"error": f"Engine not found for user "}
 
             self.db.delete(engine)
             self.db.commit()

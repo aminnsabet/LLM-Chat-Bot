@@ -211,7 +211,6 @@ async def get_all_data(
                 user_data["conversations"].append(
                     {
                         "conversation_number": conversation.conversation_number,
-                        "content": conversation.content,
                         "timestamp": conversation.timestamp,
                     }
                 )

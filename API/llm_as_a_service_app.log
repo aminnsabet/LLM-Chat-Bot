@@ -2147,3 +2147,452 @@
 2024-06-19 15:34:02,784 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user amin
 2024-06-19 15:34:02,784 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user amin
 2024-06-19 15:34:02,784 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user amin
+2024-06-19 16:37:31,266 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-06-19 16:37:31,266 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-06-19 16:37:31,266 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-06-19 16:37:31,266 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-06-19 16:37:31,266 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-06-19 16:37:31,266 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-06-19 16:37:31,266 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-06-19 16:38:14,810 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-06-19 16:38:14,810 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-06-19 16:38:14,810 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-06-19 16:38:14,810 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-06-19 16:38:14,810 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-06-19 16:38:14,810 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-06-19 16:38:14,810 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-06-19 16:39:20,138 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 16:39:20,138 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 16:39:20,138 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 16:39:20,138 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 16:39:20,138 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 16:39:20,138 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 16:39:20,138 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 16:39:25,146 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 16:39:25,146 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 16:39:25,146 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 16:39:25,146 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 16:39:25,146 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 16:39:25,146 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 16:39:25,146 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 16:39:30,154 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 16:39:30,154 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 16:39:30,154 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 16:39:30,154 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 16:39:30,154 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 16:39:30,154 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 16:39:30,154 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 16:39:35,164 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 16:39:35,164 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 16:39:35,164 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 16:39:35,164 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 16:39:35,164 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 16:39:35,164 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 16:39:35,164 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 16:39:40,173 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 16:39:40,173 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 16:39:40,173 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 16:39:40,173 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 16:39:40,173 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 16:39:40,173 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 16:39:40,173 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 16:39:45,183 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 16:39:45,183 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 16:39:45,183 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 16:39:45,183 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 16:39:45,183 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 16:39:45,183 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 16:39:45,183 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 16:39:50,192 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 16:39:50,192 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 16:39:50,192 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 16:39:50,192 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 16:39:50,192 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 16:39:50,192 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 16:39:50,192 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 16:39:55,199 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 16:39:55,199 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 16:39:55,199 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 16:39:55,199 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 16:39:55,199 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 16:39:55,199 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 16:39:55,199 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 16:40:00,206 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 16:40:00,206 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 16:40:00,206 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 16:40:00,206 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 16:40:00,206 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 16:40:00,206 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 16:40:00,206 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 16:40:05,214 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 16:40:05,214 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 16:40:05,214 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 16:40:05,214 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 16:40:05,214 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 16:40:05,214 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 16:40:05,214 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 16:40:10,224 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 16:40:10,224 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 16:40:10,224 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 16:40:10,224 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 16:40:10,224 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 16:40:10,224 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 16:40:10,224 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 16:40:15,233 - llm_as_a_service_logger - INFO - Container started successfully. Port: 8500
+2024-06-19 16:40:15,233 - llm_as_a_service_logger - INFO - Container started successfully. Port: 8500
+2024-06-19 16:40:15,233 - llm_as_a_service_logger - INFO - Container started successfully. Port: 8500
+2024-06-19 16:40:15,233 - llm_as_a_service_logger - INFO - Container started successfully. Port: 8500
+2024-06-19 16:40:15,233 - llm_as_a_service_logger - INFO - Container started successfully. Port: 8500
+2024-06-19 16:40:15,233 - llm_as_a_service_logger - INFO - Container started successfully. Port: 8500
+2024-06-19 16:40:15,233 - llm_as_a_service_logger - INFO - Container started successfully. Port: 8500
+2024-06-19 16:40:15,234 - llm_as_a_service_logger - INFO - User info: Amin-nsclae
+2024-06-19 16:40:15,234 - llm_as_a_service_logger - INFO - User info: Amin-nsclae
+2024-06-19 16:40:15,234 - llm_as_a_service_logger - INFO - User info: Amin-nsclae
+2024-06-19 16:40:15,234 - llm_as_a_service_logger - INFO - User info: Amin-nsclae
+2024-06-19 16:40:15,234 - llm_as_a_service_logger - INFO - User info: Amin-nsclae
+2024-06-19 16:40:15,234 - llm_as_a_service_logger - INFO - User info: Amin-nsclae
+2024-06-19 16:40:15,234 - llm_as_a_service_logger - INFO - User info: Amin-nsclae
+2024-06-19 16:40:15,234 - llm_as_a_service_logger - INFO - Container ID: 114587b81470e55b7efb39c6ef695c2d9a9251db008aad1a10f20138593acb21
+2024-06-19 16:40:15,234 - llm_as_a_service_logger - INFO - Container ID: 114587b81470e55b7efb39c6ef695c2d9a9251db008aad1a10f20138593acb21
+2024-06-19 16:40:15,234 - llm_as_a_service_logger - INFO - Container ID: 114587b81470e55b7efb39c6ef695c2d9a9251db008aad1a10f20138593acb21
+2024-06-19 16:40:15,234 - llm_as_a_service_logger - INFO - Container ID: 114587b81470e55b7efb39c6ef695c2d9a9251db008aad1a10f20138593acb21
+2024-06-19 16:40:15,234 - llm_as_a_service_logger - INFO - Container ID: 114587b81470e55b7efb39c6ef695c2d9a9251db008aad1a10f20138593acb21
+2024-06-19 16:40:15,234 - llm_as_a_service_logger - INFO - Container ID: 114587b81470e55b7efb39c6ef695c2d9a9251db008aad1a10f20138593acb21
+2024-06-19 16:40:15,234 - llm_as_a_service_logger - INFO - Container ID: 114587b81470e55b7efb39c6ef695c2d9a9251db008aad1a10f20138593acb21
+2024-06-19 16:49:01,722 - llm_as_a_service_logger - ERROR - Error occurred: name 'engine_info' is not defined
+2024-06-19 16:49:01,722 - llm_as_a_service_logger - ERROR - Error occurred: name 'engine_info' is not defined
+2024-06-19 16:49:01,722 - llm_as_a_service_logger - ERROR - Error occurred: name 'engine_info' is not defined
+2024-06-19 16:49:01,722 - llm_as_a_service_logger - ERROR - Error occurred: name 'engine_info' is not defined
+2024-06-19 16:49:01,722 - llm_as_a_service_logger - ERROR - Error occurred: name 'engine_info' is not defined
+2024-06-19 16:49:01,722 - llm_as_a_service_logger - ERROR - Error occurred: name 'engine_info' is not defined
+2024-06-19 16:49:01,722 - llm_as_a_service_logger - ERROR - Error occurred: name 'engine_info' is not defined
+2024-06-19 16:49:01,722 - llm_as_a_service_logger - ERROR - Error occurred: name 'engine_info' is not defined
+2024-06-19 17:04:09,779 - llm_as_a_service_logger - ERROR - Error occurred: name 'engine_info' is not defined
+2024-06-19 17:04:09,779 - llm_as_a_service_logger - ERROR - Error occurred: name 'engine_info' is not defined
+2024-06-19 17:04:09,779 - llm_as_a_service_logger - ERROR - Error occurred: name 'engine_info' is not defined
+2024-06-19 17:04:09,779 - llm_as_a_service_logger - ERROR - Error occurred: name 'engine_info' is not defined
+2024-06-19 17:04:09,779 - llm_as_a_service_logger - ERROR - Error occurred: name 'engine_info' is not defined
+2024-06-19 17:04:09,779 - llm_as_a_service_logger - ERROR - Error occurred: name 'engine_info' is not defined
+2024-06-19 17:04:09,779 - llm_as_a_service_logger - ERROR - Error occurred: name 'engine_info' is not defined
+2024-06-19 17:04:09,779 - llm_as_a_service_logger - ERROR - Error occurred: name 'engine_info' is not defined
+2024-06-19 17:04:40,677 - llm_as_a_service_logger - ERROR - Error occurred: name 'engine_info' is not defined
+2024-06-19 17:04:40,677 - llm_as_a_service_logger - ERROR - Error occurred: name 'engine_info' is not defined
+2024-06-19 17:04:40,677 - llm_as_a_service_logger - ERROR - Error occurred: name 'engine_info' is not defined
+2024-06-19 17:04:40,677 - llm_as_a_service_logger - ERROR - Error occurred: name 'engine_info' is not defined
+2024-06-19 17:04:40,677 - llm_as_a_service_logger - ERROR - Error occurred: name 'engine_info' is not defined
+2024-06-19 17:04:40,677 - llm_as_a_service_logger - ERROR - Error occurred: name 'engine_info' is not defined
+2024-06-19 17:04:40,677 - llm_as_a_service_logger - ERROR - Error occurred: name 'engine_info' is not defined
+2024-06-19 17:04:40,677 - llm_as_a_service_logger - ERROR - Error occurred: name 'engine_info' is not defined
+2024-06-19 17:04:54,128 - llm_as_a_service_logger - ERROR - Error occurred: name 'engine_info' is not defined
+2024-06-19 17:04:54,128 - llm_as_a_service_logger - ERROR - Error occurred: name 'engine_info' is not defined
+2024-06-19 17:04:54,128 - llm_as_a_service_logger - ERROR - Error occurred: name 'engine_info' is not defined
+2024-06-19 17:04:54,128 - llm_as_a_service_logger - ERROR - Error occurred: name 'engine_info' is not defined
+2024-06-19 17:04:54,128 - llm_as_a_service_logger - ERROR - Error occurred: name 'engine_info' is not defined
+2024-06-19 17:04:54,128 - llm_as_a_service_logger - ERROR - Error occurred: name 'engine_info' is not defined
+2024-06-19 17:04:54,128 - llm_as_a_service_logger - ERROR - Error occurred: name 'engine_info' is not defined
+2024-06-19 17:04:54,128 - llm_as_a_service_logger - ERROR - Error occurred: name 'engine_info' is not defined
+2024-06-19 17:06:28,268 - llm_as_a_service_logger - ERROR - Error occurred: (sqlite3.IntegrityError) UNIQUE constraint failed: vllm_engines.container_id
+[SQL: INSERT INTO vllm_engines (engine_name, container_id, model_name, quantized, max_model_length, seed, user_id) VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING id, timestamp]
+[parameters: ('admin_3_XRpGNxtEqoOF', '2', '3', '4', '5', '6', 1)]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-06-19 17:06:28,268 - llm_as_a_service_logger - ERROR - Error occurred: (sqlite3.IntegrityError) UNIQUE constraint failed: vllm_engines.container_id
+[SQL: INSERT INTO vllm_engines (engine_name, container_id, model_name, quantized, max_model_length, seed, user_id) VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING id, timestamp]
+[parameters: ('admin_3_XRpGNxtEqoOF', '2', '3', '4', '5', '6', 1)]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-06-19 17:06:28,268 - llm_as_a_service_logger - ERROR - Error occurred: (sqlite3.IntegrityError) UNIQUE constraint failed: vllm_engines.container_id
+[SQL: INSERT INTO vllm_engines (engine_name, container_id, model_name, quantized, max_model_length, seed, user_id) VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING id, timestamp]
+[parameters: ('admin_3_XRpGNxtEqoOF', '2', '3', '4', '5', '6', 1)]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-06-19 17:06:28,268 - llm_as_a_service_logger - ERROR - Error occurred: (sqlite3.IntegrityError) UNIQUE constraint failed: vllm_engines.container_id
+[SQL: INSERT INTO vllm_engines (engine_name, container_id, model_name, quantized, max_model_length, seed, user_id) VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING id, timestamp]
+[parameters: ('admin_3_XRpGNxtEqoOF', '2', '3', '4', '5', '6', 1)]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-06-19 17:06:28,268 - llm_as_a_service_logger - ERROR - Error occurred: (sqlite3.IntegrityError) UNIQUE constraint failed: vllm_engines.container_id
+[SQL: INSERT INTO vllm_engines (engine_name, container_id, model_name, quantized, max_model_length, seed, user_id) VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING id, timestamp]
+[parameters: ('admin_3_XRpGNxtEqoOF', '2', '3', '4', '5', '6', 1)]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-06-19 17:06:28,268 - llm_as_a_service_logger - ERROR - Error occurred: (sqlite3.IntegrityError) UNIQUE constraint failed: vllm_engines.container_id
+[SQL: INSERT INTO vllm_engines (engine_name, container_id, model_name, quantized, max_model_length, seed, user_id) VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING id, timestamp]
+[parameters: ('admin_3_XRpGNxtEqoOF', '2', '3', '4', '5', '6', 1)]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-06-19 17:06:28,268 - llm_as_a_service_logger - ERROR - Error occurred: (sqlite3.IntegrityError) UNIQUE constraint failed: vllm_engines.container_id
+[SQL: INSERT INTO vllm_engines (engine_name, container_id, model_name, quantized, max_model_length, seed, user_id) VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING id, timestamp]
+[parameters: ('admin_3_XRpGNxtEqoOF', '2', '3', '4', '5', '6', 1)]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-06-19 17:06:28,268 - llm_as_a_service_logger - ERROR - Error occurred: (sqlite3.IntegrityError) UNIQUE constraint failed: vllm_engines.container_id
+[SQL: INSERT INTO vllm_engines (engine_name, container_id, model_name, quantized, max_model_length, seed, user_id) VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING id, timestamp]
+[parameters: ('admin_3_XRpGNxtEqoOF', '2', '3', '4', '5', '6', 1)]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-06-19 17:24:21,026 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-06-19 17:24:21,026 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-06-19 17:24:21,026 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-06-19 17:24:21,026 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-06-19 17:24:21,026 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-06-19 17:24:21,026 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-06-19 17:24:21,026 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-06-19 17:24:38,170 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2024-06-19 17:24:38,170 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2024-06-19 17:24:38,170 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2024-06-19 17:24:38,170 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2024-06-19 17:24:38,170 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2024-06-19 17:24:38,170 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2024-06-19 17:24:38,170 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2024-06-19 17:24:43,181 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 17:24:43,181 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 17:24:43,181 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 17:24:43,181 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 17:24:43,181 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 17:24:43,181 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 17:24:43,181 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 17:24:48,191 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 17:24:48,191 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 17:24:48,191 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 17:24:48,191 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 17:24:48,191 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 17:24:48,191 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 17:24:48,191 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 17:24:53,201 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 17:24:53,201 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 17:24:53,201 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 17:24:53,201 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 17:24:53,201 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 17:24:53,201 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 17:24:53,201 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 17:24:58,209 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 17:24:58,209 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 17:24:58,209 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 17:24:58,209 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 17:24:58,209 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 17:24:58,209 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 17:24:58,209 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 17:25:03,215 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 17:25:03,215 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 17:25:03,215 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 17:25:03,215 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 17:25:03,215 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 17:25:03,215 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 17:25:03,215 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 17:25:08,225 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 17:25:08,225 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 17:25:08,225 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 17:25:08,225 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 17:25:08,225 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 17:25:08,225 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 17:25:08,225 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 17:25:13,233 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 17:25:13,233 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 17:25:13,233 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 17:25:13,233 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 17:25:13,233 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 17:25:13,233 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 17:25:13,233 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 17:25:18,240 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 17:25:18,240 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 17:25:18,240 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 17:25:18,240 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 17:25:18,240 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 17:25:18,240 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 17:25:18,240 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 17:25:23,248 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 17:25:23,248 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 17:25:23,248 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 17:25:23,248 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 17:25:23,248 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 17:25:23,248 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 17:25:23,248 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 17:25:28,259 - llm_as_a_service_logger - INFO - Container started successfully. Port: 8500
+2024-06-19 17:25:28,259 - llm_as_a_service_logger - INFO - Container started successfully. Port: 8500
+2024-06-19 17:25:28,259 - llm_as_a_service_logger - INFO - Container started successfully. Port: 8500
+2024-06-19 17:25:28,259 - llm_as_a_service_logger - INFO - Container started successfully. Port: 8500
+2024-06-19 17:25:28,259 - llm_as_a_service_logger - INFO - Container started successfully. Port: 8500
+2024-06-19 17:25:28,259 - llm_as_a_service_logger - INFO - Container started successfully. Port: 8500
+2024-06-19 17:25:28,259 - llm_as_a_service_logger - INFO - Container started successfully. Port: 8500
+2024-06-19 17:25:28,260 - llm_as_a_service_logger - INFO - User info: Amin-nsclae
+2024-06-19 17:25:28,260 - llm_as_a_service_logger - INFO - User info: Amin-nsclae
+2024-06-19 17:25:28,260 - llm_as_a_service_logger - INFO - User info: Amin-nsclae
+2024-06-19 17:25:28,260 - llm_as_a_service_logger - INFO - User info: Amin-nsclae
+2024-06-19 17:25:28,260 - llm_as_a_service_logger - INFO - User info: Amin-nsclae
+2024-06-19 17:25:28,260 - llm_as_a_service_logger - INFO - User info: Amin-nsclae
+2024-06-19 17:25:28,260 - llm_as_a_service_logger - INFO - User info: Amin-nsclae
+2024-06-19 17:25:28,260 - llm_as_a_service_logger - INFO - Container ID: 294fe09fe688465def13e78f0e229eee6045ac34fd1d5fe8efd07b70ff5f3dfd
+2024-06-19 17:25:28,260 - llm_as_a_service_logger - INFO - Container ID: 294fe09fe688465def13e78f0e229eee6045ac34fd1d5fe8efd07b70ff5f3dfd
+2024-06-19 17:25:28,260 - llm_as_a_service_logger - INFO - Container ID: 294fe09fe688465def13e78f0e229eee6045ac34fd1d5fe8efd07b70ff5f3dfd
+2024-06-19 17:25:28,260 - llm_as_a_service_logger - INFO - Container ID: 294fe09fe688465def13e78f0e229eee6045ac34fd1d5fe8efd07b70ff5f3dfd
+2024-06-19 17:25:28,260 - llm_as_a_service_logger - INFO - Container ID: 294fe09fe688465def13e78f0e229eee6045ac34fd1d5fe8efd07b70ff5f3dfd
+2024-06-19 17:25:28,260 - llm_as_a_service_logger - INFO - Container ID: 294fe09fe688465def13e78f0e229eee6045ac34fd1d5fe8efd07b70ff5f3dfd
+2024-06-19 17:25:28,260 - llm_as_a_service_logger - INFO - Container ID: 294fe09fe688465def13e78f0e229eee6045ac34fd1d5fe8efd07b70ff5f3dfd
+2024-06-19 17:28:10,570 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 17:28:10,570 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 17:28:10,570 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 17:28:10,570 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 17:28:10,570 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 17:28:10,570 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 17:28:10,570 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 17:28:15,581 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 17:28:15,581 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 17:28:15,581 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 17:28:15,581 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 17:28:15,581 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 17:28:15,581 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 17:28:15,581 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 17:28:20,590 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 17:28:20,590 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 17:28:20,590 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 17:28:20,590 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 17:28:20,590 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 17:28:20,590 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 17:28:20,590 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 17:28:25,598 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 17:28:25,598 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 17:28:25,598 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 17:28:25,598 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 17:28:25,598 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 17:28:25,598 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 17:28:25,598 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 17:28:30,607 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 17:28:30,607 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 17:28:30,607 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 17:28:30,607 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 17:28:30,607 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 17:28:30,607 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 17:28:30,607 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 17:28:35,617 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 17:28:35,617 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 17:28:35,617 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 17:28:35,617 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 17:28:35,617 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 17:28:35,617 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 17:28:35,617 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 17:28:40,626 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 17:28:40,626 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 17:28:40,626 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 17:28:40,626 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 17:28:40,626 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 17:28:40,626 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 17:28:40,626 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 17:28:45,631 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 17:28:45,631 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 17:28:45,631 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 17:28:45,631 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 17:28:45,631 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 17:28:45,631 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 17:28:45,631 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 17:28:50,640 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 17:28:50,640 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 17:28:50,640 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 17:28:50,640 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 17:28:50,640 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 17:28:50,640 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 17:28:50,640 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 17:28:55,656 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 17:28:55,656 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 17:28:55,656 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 17:28:55,656 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 17:28:55,656 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 17:28:55,656 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 17:28:55,656 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 17:29:00,667 - llm_as_a_service_logger - INFO - Container started successfully. Port: 8500
+2024-06-19 17:29:00,667 - llm_as_a_service_logger - INFO - Container started successfully. Port: 8500
+2024-06-19 17:29:00,667 - llm_as_a_service_logger - INFO - Container started successfully. Port: 8500
+2024-06-19 17:29:00,667 - llm_as_a_service_logger - INFO - Container started successfully. Port: 8500
+2024-06-19 17:29:00,667 - llm_as_a_service_logger - INFO - Container started successfully. Port: 8500
+2024-06-19 17:29:00,667 - llm_as_a_service_logger - INFO - Container started successfully. Port: 8500
+2024-06-19 17:29:00,667 - llm_as_a_service_logger - INFO - Container started successfully. Port: 8500
+2024-06-19 17:29:00,668 - llm_as_a_service_logger - INFO - User info: Amin-nsclae
+2024-06-19 17:29:00,668 - llm_as_a_service_logger - INFO - User info: Amin-nsclae
+2024-06-19 17:29:00,668 - llm_as_a_service_logger - INFO - User info: Amin-nsclae
+2024-06-19 17:29:00,668 - llm_as_a_service_logger - INFO - User info: Amin-nsclae
+2024-06-19 17:29:00,668 - llm_as_a_service_logger - INFO - User info: Amin-nsclae
+2024-06-19 17:29:00,668 - llm_as_a_service_logger - INFO - User info: Amin-nsclae
+2024-06-19 17:29:00,668 - llm_as_a_service_logger - INFO - User info: Amin-nsclae
+2024-06-19 17:29:00,669 - llm_as_a_service_logger - INFO - Container ID: 64344ede0101c355eb67793149c31e5bd043adee0df654b96a02b41a039737e7
+2024-06-19 17:29:00,669 - llm_as_a_service_logger - INFO - Container ID: 64344ede0101c355eb67793149c31e5bd043adee0df654b96a02b41a039737e7
+2024-06-19 17:29:00,669 - llm_as_a_service_logger - INFO - Container ID: 64344ede0101c355eb67793149c31e5bd043adee0df654b96a02b41a039737e7
+2024-06-19 17:29:00,669 - llm_as_a_service_logger - INFO - Container ID: 64344ede0101c355eb67793149c31e5bd043adee0df654b96a02b41a039737e7
+2024-06-19 17:29:00,669 - llm_as_a_service_logger - INFO - Container ID: 64344ede0101c355eb67793149c31e5bd043adee0df654b96a02b41a039737e7
+2024-06-19 17:29:00,669 - llm_as_a_service_logger - INFO - Container ID: 64344ede0101c355eb67793149c31e5bd043adee0df654b96a02b41a039737e7
+2024-06-19 17:29:00,669 - llm_as_a_service_logger - INFO - Container ID: 64344ede0101c355eb67793149c31e5bd043adee0df654b96a02b41a039737e7
+2024-06-19 17:31:51,343 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2024-06-19 17:31:51,343 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2024-06-19 17:31:51,343 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2024-06-19 17:31:51,343 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2024-06-19 17:31:51,343 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2024-06-19 17:31:51,343 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2024-06-19 17:31:51,343 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2024-06-19 17:31:56,352 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 17:31:56,352 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 17:31:56,352 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 17:31:56,352 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 17:31:56,352 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 17:31:56,352 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 17:31:56,352 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 17:32:01,357 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 17:32:01,357 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 17:32:01,357 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 17:32:01,357 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 17:32:01,357 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 17:32:01,357 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 17:32:01,357 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 17:32:06,366 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 17:32:06,366 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 17:32:06,366 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 17:32:06,366 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 17:32:06,366 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 17:32:06,366 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 17:32:06,366 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 17:32:11,376 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 17:32:11,376 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 17:32:11,376 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 17:32:11,376 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 17:32:11,376 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 17:32:11,376 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 17:32:11,376 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 17:32:16,382 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 17:32:16,382 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 17:32:16,382 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 17:32:16,382 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 17:32:16,382 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 17:32:16,382 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 17:32:16,382 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 17:32:21,391 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 17:32:21,391 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 17:32:21,391 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 17:32:21,391 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 17:32:21,391 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 17:32:21,391 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 17:32:21,391 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 17:32:26,399 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 17:32:26,399 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 17:32:26,399 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 17:32:26,399 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 17:32:26,399 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 17:32:26,399 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 17:32:26,399 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 17:32:31,407 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 17:32:31,407 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 17:32:31,407 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 17:32:31,407 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 17:32:31,407 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 17:32:31,407 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 17:32:31,407 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 17:32:36,415 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 17:32:36,415 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 17:32:36,415 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 17:32:36,415 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 17:32:36,415 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 17:32:36,415 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 17:32:36,415 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 17:32:41,420 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 17:32:41,420 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 17:32:41,420 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 17:32:41,420 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 17:32:41,420 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 17:32:41,420 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 17:32:41,420 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 17:32:46,427 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 17:32:46,427 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 17:32:46,427 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 17:32:46,427 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 17:32:46,427 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 17:32:46,427 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-19 17:32:46,427 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
