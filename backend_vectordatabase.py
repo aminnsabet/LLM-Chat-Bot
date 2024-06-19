@@ -106,11 +106,10 @@ class VLLMManager:
                 openai_api_base=inference_endpoint,
                 model_name=model,
                 model_kwargs={"stop": ["."]},
-                streaming=True,
+                max_tokens= 1084
             )
             #text_to_log = self.model.invoke("Hi how are you?")
             #self.logger.info(f"Checking the result of run_vllm_model, output is model: {self.model} and logged text is : {text_to_log}")
-            
             return self.model
         
     def vllm_running_status(self):
@@ -158,8 +157,8 @@ class WeaviateEmbedder:
                         #uuid=generate_uuid5(text),
         )
                 self.text_list.append(text)
-        # results= self.text_list
-        # ray.get(results)
+        results= self.text_list
+        ray.get(results)
         return self.text_list
 
     def get(self):
@@ -304,7 +303,7 @@ class VectorDataBase:
                 except Exception as e:
                     print(f"Error in file {file}: {e}")
                     continue
-        self.logger.info(f"Check the parsed documents: {documents}")
+        #self.logger.info(f"Check the parsed documents: {documents}")
         return documents
 
     def simple_add_doc(self, dir):
@@ -359,35 +358,35 @@ class VectorDataBase:
             full_class = str(username) + "_" + str(cls)
             document_list = self.parse_pdf(dir)
             serialized_docs = self.weaviate_split_multiple_pdf(document_list)
-            if len(serialized_docs) <= 3000000:
+            if len(serialized_docs) <= 30:
                 self.add_weaviate_document(full_class, serialized_docs)
                 response["status"] = "success"
                 response["message"] = f"Processed {len(serialized_docs)} documents for class {full_class}."
-            # else:
-            #     doc_workload = self.divide_workload(self.num_actors, serialized_docs)
-            #     self.add_weaviate_batch_documents(full_class, doc_workload)
-            #     #self.logger.info(f"check weaviate add data, ")
-            #     response["status"] = "success"
-            #     response["message"] = f"Processed {len(serialized_docs)} documents in batches for class {full_class}."
+            else:
+                doc_workload = self.divide_workload(self.num_actors, serialized_docs)
+                self.add_weaviate_batch_documents(full_class, doc_workload)
+                #self.logger.info(f"check weaviate add data, ")
+                response["status"] = "success"
+                response["message"] = f"Processed {len(serialized_docs)} documents in batches for class {full_class}."
             return response
         except Exception as e:
             response["status"] = "error"
             response["message"] = str(e)
             return response
 
-    def adding_weaviate_document(self, text_lst, collection_name):
-        self.weaviate_client.batch.configure(batch_size=100)
-        with self.weaviate_client.batch as batch:
-            for text in text_lst:
-                batch.add_data_object(
-                    text,
-                    class_name=collection_name, 
-                        #uuid=generate_uuid5(text),
-        )
-                self.text_list.append(text)
-        results= self.text_list
-        ray.get(results)
-        return self.text_list
+    # def adding_weaviate_document(self, text_lst, collection_name):
+    #     self.weaviate_client.batch.configure(batch_size=100)
+    #     with self.weaviate_client.batch as batch:
+    #         for text in text_lst:
+    #             batch.add_data_object(
+    #                 text,
+    #                 class_name=collection_name, 
+    #                     #uuid=generate_uuid5(text),
+    #     )
+    #             self.text_list.append(text)
+    #     results= self.text_list
+    #     ray.get(results)
+    #     return self.text_list
 
 
     # def adding_weaviate_document(self, text_lst, collection_name):
@@ -466,8 +465,8 @@ class VectorDataBase:
                             model=vectorizer,
                         ),
                         properties=[  # properties configuration is optional
-                            Property(name="title", data_type=DataType.TEXT),
-                            Property(name="body", data_type=DataType.TEXT),
+                            Property(name="document_title", data_type=DataType.TEXT),
+                            Property(name="page_content", data_type=DataType.TEXT),
                         ],
                     )
                 database_response = self.database.add_collection({"username": username, "collection_name": class_name})
@@ -721,9 +720,6 @@ class VectorDataBase:
         # chain_type_kwargs = {"prompt": PROMPT}
         # return chain_type_kwargs
 
-    def format_docs(self, docs):
-        return "\n\n".join(doc.page_content for doc in docs)
-
     def get_collection_based_retriver(self, client, class_name, embedder):
         self.weaviate_client = weaviate.connect_to_local(   # `weaviate_key`: your Weaviate API key
                     headers={
@@ -775,17 +771,16 @@ class VectorDataBase:
         
         retriever = self.get_collection_based_retriver(self.weaviate_client, str(full_class_name), embedder_name)
 
-        #prompt_template = self.generate_prompt_template()
-
-        prompt = hub.pull("rlm/rag-prompt")
+        prompt_template = self.generate_prompt_template()
+        self.logger.info("Checkpoint RAG")
+        #prompt = hub.pull("rlm/rag-prompt")
        # docs = retriever.invoke(str(query))
        # self.logger.info(f"checking the retrievd documents: {docs}")
-       
-        rag_chain=(
-            {"context":retriever | self.format_docs, "question":RunnablePassthrough()}
-            |prompt
-            |self.current_llm
-            |StrOutputParser()
+        self.logger.info(f"Checking prompt before RAG: {prompt_template} and checking if retriever exists: {retriever}, checking llm: {self.current_llm}")
+        rag_chain=({"context":retriever,"question":RunnablePassthrough()}
+            | prompt_template
+            | self.current_llm
+            | StrOutputParser()
         )
         self.logger.info(f"logging the rag chain: {rag_chain} and retriever: {retriever}")
         response=rag_chain.invoke(str(query))
