@@ -29,9 +29,25 @@ from weaviate.auth import AuthApiKey
 from weaviate.classes.query import MetadataQuery
 from weaviate.classes.query import Filter
 from langchain_community.llms import VLLMOpenAI
-from langchain_weaviate.vectorstores import WeaviateVectorStore
+#from langchain_weaviate.vectorstores import WeaviateVectorStore
+#from API.app.models import VectorDBRequest
 
 from sentence_transformers import SentenceTransformer
+from langchain_weaviate.vectorstores import WeaviateVectorStore
+from langchain.prompts import PromptTemplate
+#from langchain.chains import RetrievalQA
+
+from langchain_community.retrievers import (
+    WeaviateHybridSearchRetriever,
+)
+from langchain_core.documents import Document
+
+from langchain.vectorstores import Weaviate
+from langchain_weaviate.vectorstores import WeaviateVectorStore
+from langchain_huggingface import HuggingFaceEmbeddings
+from langchain.prompts import ChatPromptTemplate
+from langchain.schema.runnable import RunnablePassthrough
+from langchain.schema.output_parser import StrOutputParser
 
 
 class Config:
@@ -54,6 +70,11 @@ class VDBaseInput(BaseModel):
     file_path: Optional[str] = None
     file_title: Optional[str] = None
     query: Optional[str] = None
+    model: Optional[str] = None
+    inference_endpoint:Optional[str]=None
+    memory: Optional[bool]=False
+    conversation_number: Optional[int]=-1
+    embedder: Optional[str]= "sentence-transformers/all-MiniLM-L6-v2"
 
 
 
@@ -72,24 +93,23 @@ class VLLMManager:
         self.logger = logging.getLogger(__name__)
         self.logger.propagate = True
 
-        # self.api_key = api_key,
-        # self.api_base = api_base,
-        # self.model_name = model_name,
-        # self.model_kwargs = model_kwargs
+
+        self.database = Database()
         self.model = None
 
         # self.logger.info(f"Checking the init of VLLMManager and parameters: api_key {self.api_key}, base {self.api_base}, model name: {self.model_name}, kwargs: {self.model_kwargs}")
 
-    def run_vllm_model(self):
+    def run_vllm_model(self, username, model, inference_endpoint):
         if self.model is None:
             self.model = VLLMOpenAI(
                 openai_api_key="EMPTY",
-                openai_api_base="http://localhost:8500/v1",
-                model_name="meta-llama/Llama-2-7b-chat-hf",
+                openai_api_base=inference_endpoint,
+                model_name=model,
                 model_kwargs={"stop": ["."]},
+                streaming=True,
             )
-            text_to_log = self.model.invoke("Hi how are you?")
-            self.logger.info(f"Checking the result of run_vllm_model, output is model: {self.model} and logged text is : {text_to_log}")
+            #text_to_log = self.model.invoke("Hi how are you?")
+            #self.logger.info(f"Checking the result of run_vllm_model, output is model: {self.model} and logged text is : {text_to_log}")
             
             return self.model
         
@@ -138,8 +158,8 @@ class WeaviateEmbedder:
                         #uuid=generate_uuid5(text),
         )
                 self.text_list.append(text)
-        results= self.text_list
-        ray.get(results)
+        # results= self.text_list
+        # ray.get(results)
         return self.text_list
 
     def get(self):
@@ -174,6 +194,7 @@ class VectorDataBase:
 
         self.vllm_manager = None
         self.embedder_model = None
+        self.current_llm = None
 
         logging.basicConfig(
             level=logging.INFO,
@@ -220,13 +241,13 @@ class VectorDataBase:
             list: A list of serialized document chunks.
         ''' 
         #text_splitter = CharacterTextSplitter(chunk_size=self.chunk_size, chunk_overlap=self.chunk_overlap)
-        text_splitter = RecursiveCharacterTextSplitter(chunk_size=1000, chunk_overlap=100)
+        text_splitter = RecursiveCharacterTextSplitter(chunk_size=200, chunk_overlap=40)
         text_docs = text_splitter.split_documents(docs)
 
         serialized_docs = [
                     self.weaviate_serialize_document(doc) 
                     for doc in text_docs
-                    ]
+                        ]
         return serialized_docs	
 
     def divide_workload(self, num_actors, documents):
@@ -270,7 +291,7 @@ class VectorDataBase:
             if file.endswith('.pdf'):
                 pdf_path = os.path.join(directory, file)
                 try:
-                    loader = PyPDFLoader(pdf_path)
+                    loader = PyPDFLoader(pdf_path, extract_images=False)
                     documents.extend(loader.load())
                 except pypdf.errors.PdfStreamError as e:
                     print(f"Skipping file {file} due to error: {e}")
@@ -283,7 +304,39 @@ class VectorDataBase:
                 except Exception as e:
                     print(f"Error in file {file}: {e}")
                     continue
+        self.logger.info(f"Check the parsed documents: {documents}")
         return documents
+
+    def simple_add_doc(self, dir):
+        weaviate_client = weaviate.connect_to_local(   # `weaviate_key`: your Weaviate API key
+                    headers={
+                        "X-HuggingFace-Api-Key": "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"
+                        }
+                )
+
+        documents = []
+        model_name = "sentence-transformers/all-MiniLM-L6-v2"
+        model_kwargs = {'device': 'cpu'}
+        encode_kwargs = {'normalize_embeddings': False}
+
+        hf = HuggingFaceEmbeddings(
+            model_name=model_name,
+            model_kwargs=model_kwargs,
+            encode_kwargs=encode_kwargs
+        )
+        for file in os.listdir(dir):
+            if file.endswith('.pdf'):
+                pdf_path = os.path.join(dir, file)
+                try:
+                    loader = PyPDFLoader(pdf_path, extract_images=False)
+                    docs = loader.load()
+                    text_splitter=CharacterTextSplitter(chunk_size=200,chunk_overlap=0)
+                    document=text_splitter.split_documents(docs)
+                    vs = WeaviateVectorStore.from_documents(document, embedding=hf, client=weaviate_client, index_name="Admin_test_class_4")
+                    #documents.extend(loader.load())
+                except pypdf.errors.PdfStreamError as e:
+                    print(f"Skipping file {file} due to error: {e}")
+                    continue  # Skip this file and continue with the next one
 
     def process_all_docs(self, dir, username, cls):
         '''
@@ -306,21 +359,49 @@ class VectorDataBase:
             full_class = str(username) + "_" + str(cls)
             document_list = self.parse_pdf(dir)
             serialized_docs = self.weaviate_split_multiple_pdf(document_list)
-            if len(serialized_docs) <= 30:
+            if len(serialized_docs) <= 3000000:
                 self.add_weaviate_document(full_class, serialized_docs)
                 response["status"] = "success"
                 response["message"] = f"Processed {len(serialized_docs)} documents for class {full_class}."
-            else:
-                doc_workload = self.divide_workload(self.num_actors, serialized_docs)
-                self.add_weaviate_batch_documents(full_class, doc_workload)
-                #self.logger.info(f"check weaviate add data, ")
-                response["status"] = "success"
-                response["message"] = f"Processed {len(serialized_docs)} documents in batches for class {full_class}."
+            # else:
+            #     doc_workload = self.divide_workload(self.num_actors, serialized_docs)
+            #     self.add_weaviate_batch_documents(full_class, doc_workload)
+            #     #self.logger.info(f"check weaviate add data, ")
+            #     response["status"] = "success"
+            #     response["message"] = f"Processed {len(serialized_docs)} documents in batches for class {full_class}."
             return response
         except Exception as e:
             response["status"] = "error"
             response["message"] = str(e)
             return response
+
+    def adding_weaviate_document(self, text_lst, collection_name):
+        self.weaviate_client.batch.configure(batch_size=100)
+        with self.weaviate_client.batch as batch:
+            for text in text_lst:
+                batch.add_data_object(
+                    text,
+                    class_name=collection_name, 
+                        #uuid=generate_uuid5(text),
+        )
+                self.text_list.append(text)
+        results= self.text_list
+        ray.get(results)
+        return self.text_list
+
+
+    # def adding_weaviate_document(self, text_lst, collection_name):
+    #     self.weaviate_client.batch.configure(batch_size=100)
+
+    #     with self.weaviate_client.batch as batch:
+    #         for text in text_lst:
+    #             batch.add_data_object(
+    #                 text,
+    #                 class_name=collection_name, 
+    #                     #uuid=generate_uuid5(text),
+    #             )
+    #             self.text_list.append(text)
+    #     return self.text_list
 
     def add_weaviate_document(self, cls, docs):
         '''
@@ -398,54 +479,6 @@ class VectorDataBase:
                     return {"error": "No class name provided"}
         except Exception as e:
             return {"error": str(e)}
-
-        #         weaviate_client = weaviate.Client("http://localhost:8080")
-        #         self.logger.info("checkpoint 1")
-        #         prefix = username
-        #         self.logger.info(f"checkpoint 2 {prefix}: %s",)
-        #         cls = str(prefix) + "_" + str(class_name)
-        #         self.logger.info(f"checkpoint 2 {cls}: %s",)
-        #         #class_description = str(description)
-        #         vectorizer = 'text2vec-transformers'
-        #         if cls is not None:
-        #             schema = {'classes': [ 
-        #                 {
-        #                         'class': str(cls),
-        #                         'description': 'normal description',
-        #                         'vectorizer': str(vectorizer),
-        #                         'moduleConfig': {
-        #                             str(vectorizer): {
-        #                                 'vectorizerClassName': False,
-        #                                 }
-        #                         },
-        #                         'properties': [{
-        #                             'dataType': ['text'],
-        #                             'description': 'the text from the documents parsed',
-        #                             'moduleConfig': {
-        #                                 str(vectorizer): {
-        #                                     'skip': False,
-        #                                     'vectorizePropertyName': False,
-        #                                     }
-        #                             },
-        #                             'name': 'page_content',
-        #                         },
-        #                         {
-        #                             'name': 'document_title',
-        #                             'dataType': ['text'],
-        #                         }],      
-        #                         },
-        #             ]}
-        #             weaviate_client.schema.create(schema)
-        #             database_response = self.database.add_collection({"username": username, "collection_name": class_name})
-        #             if database_response:
-        #                 self.logger.info("class name added successfully to database")     
-        #             self.logger.info(f"success: class {class_name} created for user {username}")
-        #             return {"success": f"Class {cls} created "}
-        #         else:
-        #             return {"error": "No class name provided"}
-        # except Exception as e:
-        #     return {"error": str(e)}
-
 
     def delete_weaviate_class(self, username, class_name):
             '''
@@ -543,6 +576,17 @@ class VectorDataBase:
         except Exception as e:
                 return {"error": str(e)}
         
+    def get_all_objects(self, username, class_name):
+        weaviate_client = weaviate.connect_to_local(   # `weaviate_key`: your Weaviate API key
+                    headers={
+                        "X-HuggingFace-Api-Key": "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"
+                        }
+                )
+        full_class_name = str(username) + "_" + str(class_name)
+
+        collection = self.weaviate_client.collections.get(str(full_class_name))
+        for item in collection.iterator():
+            self.logger.info(f"Collection content: {item.properties}")
 
     def get_classes(self, username):
         try:
@@ -624,31 +668,132 @@ class VectorDataBase:
         return response
     
     ### Retriever functions ###
-    def initialize_vllm_manager(self, api_key, api_base, model_name, model_kwargs):
-        if api_key and api_base and model_name and model_kwargs is not None:   
-            self.vllm_manager = VLLMManager(api_key, api_base, model_name, model_kwargs)
-            self.logger.info(f"check the success init status: {self.vllm_manager}")
-            return self.vllm_manager
+    def initialize_vllm_manager(self, username, model, inference_endpoint):
+        if model and inference_endpoint is not None:   
+            self.vllm_manager = VLLMManager()
+            self.current_llm = self.vllm_manager.run_vllm_model(username, model, inference_endpoint)
+            self.logger.info(f"check the success init status: {self.vllm_manager}, and the current llm : {self.current_llm}")
+            return self.current_llm
         else: 
             self.logger.info(f"check the failed init status: {self.vllm_manager}")
             return None
+        
+    def run_inference_on_vllm(self, username, model, query):
+        self.logger.info(f"Checking the current llm status: {model} and the query: {query}")
+        response = model.invoke(str(query))
+        self.logger.info(f"logging the query and response: {response}")
+        return response
 
-    def initilize_embedder(self, embedder_name=None):
+    def initilize_embedder(self, username, embedder_name=None):
         if embedder_name == None:
             self.embedder_model = SentenceTransformer('sentence-transformers/all-MiniLM-L6-v2')
             self.logger.info(f"Checking the embedding model mini: {self.embedder_model}")
+            embeddings_test = self.embedder_model.encode("What is the capital of France?")
+           # self.logger.info(f"logging the vector generated by embedder for checking: {embeddings_test}")
             return self.embedder_model
         else:
             self.embedder_model = SentenceTransformer(str(embedder_name))
             self.logger.info(f"Checking the embedding model cutsom: {self.embedder_model}")
+            embeddings_test = self.embedder_model.encode("What is the capital of France?")
+           # self.logger.info(f"logging the vector generated by embedder for checking: {embeddings_test}")
             return self.embedder_model
 
-    def retrieval_augmented_generation(self):
-        self.logger.info(f"pre checking the vllm manager before RAG: {self.vllm_manager}")
-        qa_chain = RetrievalQA.from_chain_type(
-            self.vllm_manager,
+    def generate_prompt_template(self,):
+        template= """You are an assistant for question-answering tasks. 
+        Use the following pieces of retrieved context to answer the question. 
+        If you don't know the answer, just say that you don't know. 
+        Use five sentences maximum and keep the answer concise.
+        Question: {question} 
+        Context: {context} 
+        Answer:
+        """
+        prompt=ChatPromptTemplate.from_template(template)
+        return prompt
+        # prompt_template = """Text: {context}
 
+        # Question: {question}
+        
+        # Answer the question based on the text provided. If the text doesn't contain the answer, reply that the answer is not available.
+        # """
+        # PROMPT = PromptTemplate(
+        #     tempalte=prompt_template, input_variables=["context", "question"]
+        # )
+        # chain_type_kwargs = {"prompt": PROMPT}
+        # return chain_type_kwargs
+
+    def format_docs(self, docs):
+        return "\n\n".join(doc.page_content for doc in docs)
+
+    def get_collection_based_retriver(self, client, class_name, embedder):
+        self.weaviate_client = weaviate.connect_to_local(   # `weaviate_key`: your Weaviate API key
+                    headers={
+                        "X-HuggingFace-Api-Key": "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"
+                        }
+                )
+        model_name = str(embedder)
+        model_kwargs = {'device': 'cpu'}
+        encode_kwargs = {'normalize_embeddings': False}
+
+        hf = HuggingFaceEmbeddings(
+            model_name=model_name,
+            model_kwargs=model_kwargs,
+            encode_kwargs=encode_kwargs
         )
+        ## Log the hf embedder
+
+        self.logger.info(f"collection is {str(class_name)}, and client: {self.weaviate_client}, and embedder: {hf} ")
+
+        db2 = WeaviateVectorStore(client=self.weaviate_client, index_name=str(class_name), embedding=hf, text_key='page_content')
+
+        self.logger.info(f"checking the vectorstore 2 : {db2}")
+        self.retriever = db2.as_retriever()
+
+        self.logger.info(f"Check the retriever: {self.retriever}")
+        return self.retriever
+
+    def format_docs(self, docs):
+        return "\n\n".join(doc.page_content for doc in docs)
+
+    def retrieval_augmented_generation(self, username, class_name, embedder_name, model, inference_endpoint, query):
+        from langchain_core.output_parsers import StrOutputParser
+        from langchain_core.runnables import RunnablePassthrough
+        from langchain.vectorstores import Weaviate
+        from langchain import hub
+        self.weaviate_client = weaviate.connect_to_local(   # `weaviate_key`: your Weaviate API key
+                    headers={
+                        "X-HuggingFace-Api-Key": "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"
+                        }
+                )
+
+        # VVLM INIT
+        self.current_llm = self.initialize_vllm_manager(username, model, inference_endpoint)
+
+        self.logger.info(f"Checking the embedder : {embedder_name} and the current llm: {self.current_llm}")
+
+        full_class_name = str(username) + "_" + str(class_name)
+        selected_class = self.weaviate_client.collections.get(full_class_name)
+        
+        retriever = self.get_collection_based_retriver(self.weaviate_client, str(full_class_name), embedder_name)
+
+        #prompt_template = self.generate_prompt_template()
+
+        prompt = hub.pull("rlm/rag-prompt")
+       # docs = retriever.invoke(str(query))
+       # self.logger.info(f"checking the retrievd documents: {docs}")
+       
+        rag_chain=(
+            {"context":retriever | self.format_docs, "question":RunnablePassthrough()}
+            |prompt
+            |self.current_llm
+            |StrOutputParser()
+        )
+        self.logger.info(f"logging the rag chain: {rag_chain} and retriever: {retriever}")
+        response=rag_chain.invoke(str(query))
+
+        self.logger.info(f"Checking the response of do rag: {response}")
+
+        return response
+
 
     @VDB_app.post("/")
     async def VectorDataBase(self, request: VDBaseInput):
@@ -656,7 +801,12 @@ class VectorDataBase:
                 if request.mode == "add_to_collection":
                     #self.logger.info(f"request received {request}: %s", )
                     response  = self.process_all_docs(request.file_path, request.username, request.class_name)
+                    self.logger.info(f"Quick check of the embedder: {self.embedder_model}")
                     self.logger.info(f"response: {response}: %s", )
+                elif request.mode == "simple_add_to_collection":
+                    response = self.simple_add_doc(request.file_path)
+                    self.logger.info(f"logging the simple add: {response}")
+                    return response
                 elif request.mode == "basic_search":
                     response = self.basic_vector_search(request.username, request.class_name)
                     self.logger.info(f"Here is the response after basic search request: {response}")
@@ -676,6 +826,9 @@ class VectorDataBase:
                 elif request.mode == "display_documents":
                     response = self.query_weaviate_document_names(request.username, request.class_name)
                     return response
+                elif request.mode == "display_all_objects":
+                    response = self.get_all_objects(request.username, request.class_name)
+                    return response
                 elif request.mode == "delete_class":
                     response = self.delete_weaviate_class(request.username, request.class_name)
                     self.logger.info(f"collection delete: {response}: %s", )
@@ -691,6 +844,25 @@ class VectorDataBase:
                     self.logger.info(f"checking the request/ {request}: %s", )
                     response = self.add_vdb_class(request.username, request.class_name)
                     return response
+                elif request.mode == "initialize_vllm":
+                    #self.logger.info(f"Quick check of the embedder: {self.embedder_model}")
+                    self.logger.info(f"Checking the init vllm request args: {request}")
+                    response = self.initialize_vllm_manager(request.username, request.model, request.inference_endpoint)
+                    return response
+                elif request.mode == "vllm_inference":
+                    self.logger.info(f"Checking the vllm inference from VDB API and its args: {request.username}, and query {request.query} and current llm {self.current_llm}")
+                    response = self.run_inference_on_vllm(request.username, self.current_llm, request.query)
+                    self.logger.info(f"logging the inference response: {response}")
+                    return response
+                elif request.mode == "initialize_embedder":
+                    self.embedder_model = self.initilize_embedder(request.username, request.embedder)
+                    self.logger.info(f"Checking the response and the embedder creation: {self.embedder_model}, {request.embedder}")
+                    return self.embedder_model
+                elif request.mode == "do_rag":
+                    response = self.retrieval_augmented_generation(request.username, request.class_name, request.embedder, request.model, request.inference_endpoint, request.query)
+                    self.logger.info(f"Checking the response of do rag: {response}")
+                    return response
+                    #retrieval_augmented_generation(self, username, class_name, embedder_name, model, inference_endpoint, query):
                 self.logger.info(f"request processed successfully {request}: %s", )
                 return {"username": request.username, "response": response}
             except Exception as e:
