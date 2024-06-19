@@ -20,7 +20,7 @@ class Data(BaseModel):
     prompt: str
 
 # 
-class VllmBuildRequest(BaseModel):
+class VllmRequest(BaseModel):
     HUGGING_FACE_HUB_TOKEN: str
     MODEL: str
     TOKENIZER: Optional[str] = 'auto'
@@ -28,6 +28,8 @@ class VllmBuildRequest(BaseModel):
     TENSOR_PARALLEL_SIZE: Optional[int] = 1
     SEED: Optional[int] = 42
     QUANTIZATION: Optional[str]="None"
+    container_id: Optional[str] = None
+    engine_name: Optional[str] = None
 
 
 class InferenceRequest(BaseModel):

@@ -63,10 +63,10 @@ class VLLM_Engine(Base):
     container_id = Column(String, unique=True, index=True)
     model_name = Column(String, default="VLLM")
     quantized = Column(String, default="None")
-    end_point = Column(String, default="None")
     timestamp = Column(DateTime(timezone=True), server_default=func.now())
     max_model_length = Column(Integer, default=512)
     seed = Column(Integer, default=42)
+    inference_end_point = Column(String, unique=True,index=True)  # New column
     user_id = Column(Integer, ForeignKey('users.id'))
     user = relationship("User", back_populates="engines")
     __table_args__ = (UniqueConstraint('engine_name', name='_engine_name_uc'),)
@@ -336,15 +336,15 @@ class Database:
                 self.logger.error("User not found")
                 return {"error": "User not found"}
 
-            engine_name = input["username"]+"_"+input['model_name']+f"_{self.generate_random_name()}"
+            engine_name = input["username"]+"/"+input['model_name']+f"/{self.generate_random_name()}"
             engine = VLLM_Engine(
                 engine_name=engine_name,
                 container_id=input['container_id'],
-                end_point=input.get('end_point', 'None'),
                 model_name=input.get('model_name', 'VLLM'),
                 quantized=input.get('quantized', 'None'),
                 max_model_length=input.get('max_model_length', 512),
                 seed=input.get('seed', 42),
+                inference_end_point=input.get('endpoint', ''),
                 user_id=user.id
             )
             self.db.add(engine)
@@ -354,18 +354,32 @@ class Database:
             self.logger.error(f"Error occurred: {e}")
             return {"error": str(e)}
 
-    def get_user_engines(self, username):
+    def get_user_engines(self, input):
         try:
             user = self.db.query(User).filter(User.username == input["username"]).first()
             if not user:
-                self.logger.error(f"User {username} not found")
-                return {"error": f"User {username} not found"}
+                self.logger.error(f"User not found")
+                return {"error": f"User not found"}
 
-            engines = [engine.engine_name for engine in user.engines]
+            engines = [
+                {
+                    "engine_name": engine.engine_name,
+                    "container_id": engine.container_id,
+                    "model_name": engine.model_name,
+                    "quantized": engine.quantized,
+                    "max_model_length": engine.max_model_length,
+                    "seed": engine.seed,
+                    "inference_end_point": engine.inference_end_point,
+                    "timestamp": engine.timestamp,
+                    "user_id": engine.user_id
+                }
+                for engine in user.engines
+            ]
             return {"engines": engines}
         except Exception as e:
             self.logger.error(f"Error occurred: {e}")
-            return {"error": "An unexpected error occurred. Please try again later."}
+            return {"error": str(e)}
+
 
     def remove_engine_from_user(self, input):
         try:
@@ -389,4 +403,4 @@ class Database:
             return {"message": "Engine removed"}
         except Exception as e:
             self.logger.error(f"Error occurred: {e}")
-            return {"error": "An unexpected error occurred. Please try again later."}
+            return {"error": str(e)}

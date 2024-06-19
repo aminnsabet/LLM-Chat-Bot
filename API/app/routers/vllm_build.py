@@ -13,14 +13,14 @@ import requests
 from typing import Optional
 import time
 from app.logging_config import setup_logger
-from app.models import VllmBuildRequest
+from app.models import VllmRequest
 from app.routers.LLM.backend_database import Database
 logger = setup_logger()
 
 
 router = APIRouter()
 
-class VllmBuildRequest(VllmBuildRequest):
+class VllmRequest(VllmRequest):
     
     @field_validator('HUGGING_FACE_HUB_TOKEN')
     def validate_huggingface_token(cls, value):
@@ -111,13 +111,23 @@ def check_vllm_health(endpoint: str, timeout: int = 60, interval: int = 5):
         time.sleep(interval)
     return False
 
-def update_user_vLLM(user_id,engine_name,container_id,model_name,quantized,max_model_length,seed):
+def update_user_vLLM(username,container_id,model_name,endpoint,quantized,max_model_length,seed):
     database = Database()
-    response= database.add_engine_to_user({"username": user_id, "engine_name": engine_name, "container_id": container_id, "model_name": model_name, "quantized": quantized, "max_model_length": max_model_length, "seed": seed})
+    response= database.add_engine_to_user({"username": username, "container_id": container_id, "model_name": model_name,"endpoint":endpoint, "quantized": quantized, "max_model_length": max_model_length, "seed": seed})
     return response
 
-@router.post("/")
-def run_docker(engine_args: VllmBuildRequest,user: User = Depends(get_current_active_user)):
+def delete_user_vLLM(username,container_id,engine_name=None):
+    database = Database()
+    response= database.remove_engine_from_user({"username": username, "container_id": container_id, "engine_name": engine_name})
+    return response
+
+def user_engine_info(username):
+    database = Database()
+    response= database.get_user_engines({"username": username})
+    return response
+
+@router.post("/start/")
+def run_docker(engine_args: VllmRequest,user: User = Depends(get_current_active_user)):
     user_info = validate_huggingface_token(engine_args.HUGGING_FACE_HUB_TOKEN)
     if user_info is None:
         raise HTTPException(status_code=400, detail="Invalid Hugging Face token.")
@@ -140,6 +150,7 @@ def run_docker(engine_args: VllmBuildRequest,user: User = Depends(get_current_ac
         os.makedirs(log_dir)
 
     try:
+        
         free_port = find_free_port()
         ports = {8000:f'{free_port}/tcp'}  # Map the external port to the internal port 8000
 
@@ -174,14 +185,18 @@ def run_docker(engine_args: VllmBuildRequest,user: User = Depends(get_current_ac
             logger.info(f"Container started successfully. Port: {free_port}")
             logger.info(f"User info: {user_info}")
             logger.info(f"Container ID: {container.id}")
-            if not engine_args.QUANTIZATION:
-                engine_args.QUANTIZATION = "None"
-            update_user_vLLM(user.username,container.id,engine_args.MODEL,engine_args.QUANTIZATION,engine_args.MAX_MODEL_LEN,engine_args.SEED)  
+            endpoint = f"http://localhost:{free_port}/v1/completions"
+            try:
+                db_resp = update_user_vLLM( user.username,container.id,engine_args.MODEL,endpoint,engine_args.QUANTIZATION,engine_args.MAX_MODEL_LEN,engine_args.SEED) 
+            except Exception as e:
+                return {"message": "Container started successfully but failed to update the database.",
+                       "container_id": container.id }
             return {
                 "message": "Container started successfully and vLLM server is healthy",
-                "vLLM_endpoint": f"http://localhost:{free_port}/v1/completions",
+                "vLLM_endpoint": endpoint,
                 "user_info": user_info,
                 "status": "healthy"
+
             }
         else:
             raise Exception("Container did not pass health check.")
@@ -194,3 +209,18 @@ def run_docker(engine_args: VllmBuildRequest,user: User = Depends(get_current_ac
             log_file.flush()
 
         raise HTTPException(status_code=500, detail=str(e))
+
+@router.post("/terminate/")
+def stop_docker(engine_args: VllmRequest,user: User = Depends(get_current_active_user)):
+    client = docker.from_env()
+    container_id = engine_args.container_id
+    container = client.containers.get(container_id)
+    container.stop()
+    container.remove()
+    db_resp = delete_user_vLLM(user.username,container_id,engine_args.engine_name)
+    return {"message": "Container stopped successfully."}
+
+@router.post("/active_models/")
+def available_engine(user: User = Depends(get_current_active_user)):
+    response = user_engine_info(user.username)
+    return response
