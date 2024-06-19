@@ -1,4 +1,3 @@
-from backend_hfTextGen import PredictDeployment
 from backend_vectordatabase import VectorDataBase
 #from backend_arxiv_search import ArxivSearch
 from ray import serve
