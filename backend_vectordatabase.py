@@ -105,7 +105,6 @@ class VLLMManager:
                 openai_api_key="EMPTY",
                 openai_api_base=inference_endpoint,
                 model_name=model,
-                model_kwargs={"stop": ["."]},
                 max_tokens= 1084
             )
             #text_to_log = self.model.invoke("Hi how are you?")
@@ -125,7 +124,7 @@ class VLLMManager:
         self.model = None
         self.logger.info(f"Shutting down model: {self.model}")
 
-@ray.remote(num_cpus=1)
+@ray.remote(num_cpus=0.33)
 class WeaviateEmbedder:
     def __init__(self):
         self.time_taken = 0
@@ -167,6 +166,9 @@ class WeaviateEmbedder:
     
     def get_time_taken(self):
         return self.time_taken
+
+    def terminate_actors(self):
+        ray.actor.exit_actor()
     
 @serve.deployment(
     # ray_actor_options={"num_gpus": config.VD_deployment_num_gpus}, autoscaling_config={
@@ -183,7 +185,7 @@ class VectorDataBase:
 
         self.weaviate_client = weaviate.connect_to_local(   # `weaviate_key`: your Weaviate API key
                     headers={
-                        "X-HuggingFace-Api-Key": "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"
+                        "X-HuggingFace-Api-Key": "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"
                         }
                 )
 
@@ -310,7 +312,7 @@ class VectorDataBase:
     def simple_add_doc(self, dir):
         weaviate_client = weaviate.connect_to_local(   # `weaviate_key`: your Weaviate API key
                     headers={
-                        "X-HuggingFace-Api-Key": "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"
+                        "X-HuggingFace-Api-Key": "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"
                         }
                 )
 
@@ -429,8 +431,13 @@ class VectorDataBase:
         actors = [WeaviateEmbedder.remote() for _ in range(3)]
         self.logger.info(f"actors creation successful {actors}: %s", )
         [actor.adding_weaviate_document.remote(doc_part, str(cls)) for actor, doc_part in zip(actors, doc_workload)]
+        
+        [actor.terminate_actors.remote() for actor in actors]
         self.logger.info(f"check 1st step of ray was successful", )
         self.logger.info(f"check if ray was successful:", )
+
+
+
 
 
     def add_vdb_class(self,username, class_name,embedder=None):
@@ -450,7 +457,7 @@ class VectorDataBase:
         try:            
                 weaviate_client = weaviate.connect_to_local(   # `weaviate_key`: your Weaviate API key
                     headers={
-                        "X-HuggingFace-Api-Key": "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"
+                        "X-HuggingFace-Api-Key": "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"
                         }
                 )
 
@@ -498,7 +505,7 @@ class VectorDataBase:
             try: 
                 weaviate_client = weaviate.connect_to_local(   # `weaviate_key`: your Weaviate API key
                     headers={
-                        "X-HuggingFace-Api-Key": "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"
+                        "X-HuggingFace-Api-Key": "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"
                         }
                 )
                 full_class_name = str(username) + "_" + str(class_name)
@@ -580,20 +587,23 @@ class VectorDataBase:
     def get_all_objects(self, username, class_name):
         weaviate_client = weaviate.connect_to_local(   # `weaviate_key`: your Weaviate API key
                     headers={
-                        "X-HuggingFace-Api-Key": "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"
+                        "X-HuggingFace-Api-Key": "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"
                         }
                 )
+        doc_list = []
         full_class_name = str(username) + "_" + str(class_name)
 
         collection = self.weaviate_client.collections.get(str(full_class_name))
         for item in collection.iterator():
+            doc_list.append(item.properties)
             self.logger.info(f"Collection content: {item.properties}")
+        return doc_list
 
     def get_classes(self, username):
         try:
             weaviate_client = weaviate.connect_to_local(   # `weaviate_key`: your Weaviate API key
                     headers={
-                        "X-HuggingFace-Api-Key": "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"
+                        "X-HuggingFace-Api-Key": "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"
                         }
                 )
             #weaviate_client = weaviate.Client("http://localhost:8080")
@@ -619,7 +629,7 @@ class VectorDataBase:
     def basic_vector_search(self, username, cls):
         self.weaviate_client = weaviate.connect_to_local(   # `weaviate_key`: your Weaviate API key
                     headers={
-                        "X-HuggingFace-Api-Key": "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"
+                        "X-HuggingFace-Api-Key": "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"
                         }
                 )
         class_name = str(username) + "_" + str(cls)
@@ -633,7 +643,7 @@ class VectorDataBase:
     def similarity_vector_search(self, username, cls, user_query):
         self.weaviate_client = weaviate.connect_to_local(   # `weaviate_key`: your Weaviate API key
                     headers={
-                        "X-HuggingFace-Api-Key": "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"
+                        "X-HuggingFace-Api-Key": "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"
                         }
                 )
         class_name = str(username) + "_" + str(cls)
@@ -652,7 +662,7 @@ class VectorDataBase:
     def keyword_search(self, username, cls, user_query):
         self.weaviate_client = weaviate.connect_to_local(   # `weaviate_key`: your Weaviate API key
                     headers={
-                        "X-HuggingFace-Api-Key": "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"
+                        "X-HuggingFace-Api-Key": "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"
                         }
                 )
         class_name = str(username) + "_" + str(cls)
@@ -725,7 +735,7 @@ class VectorDataBase:
     def get_collection_based_retriver(self, client, class_name, embedder):
         self.weaviate_client = weaviate.connect_to_local(   # `weaviate_key`: your Weaviate API key
                     headers={
-                        "X-HuggingFace-Api-Key": "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"
+                        "X-HuggingFace-Api-Key": "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"
                         }
                 )
         model_name = str(embedder)
@@ -759,7 +769,7 @@ class VectorDataBase:
         from langchain import hub
         self.weaviate_client = weaviate.connect_to_local(   # `weaviate_key`: your Weaviate API key
                     headers={
-                        "X-HuggingFace-Api-Key": "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"
+                        "X-HuggingFace-Api-Key": "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"
                         }
                 )
 
