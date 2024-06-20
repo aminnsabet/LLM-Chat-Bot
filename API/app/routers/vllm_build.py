@@ -99,7 +99,7 @@ def validate_huggingface_model(model: str):
     response = requests.head(f"https://huggingface.co/{model}")
     return response.status_code == 200
 
-def check_vllm_health(endpoint: str, timeout: int = 60, interval: int = 5):
+def check_vllm_health(endpoint: str, timeout: int = 120, interval: int = 5):
     start_time = time.time()
     while time.time() - start_time < timeout:
         try:
@@ -150,16 +150,9 @@ def run_docker(engine_args: VllmRequest,user: User = Depends(get_current_active_
         os.makedirs(log_dir)
 
     try:
-        
         free_port = find_free_port()
         ports = {8000:f'{free_port}/tcp'}  # Map the external port to the internal port 8000
-
-        command = f"--model {engine_args.MODEL} --max-model-len {engine_args.MAX_MODEL_LEN} "
-        if engine_args.QUANTIZATION:
-            command += f" --quantization {engine_args.QUANTIZATION}"
-        if engine_args.TOKENIZER and engine_args.TOKENIZER != 'auto':
-            command += f" --tokenizer {engine_args.TOKENIZER}"
-
+        command = f"--model {engine_args.MODEL}"
         container = client.containers.run(
             'vllm/vllm-openai:latest',
             command=command,
@@ -214,11 +207,14 @@ def run_docker(engine_args: VllmRequest,user: User = Depends(get_current_active_
 def stop_docker(engine_args: VllmRequest,user: User = Depends(get_current_active_user)):
     client = docker.from_env()
     container_id = engine_args.container_id
-    container = client.containers.get(container_id)
-    container.stop()
-    container.remove()
-    db_resp = delete_user_vLLM(user.username,container_id,engine_args.engine_name)
-    return {"message": "Container stopped successfully."}
+    try:
+        container = client.containers.get(container_id)
+        container.stop()
+        container.remove()
+        db_resp = delete_user_vLLM(user.username,container_id,engine_args.engine_name)
+        return {"status": "terminated","container_id": container_id}
+    except Exception as e:  
+        return {"status": "failed","container_id": container_id}
 
 @router.post("/active_models/")
 def available_engine(user: User = Depends(get_current_active_user)):

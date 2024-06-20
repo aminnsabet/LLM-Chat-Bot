@@ -21,15 +21,15 @@ class Data(BaseModel):
 
 # 
 class VllmRequest(BaseModel):
-    HUGGING_FACE_HUB_TOKEN: str
-    MODEL: str
+    HUGGING_FACE_HUB_TOKEN: Optional[str]="None"
+    MODEL: Optional[str] = "None"
     TOKENIZER: Optional[str] = 'auto'
-    MAX_MODEL_LEN: Optional[int] = 512
+    MAX_MODEL_LEN: Optional[int] = 10000
     TENSOR_PARALLEL_SIZE: Optional[int] = 1
     SEED: Optional[int] = 42
     QUANTIZATION: Optional[str]="None"
-    container_id: Optional[str] = None
-    engine_name: Optional[str] = None
+    container_id: Optional[str] = "None"
+    engine_name: Optional[str] = "None"
 
 
 class InferenceRequest(BaseModel):

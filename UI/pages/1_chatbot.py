@@ -106,7 +106,7 @@ def add_LLM(model_name, access_token, HF_ACCESS_TOKEN, MAX_MODEL_LEN, SEED):
         "QUANTIZATION": "None"
     }
     resp = requests.post(f"{BASE_URL}/vllm_request/start/", json=query_data, headers=headers)
-
+      
     if resp.status_code == 200:
         if resp.json()["status"] == "healthy":
             return resp.json()
@@ -149,6 +149,33 @@ def parse_text(text):
         wrapped_text = textwrap.fill(cleaned_text, width=100)
         return wrapped_text
 
+def available_engine(username, access_token):
+    headers = {"Authorization": f"Bearer {access_token}"}
+    query_data = {
+        "username": username
+    }
+    resp = requests.post(f"{BASE_URL}/vllm_request/active_models/", json=query_data, headers=headers)
+    if resp.status_code == 200:
+        engines = resp.json()["engines"]
+        if len(engines) > 0:
+            return engines
+        else:
+            return None
+
+def remove_engine(username, access_token, container_id):
+    headers =   {"Authorization": f"Bearer {access_token}"}
+    query_data = {
+        "username": username,
+        "container_id": container_id
+    }
+    print(query_data)
+    resp = requests.post(f"{BASE_URL}/vllm_request/terminate/", json=query_data, headers=headers)
+    print("------->",resp.json())
+    if resp.status_code == 200:
+        if resp.json()["status"] == "terminated":
+            return True
+    else:
+        return False
 
 if "username" not in st.session_state or st.sidebar.button("Logout"):
     if "username" not in st.session_state:
@@ -186,29 +213,66 @@ else:
                 else:
                     st.error("User already exists")
         else:
+            
+            st.session_state.available_models = available_engine(logedin_username, st.session_state.token)
+            if not st.session_state.available_models:
+                st.warning("Add a Model to be able to chat", icon=None)
+
             st.sidebar.markdown("---")
             st.sidebar.markdown("<br>", unsafe_allow_html=True)
             st.sidebar.subheader("User Access Token:")
-            show_token = st.sidebar.button("Show Token")
+            show_token = st.sidebar.button("Show Access Token")
             if show_token:
                 st.sidebar.code(st.session_state.token)
-
+            # Add a new model to the user
             st.sidebar.markdown("---")
             st.sidebar.markdown("<br>", unsafe_allow_html=True)
             expander = st.sidebar.expander("Add New Model")
             model_name = expander.text_input("Enter the model name from Huggingface:")
             HF_ACCESS_TOKEN = expander.text_input("Enter your Huggingface Access Token:")
-            MAX_MODEL_LEN = expander.slider('Adjust the maximum model length', min_value=32, max_value=1024, value=512)
+            MAX_MODEL_LEN = expander.slider('Adjust the maximum context length', min_value=32, max_value=10000, value=5000)
             SEED = expander.slider('Adjust the seed', min_value=1, max_value=100, value=42)
             add_model = expander.button("Add")
             if add_model:
                 with expander:
                     with st.spinner("Adding model..."):
-                        response = add_LLM(model_name, logedin_username, HF_ACCESS_TOKEN, MAX_MODEL_LEN, SEED)
+                        response = add_LLM(model_name, st.session_state.token, HF_ACCESS_TOKEN, MAX_MODEL_LEN, SEED)
                         if response:
                             expander.success("Model added successfully!")
+                            st.session_state.available_models = available_engine(logedin_username, st.session_state.token)
                         else:
                             expander.error("Error adding model")
+
+            
+            # Remove an existing Model
+            st.sidebar.markdown("---")
+            st.sidebar.markdown("<br>", unsafe_allow_html=True)
+            expander_remove = st.sidebar.expander("Remove Model")
+            if st.session_state.available_models:
+                engine_names = [engine["model_name"] for engine in st.session_state.available_models]
+                selected_engine_name = expander_remove.selectbox("Select a model to remove", engine_names, key="remove_model")
+                selected_engine = next(engine for engine in st.session_state.available_models if engine["model_name"] == selected_engine_name)
+                if selected_engine_name and expander_remove.button("Remove"):
+                    with expander:
+                        with st.spinner("Terminating model..."):
+                            response = remove_engine(logedin_username, st.session_state.token, selected_engine["container_id"])
+                            if response:
+                                expander.success("Model removed successfully!")
+                                st.session_state.available_models = available_engine(logedin_username, st.session_state.token)
+                            else:
+                                expander_remove.error("Error removing model")
+            else:
+                expander_remove.warning("No models to remove")
+
+            if st.session_state.available_models:
+                st.sidebar.markdown("---")
+                st.sidebar.markdown("<br>", unsafe_allow_html=True)
+                st.sidebar.subheader("Available Models:")
+                engine_names = [engine["model_name"] for engine in st.session_state.available_models]
+                selected_engine_name = st.sidebar.selectbox("Select a model", engine_names)
+                selected_engine = next(engine for engine in st.session_state.available_models if engine["model_name"] == selected_engine_name)
+                st.session_state.inference_end_point = selected_engine["inference_end_point"].rstrip('/completions')
+                st.session_state.model_name = selected_engine["model_name"]
 
             st.sidebar.markdown("---")
             st.sidebar.markdown("<br>", unsafe_allow_html=True)
@@ -239,11 +303,11 @@ else:
                     st.chat_message(msg.type).write(msg.content)
                     st.session_state.messages.append({"role": msg.type, "content": msg.content})
 
-            # if the a chat is selected, the memory is set to True; otherwise, it is set to False
+            # if the a previous chat is selected, the memory is set to True; otherwise, it is set to False
             st.session_state.memory = False
             if selected_chat:
                 st.session_state.memory = True
-                
+
             #Chatbot
             if prompt := st.chat_input():
                 st.session_state.messages.append({"role": "user", "content": prompt})
@@ -251,7 +315,7 @@ else:
                     st.write(prompt)
                 with st.chat_message("assistant"):
                     with st.spinner("Thinking..."):
-                        response = chat(model="meta-llama/Llama-2-7b-chat-hf", inference_endpoint="http://localhost:8500/v1", prompt=prompt, memory=True, username=logedin_username, conversation_number=selected_chat, access_token=st.session_state.token)
+                        response = chat(model=st.session_state.model_name, inference_endpoint=st.session_state.inference_end_point , prompt=prompt, memory=st.session_state.memory, username=logedin_username, conversation_number=selected_chat, access_token=st.session_state.token)
                         if response:   
                             response = response["data"]
                             full_response = process_text(response)

@@ -66,7 +66,7 @@ class VLLM_Engine(Base):
     timestamp = Column(DateTime(timezone=True), server_default=func.now())
     max_model_length = Column(Integer, default=512)
     seed = Column(Integer, default=42)
-    inference_end_point = Column(String, unique=True,index=True)  # New column
+    inference_end_point = Column(String,index=True)  # New column
     user_id = Column(Integer, ForeignKey('users.id'))
     user = relationship("User", back_populates="engines")
     __table_args__ = (UniqueConstraint('engine_name', name='_engine_name_uc'),)
