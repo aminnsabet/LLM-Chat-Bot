@@ -46,3 +46,4 @@ docker run --runtime nvidia --gpus all \
 
 TheBloke/Llama-2-7B-Chat-AWQ
 TechxGenus/Meta-Llama-3-8B-Instruct-AWQ
+Moses25/Llama-3-8B-chat-32K-AWQ

@@ -168,9 +168,7 @@ def remove_engine(username, access_token, container_id):
         "username": username,
         "container_id": container_id
     }
-    print(query_data)
     resp = requests.post(f"{BASE_URL}/vllm_request/terminate/", json=query_data, headers=headers)
-    print("------->",resp.json())
     if resp.status_code == 200:
         if resp.json()["status"] == "terminated":
             return True
@@ -227,7 +225,7 @@ else:
             
             st.session_state.available_models = available_engine(logedin_username, st.session_state.token)
             if not st.session_state.available_models:
-                st.warning("Add a Model to be able to chat", icon=None)
+                st.warning("Add a model to enable the chatbot", icon=None)
 
             st.sidebar.markdown("---")
             st.sidebar.markdown("<br>", unsafe_allow_html=True)
@@ -283,7 +281,7 @@ else:
                                 expander_remove.error("Error removing model")
             else:
                 expander_remove.warning("No models to remove")
-
+            #Select a model to chat
             if st.session_state.available_models:
                 st.sidebar.markdown("---")
                 st.sidebar.markdown("<br>", unsafe_allow_html=True)
@@ -293,7 +291,7 @@ else:
                 selected_engine = next(engine for engine in st.session_state.available_models if engine["model_name"] == selected_engine_name)
                 st.session_state.inference_end_point = selected_engine["inference_end_point"].rstrip('/completions')
                 st.session_state.model_name = selected_engine["model_name"]
-
+            # Chat History
             st.sidebar.markdown("---")
             st.sidebar.markdown("<br>", unsafe_allow_html=True)
             st.sidebar.subheader("Chat History:")
@@ -302,21 +300,22 @@ else:
                 user_chat_list = retrieve_user_conversations_info(logedin_username, st.session_state.token)
 
             user_chat_list = retrieve_user_conversations_info(logedin_username, st.session_state.token)
-
+            formatted_conversations = [f"chat {num}" for num in user_chat_list["conversation_numbers"]]
             if not user_chat_list:
                 st.sidebar.write("No previous chats")
                 selected_chat = None
             else:
                 selected_chat = st.sidebar.radio(
                     "Select a conversation:",
-                    user_chat_list["conversation_numbers"],
-                    index=len(user_chat_list["conversation_numbers"]) - 1,
+                    formatted_conversations,
+                    index=len(formatted_conversations) - 1,
                 )
 
             if "messages" not in st.session_state:
                 st.session_state.messages = []
 
             if selected_chat:
+                selected_chat = selected_chat.replace("chat ", "")
                 st.session_state.messages = []
                 msgs = retrieving_messages(logedin_username, st.session_state.token, conversation_number=selected_chat)
                 for msg in msgs:
