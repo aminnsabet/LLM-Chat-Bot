@@ -99,7 +99,7 @@ def validate_huggingface_model(model: str):
     response = requests.head(f"https://huggingface.co/{model}")
     return response.status_code == 200
 
-def check_vllm_health(endpoint: str, timeout: int = 120, interval: int = 5):
+def check_vllm_health(endpoint: str, timeout: int = 180, interval: int = 5):
     start_time = time.time()
     while time.time() - start_time < timeout:
         try:
@@ -152,7 +152,8 @@ def run_docker(engine_args: VllmRequest,user: User = Depends(get_current_active_
     try:
         free_port = find_free_port()
         ports = {8000:f'{free_port}/tcp'}  # Map the external port to the internal port 8000
-        command = f"--model {engine_args.MODEL}"
+        command = f"--model {engine_args.MODEL} --gpu-memory-utilization 0.4 --quantization awq"
+        logger.info(f"Starting container with command: {command} and port: {free_port}")
         container = client.containers.run(
             'vllm/vllm-openai:latest',
             command=command,

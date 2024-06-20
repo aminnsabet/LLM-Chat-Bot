@@ -404,3 +404,25 @@ class Database:
         except Exception as e:
             self.logger.error(f"Error occurred: {e}")
             return {"error": str(e)}
+    def get_token_info(self, username):
+        try:
+            user = self.db.query(User).filter(User.username == username).first()
+
+            if not user:
+                self.logger.error(f"User {username} not found")
+                return {"error": f"User {username} not found"}
+
+            token_info = {
+                "username": user.username,
+                "prompt_token_limit": user.prompt_token_limit,
+                "prompt_token_number": user.prompt_token_number,
+                "gen_token_limit": user.gen_token_limit,
+                "gen_token_number": user.gen_token_number,
+                "disabled": user.disabled
+            }
+
+            self.db.close()
+            return token_info
+        except Exception as e:
+            self.logger.error(f"Error occurred: {e}")
+            return {"error": "An unexpected error occurred. Please try again later."}

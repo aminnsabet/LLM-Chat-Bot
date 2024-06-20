@@ -36,10 +36,13 @@ model = VLLMOpenAI(
 # "temperature": 0
 # }'
 
-# docker run --runtime nvidia --gpus all \
-#     -v ~/.cache/huggingface:/root/.cache/huggingface \
-#     --env "HUGGING_FACE_HUB_TOKEN=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" \
-#     -p 8500:8000 \
-#     --ipc=host \
-#     vllm/vllm-openai:latest \
-#     --model meta-llama/Llama-2-7b-chat-hf
+docker run --runtime nvidia --gpus all \
+    -v ~/.cache/huggingface:/root/.cache/huggingface \
+    --env "HUGGING_FACE_HUB_TOKEN=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" \
+    -p 8500:8000 \
+    --ipc=host \
+    vllm/vllm-openai:latest \
+    --model meta-llama/Llama-2-7b-chat-hf
+
+TheBloke/Llama-2-7B-Chat-AWQ
+TechxGenus/Meta-Llama-3-8B-Instruct-AWQ

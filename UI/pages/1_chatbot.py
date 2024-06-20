@@ -177,6 +177,17 @@ def remove_engine(username, access_token, container_id):
     else:
         return False
 
+def user_token_info(username, access_token):
+    headers =   {"Authorization": f"Bearer {access_token}"}
+    query_data = {
+        "username": username
+    }
+    resp = requests.post(f"{BASE_URL}/db_request/get_token_info/", json=query_data, headers=headers)
+    if resp.status_code == 200:
+        return resp.json()
+    else:
+        return None
+
 if "username" not in st.session_state or st.sidebar.button("Logout"):
     if "username" not in st.session_state:
         username = st.text_input("Enter your username:")
@@ -224,6 +235,15 @@ else:
             show_token = st.sidebar.button("Show Access Token")
             if show_token:
                 st.sidebar.code(st.session_state.token)
+            #Show token usage
+            st.sidebar.markdown("---")
+            st.sidebar.markdown("<br>", unsafe_allow_html=True)
+            st.sidebar.subheader("Token Usage:")
+            show_token_usage = st.sidebar.button("Show User Token Usage")
+            if show_token_usage:
+                token_usage = user_token_info(logedin_username, st.session_state.token)
+                st.sidebar.write(f"Input token usage: {token_usage['prompt_token_number']}/{token_usage['prompt_token_limit']}")
+                st.sidebar.write(f"Gen token usage: {token_usage['gen_token_number']}/{token_usage['gen_token_limit']}")
             # Add a new model to the user
             st.sidebar.markdown("---")
             st.sidebar.markdown("<br>", unsafe_allow_html=True)
@@ -253,7 +273,7 @@ else:
                 selected_engine_name = expander_remove.selectbox("Select a model to remove", engine_names, key="remove_model")
                 selected_engine = next(engine for engine in st.session_state.available_models if engine["model_name"] == selected_engine_name)
                 if selected_engine_name and expander_remove.button("Remove"):
-                    with expander:
+                    with expander_remove:
                         with st.spinner("Terminating model..."):
                             response = remove_engine(logedin_username, st.session_state.token, selected_engine["container_id"])
                             if response:

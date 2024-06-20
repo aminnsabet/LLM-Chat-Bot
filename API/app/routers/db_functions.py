@@ -752,4 +752,28 @@ async def get_user_conversations(
         # Handle the exception here
         return {"error": str(e),"username":input.username}
 
+@router.post("/get_token_info/")
+def get_token_info(input: UserRequest,
+    current_user: LoginUser = Security(get_current_active_user),
+    db: Session = Depends(get_db),):
+        try:
+            user = db.query(User).filter(User.username == current_user.username).first()
 
+            if not user:
+                self.logger.error(f"User {username} not found")
+                return {"error": f"User {username} not found"}
+
+            token_info = {
+                "username": user.username,
+                "prompt_token_limit": user.prompt_token_limit,
+                "prompt_token_number": user.prompt_token_number,
+                "gen_token_limit": user.gen_token_limit,
+                "gen_token_number": user.gen_token_number,
+                "disabled": user.disabled
+            }
+
+            db.close()
+            return token_info
+        except Exception as e:
+            
+            return {"error": str(e)}
