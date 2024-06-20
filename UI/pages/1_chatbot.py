@@ -5,6 +5,8 @@ import time
 from langchain.schema import messages_from_dict, messages_to_dict
 from langchain.memory.chat_message_histories import StreamlitChatMessageHistory
 from langchain_community.chat_message_histories import SQLChatMessageHistory
+import re
+import textwrap
 
 BASE_URL = "http://localhost:8086"
 Weaviate_endpoint = "/vector_DB_request/"
@@ -103,7 +105,7 @@ def add_LLM(model_name, access_token, HF_ACCESS_TOKEN, MAX_MODEL_LEN, SEED):
         "SEED": int(SEED),
         "QUANTIZATION": "None"
     }
-    resp = requests.post(f"{BASE_URL}/vllm_init", json=query_data, headers=headers)
+    resp = requests.post(f"{BASE_URL}/vllm_request/start/", json=query_data, headers=headers)
 
     if resp.status_code == 200:
         if resp.json()["status"] == "healthy":
@@ -139,6 +141,14 @@ def add_conversation(username,access_token, conversation_name=None):
         return resp.json()
     else:
         return None
+def parse_text(text):
+        pattern = r"\s*Assistant:\s*"
+        pattern2 = r"\s*AI:\s*"
+        cleaned_text = re.sub(pattern, "", text)
+        cleaned_text = re.sub(pattern2, "", cleaned_text)
+        wrapped_text = textwrap.fill(cleaned_text, width=100)
+        return wrapped_text
+
 
 if "username" not in st.session_state or st.sidebar.button("Logout"):
     if "username" not in st.session_state:
@@ -229,6 +239,12 @@ else:
                     st.chat_message(msg.type).write(msg.content)
                     st.session_state.messages.append({"role": msg.type, "content": msg.content})
 
+            # if the a chat is selected, the memory is set to True; otherwise, it is set to False
+            st.session_state.memory = False
+            if selected_chat:
+                st.session_state.memory = True
+                
+            #Chatbot
             if prompt := st.chat_input():
                 st.session_state.messages.append({"role": "user", "content": prompt})
                 with st.chat_message("user"):
@@ -239,6 +255,7 @@ else:
                         if response:   
                             response = response["data"]
                             full_response = process_text(response)
-                            st.write(full_response)
+                            parsed_response = parse_text(full_response)
+                            st.write(parsed_response)
                             st.session_state.messages.append({"role": "assistant", "content": full_response})
                             add_conversation(logedin_username, st.session_state.messages, st.session_state.token)

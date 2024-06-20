@@ -1,67 +1,53 @@
-# import requests
-# from transformers import AutoTokenizer, AutoModelForCausalLM
-# token = "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"
-# model = AutoModelForCausalLM.from_pretrained("bigscience/bloom-560m",token=token
-
-# docker run --runtime nvidia --gpus all     -v ~/.cache/huggingface:/root/.cache/huggingface     --env "HUGGING_FACE_HUB_TOKEN=<secret>"     -p 8500:8000    
-#  --ipc=host     vllm/vllm-openai:latest     --model Hastagaras/Halu-8B-Llama3-v0.3
- #docker run --runtime nvidia --gpus all     -v ~/.cache/huggingface:/root/.cache/huggingface     --env "HUGGING_FACE_HUB_TOKEN=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"     -p 8000:8000     --ipc=host     vllm/vllm-openai:latest     --model meta-llama/Llama-2-7b-chat-hf
-import os
-from sqlalchemy import create_engine
-from langchain_community.llms import VLLMOpenAI
 from langchain_core.messages import HumanMessage
 from langchain_community.chat_message_histories import SQLChatMessageHistory
 from langchain_core.runnables.history import RunnableWithMessageHistory
 from langchain_core.runnables import Runnable
 from langchain.prompts import ChatPromptTemplate, MessagesPlaceholder
+from langchain.llms import VLLMOpenAI
 
 # Define the LLM
 model = VLLMOpenAI(
     openai_api_key="EMPTY",
     openai_api_base="http://localhost:8500/v1",
     model_name="meta-llama/Llama-2-7b-chat-hf",
-    model_kwargs={"stop": ["."]},
+    temperature=0.7,  # Adjust this value to control the randomness of responses
+    max_tokens=5,  # Limit the length of the response
+    top_p=0.9,  # Use nucleus sampling to limit the tokens considered
 )
 
-prompt = ChatPromptTemplate.from_messages(
-    [
-        (
-            "system",
-            "You're an assistant who is answering user questions in a chat manner.",
-        ),
-        MessagesPlaceholder(variable_name="history"),
-        ("human", "{input}"),
-    ]
-)
-import logging
-logging.getLogger().setLevel(logging.ERROR)
-
-runnable: Runnable = prompt | model
-
-# Ensure the database file exists
-from langchain_community.chat_message_histories import SQLChatMessageHistory
+# Create message history instance
 
 
-def get_session_history(session_id):
-    return SQLChatMessageHistory(session_id, "sqlite:////home/amin_sabet/dev/LLM-Chat-Bot/API/memory.db")
+system_prompt = ChatPromptTemplate.from_messages([
+            ('''You are a helpful, respectful, and honest assistant. Always answer as helpfully as possible, while being safe. Your answers should not include any harmful, unethical, racist, sexist, toxic, dangerous, or illegal content. Please ensure that your responses are socially unbiased and positive in nature.
+If a question does not make any sense, or is not factually coherent, explain why instead of answering something not correct. If you don't know the answer to a question, please don't share false information.
 
-with_message_history = RunnableWithMessageHistory(
-    runnable,
-    get_session_history,
-    input_messages_key="input",
-    history_messages_key="history",
-)
+Here is the conversation so far:
+{history}
 
-print(with_message_history.invoke(
-    {"input": "my Name is Amin?"},
-    config={"configurable": {"session_id": "abc122"}},
-))
-print(with_message_history.invoke(
-    {"input": "What was my name?"},
-    config={"configurable": {"session_id": "abc122"}},
-))
-messages = SQLChatMessageHistory("abc122","sqlite:////home/amin_sabet/dev/LLM-Chat-Bot/API/memory.db").get_messages()
-for message in messages:
-    print(message)
+User's message:
+{input}
+Response:'''),
+            MessagesPlaceholder(variable_name="history"),
+            ("human", "{input}"),
+        ])
 
-# "http://localhost:8500/v1"
+# Combine the prompt template and the model
+runnable: Runnable = system_prompt | model
+
+# Initialize conversation history
+conversation_history = []
+
+# Function to add message to history
+
+
+# Create an initial input
+user_input = "What is nuclear fusion?"
+input_data = {"input": user_input, "history": conversation_history}
+
+# Invoke the runnable
+response = runnable.invoke(input_data)
+
+# Print the initial response
+print(response)
+

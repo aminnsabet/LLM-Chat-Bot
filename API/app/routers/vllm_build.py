@@ -154,7 +154,7 @@ def run_docker(engine_args: VllmRequest,user: User = Depends(get_current_active_
         free_port = find_free_port()
         ports = {8000:f'{free_port}/tcp'}  # Map the external port to the internal port 8000
 
-        command = f"--model {engine_args.MODEL} --max-model-len {engine_args.MAX_MODEL_LEN}"
+        command = f"--model {engine_args.MODEL} --max-model-len {engine_args.MAX_MODEL_LEN} "
         if engine_args.QUANTIZATION:
             command += f" --quantization {engine_args.QUANTIZATION}"
         if engine_args.TOKENIZER and engine_args.TOKENIZER != 'auto':

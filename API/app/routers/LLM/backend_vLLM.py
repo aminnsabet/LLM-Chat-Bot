@@ -32,7 +32,15 @@ class vLLM_Inference:
         self.loop = asyncio.get_running_loop()
         # Define system prompt template
         self.system_prompt = ChatPromptTemplate.from_messages([
-            ("system", "You're an AI assistant who is answering user questions"),
+            ('''You are a helpful, respectful, and honest chatbot. Always answer as helpfully as possible, while being safe. Don't provide  any irrelevant anwer to user's question.  
+If a question does not make any sense, or is not factually coherent, explain why instead of answering something not correct. If you don't know the answer to a question, please don't share false information.
+
+conversation so far:
+{history}
+
+User's message:
+{input}
+'''),
             MessagesPlaceholder(variable_name="history"),
             ("human", "{input}"),
         ])
@@ -79,15 +87,21 @@ class vLLM_Inference:
             self.logger.error("Error in updating token usage: %s", e)
 
     # Asynchronous method to invoke the LLM and handle responses
-    async def invoke(self, username, input_prompt, database, llm, conversation_id):
+    async def invoke_history(self, username, input_prompt, database, llm, conversation_id):
         try:
             # Invoke the LLM based on the presence of a conversation ID
-            if conversation_id:
-                config = {"configurable": {"session_id": conversation_id}}
-                response = llm.invoke({"input": input_prompt}, config={"configurable": {"session_id": conversation_id}})
-            else:
-                response = llm.invoke(input_prompt)
-            
+            config = {"configurable": {"session_id": conversation_id}}
+            response = llm.invoke({"input": input_prompt}, config={"configurable": {"session_id": conversation_id}})
+            # Schedule the token update task asynchronously
+            asyncio.create_task(self.update_tokens_and_database(username, input_prompt, response))
+            return response
+        except Exception as e:
+            self.logger.error("Error in Inference Call: %s", e)
+            return str(e)
+
+    async def invoke_No_history(self, username, input_prompt, database, llm):
+        try:
+            response = llm.invoke({"input": input_prompt, "history": []})
             # Schedule the token update task asynchronously
             asyncio.create_task(self.update_tokens_and_database(username, input_prompt, response))
             return response
@@ -109,12 +123,13 @@ class vLLM_Inference:
                 openai_api_key="EMPTY",
                 openai_api_base=request.inference_endpoint,
                 model_name=request.model,
-                model_kwargs={"stop": ["."]},
-                streaming=True,
+                temperature=0.7,  # Adjust this value to control the randomness of responses
+                max_tokens=512,  # Limit the length of the response
+                top_p=0.9,
             )
             
             conversation_id = None
-
+            runnable: Runnable = self.system_prompt | llm
             # Handle memory retrieval if enabled
             if request.memory:
                 if request.conversation_number <= 0 or request.conversation_number is None:
@@ -123,19 +138,16 @@ class vLLM_Inference:
                     conversation_id = self.database.retrieve_conversation({"username": request.username, "conversation_number": request.conversation_number})["conversation_id"]
 
                 logging.getLogger().setLevel(logging.ERROR)
-    
-                runnable: Runnable = self.system_prompt | llm
-
                 llm_with_message_history = RunnableWithMessageHistory(
                     runnable,
                     self.get_session_history,
                     input_messages_key="input",
                     history_messages_key="history",
                 )
-                response = await self.invoke(request.username, request.prompt, self.database, llm_with_message_history, conversation_id)
+                response = await self.invoke_history(request.username, request.prompt, self.database, llm_with_message_history, conversation_id)
                 return response
             else:
-                response = await self.invoke(request.username, request.prompt, self.database, llm, conversation_id)
+                response = await self.invoke_No_history(request.username, request.prompt, self.database, runnable)
             return response
 
         except Exception as e:
