@@ -48,7 +48,8 @@ from langchain_huggingface import HuggingFaceEmbeddings
 from langchain.prompts import ChatPromptTemplate
 from langchain.schema.runnable import RunnablePassthrough
 from langchain.schema.output_parser import StrOutputParser
-
+import asyncio
+from pypdf.errors import PdfStreamError
 
 class Config:
     def __init__(self, **entries):
@@ -96,11 +97,12 @@ class VLLMManager:
 
         self.database = Database()
         self.model = None
-
+        self.logger.info(f"Checkpoint vllm manager before meta error 1! ")   
         # self.logger.info(f"Checking the init of VLLMManager and parameters: api_key {self.api_key}, base {self.api_base}, model name: {self.model_name}, kwargs: {self.model_kwargs}")
 
     def run_vllm_model(self, username, model, inference_endpoint):
         if self.model is None:
+            self.logger.info(f"Checkpoint vllm run before meta error 1! ")   
             self.model = VLLMOpenAI(
                 openai_api_key="EMPTY",
                 openai_api_base=inference_endpoint,
@@ -109,6 +111,7 @@ class VLLMManager:
             )
             #text_to_log = self.model.invoke("Hi how are you?")
             #self.logger.info(f"Checking the result of run_vllm_model, output is model: {self.model} and logged text is : {text_to_log}")
+            self.logger.info(f"Checkpoint vllm run before meta error 2! ")   
             return self.model
         
     def vllm_running_status(self):
@@ -124,51 +127,125 @@ class VLLMManager:
         self.model = None
         self.logger.info(f"Shutting down model: {self.model}")
 
-@ray.remote(num_cpus=0.33)
+@ray.remote(num_cpus=0.2, num_gpus=0.2)
 class WeaviateEmbedder:
-    def __init__(self):
+    def __init__(self, class_name=None):
         self.time_taken = 0
         self.text_list = []
-        # adding logger for debugging
-        logging.basicConfig(
-            level=logging.INFO,
-            format="%(asctime)s - %(levelname)s - %(message)s",
-            filename="app.log",  # specify the file name if you want logging to be stored in a file
-            filemode="a",  # append to the log file if it exists
-        )
+        self.class_name= class_name
+        
+    async def run_split_pdf(self, document):
+        serialized_docs = await self.weaviate_split_pdf(document)
+        return serialized_docs
 
-        self.logger = logging.getLogger(__name__)
-        self.logger.propagate = True
+    async def run_embedder_on_text(self, serialized_docs, collection_name):
+        doc_list = await self.adding_weaviate_document(serialized_docs, collection_name)
+        return doc_list
 
-        try:
-            self.weaviate_client = weaviate.Client(
-                url=config.weaviate_client_url,   
-            )
-        except:
-            self.logger.error("Error in connecting to Weaviate")
+    # async def run_embedder_on_text(self, documents):
+    #     serialized_docs = await self.weaviate_split_pdf(documents)
+    #     doc_list = await self.adding_weaviate_document(serialized_docs)
+    #     return doc_list
 
-    def adding_weaviate_document(self, text_lst, collection_name):
-        self.weaviate_client.batch.configure(batch_size=100)
-        with self.weaviate_client.batch as batch:
-            for text in text_lst:
-                batch.add_data_object(
-                    text,
-                    class_name=collection_name, 
-                        #uuid=generate_uuid5(text),
-        )
-                self.text_list.append(text)
-        results= self.text_list
-        ray.get(results)
-        return self.text_list
+    async def weaviate_split_pdf(self, docs):
 
-    def get(self):
-        return self.lst_embeddings
+        text_splitter = RecursiveCharacterTextSplitter(chunk_size=1000, chunk_overlap=100)
+        text_docs = text_splitter.split_documents(docs)
+        serialized_docs = [await self.weaviate_serialize_document(doc) for doc in text_docs]
+
+        return serialized_docs
+
+    async def weaviate_serialize_document(self, doc):
+
+        document_title = doc.metadata.get('source', '').split('/')[-1]
+        return {
+            "page_content": doc.page_content,
+            "document_title": document_title,
+        }
+
+    async def parse_pdf(self, file_path_list):
+        documents = []
+        for pdf_path in file_path_list:
+            try:
+                loader = PyPDFLoader(pdf_path)
+                documents.extend(loader.load())
+
+            except PdfStreamError as e:
+
+                continue
+        return documents
+
+    async def convert_file_to_text(self, document_path):
+        documents = await self.parse_pdf(document_path)
+
+        return documents
     
-    def get_time_taken(self):
-        return self.time_taken
+    async def adding_weaviate_document(self, text_lst, collection_name=None):
+        weaviate_client = weaviate.connect_to_local(   # `weaviate_key`: your Weaviate API key
+                    port= 8900,
+                    # headers={
+                    #     #"X-HuggingFace-Api-Key": "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"
+                    #     }
+                )
+        
+        collection = weaviate_client.collections.get(str(collection_name))
+        with collection.batch.fixed_size(batch_size=100) as batch:
+            for data_row in text_lst:
+                batch.add_object(
+                    properties=data_row,
+                )
+                self.text_list.append(data_row)
 
-    def terminate_actors(self):
+        return self.text_list
+    
+    async def terminate_actors(self):
         ray.actor.exit_actor()
+
+# @ray.remote(num_cpus=0.33)
+# class WeaviateEmbedder:
+#     def __init__(self):
+#         self.time_taken = 0
+#         self.text_list = []
+#         # adding logger for debugging
+#         logging.basicConfig(
+#             level=logging.INFO,
+#             format="%(asctime)s - %(levelname)s - %(message)s",
+#             filename="app.log",  # specify the file name if you want logging to be stored in a file
+#             filemode="a",  # append to the log file if it exists
+#         )
+
+#         self.logger = logging.getLogger(__name__)
+#         self.logger.propagate = True
+
+#         try:
+#             self.weaviate_client = weaviate.Client(
+#                 url=config.weaviate_client_url,   
+#             )
+#         except:
+#             self.logger.error("Error in connecting to Weaviate")
+
+#     def adding_weaviate_document(self, text_lst, collection_name):
+#         self.weaviate_client.batch.configure(batch_size=100)
+#         with self.weaviate_client.batch as batch:
+#             for text in text_lst:
+#                 batch.add_data_object(
+#                     text,
+#                     class_name=collection_name, 
+#                         #uuid=generate_uuid5(text),
+#         )
+#                 self.text_list.append(text)
+#         results= self.text_list
+        
+#         return self.text_list
+
+#     def get(self):
+#         return self.lst_embeddings
+    
+#     def get_time_taken(self):
+#         return self.time_taken
+
+#     def terminate_actors(self):
+#         ray.actor.exit_actor()
     
 @serve.deployment(
     # ray_actor_options={"num_gpus": config.VD_deployment_num_gpus}, autoscaling_config={
@@ -184,9 +261,8 @@ class VectorDataBase:
     def __init__(self):
 
         self.weaviate_client = weaviate.connect_to_local(   # `weaviate_key`: your Weaviate API key
-                    headers={
-                        "X-HuggingFace-Api-Key": "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"
-                        }
+                    port= 8900,
+                    
                 )
 
         self.num_actors = config.VD_number_actors
@@ -251,6 +327,9 @@ class VectorDataBase:
                     for doc in text_docs
                         ]
         return serialized_docs	
+
+    def split_workload(self, file_paths, num_actors):
+        return [file_paths[i::num_actors] for i in range(num_actors)]
 
     def divide_workload(self, num_actors, documents):
         '''
@@ -340,7 +419,25 @@ class VectorDataBase:
                     print(f"Skipping file {file} due to error: {e}")
                     continue  # Skip this file and continue with the next one
 
-    def process_all_docs(self, dir, username, cls):
+    def adding_weaviate_document(self, text_lst, collection_name=None):
+        weaviate_client = weaviate.connect_to_local(   # `weaviate_key`: your Weaviate API key
+                    port= 8900,
+                    # headers={
+                    #     #"X-HuggingFace-Api-Key": "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"
+                    #     }
+                )
+        
+        collection = weaviate_client.collections.get(str(collection_name))
+        with collection.batch.fixed_size(batch_size=100) as batch:
+            for data_row in text_lst:
+                batch.add_object(
+                    properties=data_row,
+                )
+                self.text_list.append(data_row)
+
+        return self.text_list
+
+    async def process_all_docs(self, dir, username, cls, ray, ray_actors):
         '''
         Description:
             Processes all documents in a specified directory, serializes them, and adds them to Weaviate. Handles both small and large document sets by splitting the workload for efficient processing.
@@ -359,51 +456,40 @@ class VectorDataBase:
         response = {"status": "initiated", "message": ""}
         try:
             full_class = str(username) + "_" + str(cls)
-            document_list = self.parse_pdf(dir)
-            serialized_docs = self.weaviate_split_multiple_pdf(document_list)
-            if len(serialized_docs) <= 30:
-                self.add_weaviate_document(full_class, serialized_docs)
-                response["status"] = "success"
-                response["message"] = f"Processed {len(serialized_docs)} documents for class {full_class}."
-            else:
-                doc_workload = self.divide_workload(self.num_actors, serialized_docs)
-                self.add_weaviate_batch_documents(full_class, doc_workload)
-                #self.logger.info(f"check weaviate add data, ")
-                response["status"] = "success"
-                response["message"] = f"Processed {len(serialized_docs)} documents in batches for class {full_class}."
-            return response
+            #pdf_paths = self.get_pdf_paths(str(dir))
+            parsed_pdf = self.parse_pdf(dir)
+            #self.logger.info(f"Parsed pdf? {parsed_pdf}")
+            splitted_workload = self.weaviate_split_multiple_pdf(parsed_pdf)
+            #self.logger.info(f"Checking the split workload: {splitted_workload}")
+            
+            #self.logger.info(f"Cgecking the workload divided: {len(workload)}, and worklad {workload[0]}")
+            if ray == True:
+                workload = self.divide_workload(ray_actors, splitted_workload)
+                weaviate_embedders = [WeaviateEmbedder.remote() for _ in range(ray_actors)]
+                very_finals = [weaviate_embedder.run_embedder_on_text.remote(i, str(full_class)) for weaviate_embedder, i in zip(weaviate_embedders, workload)]
+                results = await asyncio.gather(*very_finals)
+                self.logger.info(f"Cheking the results: {results}")
+                return results
+            elif ray == False:
+                results = self.adding_weaviate_document(splitted_workload, full_class)
+                return results
+            else:            
+                response["status"] = "error"
+                response["message"] = str(e)
+                return response
+                
         except Exception as e:
             response["status"] = "error"
             response["message"] = str(e)
             return response
 
-    # def adding_weaviate_document(self, text_lst, collection_name):
-    #     self.weaviate_client.batch.configure(batch_size=100)
-    #     with self.weaviate_client.batch as batch:
-    #         for text in text_lst:
-    #             batch.add_data_object(
-    #                 text,
-    #                 class_name=collection_name, 
-    #                     #uuid=generate_uuid5(text),
-    #     )
-    #             self.text_list.append(text)
-    #     results= self.text_list
-    #     ray.get(results)
-    #     return self.text_list
-
-
-    # def adding_weaviate_document(self, text_lst, collection_name):
-    #     self.weaviate_client.batch.configure(batch_size=100)
-
-    #     with self.weaviate_client.batch as batch:
-    #         for text in text_lst:
-    #             batch.add_data_object(
-    #                 text,
-    #                 class_name=collection_name, 
-    #                     #uuid=generate_uuid5(text),
-    #             )
-    #             self.text_list.append(text)
-    #     return self.text_list
+    def get_pdf_paths(self, dir):
+        pdf_paths = []
+        for file in os.listdir(dir):
+            if file.endswith('.pdf'):
+                pdf_path = os.path.join(dir, file)
+                pdf_paths.append(pdf_path)
+        return pdf_paths
 
     def add_weaviate_document(self, cls, docs):
         '''
@@ -428,19 +514,55 @@ class VectorDataBase:
             cls (str): The class name under which the documents will be added.
             doc_workload (list): A list of document batches to be added, where each sublist is a separate batch.
         '''
-        actors = [WeaviateEmbedder.remote() for _ in range(3)]
-        self.logger.info(f"actors creation successful {actors}: %s", )
-        [actor.adding_weaviate_document.remote(doc_part, str(cls)) for actor, doc_part in zip(actors, doc_workload)]
+        document_list = self.parse_pdf(dir)
+        # serialized_docs = self.weaviate_split_multiple_pdf(document_list)
+
+
+        # weaviate_embedders = [WeaviateEmbedder.remote() for _ in range(len(document_list))]
+
+        # futures = [weaviate_embedder.convert_file_to_text.remote(i) for weaviate_embedder, i in zip(weaviate_embedders, workload)]
+
+
+        # self.logger.info(f"actors creation successful {actors}: %s", )
+        # results = ray.get([actor.adding_weaviate_document.remote(doc_part, str(cls)) for actor, doc_part in zip(actors, doc_workload)])
+        # document_list = self.parse_pdf(dir)
+        # serialized_docs = self.weaviate_split_multiple_pdf(document_list)
         
-        [actor.terminate_actors.remote() for actor in actors]
+        # pdf_paths = get_pdf_paths("API/received_files/0e5ba6dbf1116059")
+        # doc_workload = self.divide_workload(self.num_actors, serialized_docs)
+        # workload = split_workload(pdf_paths, len(pdf_paths))
+        # futures = [weaviate_embedder.convert_file_to_text.remote(i) for weaviate_embedder, i in zip(weaviate_embedders, workload)]
+        # mid_res = await asyncio.gather(*futures)
+        # very_finals = [weaviate_embedder.run_embedder_on_text.remote(i) for weaviate_embedder, i in zip(weaviate_embedders, mid_res)]
+        # results = await asyncio.gather(*very_finals)
+
+
         self.logger.info(f"check 1st step of ray was successful", )
         self.logger.info(f"check if ray was successful:", )
 
 
+    def adding_weaviate_document_no_ray(self, text_lst, collection_name):
+        try:
+            self.weaviate_client = weaviate.connect_to_local(   # `weaviate_key`: your Weaviate API key
+                    port= 8900,
+                    
+                )
+        except:
+            self.logger.error("Error in connecting to Weaviate")
+
+        self.logger.inf(f"Checkpoint no ray 1 and check list {text_lst[0]}")
+        self.weaviate_client.batch.configure(batch_size=100)
+        with self.weaviate_client.batch as batch:
+            for text in text_lst:
+                batch.add_data_object(
+                    text,
+                    class_name=str(collection_name), 
+        )
+                self.text_list.append(text)
+        return self.text_list
 
 
-
-    def add_vdb_class(self,username, class_name,embedder=None):
+    def add_vdb_class(self, username, class_name,embedder=None, HF_token=None):
         '''
         Description:
             Creates a new class in the Weaviate database with the specified name and username. It also adds the class to the internal database.
@@ -456,38 +578,35 @@ class VectorDataBase:
         '''
         try:            
                 weaviate_client = weaviate.connect_to_local(   # `weaviate_key`: your Weaviate API key
-                    headers={
-                        "X-HuggingFace-Api-Key": "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"
-                        }
+                    port= 8900,
                 )
 
                 prefix = username
                 cls = str(prefix) + "_" + str(class_name)
+                #self.logger.info(f"Chec")
                 if embedder is None:
                     vectorizer = "sentence-transformers/all-MiniLM-L6-v2"
                 else:
                     vectorizer = embedder
                 weaviate_client.collections.create(
                         cls,
-                        vectorizer_config=Configure.Vectorizer.text2vec_huggingface(
-                            model=vectorizer,
-                        ),
+                        vectorizer_config=Configure.Vectorizer.text2vec_transformers(),
                         vector_index_config=Configure.VectorIndex.flat(),
                         properties=[  # properties configuration is optional
                             Property(name="document_title", data_type=DataType.TEXT),
                             Property(name="page_content", data_type=DataType.TEXT),
                         ],
                     )
-                database_response = self.database.add_collection({"username": username, "collection_name": class_name})
-                if database_response:
-                    self.logger.info("class name added successfully to database")     
-                    self.logger.info(f"success: class {class_name} created for user {username}")
-                    return {"success": f"Class {cls} created "}
-                else:
-                    return {"error": "No class name provided"}
+                # database_response = self.database.add_collection({"username": username, "collection_name": class_name})
+                # if database_response:
+                #     self.logger.info("class name added successfully to database")     
+                #     self.logger.info(f"success: class {class_name} created for user {username}")
+                #     return {"success": f"Class {cls} created "}
+                # else:
+                #     return {"error": "No class name provided"}
         except Exception as e:
             return {"error": str(e)}
-
+        
     def delete_weaviate_class(self, username, class_name):
             '''
             Description:
@@ -504,9 +623,8 @@ class VectorDataBase:
             '''
             try: 
                 weaviate_client = weaviate.connect_to_local(   # `weaviate_key`: your Weaviate API key
-                    headers={
-                        "X-HuggingFace-Api-Key": "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"
-                        }
+                    port= 8900,
+                    
                 )
                 full_class_name = str(username) + "_" + str(class_name)
                 if full_class_name is not None:
@@ -560,7 +678,7 @@ class VectorDataBase:
             list/dict: A list of document titles found, or an error message if no documents are found or an error occurs.
         '''
         try:
-            weaviate_client = weaviate.Client("http://localhost:8080")
+            weaviate_client = weaviate.Client("http://localhost:8900")
             prefix = username
             prefix = prefix.capitalize()
             class_properties = ["document_title"]
@@ -586,9 +704,8 @@ class VectorDataBase:
         
     def get_all_objects(self, username, class_name):
         weaviate_client = weaviate.connect_to_local(   # `weaviate_key`: your Weaviate API key
-                    headers={
-                        "X-HuggingFace-Api-Key": "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"
-                        }
+                    port= 8900,
+                    
                 )
         doc_list = []
         full_class_name = str(username) + "_" + str(class_name)
@@ -602,9 +719,8 @@ class VectorDataBase:
     def get_classes(self, username):
         try:
             weaviate_client = weaviate.connect_to_local(   # `weaviate_key`: your Weaviate API key
-                    headers={
-                        "X-HuggingFace-Api-Key": "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"
-                        }
+                    port= 8900,
+                    
                 )
             #weaviate_client = weaviate.Client("http://localhost:8080")
             username = username
@@ -680,7 +796,7 @@ class VectorDataBase:
     
     ### Retriever functions ###
     def initialize_vllm_manager(self, username, model, inference_endpoint):
-        if model and inference_endpoint is not None:   
+        if model and inference_endpoint is not None:
             self.vllm_manager = VLLMManager()
             self.current_llm = self.vllm_manager.run_vllm_model(username, model, inference_endpoint)
             self.logger.info(f"check the success init status: {self.vllm_manager}, and the current llm : {self.current_llm}")
@@ -734,21 +850,20 @@ class VectorDataBase:
 
     def get_collection_based_retriver(self, client, class_name, embedder):
         self.weaviate_client = weaviate.connect_to_local(   # `weaviate_key`: your Weaviate API key
-                    headers={
-                        "X-HuggingFace-Api-Key": "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"
-                        }
+                    port=8900
                 )
-        model_name = str(embedder)
+        model_name = "BAAI/bge-base-en-v1.5"#str(embedder)
         model_kwargs = {'device': 'cpu'}
         encode_kwargs = {'normalize_embeddings': False}
-
+        self.logger.info(f"Checkpoint retriever before path error 1")
         hf = HuggingFaceEmbeddings(
             model_name=model_name,
             model_kwargs=model_kwargs,
             encode_kwargs=encode_kwargs
         )
+        self.logger.info(f"Checkpoint retriever before path error 2")
         ## Log the hf embedder
-
+        self.logger.info(f"Check the huggingface embedding: {hf}")
         self.logger.info(f"collection is {str(class_name)}, and client: {self.weaviate_client}, and embedder: {hf} ")
 
         db2 = WeaviateVectorStore(client=self.weaviate_client, index_name=str(class_name), embedding=hf, text_key='page_content')
@@ -768,9 +883,7 @@ class VectorDataBase:
         from langchain.vectorstores import Weaviate
         from langchain import hub
         self.weaviate_client = weaviate.connect_to_local(   # `weaviate_key`: your Weaviate API key
-                    headers={
-                        "X-HuggingFace-Api-Key": "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"
-                        }
+                    port=8900
                 )
 
         # VVLM INIT
@@ -854,10 +967,16 @@ class VectorDataBase:
 
     def hyde_retrieval_augmented_gneneration(self, username, class_name, model, inference_endpoint, embedder_name, query):
         from langchain_core.runnables import chain
+        self.weaviate_client = weaviate.connect_to_local(   # `weaviate_key`: your Weaviate API key
+                    port=8900
+                )
+        self.logger.info(f"Checkpoint before meta error 1! ")
         self.current_llm = self.initialize_vllm_manager(username, model, inference_endpoint)
+        self.logger.info(f"Checkpoint before meta error 2! ")
         full_class_name = str(username) + "_" + str(class_name)
+        self.logger.info(f"Checkpoint before meta error 3! ")
         retriever = self.get_collection_based_retriver(self.weaviate_client, str(full_class_name), embedder_name)
-
+        self.logger.info(f"Checkpoint before meta error 4! ")
 
         hyde_template = """
             Even if you do not know the full answer, generate a one-paragraph hypothetical answer to the below question.
@@ -902,8 +1021,8 @@ class VectorDataBase:
             try:
                 if request.mode == "add_to_collection":
                     #self.logger.info(f"request received {request}: %s", )
-                    response  = self.process_all_docs(request.file_path, request.username, request.class_name)
-                    self.logger.info(f"Quick check of the embedder: {self.embedder_model}")
+                    response  = await self.process_all_docs(request.file_path, request.username, request.class_name)
+                    #self.logger.info(f"Quick check of the embedder: {self.embedder_model}")
                     self.logger.info(f"response: {response}: %s", )
                 elif request.mode == "simple_add_to_collection":
                     response = self.simple_add_doc(request.file_path)
@@ -921,7 +1040,7 @@ class VectorDataBase:
                     response = self.keyword_search(request.username, request.class_name, request.query)
                     self.logger.info(f"Here is the response after keyword search request: {response}")
                     return response
-                elif request.mode == "display_classes":
+                elif request.mode == "display_collections":
                     response = self.get_classes(request.username)
                     self.logger.info(f"classes: {response}: %s", )
                     return response
@@ -931,7 +1050,7 @@ class VectorDataBase:
                 elif request.mode == "display_all_objects":
                     response = self.get_all_objects(request.username, request.class_name)
                     return response
-                elif request.mode == "delete_class":
+                elif request.mode == "delete_collection":
                     response = self.delete_weaviate_class(request.username, request.class_name)
                     self.logger.info(f"collection delete: {response}: %s", )
                     return response
@@ -947,7 +1066,6 @@ class VectorDataBase:
                     response = self.add_vdb_class(request.username, request.class_name)
                     return response
                 elif request.mode == "initialize_vllm":
-                    #self.logger.info(f"Quick check of the embedder: {self.embedder_model}")
                     self.logger.info(f"Checking the init vllm request args: {request}")
                     response = self.initialize_vllm_manager(request.username, request.model, request.inference_endpoint)
                     return response
@@ -960,15 +1078,15 @@ class VectorDataBase:
                     self.embedder_model = self.initilize_embedder(request.username, request.embedder)
                     self.logger.info(f"Checking the response and the embedder creation: {self.embedder_model}, {request.embedder}")
                     return self.embedder_model
-                elif request.mode == "do_rag":
+                elif request.mode == "rag":
                     response = self.retrieval_augmented_generation(request.username, request.class_name, request.embedder, request.model, request.inference_endpoint, request.query)
                     self.logger.info(f"Checking the response of do rag: {response}")
                     return response
-                elif request.mode == "do_rag_hyde":
+                elif request.mode == "rag_hyde":
                     response = self.hyde_retrieval_augmented_gneneration(request.username, request.class_name, request.model, request.inference_endpoint, request.embedder, request.query)
                     self.logger.info(f"CHecking after hyde the response: {response}")
                     return response
-                elif request.mode == "do_rag_mq":
+                elif request.mode == "rag_mq":
                     response = self.multi_query_retrieval_augmented_generation(request.username, request.class_name, request.model, request.inference_endpoint, request.embedder, request.query)
                     self.logger.info(f"Checking the response after MQ RAG: {response}")
                     return response
