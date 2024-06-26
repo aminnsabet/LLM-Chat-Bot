@@ -29,6 +29,7 @@ from weaviate.auth import AuthApiKey
 from weaviate.classes.query import MetadataQuery
 from weaviate.classes.query import Filter
 from langchain_community.llms import VLLMOpenAI
+from weaviate.exceptions import UnexpectedStatusCodeException
 #from langchain_weaviate.vectorstores import WeaviateVectorStore
 #from API.app.models import VectorDBRequest
 
@@ -55,6 +56,11 @@ from langchain_core.runnables import RunnablePassthrough
 from langchain.vectorstores import Weaviate
 from langchain import hub
 
+#Error handling import:
+from fastapi import FastAPI, Request
+from fastapi.responses import JSONResponse
+from fastapi.encoders import jsonable_encoder
+
 class Config:
     def __init__(self, **entries):
         self.__dict__.update(entries)
@@ -80,10 +86,35 @@ class VDBaseInput(BaseModel):
     memory: Optional[bool]=False
     conversation_number: Optional[int]=-1
     embedder: Optional[str]= "sentence-transformers/all-MiniLM-L6-v2"
+    ray: Optional[bool] = False
+    num_actors: Optional[int] = 1
 
 
 
 VDB_app = FastAPI()
+
+class DocumentProcessingError(Exception):
+    """Exception raised for errors in the document processing pipeline."""
+    def __init__(self, message, errors=None):
+        super().__init__(message)
+        self.errors = errors
+
+
+
+@VDB_app.exception_handler(DocumentProcessingError)
+async def document_processing_exception_handler(request: Request, exc: DocumentProcessingError):
+    return JSONResponse(
+        status_code=400,
+        content=jsonable_encoder({"message": exc.message, "errors": exc.errors}),
+    )
+
+@VDB_app.exception_handler(Exception)
+async def general_exception_handler(request: Request, exc: Exception):
+    # Log the error details here if necessary
+    return JSONResponse(
+        status_code=500,
+        content={"message": "An unexpected error occurred"},
+    )
 
 class VLLMManager:
     def __init__(self):
@@ -146,11 +177,6 @@ class WeaviateEmbedder:
         doc_list = await self.adding_weaviate_document(serialized_docs, collection_name)
         return doc_list
 
-    # async def run_embedder_on_text(self, documents):
-    #     serialized_docs = await self.weaviate_split_pdf(documents)
-    #     doc_list = await self.adding_weaviate_document(serialized_docs)
-    #     return doc_list
-
     async def weaviate_split_pdf(self, docs):
 
         text_splitter = RecursiveCharacterTextSplitter(chunk_size=1000, chunk_overlap=100)
@@ -185,13 +211,10 @@ class WeaviateEmbedder:
         return documents
     
     async def adding_weaviate_document(self, text_lst, collection_name=None):
-        weaviate_client = weaviate.connect_to_local(   # `weaviate_key`: your Weaviate API key
+        weaviate_client = weaviate.connect_to_local(  
                     port= 8900,
-                    # headers={
-                    #     #"X-HuggingFace-Api-Key": "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"
-                    #     }
                 )
-        
+        self.logger.info(f"Parsing documents with Ray")
         collection = weaviate_client.collections.get(str(collection_name))
         with collection.batch.fixed_size(batch_size=100) as batch:
             for data_row in text_lst:
@@ -204,52 +227,6 @@ class WeaviateEmbedder:
     
     async def terminate_actors(self):
         ray.actor.exit_actor()
-
-# @ray.remote(num_cpus=0.33)
-# class WeaviateEmbedder:
-#     def __init__(self):
-#         self.time_taken = 0
-#         self.text_list = []
-#         # adding logger for debugging
-#         logging.basicConfig(
-#             level=logging.INFO,
-#             format="%(asctime)s - %(levelname)s - %(message)s",
-#             filename="app.log",  # specify the file name if you want logging to be stored in a file
-#             filemode="a",  # append to the log file if it exists
-#         )
-
-#         self.logger = logging.getLogger(__name__)
-#         self.logger.propagate = True
-
-#         try:
-#             self.weaviate_client = weaviate.Client(
-#                 url=config.weaviate_client_url,   
-#             )
-#         except:
-#             self.logger.error("Error in connecting to Weaviate")
-
-#     def adding_weaviate_document(self, text_lst, collection_name):
-#         self.weaviate_client.batch.configure(batch_size=100)
-#         with self.weaviate_client.batch as batch:
-#             for text in text_lst:
-#                 batch.add_data_object(
-#                     text,
-#                     class_name=collection_name, 
-#                         #uuid=generate_uuid5(text),
-#         )
-#                 self.text_list.append(text)
-#         results= self.text_list
-        
-#         return self.text_list
-
-#     def get(self):
-#         return self.lst_embeddings
-    
-#     def get_time_taken(self):
-#         return self.time_taken
-
-#     def terminate_actors(self):
-#         ray.actor.exit_actor()
     
 @serve.deployment(
     # ray_actor_options={"num_gpus": config.VD_deployment_num_gpus}, autoscaling_config={
@@ -264,14 +241,10 @@ class WeaviateEmbedder:
 class VectorDataBase:
     def __init__(self):
 
-        self.weaviate_client = weaviate.connect_to_local(   # `weaviate_key`: your Weaviate API key
+        self.weaviate_client = weaviate.connect_to_local( 
                     port= 8900,
-                    
                 )
 
-        self.num_actors = config.VD_number_actors
-        self.chunk_size = config.VD_chunk_size
-        self.chunk_overlap = config.VD_chunk_overlap
         self.database = Database()
 
         self.vllm_manager = None
@@ -322,7 +295,6 @@ class VectorDataBase:
 
             list: A list of serialized document chunks.
         ''' 
-        #text_splitter = CharacterTextSplitter(chunk_size=self.chunk_size, chunk_overlap=self.chunk_overlap)
         text_splitter = RecursiveCharacterTextSplitter(chunk_size=800, chunk_overlap=80)
         text_docs = text_splitter.split_documents(docs)
 
@@ -373,61 +345,30 @@ class VectorDataBase:
         '''
         documents = []
         for file in os.listdir(directory):
-            if file.endswith('.pdf'):
-                pdf_path = os.path.join(directory, file)
-                try:
-                    loader = PyPDFLoader(pdf_path, extract_images=False)
+            file_path = os.path.join(directory, file)
+            try:
+                if file.endswith('.pdf'):
+                    loader = PyPDFLoader(file_path, extract_images=False)
                     documents.extend(loader.load())
-                except pypdf.errors.PdfStreamError as e:
-                    print(f"Skipping file {file} due to error: {e}")
-                    continue  # Skip this file and continue with the next one
-            elif file.endswith('.txt'):
-                text_path = os.path.join(directory, file)
-                try:
-                    loader = TextLoader(text_path)
+
+                elif file.endswith('.txt'):
+
+                    loader = TextLoader(file_path)
                     documents.extend(loader.load())
-                except Exception as e:
-                    print(f"Error in file {file}: {e}")
+                else:
+                    self.logger.error(f"Unexpected error, Unsupported file type: {file}")
                     continue
-        #self.logger.info(f"Check the parsed documents: {documents}")
+            except Exception as e:
+                self.logger.error(f"Error processing file {file}: {e}")
+                continue 
         return documents
-
-    def simple_add_doc(self, dir):
-        weaviate_client = weaviate.connect_to_local(   # `weaviate_key`: your Weaviate API key
-                    headers={
-                        "X-HuggingFace-Api-Key": "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"
-                        }
-                )
-
-        documents = []
-        model_name = "sentence-transformers/all-MiniLM-L6-v2"
-        model_kwargs = {'device': 'cpu'}
-        encode_kwargs = {'normalize_embeddings': False}
-
-        hf = HuggingFaceEmbeddings(
-            model_name=model_name,
-            model_kwargs=model_kwargs,
-            encode_kwargs=encode_kwargs
-        )
-        for file in os.listdir(dir):
-            if file.endswith('.pdf'):
-                pdf_path = os.path.join(dir, file)
-                try:
-                    loader = PyPDFLoader(pdf_path, extract_images=False)
-                    docs = loader.load()
-                    text_splitter=CharacterTextSplitter(chunk_size=200,chunk_overlap=0)
-                    document=text_splitter.split_documents(docs)
-                    vs = WeaviateVectorStore.from_documents(document, embedding=hf, client=weaviate_client, index_name="Admin_test_class_4")
-                    #documents.extend(loader.load())
-                except pypdf.errors.PdfStreamError as e:
-                    print(f"Skipping file {file} due to error: {e}")
-                    continue  # Skip this file and continue with the next one
 
     def adding_weaviate_document(self, text_lst, collection_name=None):
         weaviate_client = weaviate.connect_to_local(   # `weaviate_key`: your Weaviate API key
                     port= 8900,
                 )
-        
+        self.text_list = []
+        self.logger.info(f"Parsing documents without Ray")
         collection = weaviate_client.collections.get(str(collection_name))
         with collection.batch.fixed_size(batch_size=100) as batch:
             for data_row in text_lst:
@@ -454,104 +395,40 @@ class VectorDataBase:
             dict: A response indicating the status of the processing ('success' or 'error') and a message detailing the outcome.
         '''
 
-        response = {"status": "initiated", "message": ""}
+        self.logger.info("Processing initiated.")
         try:
             full_class = str(username) + "_" + str(cls)
-            #pdf_paths = self.get_pdf_paths(str(dir))
+
             parsed_pdf = self.parse_pdf(dir)
-            #self.logger.info(f"Parsed pdf? {parsed_pdf}")
+            self.logger.info(f"Checking the parsed_pdfs: {parsed_pdf}")
             splitted_workload = self.weaviate_split_multiple_pdf(parsed_pdf)
-            #self.logger.info(f"Checking the split workload: {splitted_workload}")
-            
-            #self.logger.info(f"Cgecking the workload divided: {len(workload)}, and worklad {workload[0]}")
-            if ray == True:
+
+            if ray:
                 workload = self.divide_workload(ray_actors, splitted_workload)
                 weaviate_embedders = [WeaviateEmbedder.remote() for _ in range(ray_actors)]
                 very_finals = [weaviate_embedder.run_embedder_on_text.remote(i, str(full_class)) for weaviate_embedder, i in zip(weaviate_embedders, workload)]
                 results = await asyncio.gather(*very_finals)
-                self.logger.info(f"Cheking the results: {results}")
-                return results
-            elif ray == False:
+                self.logger.info(f"Finished processing docs using Ray:")
+            else:
                 results = self.adding_weaviate_document(splitted_workload, full_class)
-                return results
-            else:            
-                response["status"] = "error"
-                response["message"] = str(e)
-                return response
-                
+                self.logger.info(f"Finished processing docs without Ray")
+            return {"status": "success", "message": "Documents processed successfully", "results": results}
+        except DocumentProcessingError as e:
+            self.logger.error(f"Error processing documents: {e}")
+            raise HTTPException(status_code=400, detail=str(e))
         except Exception as e:
-            response["status"] = "error"
-            response["message"] = str(e)
-            return response
-
-    def get_pdf_paths(self, dir):
-        pdf_paths = []
-        for file in os.listdir(dir):
-            if file.endswith('.pdf'):
-                pdf_path = os.path.join(dir, file)
-                pdf_paths.append(pdf_path)
-        return pdf_paths
-
-    def add_weaviate_document(self, cls, docs):
-        '''
-        Description:
-            Adds a list of serialized documents to Weaviate under a specified class. Uses a remote WeaviateEmbedder actor for the operation.
-
-        Parameters:
-
-            cls (str): The class name under which the documents will be added.
-            docs (list): A list of serialized documents to be added.
-        '''
-        actor = WeaviateEmbedder.remote()
-        ray.get([actor.adding_weaviate_document.remote(docs, str(cls))])
-
-    def add_weaviate_batch_documents(self, cls, doc_workload):
-        '''
-        Description:
-            Adds documents to Weaviate in batches using multiple WeaviateEmbedder actors. This method is used for efficient processing of larger sets of documents.
-
-        Parameters:
-
-            cls (str): The class name under which the documents will be added.
-            doc_workload (list): A list of document batches to be added, where each sublist is a separate batch.
-        '''
-        document_list = self.parse_pdf(dir)
-        # serialized_docs = self.weaviate_split_multiple_pdf(document_list)
-
-
-        # weaviate_embedders = [WeaviateEmbedder.remote() for _ in range(len(document_list))]
-
-        # futures = [weaviate_embedder.convert_file_to_text.remote(i) for weaviate_embedder, i in zip(weaviate_embedders, workload)]
-
-
-        # self.logger.info(f"actors creation successful {actors}: %s", )
-        # results = ray.get([actor.adding_weaviate_document.remote(doc_part, str(cls)) for actor, doc_part in zip(actors, doc_workload)])
-        # document_list = self.parse_pdf(dir)
-        # serialized_docs = self.weaviate_split_multiple_pdf(document_list)
-        
-        # pdf_paths = get_pdf_paths("API/received_files/0e5ba6dbf1116059")
-        # doc_workload = self.divide_workload(self.num_actors, serialized_docs)
-        # workload = split_workload(pdf_paths, len(pdf_paths))
-        # futures = [weaviate_embedder.convert_file_to_text.remote(i) for weaviate_embedder, i in zip(weaviate_embedders, workload)]
-        # mid_res = await asyncio.gather(*futures)
-        # very_finals = [weaviate_embedder.run_embedder_on_text.remote(i) for weaviate_embedder, i in zip(weaviate_embedders, mid_res)]
-        # results = await asyncio.gather(*very_finals)
-
-
-        self.logger.info(f"check 1st step of ray was successful", )
-        self.logger.info(f"check if ray was successful:", )
-
+            self.logger.error(f"Unexpected error: {e}")
+            raise HTTPException(status_code=500, detail="An unexpected error occurred while processing documents")
 
     def adding_weaviate_document_no_ray(self, text_lst, collection_name):
         try:
             self.weaviate_client = weaviate.connect_to_local(   # `weaviate_key`: your Weaviate API key
-                    port= 8900,
-                    
+                    port= 8900,   
                 )
         except:
             self.logger.error("Error in connecting to Weaviate")
 
-        self.logger.inf(f"Checkpoint no ray 1 and check list {text_lst[0]}")
+        self.logger.info(f"Checkpoint no ray 1 and check list {text_lst[0]}")
         self.weaviate_client.batch.configure(batch_size=100)
         with self.weaviate_client.batch as batch:
             for text in text_lst:
@@ -577,19 +454,13 @@ class VectorDataBase:
 
             dict: A response indicating the outcome ('success' or 'error') and relevant messages.
         '''
+        response = {"status": "initiated", "message": ""}
         try:            
-                weaviate_client = weaviate.connect_to_local(   # `weaviate_key`: your Weaviate API key
-                    port= 8900,
-                )
-
-                prefix = username
-                cls = str(prefix) + "_" + str(class_name)
-                #self.logger.info(f"Chec")
-                if embedder is None:
-                    vectorizer = "sentence-transformers/all-MiniLM-L6-v2"
-                else:
-                    vectorizer = embedder
-                weaviate_client.collections.create(
+            weaviate_client = weaviate.connect_to_local( 
+                port= 8900,
+            )
+            cls = str(username) + "_" + str(class_name)    
+            weaviate_client.collections.create(
                         cls,
                         vectorizer_config=Configure.Vectorizer.text2vec_transformers(),
                         vector_index_config=Configure.VectorIndex.flat(),
@@ -597,18 +468,21 @@ class VectorDataBase:
                             Property(name="document_title", data_type=DataType.TEXT),
                             Property(name="page_content", data_type=DataType.TEXT),
                         ],
-                    )
-                # database_response = self.database.add_collection({"username": username, "collection_name": class_name})
-                # if database_response:
-                #     self.logger.info("class name added successfully to database")     
-                #     self.logger.info(f"success: class {class_name} created for user {username}")
-                #     return {"success": f"Class {cls} created "}
-                # else:
-                #     return {"error": "No class name provided"}
+            )        
+            response["status"] = "success"
+            response["message"] = f"Class '{cls}' successfully created."
+        except UnexpectedStatusCodeException as e:
+            self.logger.error(f"Failed to create class {cls} due to unexpected status code: {str(e)}")
+            response["status"] = "error"
+            response["message"] = "Failed to create the class due to a server error."
         except Exception as e:
-            return {"error": str(e)}
-        
-    def delete_weaviate_class(self, username, class_name):
+            self.logger.error(f"Unexpected error while creating class {cls}: {str(e)}")
+            response["status"] = "error"
+            response["message"] = "An unexpected error occurred."
+
+        return response
+
+    def delete_collection(self, username, class_name):
             '''
             Description:
                 Deletes a specified class from the Weaviate database and the internal database.
@@ -653,14 +527,6 @@ class VectorDataBase:
             selected_class.data.delete_many(
                 where=Filter.by_property("document_title").like(str(document_name))
             )
-            # self.weaviate_client.batch.delete_objects(
-            #     class_name=cls_name,
-            #     where={
-            #         "path": ["document_title"],
-            #         "operator": "Like",
-            #         "valueText": document_name,
-            #     }
-            #)
         except Exception as e:
                 return {"error": str(e)}
 
@@ -704,9 +570,8 @@ class VectorDataBase:
                 return {"error": str(e)}
         
     def get_all_objects(self, username, class_name):
-        weaviate_client = weaviate.connect_to_local(   # `weaviate_key`: your Weaviate API key
-                    port= 8900,
-                    
+        weaviate_client = weaviate.connect_to_local(  
+                    port= 8900,                    
                 )
         doc_list = []
         full_class_name = str(username) + "_" + str(class_name)
@@ -719,28 +584,17 @@ class VectorDataBase:
 
     def get_classes(self, username):
         try:
-            weaviate_client = weaviate.connect_to_local(   # `weaviate_key`: your Weaviate API key
+            weaviate_client = weaviate.connect_to_local(  
                     port= 8900,
-                    
                 )
-            #weaviate_client = weaviate.Client("http://localhost:8080")
-            username = username
             response = weaviate_client.collections.list_all()
-            if response is not None:    
-                return response
+            if response:
+                return {"status": "success", "data": response} 
             else:
-                return {"error": "No classes found"}
-            # schema = weaviate_client.schema.get()
-            # classes = schema.get('classes', []) 
-            # prefix = str(username) + "_"
-            # prefix = prefix.capitalize()
-            # filtered_classes = [cls["class"].replace(prefix, "", 1) for cls in classes if cls["class"].startswith(prefix)] #[cls["class"] for cls in classes if cls["class"].startswith(prefix)]
-            # if filtered_classes is not None:
-            #     return filtered_classes
-            # else:
-            #     return {"error": "No classes found"}
+                return {"status": "success", "message": "No classes found", "data": []}  #TODO
         except Exception as e:
-                return {"error": str(e)}
+            self.logger.error(f"Error when display the collections: {str(e)}")
+            return {"status": "error", "message": str(e)}
         
     ### SEARCH FUNCTIONS ###
     def basic_vector_search(self, username, cls):
@@ -826,17 +680,6 @@ class VectorDataBase:
         """
         prompt=ChatPromptTemplate.from_template(template)
         return prompt
-        # prompt_template = """Text: {context}
-
-        # Question: {question}
-        
-        # Answer the question based on the text provided. If the text doesn't contain the answer, reply that the answer is not available.
-        # """
-        # PROMPT = PromptTemplate(
-        #     tempalte=prompt_template, input_variables=["context", "question"]
-        # )
-        # chain_type_kwargs = {"prompt": PROMPT}
-        # return chain_type_kwargs
 
     def get_collection_based_retriver(self, client, class_name, embedder):
         try:
@@ -1017,14 +860,8 @@ class VectorDataBase:
     async def VectorDataBase(self, request: VDBaseInput):
             try:
                 if request.mode == "add_to_collection":
-                    #self.logger.info(f"request received {request}: %s", )
-                    response  = await self.process_all_docs(request.file_path, request.username, request.class_name)
-                    #self.logger.info(f"Quick check of the embedder: {self.embedder_model}")
+                    response  = await self.process_all_docs(request.file_path, request.username, request.class_name, request.ray, request.num_actors)
                     self.logger.info(f"response: {response}: %s", )
-                elif request.mode == "simple_add_to_collection":
-                    response = self.simple_add_doc(request.file_path)
-                    self.logger.info(f"logging the simple add: {response}")
-                    return response
                 elif request.mode == "basic_search":
                     response = self.basic_vector_search(request.username, request.class_name)
                     self.logger.info(f"Here is the response after basic search request: {response}")
@@ -1048,7 +885,7 @@ class VectorDataBase:
                     response = self.get_all_objects(request.username, request.class_name)
                     return response
                 elif request.mode == "delete_collection":
-                    response = self.delete_weaviate_class(request.username, request.class_name)
+                    response = self.delete_collection(request.username, request.class_name)
                     self.logger.info(f"collection delete: {response}: %s", )
                     return response
                 elif request.mode == "delete_document":
