@@ -88,6 +88,8 @@ class VDBaseInput(BaseModel):
     embedder: Optional[str]= "sentence-transformers/all-MiniLM-L6-v2"
     ray: Optional[bool] = False
     num_actors: Optional[int] = 1
+    object_property: Optional[str] = None
+    object_limit: Optional[int] = None
 
 
 
@@ -530,8 +532,31 @@ class VectorDataBase:
         except Exception as e:
                 return {"error": str(e)}
 
+    def query_objects_in_collection(self, username, class_name, query, property, object_limit):
+        '''Supposed to return objects containg the query. Need to check if the behaviour is normal.'''
+        try:
+            weaviate_client = weaviate.connect_to_local(  
+                    port= 8900,
+                    
+                )
+            full_class_name = str(username) + "_" + str(class_name)
+            collection = weaviate_client.collections.get(str(full_class_name))
+            self.logger.info(f"Checks query obj in col with collection: {collection}")
+            response = collection.query.fetch_objects(
+                filters=(
+                    Filter.by_property(str(property)).like(f"*{str(query)}*")
+                ),
+                limit=object_limit,
+            )
+            for obj in response.objects:
+                response = obj.properties.get(str(property))
+            return response
+        except Exception as e:
+                    return {"error": str(e)}
+
     def query_weaviate_document_names(self, username, class_name):
         '''
+        !!!!!!!!!!!!!!!! Need update to weaviate v4 !!!!!
         Description:
             Queries the Weaviate database for the titles of all documents in a specified class.
 
@@ -570,9 +595,6 @@ class VectorDataBase:
                 return {"error": str(e)}
         
     def get_all_objects(self, username, class_name):
-        weaviate_client = weaviate.connect_to_local(  
-                    port= 8900,                    
-                )
         doc_list = []
         full_class_name = str(username) + "_" + str(class_name)
 
@@ -880,6 +902,9 @@ class VectorDataBase:
                     return response
                 elif request.mode == "display_documents":
                     response = self.query_weaviate_document_names(request.username, request.class_name)
+                    return response
+                elif request.mode == "query_objects_in_collection":
+                    response = self.query_objects_in_collection(request.username, request.class_name, request.query, request.object_property, request.object_limit)
                     return response
                 elif request.mode == "display_all_objects":
                     response = self.get_all_objects(request.username, request.class_name)
