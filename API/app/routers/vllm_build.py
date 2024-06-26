@@ -13,8 +13,8 @@ import requests
 from typing import Optional
 import time
 from app.logging_config import setup_logger
-from app.models import VllmRequest
-from app.routers.LLM.backend_database import Database
+from app.APIs import VllmRequest
+from app.routers.utils.backend_database import Database
 logger = setup_logger()
 
 

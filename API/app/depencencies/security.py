@@ -3,7 +3,7 @@
 from jose import JWTError, jwt
 from fastapi import Depends, HTTPException, status
 from fastapi.security import OAuth2PasswordBearer
-from app.models import TokenData
+from app.APIs import TokenData
 from app.database import get_db, User
 from datetime import timedelta, datetime
 import os

@@ -212,8 +212,8 @@ else:
             st.header("Admin Panel - Add Users")
             new_user = st.text_input("Enter a new user:")
             new_user_password = st.text_input("Enter password for user:", type="password")
-            gen_token_limit = st.slider('Adjust the generated token limit', min_value=0, max_value=100000, value=1000)
-            prompt_token_limit = st.slider('Adjust the Input prompt token limit', min_value=0, max_value=100000, value=10000)
+            gen_token_limit = st.slider('Allocate generated token limit', min_value=0, max_value=100000, value=1000)
+            prompt_token_limit = st.slider('Allocate Input prompt token limit', min_value=0, max_value=100000, value=10000)
 
             if st.button("Add User") and new_user and new_user_password:
                 new_user = add_user(new_user, new_user_password, gen_token_limit, prompt_token_limit, st.session_state.token)
