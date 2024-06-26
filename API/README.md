@@ -1,3 +1,151 @@
+
+
+# Run demo
+In API directory run the following command
+
+python main.py
+
+# API Endpoints Documentation
+
+## Authentication
+
+### `/token`
+**Description:** Generates an authentication token for the user.
+
+**Request Format:**
+```json
+{
+  "username": "string",
+  "password": "string"
+}
+```
+
+**Response Format:**
+```json
+{
+  "username": "string",
+  "access_token": "string",
+  "token_type": "bearer"
+}
+```
+
+## VLLM Engine Management
+
+### `/vllm_request/start`
+**Description:** Starts a VLLM engine.
+
+**Request Format:**
+```json
+{
+  "HUGGING_FACE_HUB_TOKEN": "string",   //Huggingface Access Token Required
+  "Model": "string",                    // HuggingFace model name, Required
+  "MAX_MODEL_LEN": "integer",           // Maximum input token into LLM, Optional
+  "TENSOR_PARALLEL_SIZE": "integer",    // Optional
+  "SEED": "integer"                     // Optional
+}
+```
+
+**Response Format:**
+```json
+{
+  "message": "string",
+  "vLLM_endpoint": "string",
+  "user_info": {
+    // User-specific information
+  },
+  "status": "string" //healthy, unhealthy
+}
+```
+
+### `/vllm_request/terminate`
+**Description:** Terminates the Docker container running the VLLM engine.
+
+**Request Format:**
+```json
+{
+  "container_id": "string",    // Required
+  "engine_name": "string"      // Optional
+}
+```
+
+**Response Format:**
+```json
+{
+  "status": "string"
+}
+```
+
+### `/active_models/`
+**Description:** Returns a list of active VLLMs for the user.
+
+**Response Format:**
+```json
+[
+  {
+    "engine_name": "string",
+    "container_id": "string",
+    "model_name": "string",
+    "quantized": "boolean",
+    "max_model_length": "integer",
+    "seed": "integer",
+    "inference_end_point": "string",
+    "timestamp": "string",
+    "user_id": "string"
+  }
+]
+```
+
+## LLM Inference
+
+### `/llm_request`
+**Description:** Makes an inference request to a specified model.
+
+**Request Format:**
+```json
+{
+  "model": "string",               // Required
+  "inference_endpoint": "string",  // Required
+  "prompt": "string",              // Required
+  "memory": "boolean",             // Optional, default: false
+  "conversation_number": "integer" // Optional, required if memory=true
+}
+```
+
+**Response Format:**
+```json
+{
+  "username": "string",
+  "data": "string" // Inference response
+}
+```
+
+## Database Management
+
+### `/db_request/add_user/`
+**Description:** Adds a new user to the database.
+
+**Request Format:**
+```json
+{
+  "username": "string",                // Required
+  "password": "string",                // Required
+  "prompt_token_number": "integer",    // Optional
+  "gen_token_number": "integer",       // Optional
+  "gen_token_limit": "integer",        // Optional
+  "prompt_token_limit": "integer"      // Optional
+}
+```
+
+**Response Format:**
+```json
+{
+  "status": "string",
+  "message": "string" // Confirmation message
+}
+```
+
+
+
 # API Documentation
 
 ## Directory Structure Overview
@@ -152,261 +300,3 @@ Contains functions for handling LLM inference requests. It includes pre-processi
 ---
 
 This documentation provides an overview of the application's structure and the role of each component. For further details on specific functions and their implementations, refer to the respective source files.
-
-# API Endpoints Documentation
-
-## Authentication
-
-### `/token`
-**Description:** Generates an authentication token for the user.
-
-**Request Format:**
-```json
-{
-  "username": "string",
-  "password": "string"
-}
-```
-
-**Response Format:**
-```json
-{
-  "username": "string",
-  "access_token": "string",
-  "token_type": "bearer"
-}
-```
-
-## VLLM Engine Management
-
-### `/vllm_request/start`
-**Description:** Starts a VLLM engine.
-
-**Request Format:**
-```json
-{
-  "HUGGING_FACE_HUB_TOKEN": "string",   //Huggingface Access Token Required
-  "Model": "string",                    // HuggingFace model name, Required
-  "MAX_MODEL_LEN": "integer",           // Maximum input token into LLM, Optional
-  "TENSOR_PARALLEL_SIZE": "integer",    // Optional
-  "SEED": "integer"                     // Optional
-}
-```
-
-**Response Format:**
-```json
-{
-  "message": "string",
-  "vLLM_endpoint": "string",
-  "user_info": {
-    // User-specific information
-  },
-  "status": "string" //healthy, unhealthy
-}
-```
-
-### `/vllm_request/terminate`
-**Description:** Terminates the Docker container running the VLLM engine.
-
-**Request Format:**
-```json
-{
-  "container_id": "string",    // Required
-  "engine_name": "string"      // Optional
-}
-```
-
-**Response Format:**
-```json
-{
-  "status": "string"
-}
-```
-
-### `/active_models/`
-**Description:** Returns a list of active VLLMs for the user.
-
-**Response Format:**
-```json
-[
-  {
-    "engine_name": "string",
-    "container_id": "string",
-    "model_name": "string",
-    "quantized": "boolean",
-    "max_model_length": "integer",
-    "seed": "integer",
-    "inference_end_point": "string",
-    "timestamp": "string",
-    "user_id": "string"
-  }
-]
-```
-
-## LLM Inference
-
-### `/llm_request`
-**Description:** Makes an inference request to a specified model.
-
-**Request Format:**
-```json
-{
-  "model": "string",               // Required
-  "inference_endpoint": "string",  // Required
-  "prompt": "string",              // Required
-  "memory": "boolean",             // Optional, default: false
-  "conversation_number": "integer" // Optional, required if memory=true
-}
-```
-
-**Response Format:**
-```json
-{
-  "username": "string",
-  "data": "string" // Inference response
-}
-```
-
-## Database Management
-
-### `/db_request/add_user/`
-**Description:** Adds a new user to the database.
-
-**Request Format:**
-```json
-{
-  "username": "string",                // Required
-  "password": "string",                // Required
-  "prompt_token_number": "integer",    // Optional
-  "gen_token_number": "integer",       // Optional
-  "gen_token_limit": "integer",        // Optional
-  "prompt_token_limit": "integer"      // Optional
-}
-```
-
-**Response Format:**
-```json
-{
-  "status": "string",
-  "message": "string" // Confirmation message
-}
-```
-
-## Example Usage
-
-### Authentication Example
-**Request:**
-```json
-{
-  "username": "user1",
-  "password": "password123"
-}
-```
-**Response:**
-```json
-{
-  "username": "user1",
-  "access_token": "eyJhbGciOiJIUzI1NiIsInR...",
-  "token_type": "bearer"
-}
-```
-
-### Start VLLM Engine Example
-**Request:**
-```json
-{
-  "HUGGING_FACE_HUB_TOKEN": "hf_token",
-  "Model": "gpt-3",
-  "MAX_MODEL_LEN": 1024,
-  "TENSOR_PARALLEL_SIZE": 2,
-  "SEED": 42
-}
-```
-**Response:**
-```json
-{
-  "message": "VLLM engine started successfully",
-  "vLLM_endpoint": "http://localhost:8000/inference",
-  "user_info": {
-    "username": "user1",
-    "roles": ["admin"]
-  },
-  "status": "success"
-}
-```
-
-### Terminate VLLM Engine Example
-**Request:**
-```json
-{
-  "container_id": "abc123",
-  "engine_name": "vllm-engine-1"
-}
-```
-**Response:**
-```json
-{
-  "status": "terminated"
-}
-```
-
-### List Active Models Example
-**Response:**
-```json
-[
-  {
-    "engine_name": "vllm-engine-1",
-    "container_id": "abc123",
-    "model_name": "gpt-3",
-    "quantized": false,
-    "max_model_length": 1024,
-    "seed": 42,
-    "inference_end_point": "http://localhost:8000/inference",
-    "timestamp": "2024-06-26T15:45:00Z",
-    "user_id": "user1"
-  }
-]
-```
-
-### LLM Inference Example
-**Request:**
-```json
-{
-  "model": "gpt-3",
-  "inference_endpoint": "http://localhost:8000/inference",
-  "prompt": "Hello, how are you?",
-  "memory": true,
-  "conversation_number": 1
-}
-```
-**Response:**
-```json
-{
-  "username": "user1",
-  "data": "I'm good, thank you! How can I assist you today?"
-}
-```
-
-### Add User Example
-**Request:**
-```json
-{
-  "username": "new_user",
-  "password": "new_password",
-  "prompt_token_number": 100,
-  "gen_token_number": 100,
-  "gen_token_limit": 1000,
-  "prompt_token_limit": 1000
-}
-```
-**Response:**
-```json
-{
-  "status": "success",
-  "message": "User added successfully"
-}
-```
-
----
-
-This documentation outlines the available endpoints, their request and response formats, and provides example requests and responses for better understanding. For further details on implementing and using these endpoints, refer to the source code and accompanying comments.
