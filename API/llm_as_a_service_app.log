@@ -740,3 +740,185 @@
 2024-06-25 09:43:58,613 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user test
 2024-06-25 09:43:58,613 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user test
 2024-06-25 09:43:58,613 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user test
+2024-06-27 06:43:50,270 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-06-27 06:43:50,270 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-06-27 06:43:50,270 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-06-27 06:43:50,270 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-06-27 06:43:50,270 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-06-27 06:43:50,270 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-06-27 06:43:50,270 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-06-27 07:02:56,018 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-06-27 07:02:56,018 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-06-27 07:02:56,018 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-06-27 07:02:56,018 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-06-27 07:02:56,018 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-06-27 07:02:56,018 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-06-27 07:02:56,018 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-06-27 07:03:42,532 - llm_as_a_service_logger - INFO - Starting container with command: --model TheBloke/Llama-2-7B-Chat-AWQ --gpu-memory-utilization 0.4 --quantization awq and port: 8500
+2024-06-27 07:03:42,532 - llm_as_a_service_logger - INFO - Starting container with command: --model TheBloke/Llama-2-7B-Chat-AWQ --gpu-memory-utilization 0.4 --quantization awq and port: 8500
+2024-06-27 07:03:42,532 - llm_as_a_service_logger - INFO - Starting container with command: --model TheBloke/Llama-2-7B-Chat-AWQ --gpu-memory-utilization 0.4 --quantization awq and port: 8500
+2024-06-27 07:03:42,532 - llm_as_a_service_logger - INFO - Starting container with command: --model TheBloke/Llama-2-7B-Chat-AWQ --gpu-memory-utilization 0.4 --quantization awq and port: 8500
+2024-06-27 07:03:42,532 - llm_as_a_service_logger - INFO - Starting container with command: --model TheBloke/Llama-2-7B-Chat-AWQ --gpu-memory-utilization 0.4 --quantization awq and port: 8500
+2024-06-27 07:03:42,532 - llm_as_a_service_logger - INFO - Starting container with command: --model TheBloke/Llama-2-7B-Chat-AWQ --gpu-memory-utilization 0.4 --quantization awq and port: 8500
+2024-06-27 07:03:42,532 - llm_as_a_service_logger - INFO - Starting container with command: --model TheBloke/Llama-2-7B-Chat-AWQ --gpu-memory-utilization 0.4 --quantization awq and port: 8500
+2024-06-27 07:05:23,802 - llm_as_a_service_logger - INFO - Starting container with command: --model TheBloke/Llama-2-7B-Chat-AWQ --gpu-memory-utilization 0.4 --quantization awq and port: 8500
+2024-06-27 07:05:23,802 - llm_as_a_service_logger - INFO - Starting container with command: --model TheBloke/Llama-2-7B-Chat-AWQ --gpu-memory-utilization 0.4 --quantization awq and port: 8500
+2024-06-27 07:05:23,802 - llm_as_a_service_logger - INFO - Starting container with command: --model TheBloke/Llama-2-7B-Chat-AWQ --gpu-memory-utilization 0.4 --quantization awq and port: 8500
+2024-06-27 07:05:23,802 - llm_as_a_service_logger - INFO - Starting container with command: --model TheBloke/Llama-2-7B-Chat-AWQ --gpu-memory-utilization 0.4 --quantization awq and port: 8500
+2024-06-27 07:05:23,802 - llm_as_a_service_logger - INFO - Starting container with command: --model TheBloke/Llama-2-7B-Chat-AWQ --gpu-memory-utilization 0.4 --quantization awq and port: 8500
+2024-06-27 07:05:23,802 - llm_as_a_service_logger - INFO - Starting container with command: --model TheBloke/Llama-2-7B-Chat-AWQ --gpu-memory-utilization 0.4 --quantization awq and port: 8500
+2024-06-27 07:05:23,802 - llm_as_a_service_logger - INFO - Starting container with command: --model TheBloke/Llama-2-7B-Chat-AWQ --gpu-memory-utilization 0.4 --quantization awq and port: 8500
+2024-06-27 07:05:27,867 - llm_as_a_service_logger - INFO - Starting container with command: --model TheBloke/Llama-2-7B-Chat-AWQ --gpu-memory-utilization 0.4 --quantization awq and port: 8500
+2024-06-27 07:05:27,867 - llm_as_a_service_logger - INFO - Starting container with command: --model TheBloke/Llama-2-7B-Chat-AWQ --gpu-memory-utilization 0.4 --quantization awq and port: 8500
+2024-06-27 07:05:27,867 - llm_as_a_service_logger - INFO - Starting container with command: --model TheBloke/Llama-2-7B-Chat-AWQ --gpu-memory-utilization 0.4 --quantization awq and port: 8500
+2024-06-27 07:05:27,867 - llm_as_a_service_logger - INFO - Starting container with command: --model TheBloke/Llama-2-7B-Chat-AWQ --gpu-memory-utilization 0.4 --quantization awq and port: 8500
+2024-06-27 07:05:27,867 - llm_as_a_service_logger - INFO - Starting container with command: --model TheBloke/Llama-2-7B-Chat-AWQ --gpu-memory-utilization 0.4 --quantization awq and port: 8500
+2024-06-27 07:05:27,867 - llm_as_a_service_logger - INFO - Starting container with command: --model TheBloke/Llama-2-7B-Chat-AWQ --gpu-memory-utilization 0.4 --quantization awq and port: 8500
+2024-06-27 07:05:27,867 - llm_as_a_service_logger - INFO - Starting container with command: --model TheBloke/Llama-2-7B-Chat-AWQ --gpu-memory-utilization 0.4 --quantization awq and port: 8500
+2024-06-27 07:34:35,136 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-06-27 07:34:35,136 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-06-27 07:34:35,136 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-06-27 07:34:35,136 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-06-27 07:34:35,136 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-06-27 07:34:35,136 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-06-27 07:34:35,136 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-06-27 07:40:18,222 - llm_as_a_service_logger - INFO - Starting container with command: --model TheBloke/Llama-2-7B-Chat-AWQ --gpu-memory-utilization 0.4 --quantization awq and port: 8500
+2024-06-27 07:40:18,222 - llm_as_a_service_logger - INFO - Starting container with command: --model TheBloke/Llama-2-7B-Chat-AWQ --gpu-memory-utilization 0.4 --quantization awq and port: 8500
+2024-06-27 07:40:18,222 - llm_as_a_service_logger - INFO - Starting container with command: --model TheBloke/Llama-2-7B-Chat-AWQ --gpu-memory-utilization 0.4 --quantization awq and port: 8500
+2024-06-27 07:40:18,222 - llm_as_a_service_logger - INFO - Starting container with command: --model TheBloke/Llama-2-7B-Chat-AWQ --gpu-memory-utilization 0.4 --quantization awq and port: 8500
+2024-06-27 07:40:18,222 - llm_as_a_service_logger - INFO - Starting container with command: --model TheBloke/Llama-2-7B-Chat-AWQ --gpu-memory-utilization 0.4 --quantization awq and port: 8500
+2024-06-27 07:40:18,222 - llm_as_a_service_logger - INFO - Starting container with command: --model TheBloke/Llama-2-7B-Chat-AWQ --gpu-memory-utilization 0.4 --quantization awq and port: 8500
+2024-06-27 07:40:18,222 - llm_as_a_service_logger - INFO - Starting container with command: --model TheBloke/Llama-2-7B-Chat-AWQ --gpu-memory-utilization 0.4 --quantization awq and port: 8500
+2024-06-27 07:40:23,769 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-27 07:40:23,769 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-27 07:40:23,769 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-27 07:40:23,769 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-27 07:40:23,769 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-27 07:40:23,769 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-27 07:40:23,769 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-27 07:40:28,778 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-27 07:40:28,778 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-27 07:40:28,778 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-27 07:40:28,778 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-27 07:40:28,778 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-27 07:40:28,778 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-27 07:40:28,778 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-27 07:40:33,786 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-27 07:40:33,786 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-27 07:40:33,786 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-27 07:40:33,786 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-27 07:40:33,786 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-27 07:40:33,786 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-27 07:40:33,786 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-27 07:40:38,794 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-27 07:40:38,794 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-27 07:40:38,794 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-27 07:40:38,794 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-27 07:40:38,794 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-27 07:40:38,794 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-27 07:40:38,794 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-27 07:40:43,802 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-27 07:40:43,802 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-27 07:40:43,802 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-27 07:40:43,802 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-27 07:40:43,802 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-27 07:40:43,802 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-27 07:40:43,802 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-27 07:40:48,809 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-27 07:40:48,809 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-27 07:40:48,809 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-27 07:40:48,809 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-27 07:40:48,809 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-27 07:40:48,809 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-27 07:40:48,809 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-27 07:40:53,813 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-27 07:40:53,813 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-27 07:40:53,813 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-27 07:40:53,813 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-27 07:40:53,813 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-27 07:40:53,813 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-27 07:40:53,813 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-27 07:40:58,821 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-27 07:40:58,821 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-27 07:40:58,821 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-27 07:40:58,821 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-27 07:40:58,821 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-27 07:40:58,821 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-27 07:40:58,821 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-27 07:41:03,826 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-27 07:41:03,826 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-27 07:41:03,826 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-27 07:41:03,826 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-27 07:41:03,826 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-27 07:41:03,826 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-27 07:41:03,826 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-27 07:41:08,833 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-27 07:41:08,833 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-27 07:41:08,833 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-27 07:41:08,833 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-27 07:41:08,833 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-27 07:41:08,833 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-27 07:41:08,833 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-27 07:41:13,841 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-27 07:41:13,841 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-27 07:41:13,841 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-27 07:41:13,841 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-27 07:41:13,841 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-27 07:41:13,841 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-27 07:41:13,841 - llm_as_a_service_logger - ERROR - Health check error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-27 07:41:18,847 - llm_as_a_service_logger - INFO - Container started successfully. Port: 8500
+2024-06-27 07:41:18,847 - llm_as_a_service_logger - INFO - Container started successfully. Port: 8500
+2024-06-27 07:41:18,847 - llm_as_a_service_logger - INFO - Container started successfully. Port: 8500
+2024-06-27 07:41:18,847 - llm_as_a_service_logger - INFO - Container started successfully. Port: 8500
+2024-06-27 07:41:18,847 - llm_as_a_service_logger - INFO - Container started successfully. Port: 8500
+2024-06-27 07:41:18,847 - llm_as_a_service_logger - INFO - Container started successfully. Port: 8500
+2024-06-27 07:41:18,847 - llm_as_a_service_logger - INFO - Container started successfully. Port: 8500
+2024-06-27 07:41:18,848 - llm_as_a_service_logger - INFO - User info: Amin-nsclae
+2024-06-27 07:41:18,848 - llm_as_a_service_logger - INFO - User info: Amin-nsclae
+2024-06-27 07:41:18,848 - llm_as_a_service_logger - INFO - User info: Amin-nsclae
+2024-06-27 07:41:18,848 - llm_as_a_service_logger - INFO - User info: Amin-nsclae
+2024-06-27 07:41:18,848 - llm_as_a_service_logger - INFO - User info: Amin-nsclae
+2024-06-27 07:41:18,848 - llm_as_a_service_logger - INFO - User info: Amin-nsclae
+2024-06-27 07:41:18,848 - llm_as_a_service_logger - INFO - User info: Amin-nsclae
+2024-06-27 07:41:18,848 - llm_as_a_service_logger - INFO - Container ID: c81c132954fcad5cbb30f9fd819ba11425490121e8b2287dff52855160870b83
+2024-06-27 07:41:18,848 - llm_as_a_service_logger - INFO - Container ID: c81c132954fcad5cbb30f9fd819ba11425490121e8b2287dff52855160870b83
+2024-06-27 07:41:18,848 - llm_as_a_service_logger - INFO - Container ID: c81c132954fcad5cbb30f9fd819ba11425490121e8b2287dff52855160870b83
+2024-06-27 07:41:18,848 - llm_as_a_service_logger - INFO - Container ID: c81c132954fcad5cbb30f9fd819ba11425490121e8b2287dff52855160870b83
+2024-06-27 07:41:18,848 - llm_as_a_service_logger - INFO - Container ID: c81c132954fcad5cbb30f9fd819ba11425490121e8b2287dff52855160870b83
+2024-06-27 07:41:18,848 - llm_as_a_service_logger - INFO - Container ID: c81c132954fcad5cbb30f9fd819ba11425490121e8b2287dff52855160870b83
+2024-06-27 07:41:18,848 - llm_as_a_service_logger - INFO - Container ID: c81c132954fcad5cbb30f9fd819ba11425490121e8b2287dff52855160870b83
+2024-06-27 10:39:28,915 - llm_as_a_service_logger - ERROR - Error occurred: string indices must be integers
+2024-06-27 10:39:28,915 - llm_as_a_service_logger - ERROR - Error occurred: string indices must be integers
+2024-06-27 10:39:28,915 - llm_as_a_service_logger - ERROR - Error occurred: string indices must be integers
+2024-06-27 10:39:28,915 - llm_as_a_service_logger - ERROR - Error occurred: string indices must be integers
+2024-06-27 10:39:28,915 - llm_as_a_service_logger - ERROR - Error occurred: string indices must be integers
+2024-06-27 10:39:28,915 - llm_as_a_service_logger - ERROR - Error occurred: string indices must be integers
+2024-06-27 10:39:28,915 - llm_as_a_service_logger - ERROR - Error occurred: string indices must be integers
+2024-06-27 10:40:11,752 - llm_as_a_service_logger - ERROR - Error occurred: string indices must be integers
+2024-06-27 10:40:11,752 - llm_as_a_service_logger - ERROR - Error occurred: string indices must be integers
+2024-06-27 10:40:11,752 - llm_as_a_service_logger - ERROR - Error occurred: string indices must be integers
+2024-06-27 10:40:11,752 - llm_as_a_service_logger - ERROR - Error occurred: string indices must be integers
+2024-06-27 10:40:11,752 - llm_as_a_service_logger - ERROR - Error occurred: string indices must be integers
+2024-06-27 10:40:11,752 - llm_as_a_service_logger - ERROR - Error occurred: string indices must be integers
+2024-06-27 10:40:11,752 - llm_as_a_service_logger - ERROR - Error occurred: string indices must be integers
+2024-06-27 10:40:32,723 - llm_as_a_service_logger - ERROR - Error occurred: string indices must be integers
+2024-06-27 10:40:32,723 - llm_as_a_service_logger - ERROR - Error occurred: string indices must be integers
+2024-06-27 10:40:32,723 - llm_as_a_service_logger - ERROR - Error occurred: string indices must be integers
+2024-06-27 10:40:32,723 - llm_as_a_service_logger - ERROR - Error occurred: string indices must be integers
+2024-06-27 10:40:32,723 - llm_as_a_service_logger - ERROR - Error occurred: string indices must be integers
+2024-06-27 10:40:32,723 - llm_as_a_service_logger - ERROR - Error occurred: string indices must be integers
+2024-06-27 10:40:32,723 - llm_as_a_service_logger - ERROR - Error occurred: string indices must be integers
+2024-06-27 10:41:02,055 - llm_as_a_service_logger - ERROR - Error occurred: string indices must be integers
+2024-06-27 10:41:02,055 - llm_as_a_service_logger - ERROR - Error occurred: string indices must be integers
+2024-06-27 10:41:02,055 - llm_as_a_service_logger - ERROR - Error occurred: string indices must be integers
+2024-06-27 10:41:02,055 - llm_as_a_service_logger - ERROR - Error occurred: string indices must be integers
+2024-06-27 10:41:02,055 - llm_as_a_service_logger - ERROR - Error occurred: string indices must be integers
+2024-06-27 10:41:02,055 - llm_as_a_service_logger - ERROR - Error occurred: string indices must be integers
+2024-06-27 10:41:02,055 - llm_as_a_service_logger - ERROR - Error occurred: string indices must be integers
+2024-06-27 10:41:40,342 - llm_as_a_service_logger - ERROR - Error occurred: string indices must be integers
+2024-06-27 10:41:40,342 - llm_as_a_service_logger - ERROR - Error occurred: string indices must be integers
+2024-06-27 10:41:40,342 - llm_as_a_service_logger - ERROR - Error occurred: string indices must be integers
+2024-06-27 10:41:40,342 - llm_as_a_service_logger - ERROR - Error occurred: string indices must be integers
+2024-06-27 10:41:40,342 - llm_as_a_service_logger - ERROR - Error occurred: string indices must be integers
+2024-06-27 10:41:40,342 - llm_as_a_service_logger - ERROR - Error occurred: string indices must be integers
+2024-06-27 10:41:40,342 - llm_as_a_service_logger - ERROR - Error occurred: string indices must be integers

@@ -31,7 +31,6 @@ class VllmRequest(BaseModel):
     container_id: Optional[str] = "None"
     engine_name: Optional[str] = "None"
 
-
 class InferenceRequest(BaseModel):
     model: str= None
     inference_endpoint:str = None
@@ -66,17 +65,6 @@ class VectorDBRequest(BaseModel):
     file_path: Optional[str] = None
     file_title: Optional[str] = None
 
-class ArxivInput(BaseModel):
-    username: Optional[str]
-    class_name: Optional[str] = None
-    query: Optional[str] = None
-    paper_limit: Optional[int] = None
-    recursive_mode: Optional[int] = None
-    mode: Optional[str]
-    title: Optional[str] = None
-    url: Optional[str] = None
-    file_path: Optional[str] = None
-    dir_name: Optional[str] = None
 
 class ChatMessage(BaseModel):
     role: str
